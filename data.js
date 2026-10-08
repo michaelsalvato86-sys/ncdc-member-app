@@ -23,6 +23,8 @@ const CLUB = {
   buyUrl: 'https://square.link/u/MWVwkI9s',
   renewUrl: 'https://square.link/u/XqJux7Uh',
   partnerFormUrl: 'https://aqddirfs.paperform.co/',
+  // Prices from the club site, 2026-10-08. The $17 online price is an end-of-year special; update when it ends.
+  price: { online: 17, regular: 27, retail: 25 },
 };
 
 // status: 'live' | 'seasonal' | 'later'   note: shown under the name

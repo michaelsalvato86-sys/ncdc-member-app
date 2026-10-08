@@ -33,7 +33,7 @@ html,body{height:100%}
 body{font-family:var(--sans);background:var(--bg);color:var(--ink-800);-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
 button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 input{font:inherit}
-.demo-ribbon{position:fixed;top:calc(var(--safe-t) + 6px);left:50%;transform:translateX(-50%);z-index:60;background:var(--brick-500);color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;padding:4px 9px;border-radius:99px}
+.demo-ribbon{position:fixed;bottom:calc(var(--safe-b) + 8px);left:8px;z-index:60;background:var(--brick-500);color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;padding:4px 9px;border-radius:99px}
 .view{display:none;min-height:100%;}
 .view.on{display:block}
 
@@ -144,6 +144,27 @@ input{font:inherit}
 .rd-link{display:inline-block;margin-top:16px;color:var(--water-500);font-weight:600;font-size:14px}
 .toast{position:fixed;left:50%;bottom:calc(var(--safe-b) + 20px);transform:translate(-50%,20px);opacity:0;background:var(--ink-800);color:#fff;padding:11px 16px;border-radius:12px;font-size:14px;transition:.25s;z-index:80;max-width:90%}
 .toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* join */
+#join{background:linear-gradient(180deg,var(--paper) 0%,var(--harbor-100) 100%);padding:calc(var(--safe-t) + 18px) 20px 40px}
+.jn{max-width:440px;margin:0 auto}
+.jn-back{display:flex;align-items:center;gap:4px;font-weight:600;color:var(--water-600);padding:8px 0;margin-bottom:6px}
+.jn h1{font-family:var(--serif);font-weight:400;font-size:34px;color:var(--water-600);line-height:1.1}
+.jn .lead{color:var(--ink-500);margin:8px 0 20px;line-height:1.5}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.seg label{border:1.5px solid #cfd6e6;border-radius:12px;padding:12px;background:#fff;cursor:pointer;font-weight:600;color:var(--water-800);text-align:center}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label:has(input:checked){border-color:var(--water-600);background:var(--harbor-100)}
+.seg label:has(input:focus-visible){box-shadow:0 0 0 3px rgba(25,78,143,.25)}
+.price{display:flex;justify-content:space-between;align-items:baseline;background:#fff;border:1px solid #e3e7f1;border-radius:14px;padding:14px 16px;margin:4px 0 14px}
+.price b{font-size:28px;color:var(--water-600);font-variant-numeric:tabular-nums}
+.price s{color:var(--ink-300);margin-left:6px;font-size:15px}
+.price span{font-size:14px;color:var(--ink-500)}
+.btn.pay{background:#000;display:flex;align-items:center;justify-content:center;gap:8px}
+.pay-note{font-size:13px;color:var(--ink-500);text-align:center;margin-top:10px;line-height:1.5}
+.paid{margin-top:22px;background:#fff;border:1.5px solid #bfe2cd;border-radius:14px;padding:14px 16px}
+.paid b{color:var(--ok);display:block;margin-bottom:4px}
+.paid p{font-size:14px;color:var(--ink-500);line-height:1.5;margin-bottom:10px}
 @media (prefers-reduced-motion:reduce){.live,.live .wave,.live-dot{animation:none}}
 </style>
 </head>
@@ -156,6 +177,7 @@ input{font:inherit}
     <img class="si-logo" src="logo-vert.png" alt="Newport County Dinner Club">
     <h1>Your card, on your phone</h1>
     <p class="lead">Activate your <span id="si-season"></span> membership once. Then tap a restaurant and show your server the screen.</p>
+    <button class="btn pay" id="si-join" type="button" style="margin-bottom:18px">New member? Join and pay</button>
     <form id="si-form" autocomplete="on" novalidate>
       <div class="field"><label for="si-email">Email used to buy or renew</label>
         <input id="si-email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required></div>
@@ -165,9 +187,37 @@ input{font:inherit}
       <div class="err" id="si-err" role="alert"></div>
       <button class="btn" type="submit">Activate my card</button>
     </form>
-    <div class="si-foot">Not a member yet? <a id="si-buy" target="_blank" rel="noopener">Join the club</a><br>
+    <div class="si-foot">Not a member yet? <a id="si-buy" href="#join">Join and pay with Apple Pay</a><br>
       Questions: <a id="si-mail"></a></div>
     <div class="demo-hint"><b>Mockup:</b> any email and member number will activate. In the live app this checks the club's member list and emails a one-time sign-in link.</div>
+  </div>
+</section>
+
+
+<!-- JOIN / PAY -->
+<section class="view" id="join">
+  <div class="jn">
+    <button class="jn-back" id="jn-back" type="button"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m15 18-6-6 6-6"/></svg>Back</button>
+    <h1>Join the Dinner Club</h1>
+    <p class="lead">Two-for-one entrées at 50+ Newport County restaurants, all season. Pay in under a minute, then activate your card on this phone.</p>
+    <form id="jn-form" novalidate>
+      <div class="seg" role="radiogroup" aria-label="Membership type">
+        <label><input type="radio" name="jt" value="new" checked>New member</label>
+        <label><input type="radio" name="jt" value="renew">Renewing</label>
+      </div>
+      <div class="field"><label for="jn-name">Full name</label><input id="jn-name" autocomplete="name" placeholder="First and last name" required></div>
+      <div class="field"><label for="jn-email">Email</label><input id="jn-email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+        <small>Use the same email at checkout. It is how your card finds your membership.</small></div>
+      <div class="price"><span id="jn-season"></span><div><b id="jn-price"></b><s id="jn-reg"></s></div></div>
+      <div class="err" id="jn-err" role="alert"></div>
+      <button class="btn pay" type="submit"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pay with Apple Pay or card</button>
+      <div class="pay-note">Secure checkout by Square. Apple Pay and Google Pay appear on supported phones. Opens in a new tab.</div>
+    </form>
+    <div class="paid" id="jn-paid" hidden>
+      <b>Finished paying?</b>
+      <p>Come back here and activate your card with the same email.</p>
+      <button class="btn" id="jn-activate" type="button">Activate my card</button>
+    </div>
   </div>
 </section>
 
@@ -226,11 +276,34 @@ $('#si-form').addEventListener('submit',e=>{
   if(!/^\S+@\S+\.\S+$/.test(email)) return $('#si-err').textContent='Enter the email you used to buy or renew.';
   if(num.length<3) return $('#si-err').textContent='Enter your member number.';
   const known=DEMO_MEMBERS.find(m=>m.email.toLowerCase()===email.toLowerCase()||m.number===num);
-  const name=known?known.name:email.split('@')[0].replace(/[._-]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+  const pend=LS.get(K_PENDING,null);
+  const name=known?known.name:(pend&&pend.email.toLowerCase()===email.toLowerCase())?pend.name:email.split('@')[0].replace(/[._-]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
   member={email,number:num,name,activated:new Date().toISOString()};
   LS.set(K_MEMBER,member); $('#si-err').textContent=''; renderHome(); show('home'); toast('Card activated on this phone');
 });
 $('#signout').addEventListener('click',()=>{ if(confirm('Sign out of your card on this phone?')){member=null;LS.set(K_MEMBER,null);show('signin')} });
+
+
+// ---- join / pay ----
+const K_PENDING='ncdc_pending_signup';
+function openJoin(){const p=LS.get(K_PENDING,null);if(p){$('#jn-name').value=p.name;$('#jn-email').value=p.email;$('#jn-paid').hidden=false}renderPrice();show('join')}
+function renderPrice(){const renew=document.querySelector('input[name=jt]:checked').value==='renew';
+  $('#jn-season').textContent=CLUB.season+(renew?' renewal':' membership');
+  $('#jn-price').textContent='$'+CLUB.price.online; $('#jn-reg').textContent=CLUB.price.regular>CLUB.price.online?'$'+CLUB.price.regular:''}
+document.querySelectorAll('input[name=jt]').forEach(r=>r.addEventListener('change',renderPrice));
+$('#si-join').addEventListener('click',openJoin);
+$('#si-buy').addEventListener('click',e=>{e.preventDefault();openJoin()});
+$('#jn-back').addEventListener('click',()=>show(member?'home':'signin'));
+$('#jn-form').addEventListener('submit',e=>{e.preventDefault();
+  const name=$('#jn-name').value.trim(), email=$('#jn-email').value.trim(), renew=document.querySelector('input[name=jt]:checked').value==='renew';
+  if(name.length<2) return $('#jn-err').textContent='Enter your full name.';
+  if(!/^\S+@\S+\.\S+$/.test(email)) return $('#jn-err').textContent='Enter a valid email address.';
+  $('#jn-err').textContent='';
+  LS.set(K_PENDING,{name,email,renew,started:new Date().toISOString()});
+  window.open(renew?CLUB.renewUrl:CLUB.buyUrl,'_blank','noopener');
+  $('#jn-paid').hidden=false; $('#jn-paid').scrollIntoView({behavior:'smooth',block:'center'});
+});
+$('#jn-activate').addEventListener('click',()=>{const p=LS.get(K_PENDING,null);show('signin');if(p){$('#si-email').value=p.email;$('#si-num').focus()}});
 
 // ---- home ----
 function seasonState(){
@@ -338,7 +411,8 @@ function bindHold(btn,id){
 }
 
 // boot
-if(member){renderHome();show('home');
+if(location.hash==='#join'){openJoin()}
+else if(member){renderHome();show('home');
   const deep=new URLSearchParams(location.search).get('r'); if(deep)openRedeem(deep);
 }else{
   show('signin'); const d=DEMO_MEMBERS[0]; $('#si-email').placeholder=d.email; $('#si-num').placeholder=d.number;
