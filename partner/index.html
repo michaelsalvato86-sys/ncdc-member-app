@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurant Code Setup</title>
+<meta name="description" content="Participating restaurants set how servers apply the Dinner Club discount in their POS.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js"></script>
+<script src="../data.js"></script>
+<style>
+:root{--water-500:#194e8f;--water-600:#133b6d;--water-800:#19304c;--harbor-100:#eceff8;--brick-500:#b8492e;--brick-600:#9c3c25;--ink-500:#5a5a5a;--ink-800:#191919;--bg:#f6f7fb;--ok:#1f7a4d;
+  --sans:"Instrument Sans","Helvetica Neue",Helvetica,sans-serif;--serif:"Instrument Serif",Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink-800);-webkit-font-smoothing:antialiased}
+header{background:var(--water-600);padding:18px 16px}
+header div{max-width:980px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+header img{height:34px}
+header span{color:#cdd8ee;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+main{max-width:980px;margin:0 auto;padding:24px 16px 60px;display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:start}
+@media (max-width:820px){main{grid-template-columns:1fr}}
+h1{font-family:var(--serif);font-weight:400;font-size:36px;color:var(--water-600);line-height:1.1}
+.lead{color:var(--ink-500);margin:8px 0 20px;line-height:1.55}
+.box{background:#fff;border:1px solid #e3e7f1;border-radius:16px;padding:18px;margin-bottom:16px}
+.box h2{font-size:15px;color:var(--water-800);margin-bottom:12px}
+label{display:block;font-size:13px;font-weight:600;color:var(--water-800);margin:12px 0 6px}
+label:first-of-type{margin-top:0}
+input,select,textarea{width:100%;padding:12px;border:1.5px solid #cfd6e6;border-radius:10px;font:inherit;font-size:16px;background:#fff}
+textarea{min-height:70px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--water-500)}
+.types{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.types label{margin:0;border:1.5px solid #cfd6e6;border-radius:12px;padding:12px;font-weight:500;color:var(--ink-800);cursor:pointer;line-height:1.35}
+.types label b{display:block;color:var(--water-600);font-size:14px}
+.types label small{color:var(--ink-500);font-size:12px}
+.types input{display:none}
+.types label:has(input:checked){border-color:var(--water-600);background:var(--harbor-100)}
+.hint{font-size:13px;color:var(--ink-500);margin-top:6px;line-height:1.5}
+.btn{display:inline-block;padding:14px 20px;border-radius:12px;background:var(--water-600);color:#fff;font-weight:600;font-size:16px;border:0;cursor:pointer;font-family:inherit}
+.btn.alt{background:#fff;color:var(--water-600);border:1.5px solid var(--water-600);margin-left:8px}
+.ok{color:var(--ok);font-weight:600;margin-top:12px;min-height:20px}
+.err{color:var(--brick-600);font-weight:600;margin-top:12px}
+aside{position:sticky;top:16px}
+.phone{background:#fff;border:10px solid var(--ink-800);border-radius:36px;padding:18px 14px;min-height:520px;text-align:center}
+.p-eye{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--brick-500);font-weight:700}
+.p-name{font-family:var(--serif);font-size:26px;color:var(--water-600);margin:4px 0 12px;line-height:1.1}
+.p-live{border-radius:14px;padding:12px;color:#fff;background:linear-gradient(135deg,var(--water-500),var(--water-800));margin-bottom:12px;font-size:13px}
+.p-live b{display:block;font-family:var(--serif);font-weight:400;font-size:22px}
+.p-code{border:1.5px solid #e3e7f1;border-radius:14px;padding:12px}
+.p-code h3{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-500);margin-bottom:8px}
+.p-code img,.p-code svg{max-width:100%;height:auto;display:block;margin:0 auto}
+.p-code .qr{width:180px;margin:0 auto}
+.promo{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:22px;font-weight:700;letter-spacing:.1em;background:var(--harbor-100);border-radius:10px;padding:12px 6px;word-break:break-all;color:var(--water-800)}
+.p-srv{font-size:12px;color:var(--ink-500);margin-top:8px;line-height:1.45}
+.cap{font-size:12px;color:var(--ink-500);text-align:center;margin-top:10px}
+.demo{background:#fff6f3;border:1px dashed var(--brick-500);border-radius:12px;padding:10px 12px;font-size:13px;color:var(--brick-600);margin-bottom:16px;line-height:1.5}
+.pos-tips{font-size:13px;color:var(--ink-500);line-height:1.55}
+.pos-tips b{color:var(--ink-800)}
+</style>
+</head>
+<body>
+<header><div><img src="../logo-white.png" alt="Newport County Dinner Club"><span>Restaurant setup</span></div></header>
+<main>
+  <section>
+    <h1>Set up your Dinner Club code</h1>
+    <p class="lead">Members tap your restaurant in the app and show this screen to the server. Tell us what your server needs to see to apply the 2-for-1 in your POS. Every POS is different, so pick whatever works at your register.</p>
+    <div class="demo"><b>Mockup:</b> this page saves to this browser only, so you can see your code in the member app on the same device. The live version sends submissions to the club for approval.</div>
+    <form id="f" novalidate>
+      <div class="box"><h2>1. Your restaurant</h2>
+        <label for="rest">Restaurant</label><select id="rest" required></select>
+        <label for="contact">Your name and email</label><input id="contact" placeholder="Manager name, manager@restaurant.com">
+        <label for="pos">POS system</label>
+        <select id="pos"><option value="">Choose…</option><option>Toast</option><option>Square</option><option>Clover</option><option>Lightspeed</option><option>SpotOn</option><option>Aloha (NCR Voyix)</option><option>Revel</option><option>Other</option></select>
+      </div>
+      <div class="box"><h2>2. What should the member's screen show?</h2>
+        <div class="types" id="types">
+          <label><input type="radio" name="t" value="image" checked><b>Upload a graphic</b><small>Your QR, barcode or coupon image</small></label>
+          <label><input type="radio" name="t" value="qr"><b>QR code</b><small>We draw it from your text</small></label>
+          <label><input type="radio" name="t" value="barcode"><b>Barcode</b><small>Code 128 from your text</small></label>
+          <label><input type="radio" name="t" value="code"><b>Promo code</b><small>Server types it in</small></label>
+          <label><input type="radio" name="t" value="none"><b>No code</b><small>Server presses a discount button</small></label>
+        </div>
+        <div id="in-image"><label for="img">Graphic (PNG or JPG)</label><input id="img" type="file" accept="image/png,image/jpeg,image/webp"><p class="hint">A clean export from your POS works best. Square image, at least 600 px.</p></div>
+        <div id="in-value" hidden><label for="val" id="val-l">Code text</label><input id="val" placeholder="e.g. DINNERCLUB27" autocapitalize="characters"></div>
+        <label for="ins">Note for your server (optional)</label><textarea id="ins" placeholder="e.g. Ring as 'Dinner Club 2-for-1' under Discounts, then scan."></textarea>
+      </div>
+      <div class="box"><h2>3. Your restrictions (optional)</h2>
+        <label for="rx">Days, times or blackout dates</label><textarea id="rx" placeholder="e.g. Sunday to Thursday only. Not valid on holidays."></textarea>
+      </div>
+      <button class="btn" type="submit">Save my code</button><button class="btn alt" type="button" id="open">Open member app</button>
+      <div id="msg"></div>
+      <div class="box" style="margin-top:22px"><h2>Which option fits my POS?</h2>
+        <div class="pos-tips">
+          <p><b>Toast:</b> set up a "Dinner Club 2-for-1" discount (lowest-priced item). The simplest fit is usually <b>No code</b> or <b>Promo code</b>. Confirm with Toast before relying on a scanned coupon.</p><br>
+          <p><b>Square:</b> create a discount, then choose <b>Barcode</b> or <b>Promo code</b> if your register has a scanner.</p><br>
+          <p><b>Clover, Lightspeed, SpotOn and others:</b> if your POS printed a coupon barcode, use <b>Upload a graphic</b>. Otherwise use <b>Promo code</b>.</p><br>
+          <p>These are general notes. Check with your POS provider for exact steps.</p>
+        </div></div>
+    </form>
+  </section>
+  <aside><div class="phone" id="prev"></div><div class="cap">What members will show your server</div></aside>
+</main>
+<script>
+(function(){
+const $=s=>document.querySelector(s), K='ncdc_partner_codes';
+const LS={get(d){try{return JSON.parse(localStorage.getItem(K))||d}catch(e){return d}},set(v){try{localStorage.setItem(K,JSON.stringify(v));return true}catch(e){return false}}};
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let imgData='';
+$('#rest').innerHTML='<option value="">Choose your restaurant…</option>'+RESTAURANTS.map(r=>`<option value="${r.id}">${esc(r.name)}</option>`).join('');
+const type=()=>document.querySelector('input[name=t]:checked').value;
+function syncInputs(){const t=type();$('#in-image').hidden=t!=='image';$('#in-value').hidden=!(t==='qr'||t==='barcode'||t==='code');
+  $('#val-l').textContent=t==='qr'?'Text or URL inside the QR':t==='barcode'?'Barcode value':'Promo code';preview()}
+function preview(){
+  const r=RESTAURANTS.find(x=>x.id===$('#rest').value), t=type(), v=$('#val').value.trim(), ins=$('#ins').value.trim();
+  let code='';
+  if(t==='none')code=`<h3>Show this screen</h3><div class="p-srv">${esc(ins||'Server: apply the Dinner Club 2-for-1 discount in your POS.')}</div>`;
+  else if(t==='image')code=`<h3>Scan or key this code</h3>${imgData?`<img src="${imgData}" alt="">`:'<div class="p-srv">Upload your graphic to see it here.</div>'}${ins?`<div class="p-srv">${esc(ins)}</div>`:''}`;
+  else if(t==='qr'){if(v){const q=qrcode(0,'M');q.addData(v);q.make();code=`<h3>Scan this code</h3><div class="qr">${q.createSvgTag({cellSize:5,margin:2,scalable:true})}</div>`}else code='<h3>Scan this code</h3><div class="p-srv">Enter the QR text.</div>';code+=ins?`<div class="p-srv">${esc(ins)}</div>`:''}
+  else if(t==='barcode')code=`<h3>Scan this barcode</h3>${v?'<svg id="pbc"></svg>':'<div class="p-srv">Enter the barcode value.</div>'}${ins?`<div class="p-srv">${esc(ins)}</div>`:''}`;
+  else code=`<h3>Promo code</h3><div class="promo">${esc(v||'YOURCODE')}</div>${ins?`<div class="p-srv">${esc(ins)}</div>`:''}`;
+  $('#prev').innerHTML=`<div class="p-eye">Dinner Club member</div><div class="p-name">${esc(r?r.name:'Your restaurant')}</div><div class="p-live">Live card<b>Member Name</b>${new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})}</div><div class="p-code">${code}</div>`;
+  if(t==='barcode'&&v){try{JsBarcode('#pbc',v,{format:'CODE128',width:1.8,height:70,fontSize:13,margin:4})}catch(e){$('#prev .p-code').insertAdjacentHTML('beforeend','<div class="err">That value cannot be a Code 128 barcode.</div>')}}
+}
+$('#types').addEventListener('change',syncInputs);
+['#rest','#val','#ins'].forEach(s=>$(s).addEventListener('input',preview));
+$('#rest').addEventListener('change',()=>{const saved=LS.get({})[$('#rest').value];if(saved){document.querySelector(`input[name=t][value=${saved.type}]`).checked=true;$('#val').value=saved.type==='image'?'':saved.value||'';imgData=saved.type==='image'?saved.value:'';$('#ins').value=saved.instructions||'';$('#rx').value=saved.restrictions||'';$('#pos').value=saved.pos||''}syncInputs()});
+$('#img').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;
+  // downscale so it fits in browser storage
+  const im=new Image(), rd=new FileReader();
+  rd.onload=()=>{im.onload=()=>{const s=Math.min(1,900/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*s;c.height=im.height*s;const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(im,0,0,c.width,c.height);imgData=c.toDataURL('image/png');preview()};im.src=rd.result};rd.readAsDataURL(f)});
+$('#f').addEventListener('submit',e=>{e.preventDefault();const id=$('#rest').value,t=type(),v=$('#val').value.trim(),m=$('#msg');
+  if(!id){m.className='err';m.textContent='Choose your restaurant.';return}
+  if(t==='image'&&!imgData){m.className='err';m.textContent='Upload your graphic.';return}
+  if((t==='qr'||t==='barcode'||t==='code')&&!v){m.className='err';m.textContent='Enter the code text.';return}
+  const all=LS.get({});all[id]={type:t,value:t==='image'?imgData:v,instructions:$('#ins').value.trim(),restrictions:$('#rx').value.trim(),pos:$('#pos').value,contact:$('#contact').value.trim(),submitted:new Date().toISOString()};
+  if(!LS.set(all)){m.className='err';m.textContent='This browser could not save it (storage full or blocked). Try a smaller image.';return}
+  m.className='ok';m.textContent='Saved. Open the member app on this device and tap your restaurant to see it.'});
+$('#open').addEventListener('click',()=>{const id=$('#rest').value;location.href='../'+(id?'?r='+id:'')});
+syncInputs();
+})();
+</script>
+</body>
+</html>
