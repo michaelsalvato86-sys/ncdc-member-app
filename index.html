@@ -253,9 +253,9 @@ function renderHome(){
   renderList();
 }
 function renderList(){
-  const q=$('#q').value.trim().toLowerCase().normalize('NFD').replace(/p{M}/gu,'');
+  const q=$('#q').value.trim().toLowerCase().normalize('NFD').replace(/\p{M}/gu,'');
   const rows=RESTAURANTS.filter(r=>{
-    const n=r.name.toLowerCase().normalize('NFD').replace(/p{M}/gu,'');
+    const n=r.name.toLowerCase().normalize('NFD').replace(/\p{M}/gu,'');
     if(q&&!n.includes(q))return false;
     if(filter==='used')return usesFor(r.id)>0;
     if(filter==='ready')return usesFor(r.id)===0&&!r.status;
