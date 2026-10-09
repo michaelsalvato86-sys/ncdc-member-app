@@ -51,7 +51,7 @@ const RESTAURANT_INFO = {
   "address": "254 Thames St, Newport, RI 02840",
   "town": "Newport",
   "phone": "(401) 846-8768",
-  "url": null,
+  "url": "https://benjaminsnewportri.com/",
   "_confidence": "partial"
  },
  "blue-plate": {
@@ -366,7 +366,7 @@ const RESTAURANT_INFO = {
   "address": "32 Broadway, Newport, RI 02840",
   "town": "Newport",
   "_confidence": "partial",
-  "url": null
+  "url": "https://www.pourjudgementnewportri.com/"
  },
  "quencher": {
   "address": "95 Long Wharf Mall, Newport, RI 02840",

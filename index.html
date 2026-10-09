@@ -755,7 +755,7 @@ function menuBlock(r){
   const secs=m.sections.filter(x=>x.items&&x.items.length);
   const nav=secs.length>1?`<nav class="mnav" aria-label="Menu sections">${secs.map((sec,i)=>`<button type="button" data-go="m-${i}"${i===0?' class="on"':''}>${esc(sec.title||'Menu')}</button>`).join('')}</nav>`:'';
   return `<div class="sec" id="dt-menu"><h3>Menu</h3>${nav}${secs.map((sec,i)=>`<div class="mgrp" id="m-${i}"><h4>${esc(sec.title||'Menu')}</h4><ul>${sec.items.map(it=>`<li><div class="mi"><b>${esc(it.name)}</b>${it.price?`<span>${esc(it.price)}</span>`:''}</div>${it.desc?`<p>${esc(it.desc)}</p>`:''}</li>`).join('')}</ul></div>`).join('')}
-    <p class="mnote">${sub?'Updated by the restaurant':'From the restaurant’s website'}${when?', checked '+when:''}. Prices and dishes can change; the restaurant has the final word. ${r.menu?`<a href="${esc(r.menu)}" target="_blank" rel="noopener">Full menu</a>`:''}</p></div>`;
+    <p class="mnote">${sub?'Updated by the restaurant':'From the restaurant’s own menu'}${when?', checked '+when:''}. Prices and dishes can change; the restaurant has the final word. ${r.menu?`<a href="${esc(r.menu)}" target="_blank" rel="noopener">Full menu</a>`:''}</p></div>`;
 }
 function menuNav(){const dt=$('#detail'),nav=dt.querySelector('.mnav');if(!nav)return;
   nav.querySelectorAll('button').forEach(bt=>bt.addEventListener('click',()=>{const g=document.getElementById(bt.dataset.go);if(!g)return;

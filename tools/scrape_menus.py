@@ -302,7 +302,7 @@ def main():
             social[rid] = socials(i['url'])
         url = i.get('menu')
         if not url:
-            report[rid] = 'no menu url'; menus.pop(rid, None); continue
+            report[rid] = 'no menu url' + (' (kept checked copy)' if (menus.get(rid) or {}).get('how') == 'agent' else ''); (menus.get(rid) or {}).get('how') == 'agent' or menus.pop(rid, None); continue
         try:
             secs, total, how = scrape(rid, url)
             prev = menus.get(rid) or {}
