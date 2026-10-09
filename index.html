@@ -813,7 +813,7 @@ function openDetail(id,push){
   if(push!==false){try{history.pushState({d:id},'')}catch(e){}}
 }
 function closeDetail(){$('#detail').classList.remove('on');renderHome()}
-$('#dt-back').addEventListener('click',()=>history.back());
+$('#dt-back').addEventListener('click',()=>{ if(history.state&&history.state.d) history.back(); else closeDetail(); });
 
 // ---- redeem ----
 let clockT=null, wakeLock=null;

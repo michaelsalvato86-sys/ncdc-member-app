@@ -14,7 +14,7 @@ UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 OUT = ROOT / 'logos'
 # Checked by eye 2026-10-08: these sites mark someone else's image as a logo (TripAdvisor badge, Marriott brand,
 # a booking-widget logo). Leave them on the letter badge until the restaurant sends its own.
-REJECT = {'annies', 'skiff-bar', 'stoneacre-brasserie', 'stoneacre-garden', 'lucia', 'one-bellevue'}  # agent-found logos replace the first four
+REJECT = {'annies', 'skiff-bar', 'stoneacre-brasserie', 'stoneacre-garden', 'one-bellevue'}  # agent-found logos replace the first four
 
 
 def get(url, **kw):

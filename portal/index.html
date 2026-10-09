@@ -357,11 +357,11 @@ $('#tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)r
 function render(){['dash','menu','specials','code','members','sharing'].forEach(t=>{const el=$('#t-'+t);el.classList.toggle('on',t===tab);if(t!==tab)el.innerHTML=''});
   ({dash:renderDash,menu:renderMenu,specials:renderSpecials,code:renderCode,members:renderMembers,sharing:renderSharing})[tab]();}
 
-function restPicker(){ // admins can look at any restaurant
-  if(session.role!=='admin')return '';
-  return `<select id="pick" aria-label="Restaurant" style="max-width:320px">${RESTAURANTS.map(r=>`<option value="${r.id}"${r.id===viewRid?' selected':''}>${esc(r.name)}${isHRG(r.id)?' (Heritage)':''}</option>`).join('')}</select>`;
+function restPicker(){ // admins can look at any restaurant; in the demo a restaurant login can switch too, to compare views
+  return `<select id="pick" aria-label="Restaurant" style="max-width:320px">${RESTAURANTS.map(r=>`<option value="${r.id}"${r.id===viewRid?' selected':''}>${esc(r.name)}${isHRG(r.id)?' (Heritage, Toast)':''}</option>`).join('')}</select>`;
 }
-function bindPicker(){const p=$('#pick');if(p)p.addEventListener('change',()=>{viewRid=p.value;render()})}
+function bindPicker(){const p=$('#pick');if(p)p.addEventListener('change',()=>{viewRid=p.value;
+  if(session.role!=='admin'){session.rid=viewRid;LS.set('ncdc_portal_session',session);$('#who').innerHTML='<b>'+esc(restName(viewRid))+'</b>'}render()})}
 
 // ---------- DASHBOARD ----------
 function card(k,title,desc,src,body,wide){
