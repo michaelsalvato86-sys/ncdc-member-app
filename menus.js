@@ -1988,94 +1988,89 @@ const MENUS = {
 "source": "https://anniesnewport.com/menu-2/"
 },
 "aquidneck-pizzeria": {
-"checked": "2026-10-09T03:29:55+00:00",
-"how": "linked-pdf",
+"checked": "2026-10-09T03:41:53+00:00",
+"how": "agent",
 "sections": [
 {
 "items": [
 {
-"desc": "",
-"name": "ONE EGG ANY STYLE",
+"desc": "Breakfast served until 12pm",
+"name": "One Egg Any Style",
 "price": "$6.99"
 },
 {
-"desc": "",
-"name": "TWO EGGS ANY STYLE",
+"desc": "add sausage, bacon, ham, or chourico 3.00",
+"name": "Two Eggs Any Style",
 "price": "$7.99"
 },
 {
-"desc": "bacon, ham, or chourico",
-"name": "add sausage",
-"price": "$3.00"
-},
-{
 "desc": "",
-"name": "STEAK & EGGS",
+"name": "Steak & Eggs",
 "price": "$12.99"
 }
 ],
-"title": "Breakfast Served Until 12Pm"
+"title": "Eggs"
 },
 {
 "items": [
 {
 "desc": "",
-"name": "HOMEFRIES",
+"name": "Homefries",
 "price": "$3.00"
 },
 {
 "desc": "",
-"name": "HAM",
+"name": "Ham",
 "price": "$3.00"
 },
 {
 "desc": "",
-"name": "BACON",
+"name": "Bacon",
 "price": "$3.00"
 },
 {
 "desc": "",
-"name": "SAUSAGE",
+"name": "Sausage",
 "price": "$3.00"
 },
 {
 "desc": "",
-"name": "CHOU RICO",
+"name": "Chou Rico",
 "price": "$3.00"
 },
 {
 "desc": "",
-"name": "CORNED BEEF HASH",
+"name": "Corned Beef Hash",
 "price": "$3.00"
 },
 {
 "desc": "",
-"name": "DELMONICO STEAK",
+"name": "Delmonico Steak",
 "price": "$5.99"
 },
 {
 "desc": "",
-"name": "BAGEL",
+"name": "Bagel",
 "price": "$3.49"
 },
 {
 "desc": "",
-"name": "ENGLISH MUFFIN",
+"name": "English Muffin",
 "price": "$2.79"
 },
 {
 "desc": "",
-"name": "TOAST",
+"name": "Toast",
 "price": "$1.99"
 },
 {
 "desc": "",
-"name": "PANCAKES (1)",
+"name": "Pancakes (1)",
 "price": "$4.00"
 },
 {
 "desc": "",
-"name": "PANCAKES ( 2)",
+"name": "Pancakes (2)",
 "price": "$6.00"
 }
 ],
@@ -2084,69 +2079,24 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "",
-"name": "EGG & CHEESE",
+"desc": "served on your choice of bagel, English muffin, hard roll, white, wheat or rye",
+"name": "Egg & Cheese",
 "price": "$5.49"
 },
 {
-"desc": "MEAT, AND CHEESE",
-"name": "EGG",
+"desc": "choose bacon, ham, sausage, or chourico",
+"name": "Egg, Meat, and Cheese",
 "price": "$6.49"
 },
 {
 "desc": "ham, peppers, onions, and cheese",
-"name": "WESTERN",
+"name": "Western",
 "price": "$6.99"
 },
 {
-"desc": "add Tomato .50¢",
-"name": "GRILLED CHEESE",
+"desc": "add tomato .50¢; add bacon or ham 1.00",
+"name": "Grilled Cheese",
 "price": "$5.49"
-},
-{
-"desc": "",
-"name": "add Bacon or Ham",
-"price": "$1.00"
-},
-{
-"desc": "mozzarella, american or swiss",
-"name": "CHEESE",
-"price": "$10.99"
-},
-{
-"desc": "",
-"name": "HAM & CHEESE",
-"price": "$11.99"
-},
-{
-"desc": "",
-"name": "BACON & CHEESE",
-"price": "$11.99"
-},
-{
-"desc": "",
-"name": "FETA & TOMATO",
-"price": "$11.49"
-},
-{
-"desc": "spinach, feta & tomato",
-"name": "GREEK",
-"price": "$11.99"
-},
-{
-"desc": "chourico, peppers & cheese",
-"name": "PORTUGUESE",
-"price": "$12.99"
-},
-{
-"desc": "broccoli, mushroom, tomato & cheese",
-"name": "VEGGIE",
-"price": "$12.49"
-},
-{
-"desc": "home made chili, onions & mozzarella",
-"name": "HOUSE SPECIAL",
-"price": "$12.99"
 }
 ],
 "title": "Breakfast Sandwiches"
@@ -2154,39 +2104,99 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "lettuce, tomato, cucumber",
-"name": "CLASSIC TOSSED",
+"desc": "mozzarella, american or swiss. Three egg omelettes served with homefries and toast; each additional egg 75¢",
+"name": "Cheese",
+"price": "$10.99"
+},
+{
+"desc": "",
+"name": "Ham & Cheese",
+"price": "$11.99"
+},
+{
+"desc": "",
+"name": "Bacon & Cheese",
+"price": "$11.99"
+},
+{
+"desc": "",
+"name": "Feta & Tomato",
 "price": "$11.49"
 },
 {
-"desc": "lettuce, tomato, cucumber, Genoa",
-"name": "ANTIPASTO",
+"desc": "ham, peppers, onions & cheese",
+"name": "Western",
+"price": "$12.99"
+},
+{
+"desc": "spinach, feta & tomato",
+"name": "Greek",
+"price": "$11.99"
+},
+{
+"desc": "chourico, peppers & cheese",
+"name": "Portuguese",
+"price": "$12.99"
+},
+{
+"desc": "broccoli, mushroom, tomato & cheese",
+"name": "Veggie",
+"price": "$12.49"
+},
+{
+"desc": "home made chili, onions & mozzarella",
+"name": "House Special",
+"price": "$12.99"
+},
+{
+"desc": "bacon, sausage, corned beef hash, ham, chourico, chili, broccoli, tomato, spinach, mushroom, onion, green peppers, hot peppers, olives, pineapple",
+"name": "Fillings",
+"price": "50¢ each"
+}
+],
+"title": "Omelets"
+},
+{
+"items": [
+{
+"desc": "lettuce, tomato, cucumber",
+"name": "Classic Tossed",
+"price": "$11.49"
+},
+{
+"desc": "lettuce, tomato, cucumber, Genoa salami, ham, mozzarella, olives",
+"name": "Antipasto",
 "price": "$13.49"
 },
 {
-"desc": "lettuce, tomato, cucumber, feta",
-"name": "GREEK",
+"desc": "lettuce, tomato, cucumber, feta cheese, onions, green peppers, pepperoncini, olives",
+"name": "Greek",
 "price": "$13.49"
 },
 {
-"desc": "lettuce, tomato, cucumber, ham,",
-"name": "CHEFS",
+"desc": "lettuce, tomato, cucumber, ham, roast beef, turkey, mozzarella, hard-boiled egg",
+"name": "Chefs",
 "price": "$13.49"
 },
 {
 "desc": "romaine lettuce with Caesar dressing",
-"name": "CAESAR",
+"name": "Caesar",
 "price": "$11.49"
 },
 {
 "desc": "",
-"name": "BUFFALO CHICKEN",
+"name": "Buffalo Chicken",
 "price": "$14.49"
 },
 {
-"desc": "(Greek Tomato Salad) tomatoes,",
-"name": "DOMATOSALATA",
+"desc": "(Greek Tomato Salad) tomatoes, onions, cucumbers, olives & feta cheese in olive oil",
+"name": "Domatosalata",
 "price": "$13.49"
+},
+{
+"desc": "with grilled chicken breast, our homemade tuna salad, or pita bread",
+"name": "Top Any Salad",
+"price": "$3"
 }
 ],
 "title": "Salads"
@@ -2195,63 +2205,53 @@ const MENUS = {
 "items": [
 {
 "desc": "",
-"name": "bread for",
-"price": "$3"
+"name": "Creamy Italian, Blue Cheese, Ranch, Caesar, Greek, Balsamic Vinaigrette, Raspberry Vinaigr",
+"price": ""
 }
 ],
-"title": "Top Any Salad"
+"title": "Salad Dressings"
 },
 {
 "items": [
 {
-"desc": "onions, peppers, hot peppers, tomatoes, olives, lettuce,",
-"name": "LOADED NACHOS",
+"desc": "onions, peppers, hot peppers, tomatoes, olives, lettuce, chili, cheese, sour cream & salsa",
+"name": "Loaded Nachos",
 "price": "$13.49"
 },
 {
 "desc": "",
-"name": "MOZZARELLA STICKS",
+"name": "Mozzarella Sticks",
 "price": "$10.49"
 },
 {
-"desc": "(8 pieces) choice of buffalo, teriyaki, BBQ, Hades (extra hot),",
-"name": "CHICKEN WINGS",
+"desc": "(8 pieces) choice of buffalo, teriyaki, BBQ, Hades (extra hot), East-West, AQ Wings (garlic, butter, parmesan)",
+"name": "Chicken Wings",
 "price": "$11.99"
 },
 {
 "desc": "w/ Fries. choice of BBQ, honey mustard, blue cheese, hot sauce",
-"name": "CHICKEN TENDERS",
+"name": "Chicken Tenders",
 "price": "$11.99"
 },
 {
-"desc": "with onions & cheese I with bacon & cheese",
-"name": "POTATO SKINS",
+"desc": "with onions & cheese | with bacon & cheese | with chili & cheese | with broccoli & cheese",
+"name": "Potato Skins",
 "price": "$10.99"
 },
 {
-"desc": "",
-"name": "GARLIC BREAD",
+"desc": "add cheese 1.50",
+"name": "Garlic Bread",
 "price": "$3.99"
 },
 {
 "desc": "",
-"name": "add cheese",
-"price": "$1.50"
-},
-{
-"desc": "",
-"name": "ONION RINGS",
+"name": "Onion Rings",
 "price": "$7.99"
 },
 {
-"desc": "choice of steak fries or curly fries",
-"name": "FRENCH FRIES",
+"desc": "choice of steak fries or curly fries; add cheese 1.50 | add chili & cheese 3.50",
+"name": "French Fries",
 "price": "$6.49"
-},
-{
-"desc": "",
-"name": "add cheese 1.50 | add chili & cheese",
-"price": "$3.50"
 }
 ],
 "title": "Appetizers"
@@ -2260,18 +2260,18 @@ const MENUS = {
 "items": [
 {
 "desc": "",
-"name": "SOUP OF THE DAY",
-"price": "5.49 / 6.49"
+"name": "Soup of the Day",
+"price": "$5.49 / $6.49"
 },
 {
 "desc": "",
-"name": "NEW ENGLAND CLAM CHOWDER",
-"price": "6.49 / 7.49"
+"name": "New England Clam Chowder",
+"price": "$6.49 / $7.49"
 },
 {
 "desc": "",
-"name": "CHILI WITH MOZZARELLA CHEESE",
-"price": "6.49 / 7.49"
+"name": "Chili with Mozzarella Cheese",
+"price": "$6.49 / $7.49"
 }
 ],
 "title": "Soup & Chili"
@@ -2279,34 +2279,134 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "white, wheat, or rye",
-"name": "GRILLED CHEESE",
+"desc": "lettuce, tomato, bacon on white, wheat, or rye; with steak or curly fries",
+"name": "Turkey",
+"price": "$13.49"
+},
+{
+"desc": "lettuce, tomato, bacon on white, wheat, or rye; with steak or curly fries",
+"name": "Roast Beef",
+"price": "$13.49"
+},
+{
+"desc": "lettuce, tomato, bacon on white, wheat, or rye; with steak or curly fries",
+"name": "Ham",
+"price": "$13.49"
+},
+{
+"desc": "lettuce, tomato, bacon on white, wheat, or rye; with steak or curly fries",
+"name": "BLT",
+"price": "$13.49"
+},
+{
+"desc": "lettuce, tomato, bacon on white, wheat, or rye; with steak or curly fries",
+"name": "Hamburger",
+"price": "$13.49"
+},
+{
+"desc": "lettuce, tomato, bacon on white, wheat, or rye; with steak or curly fries",
+"name": "Tuna",
+"price": "$13.49"
+},
+{
+"desc": "lettuce, tomato, bacon on white, wheat, or rye; with steak or curly fries",
+"name": "Cheeseburger",
+"price": "$13.49"
+},
+{
+"desc": "lettuce, tomato, bacon on white, wheat, or rye; with steak or curly fries",
+"name": "Chicken",
+"price": "$13.49"
+},
+{
+"desc": "white, wheat, or rye; with tomato +.50; with bacon or ham +2.00",
+"name": "Grilled Cheese",
 "price": "$8.99"
 },
 {
 "desc": "",
-"name": "with Tomato +.50",
-"price": "$50"
-},
-{
-"desc": "",
-"name": "with Bacon or Ham +2.00",
-"price": "$2.00"
-},
-{
-"desc": "",
-"name": "GYR0",
+"name": "Gyro",
 "price": "$13.49"
 }
 ],
-"title": "PLUS served with your"
+"title": "Club Sandwiches"
 },
 {
 "items": [
 {
+"desc": "genoa salami, ham, mozzarella",
+"name": "Italian",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
 "desc": "",
-"name": "SMALL (BIN) 11.49 I LARGE (121N)",
-"price": "$12.49"
+"name": "Ham",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "",
+"name": "Turkey",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "",
+"name": "Roast Beef",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "",
+"name": "Tuna",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "",
+"name": "BLT",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "peppers, onions, mushrooms, olives",
+"name": "Veggie",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "",
+"name": "Grilled Chicken",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "",
+"name": "Pastrami",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "peppers, onions, mushrooms",
+"name": "Steak Bomb",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "",
+"name": "Chicken Caesar Wrap",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "",
+"name": "Buffalo Chicken Wrap",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "turkey, feta, pesto",
+"name": "Pesto Turkey Wrap",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "(served cold)",
+"name": "Chicken Salad Willow Tree",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "",
+"name": "Chicken Cutlet",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
 }
 ],
 "title": "Sandwiches"
@@ -2314,53 +2414,83 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "extra cheese: mozzarella, swiss, american, provolone",
-"name": "EACH",
-"price": "$1.00"
+"desc": "Made with our homemade tomato sauce and covered in mozzarella cheese",
+"name": "Meatball Parmesan",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "Made with our homemade tomato sauce and covered in mozzarella cheese",
+"name": "Chourico Parmesan",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "Made with our homemade tomato sauce and covered in mozzarella cheese",
+"name": "Eggplant Parmesan",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "Made with our homemade tomato sauce and covered in mozzarella cheese",
+"name": "Chicken Parmesan",
+"price": "Small (8in) $11.49 / Large (12in) $12.49"
+},
+{
+"desc": "green peppers, hot peppers, onions, pickles, olives, mushrooms, lettuce, tomato, cucumber",
+"name": "Sandwich Toppings – No Charge",
+"price": "$0"
+},
+{
+"desc": "mozzarella, swiss, american, provolone",
+"name": "Sandwich Toppings – Extra Cheese",
+"price": "$1.00 each"
+},
+{
+"desc": "meatballs, sausage, bacon, ham, turkey, roast beef, chourico, shaved steak, grilled chicken, pastrami, genoa salami, eggplant, veal",
+"name": "Sandwich Toppings – Meats & More",
+"price": "$2.00 each"
 }
 ],
-"title": "Chicken Cutlet"
+"title": "Parmesans"
 },
 {
 "items": [
 {
-"desc": "",
-"name": "HAMBURGER",
+"desc": "served with onion rings, salad, or fries; lettuce, tomato, onion, pickles",
+"name": "Hamburger",
 "price": "$13.49"
 },
 {
 "desc": "american, swiss, provolone or mozzarella",
-"name": "CHEESEBURGER",
+"name": "Cheeseburger",
 "price": "$14.49"
 },
 {
 "desc": "",
-"name": "MUSHROOM CHEESEBURGER",
+"name": "Mushroom Cheeseburger",
 "price": "$14.49"
 },
 {
 "desc": "bacon, onions, cheese, BBQ",
-"name": "AQ BURGER",
+"name": "AQ Burger",
 "price": "$15.99"
 },
 {
 "desc": "two 8oz burgers stacked & topped with extra cheese",
-"name": "THE POUNDER (1LB.)",
+"name": "The Pounder (1lb.)",
 "price": "$17.49"
 },
 {
 "desc": "",
-"name": "DOUBLE AQ (1LB.)",
+"name": "Double AQ (1lb.)",
 "price": "$18.99"
 },
 {
 "desc": "bacon, fried egg, cheese",
-"name": "THE BREAKFAST BURGER",
+"name": "The Breakfast Burger",
 "price": "$16.49"
 },
 {
 "desc": "home made chili, cheese",
-"name": "THE CHILI BURGER",
+"name": "The Chili Burger",
 "price": "$16.49"
 }
 ],
@@ -2369,14 +2499,34 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "",
-"name": "MARINARA SAUCE",
+"desc": "served with bread; choose spaghetti, ziti, or linguini",
+"name": "Marinara Sauce",
 "price": "$13.99"
 },
 {
 "desc": "",
-"name": "MEAT SAUCE",
+"name": "Meat Sauce",
 "price": "$16.99"
+},
+{
+"desc": "",
+"name": "Meatballs or Sausage",
+"price": "$15.99"
+},
+{
+"desc": "",
+"name": "Garlic & Oil",
+"price": "$13.99"
+},
+{
+"desc": "linguini; garlic & oil sauce topped with feta and chicken",
+"name": "Aquidneck Pasta",
+"price": "$16.99"
+},
+{
+"desc": "linguini; served w/ pesto sauce & tomato; add chicken +3.00",
+"name": "Pesto",
+"price": "$14.99"
 }
 ],
 "title": "Pasta"
@@ -2384,59 +2534,19 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "",
-"name": "OR SAUSAGE",
-"price": "$15.99"
-},
-{
-"desc": "",
-"name": "GARLIC & OIL",
-"price": "$13.99"
-}
-],
-"title": "Meatballs"
-},
-{
-"items": [
-{
-"desc": "garlic & oil sauce topped with feta",
-"name": "AQUIDNECK PASTA",
+"desc": "our lasagna is 100% home made; served with bread",
+"name": "Lasagna",
 "price": "$16.99"
 },
 {
-"desc": "served w/ pesto sauce & tomato",
-"name": "PESTO",
-"price": "$14.99"
-},
-{
-"desc": "",
-"name": "add chicken +3.00",
-"price": "$3.00"
-}
-],
-"title": "Prepared With Linguini."
-},
-{
-"items": [
-{
-"desc": "our lasagna is 100% home made",
-"name": "LASAGNA",
-"price": "$16.99"
-},
-{
-"desc": "stuffed with ricotta, mozzarella,",
-"name": "STUFFED SHELLS",
+"desc": "stuffed with ricotta, mozzarella, cheddar",
+"name": "Stuffed Shells",
 "price": "$15.99"
 },
 {
-"desc": "ziti blended ricotta, mozzarella &",
-"name": "BAKED ZITI",
+"desc": "ziti blended ricotta, mozzarella & cheddar and topped with mozzarella; with meat sauce +3.00",
+"name": "Baked Ziti",
 "price": "$14.99"
-},
-{
-"desc": "",
-"name": "with meat sauce +3.00",
-"price": "$3.00"
 }
 ],
 "title": "Baked Pasta"
@@ -2444,54 +2554,49 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "",
-"name": "CHICKEN PARMESAN",
+"desc": "served with garlic bread",
+"name": "Chicken Parmesan",
 "price": "$16.99"
 },
 {
-"desc": "",
-"name": "EGGPLANT PARMESAN",
+"desc": "served with garlic bread",
+"name": "Eggplant Parmesan",
 "price": "$15.99"
 },
 {
-"desc": "",
-"name": "BAKED STUFFED EGGPLANT",
+"desc": "served with garlic bread",
+"name": "Baked Stuffed Eggplant",
 "price": "$16.99"
 }
 ],
-"title": "Aq Specialties"
+"title": "AQ Specialties"
 },
 {
 "items": [
 {
 "desc": "",
-"name": "PLAIN MOZZARELLA 10.99",
-"price": "$14.99"
+"name": "Plain Mozzarella",
+"price": "Sm 10\" $10.99 / Lg 14\" $14.99"
 },
 {
-"desc": "",
-"name": "EACH ADDITIONAL TOPPING 1.50",
-"price": "$1.99"
+"desc": "*meat sauce and *clams: Sm $2.50 / Lg $3.00",
+"name": "Each Additional Topping",
+"price": "Sm $1.50 / Lg $1.99"
 },
 {
-"desc": "",
-"name": "PITA PIZZA",
+"desc": "one size only | limit four toppings at 1.00 each",
+"name": "Pita Pizza",
 "price": "$8.99"
 },
 {
-"desc": "",
-"name": "WHEAT PIZZA",
+"desc": "(made on a wheat wrap) | one size only - +1.50/ea topping",
+"name": "Wheat Pizza",
 "price": "$10.99"
 },
 {
-"desc": "A 10• pizza made w/ gluten free dough that is baked, cut,",
-"name": "GLUTEN FREE",
+"desc": "A 10\" pizza made w/ gluten free dough, baked, cut, and served in its own pan; limit of four toppings + 1.50/ea topping",
+"name": "Gluten Free",
 "price": "$13.99"
-},
-{
-"desc": "",
-"name": "*ITEMS PRICED DIFFERENTL Y, SM  I LG",
-"price": "$2.50"
 }
 ],
 "title": "Build Your Own Pizza"
@@ -2499,24 +2604,24 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "sliced meatballs covered with cheese, then topped with pepperoni, chourico, and sausage.",
-"name": "MEAT LOVERS sm  lg",
-"price": "$15.99"
+"desc": "sliced meatballs covered with cheese, then topped with pepperoni, chourico, and sausage",
+"name": "Meat Lovers",
+"price": "sm $15.99 / lg $21.99"
 },
 {
-"desc": "what do you mean you don’t eat no meat?! This pizza is for you then! Fresh cheese covered",
-"name": "VEGGIE sm  lg",
-"price": "$15.99"
+"desc": "Fresh cheese covered with onions, peppers, olives and mushrooms",
+"name": "Veggie",
+"price": "sm $15.99 / lg $21.99"
 },
 {
-"desc": "pineapple bits and ham thrown over a bed of cheese.",
-"name": "HAWAIIAN sm  lg",
-"price": "$13.99"
+"desc": "pineapple bits and ham thrown over a bed of cheese",
+"name": "Hawaiian",
+"price": "sm $13.99 / lg $18.99"
 },
 {
-"desc": "our cheese pizza cheese topped with fresh basil and tomato",
-"name": "MARGARITA sm  lg",
-"price": "$13.99"
+"desc": "our cheese pizza topped with fresh basil and tomato",
+"name": "Margarita",
+"price": "sm $13.99 / lg $18.99"
 }
 ],
 "title": "Classic Pizzas"
@@ -2524,74 +2629,79 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "sliced meatballs, onions & peppers covered with pizza cheese, then topped with pepperoni, sausage,",
-"name": "AQ SPECIAL sm  lg",
-"price": "$18.99"
+"desc": "sliced meatballs, onions & peppers covered with pizza cheese, then topped with pepperoni, sausage, chourico and mushrooms",
+"name": "AQ Special",
+"price": "sm $18.99 / lg $26.49"
 },
 {
-"desc": "named after its creator, this pizza is made of our fresh dough covered with olive oil and pizza cheese,",
-"name": "O’BRIEN SPECIAL * sm  lg",
-"price": "$14.74"
+"desc": "olive oil and pizza cheese, topped with spinach, tomato and feta (*no pizza sauce)",
+"name": "O'Brien Special*",
+"price": "sm $14.74 / lg $20.24"
 },
 {
-"desc": "pesto sauce & fresh chicken covered with pizza cheese and topped with tomatoes and feta.",
-"name": "SPARTAN* sm  lg",
-"price": "$15.99"
+"desc": "pesto sauce & fresh chicken covered with pizza cheese and topped with tomatoes and feta (*no pizza sauce)",
+"name": "Spartan*",
+"price": "sm $15.99 / lg $21.99"
 },
 {
-"desc": "red sauce topped with garlic, olives, peppers, tomato and oregano. Did we mention there’s no cheese?",
-"name": "NO CHEESE PLEASE! sm  lg",
-"price": "$15.99"
+"desc": "red sauce topped with garlic, olives, peppers, tomato and oregano",
+"name": "No Cheese Please!",
+"price": "sm $15.99 / lg $21.99"
 },
 {
-"desc": "our classic pizza sauce covered with our cheese blend and topped with chicken, ham, and spinach.",
-"name": "CHICKEN FLORENTINE sm  lg",
-"price": "$14.74"
+"desc": "classic pizza sauce, cheese blend, topped with chicken, ham, and spinach",
+"name": "Chicken Florentine",
+"price": "sm $14.74 / lg $20.24"
 },
 {
-"desc": "our classic pizza sauce, sliced meatballs and spaghetti covered with our freshly grated cheese",
-"name": "MEDUSA sm  lg",
-"price": "$14.74"
+"desc": "classic pizza sauce, sliced meatballs and spaghetti covered with freshly grated cheese and topped with feta",
+"name": "Medusa",
+"price": "sm $14.74 / lg $20.24"
 },
 {
-"desc": "cannonball Barbecue Sauce with chicken, fresh pizza cheese, and topped with onions.",
-"name": "BBQ CHICKEN* sm  lg",
-"price": "$14.74"
+"desc": "cannonball Barbecue Sauce with chicken, fresh pizza cheese, and topped with onions (*no pizza sauce)",
+"name": "BBQ Chicken*",
+"price": "sm $14.74 / lg $20.24"
 },
 {
-"desc": "frank’s Red Hot Sauce & chicken topped with cheese. served with a side of blue cheese.",
-"name": "BUFFALO CHICKEN* sm  lg",
-"price": "$14.74"
+"desc": "frank's Red Hot Sauce & chicken topped with cheese, side of blue cheese (*no pizza sauce)",
+"name": "Buffalo Chicken*",
+"price": "sm $14.74 / lg $20.24"
 },
 {
-"desc": "ricotta cheese smothered with our freshly grated pizza cheese and topped with feta.",
-"name": "WHITE* sm  lg",
-"price": "$13.99"
+"desc": "ricotta cheese smothered with freshly grated pizza cheese and topped with feta (*no pizza sauce)",
+"name": "White*",
+"price": "sm $13.99 / lg $18.99"
 },
 {
-"desc": "spinach, onions and feta over a bed of pizza cheese. choose between red sauce and olive oil.",
-"name": "GREEK sm  lg",
-"price": "$14.74"
+"desc": "spinach, onions and feta over pizza cheese; choose red sauce or olive oil",
+"name": "Greek",
+"price": "sm $14.74 / lg $20.24"
 },
 {
-"desc": "fresh dough covered with olive oil and bacon topped with pizza cheese, chopped clams, and garlic.",
-"name": "CLAMS CASINO* sm  lg",
-"price": "$15.99"
+"desc": "olive oil and bacon topped with pizza cheese, chopped clams, and garlic (*no pizza sauce)",
+"name": "Clams Casino*",
+"price": "sm $15.99 / lg $21.49"
 },
 {
-"desc": "careful, this one is very hot! frank’s red hot xtra hot cayenne sauce and pizza cheese topped with pepperoni",
-"name": "SNOWBALL IN HADES* sm  lg",
-"price": "$14.74"
+"desc": "very hot! frank's red hot xtra hot cayenne sauce, pizza cheese, pepperoni, hot peppers, chilled blue cheese center",
+"name": "Snowball in Hades*",
+"price": "sm $14.74 / lg $20.24"
 },
 {
-"desc": "saddle up! ranch dressing and bacon covered with cheese then topped with freshly sliced chicken.",
-"name": "RODEO* sm  lg",
-"price": "$14.74"
+"desc": "ranch dressing and bacon covered with cheese then topped with freshly sliced chicken (*no pizza sauce)",
+"name": "Rodeo*",
+"price": "sm $14.74 / lg $20.24"
 },
 {
-"desc": "this pizza is similar to a quiche. scrambled eggs covered with pizza cheese and topped with ham, onions and",
-"name": "BREAKFAST PIZZA* sm  lg",
-"price": "$15.99"
+"desc": "similar to a quiche: scrambled eggs, pizza cheese, ham, onions and peppers (*no pizza sauce)",
+"name": "Breakfast Pizza*",
+"price": "sm $15.99 / lg $21.99"
+},
+{
+"desc": "Get your favorite specialty pizza as a calzone for the price of a small pizza!",
+"name": "Calzones",
+"price": "price of a small pizza"
 }
 ],
 "title": "Specialty Pizzas"
@@ -2599,38 +2709,58 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "",
-"name": "AQ KIDDIE COMBOS",
+"desc": "children 12 and under; soda or juice included when dining in",
+"name": "½ lb. Burger & Fries",
+"price": "$9.99"
+},
+{
+"desc": "children 12 and under; soda or juice included when dining in",
+"name": "Chicken Fingers & Fries",
+"price": "$9.99"
+},
+{
+"desc": "children 12 and under; soda or juice included when dining in",
+"name": "Pita Pizza with 1 Topping",
+"price": "$9.99"
+},
+{
+"desc": "children 12 and under; soda or juice included when dining in",
+"name": "Pasta with Choice of Sauce",
+"price": "$9.99"
+},
+{
+"desc": "children 12 and under; soda or juice included when dining in",
+"name": "Grilled Cheese and Fries",
 "price": "$9.99"
 }
 ],
-"title": "*No Pizza Sauce"
+"title": "AQ Kiddie Combos"
 },
 {
 "items": [
 {
 "desc": "",
-"name": "BAKLAVA",
+"name": "Baklava",
 "price": "$4.99"
 },
 {
 "desc": "",
-"name": "RICE PUDDING",
+"name": "Rice Pudding",
 "price": "$4.99"
 },
 {
 "desc": "",
-"name": "FRENCH SILK PlE",
+"name": "French Silk Pie",
 "price": "$4.99"
 },
 {
 "desc": "",
-"name": "CHEESECAKE (ASSORTED)",
+"name": "Cheesecake (Assorted)",
 "price": "$4.99"
 },
 {
 "desc": "",
-"name": "CARROT CAKE",
+"name": "Carrot Cake",
 "price": "$4.99"
 }
 ],
@@ -2639,55 +2769,315 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "Coke, Diet Coke, Sprite,",
-"name": "SODA",
+"desc": "Coke, Diet Coke, Sprite, root beer, orange soda",
+"name": "Soda",
 "price": "$2.99"
 },
 {
 "desc": "",
-"name": "BOTTOMLESS COFFEE",
+"name": "Bottomless Coffee",
 "price": "$3.00"
 },
 {
 "desc": "",
-"name": "TEA",
+"name": "Tea",
 "price": "$3.00"
 },
 {
 "desc": "",
-"name": "MILK",
+"name": "Milk",
 "price": "$3.00"
 },
 {
 "desc": "",
-"name": "CHOCOLATE MILK",
+"name": "Chocolate Milk",
 "price": "$3.50"
 },
 {
 "desc": "",
-"name": "COFFEE MILK",
+"name": "Coffee Milk",
 "price": "$3.50"
 },
 {
-"desc": "orange, apple,",
-"name": "JUICE",
+"desc": "orange, apple, tomato, cranberry",
+"name": "Juice",
 "price": "$3.00"
 },
 {
 "desc": "",
-"name": "ICED COFFEE",
+"name": "Iced Coffee",
 "price": "$3.50"
 },
 {
 "desc": "",
-"name": "HOT CHOCOLATE",
+"name": "Hot Chocolate",
 "price": "$3.00"
 }
 ],
 "title": "Beverages"
+},
+{
+"items": [
+{
+"desc": "4.2%",
+"name": "Miller Lite",
+"price": "$6"
+},
+{
+"desc": "",
+"name": "Samuel Adams Seasonal",
+"price": "$7"
+},
+{
+"desc": "4.8%",
+"name": "Two Roads Little Heaven IPA",
+"price": "$7"
+},
+{
+"desc": "5.5%",
+"name": "Whaler's Rise APA",
+"price": "$7"
+},
+{
+"desc": "5.4%",
+"name": "Blue Moon Belgian White",
+"price": "$7"
+},
+{
+"desc": "4.4%",
+"name": "Kona Big Wave Golden Ale",
+"price": "$7"
+},
+{
+"desc": "4.5%",
+"name": "Modelo Especial Pilsner",
+"price": "$7"
+},
+{
+"desc": "",
+"name": "Seasonal Special",
+"price": "TBD"
 }
 ],
-"source": "https://aqpizza.com/menus"
+"title": "Draft Beer"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Domestic: Miller Lite, Budweiser, Bud Light, Coors Light, Michelob Ultra",
+"price": "$6"
+},
+{
+"desc": "",
+"name": "Imported: Corona Extra, Corona Light, Heineken, Heineken 0",
+"price": "$7"
+},
+{
+"desc": "",
+"name": "Premium Domestic: Dogfish Head 60min IPA, Angry Orchard Apple Cider, Sun Cruiser, Nutrl (v",
+"price": "$7"
+},
+{
+"desc": "8.5%",
+"name": "Double IPA: Grey Sail Captain's Daughter",
+"price": "$9"
+}
+],
+"title": "Bottled Beer"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Ruffino Chianti (Italy)",
+"price": "$8 glass / $28 bottle"
+},
+{
+"desc": "",
+"name": "Unshackled Cabernet by Prisoner (Napa)",
+"price": "$12 glass / $44 bottle"
+},
+{
+"desc": "",
+"name": "Caldaro Pinot Nero (Italy)",
+"price": "$14.50 glass / $48 bottle"
+},
+{
+"desc": "",
+"name": "Stella Antica Red Blend (Italy)",
+"price": "$10 glass / $32 bottle"
+},
+{
+"desc": "",
+"name": "Concerto Lambrusco (Italy)",
+"price": "$14 glass / $45 bottle"
+}
+],
+"title": "Red Wine"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Le Bruniche Chardonnay (Italy)",
+"price": "$10 glass / $32 bottle"
+},
+{
+"desc": "",
+"name": "Dashwood Sauvignon Blanc (New Zealand)",
+"price": "$9 glass / $29 bottle"
+},
+{
+"desc": "",
+"name": "Pighin Pinot Grigio (Italy)",
+"price": "$11 glass / $40 bottle"
+},
+{
+"desc": "",
+"name": "Ruffino Pinot Grigio (Italy)",
+"price": "$8 glass / $26 bottle"
+},
+{
+"desc": "",
+"name": "Maison Saleya Rose (France)",
+"price": "$10.50 glass / $34 bottle"
+},
+{
+"desc": "",
+"name": "Maschio Prosecco (Italy)",
+"price": "$9 glass"
+}
+],
+"title": "White Wine"
+},
+{
+"items": [
+{
+"desc": "Bombay Sapphire, Dry Vermouth, Olives",
+"name": "Original Martini",
+"price": "$11"
+},
+{
+"desc": "Stolichnaya Vodka, Cranberry Juice, Lime Juice, Triple Sec",
+"name": "Classic Cosmo",
+"price": "$10"
+},
+{
+"desc": "Disaronno Amaretto, Stoli Vanilla, Bailey's, Blue Curcao",
+"name": "Pistachio Martini",
+"price": "$10"
+},
+{
+"desc": "Solichnaya Peachik, Peachtree Shnapps, Cranberry Juice",
+"name": "Peach Cosmo",
+"price": "$10"
+},
+{
+"desc": "Stolichnaya Cucumber, Lime Juice, Lemon Juice, Cucmber",
+"name": "Cucumber Martini",
+"price": "$10"
+},
+{
+"desc": "Malibu Rum, Baccardi Rum, Pineapple Juice, Blue Curraco",
+"name": "Carribean Maritni",
+"price": "$11"
+},
+{
+"desc": "Absolut Apple, Apple Juice, Sour Apple Liquor, Cinaamon",
+"name": "Appletini",
+"price": "$11"
+},
+{
+"desc": "Stoli Vanilla, Bailey's Strawberry & Cream, Milk & Strawberry",
+"name": "Strawberry & Cream Martini",
+"price": "$11"
+},
+{
+"desc": "Bailey's Chocolate, Absolut Vanilla, Cream de Cocoa",
+"name": "Chocolate Martini",
+"price": "$11"
+},
+{
+"desc": "Stoli Vanilla, Tia Maria Cold Brew, Espresso",
+"name": "Espresso Martini",
+"price": "$11"
+},
+{
+"desc": "Chambord, Ciroc Vodka, Pineapple Juice",
+"name": "French Martini",
+"price": "$11"
+}
+],
+"title": "Martinis"
+},
+{
+"items": [
+{
+"desc": "Bombay Gin, Lime Juice, Simple Syrup, served straight up",
+"name": "Gimlet",
+"price": "$10"
+},
+{
+"desc": "Bailey's Chocolate, Milk, Kahlua, Stoli Vanilla",
+"name": "Chocolate Mudslide",
+"price": "$11"
+},
+{
+"desc": "Jack Daniel's, Triple Sec, Lemon Juice, Sprite",
+"name": "Lynchburg Lemonade",
+"price": "$10"
+},
+{
+"desc": "Hornito's Plata, Triple Sec, Lime Juice, Pineapple Juice",
+"name": "The Matador",
+"price": "$10"
+},
+{
+"desc": "Bombay Sapphire, Lemon, Simple Syrup, Elderflower Tonic",
+"name": "Elderflower Collins",
+"price": "$10"
+},
+{
+"desc": "Johnnie Walker Red, Sweet Vermouth, Angostura Bitters",
+"name": "Rob Roy",
+"price": "$11"
+},
+{
+"desc": "Stolichnaya Vodka, Kahlua, Milk",
+"name": "White Russian",
+"price": "$10"
+},
+{
+"desc": "Knob Creek Bourbon, Angostura Bitters, Simple Syrup, Cherry",
+"name": "Old Fashioned",
+"price": "$11"
+},
+{
+"desc": "Triple Sec, Lime Juice, Tequila, Sour Mix",
+"name": "Margarita",
+"price": "$10"
+},
+{
+"desc": "Gosling's Rum, Ginger Beer",
+"name": "Dark & Stormy",
+"price": "$10"
+},
+{
+"desc": "Stolichnaya Vodma, Ginger Beer, Lime Juice, Lime",
+"name": "Moscow Mule",
+"price": "$10"
+},
+{
+"desc": "Tito's Vodka, Ginger Beer, Lime Juice, Lime",
+"name": "American Mule",
+"price": "$10"
+}
+],
+"title": "Mixed Drinks"
+}
+],
+"source": "https://aqpizza.com/wp-content/uploads/2025/07/Aquidneck-Pizza.pdf"
 },
 "bar-12": {
 "checked": "2026-10-09T00:39:40+00:00",
@@ -4682,71 +5072,716 @@ const MENUS = {
 "source": "https://calebandbroad.com/newport-caleb-and-broad-food-menu"
 },
 "claw-hammer": {
-"checked": "2026-10-09T03:29:55+00:00",
-"how": "linked-pdf",
+"checked": "2026-10-09T03:41:53+00:00",
+"how": "agent",
 "sections": [
 {
 "items": [
 {
+"desc": "jumbo lump, pepper medley, herb aioli, fennel salad",
+"name": "Crab Cake",
+"price": "$22"
+},
+{
+"desc": "white wine, shallot, sourdough toast",
+"name": "Old Captain Mussels or Little Neck Clams",
+"price": "$19"
+},
+{
+"desc": "pork belly lardon, tri-pepper blend, panko crumb",
+"name": "Clams Casino",
+"price": "$17"
+},
+{
+"desc": "cucumber salad, romesco, lemon-scented oil",
+"name": "Coal-Fired Octopus",
+"price": "$23"
+},
+{
+"desc": "cherry pepper, arrabbiata, lemon",
+"name": "Town Dock Calamari",
+"price": "$19"
+},
+{
+"desc": "whipped ginger sweet potatoes, green curry",
+"name": "Crispy Maitake Mushrooms",
+"price": "$18"
+},
+{
+"desc": "smoked bluefish pâté, pickled onion, chive, grilled sourdough",
+"name": "C&H Smoked Fish Toast",
+"price": "$13"
+},
+{
+"desc": "yuzu, watermelon radish, ginger & chive oil",
+"name": "Tuna Crudo*",
+"price": "$19"
+},
+{
+"desc": "horseradish-cocktail sauce",
+"name": "Jumbo Shrimp Cocktail",
+"price": "$22"
+}
+],
+"title": "Starters"
+},
+{
+"items": [
+{
+"desc": "sherry, knuckle & claw meat, chive",
+"name": "Lobster Bisque",
+"price": "$15"
+},
+{
+"desc": "local clams, light cream, onion, celery, pork belly lardon, potato, dill",
+"name": "New England Clam Chowder",
+"price": "$12"
+},
+{
+"desc": "local vegetables, paprika, light cream",
+"name": "Crab Bisque",
+"price": "$16"
+},
+{
+"desc": "pecorino, brioche crouton, white anchovy",
+"name": "Caesar Salad",
+"price": "$13"
+},
+{
+"desc": "iceberg, smoked bacon, cherry tomatoes, blue cheese crumbles & dressing. Salad add ons: shrimp, lobster tail, scallops, chicken, or crab",
+"name": "The Royale Wedge",
+"price": "$15"
+}
+],
+"title": "Soups & Salads"
+},
+{
+"items": [
+{
+"desc": "warm lemon-butter; served with fries or side Caesar salad",
+"name": "The Buttery Lobster Roll",
+"price": "$37"
+},
+{
+"desc": "light herb-mayo; served with fries or side Caesar salad",
+"name": "The Local Lobster Roll",
+"price": "$37"
+},
+{
+"desc": "jumbo lump, bibb lettuce, chive, mustard sauce, brioche roll; served with fries or side Caesar salad",
+"name": "Coastal Crab Salad Roll",
+"price": "$27"
+}
+],
+"title": "Rolls"
+},
+{
+"items": [
+{
 "desc": "",
-"name": "*SEASONAL & *",
+"name": "Lobster Mac & Cheese",
+"price": "$32"
+},
+{
+"desc": "",
+"name": "C&H Crab Mac & Cheese",
+"price": "$27"
+},
+{
+"desc": "",
+"name": "Charred Broccolini",
+"price": "$16"
+},
+{
+"desc": "",
+"name": "Roasted Corn Succotash",
+"price": "$13"
+},
+{
+"desc": "",
+"name": "Honey-Glazed Carrots",
+"price": "$14"
+},
+{
+"desc": "",
+"name": "Mashed Potatoes",
+"price": "$11"
+},
+{
+"desc": "",
+"name": "Lemon Scented Rice",
+"price": "$10"
+},
+{
+"desc": "",
+"name": "Tallow Fries",
+"price": "$9"
+},
+{
+"desc": "",
+"name": "Charred Asparagus",
+"price": "$16"
+}
+],
+"title": "Shareable Sides"
+},
+{
+"items": [
+{
+"desc": "massive stone crab, with a rich & sweet meat & unmatched texture & flavor. Served with house mustard, horseradish cocktail sauce, lemon, house-made hot sauce",
+"name": "Colossal",
 "price": "MP"
 }
 ],
-"title": "Served With House Mustard, Horseradish"
+"title": "C&H Signature Stone Crabs"
+},
+{
+"items": [
+{
+"desc": "daily rotating selection from rhode island & northeast; served with champagne mignonette, horseradish-cocktail sauce, lemon",
+"name": "Oysters*",
+"price": "$3.5 each"
+},
+{
+"desc": "narragansett littleneck clams; served with champagne mignonette, horseradish-cocktail sauce, lemon",
+"name": "Littlenecks on the Half Shell*",
+"price": "$2.75 each"
+},
+{
+"desc": "chilled with mustard sauce & lemon or hot with aged soy jus herb butter",
+"name": "Alaskan King Crab Leg",
+"price": "MP"
+}
+],
+"title": "The Raw Bar"
+},
+{
+"items": [
+{
+"desc": "oysters (10), littlenecks (10), jumbo shrimp (8), ½ chilled lobster tail (serves 2-3 guests)",
+"name": "The Dockmaster",
+"price": "$105"
+},
+{
+"desc": "oysters (12), littlenecks (12), jumbo shrimp (6), colossal stone crab claw (1), lobster tail, ½ lb chilled king crab leg (serves 3-4 guests)",
+"name": "The Admiral",
+"price": "$250"
+},
+{
+"desc": "oysters (18), littlenecks (18), jumbo shrimp (8), colossal stone crab claw (1), whole chilled lobster, 1 lb. king crab leg (serves 4-6 guests)",
+"name": "The Claw & Hammer Ocean Throne",
+"price": "$365"
+}
+],
+"title": "Ocean Feast Towers"
+},
+{
+"items": [
+{
+"desc": "robust & briny, elegant finish. Seasonal caviar includes ¼ bottle of Mionetto Prosecco; served with crème fraîche, chives, blinis & kettle chips",
+"name": "Premium Domestic Hackelback",
+"price": "$105 per oz"
+},
+{
+"desc": "rich, nutty, silky finish. Seasonal caviar includes ¼ bottle of Mionetto Prosecco; served with crème fraîche, chives, blinis & kettle chips",
+"name": "Premium Imported Osetra",
+"price": "$150 per oz"
+}
+],
+"title": "Pearls & Bubbles"
+},
+{
+"items": [
+{
+"desc": "lemon-scented rice, citrus beurre blanc",
+"name": "Grilled Atlantic Salmon*",
+"price": "$39"
+},
+{
+"desc": "charred broccolini, ginger-scented beluga lentils, black garlic butter",
+"name": "Roasted Black Cod",
+"price": "$44"
+},
+{
+"desc": "jumbo lump crab, bearnaise sauce, asparagus",
+"name": "Pan-Seared Halibut",
+"price": "$47"
+},
+{
+"desc": "sweet corn & local farm harvest vegetables, saffron emulsion",
+"name": "Scallop & Succotash*",
+"price": "$37"
+},
+{
+"desc": "seared rare, wilted spinach, aged soy jus",
+"name": "Sesame Yellow Fin Tuna*",
+"price": "$39"
+}
+],
+"title": "Fresh Catch"
+},
+{
+"items": [
+{
+"desc": "red wine demi",
+"name": "8 oz Center-Cut Filet Mignon*",
+"price": "$59"
+},
+{
+"desc": "black garlic butter",
+"name": "18 oz Bone-In Ribeye*",
+"price": "$89"
+},
+{
+"desc": "smoked bourbon bacon, aged cheddar, caramelized onion, house mustard sauce, tallow fries",
+"name": "C&H Burger*",
+"price": "$21"
+},
+{
+"desc": "roasted au jus, mashed potatos, carrots",
+"name": "½ Roasted Chicken",
+"price": "$31"
+}
+],
+"title": "Meat & Poultry"
+},
+{
+"items": [
+{
+"desc": "butter-poached lobster, shallot, leeks, garlic, saffron cream",
+"name": "Lobster Pappardelle",
+"price": "$41"
+},
+{
+"desc": "½ lobster tail, whole clams, grilled shrimp, squid, mussels, marinara diavolo",
+"name": "Spicy Seafood Linguine",
+"price": "$45"
+},
+{
+"desc": "littlenecks, garlic, white wine, herb butter, olive oil, chili flakes",
+"name": "Spaghetti alle Vongole",
+"price": "$30"
+}
+],
+"title": "Pasta"
+},
+{
+"items": [
+{
+"desc": "1.5 lb grilled lobster, littlenecks, king crab, mussels, scallops, leeks, shallots, garlic, lemon-brandy butter; choice of 2 sides (serves 2+)",
+"name": "The Grand Island Reserve",
+"price": "$127"
+},
+{
+"desc": "2 ½ lb, buttery chouriço, scallop, shrimp, & crab stuffing; choice of 2 sides (serves 2+)",
+"name": "Portuguese Stuffed Lobster",
+"price": "$110"
+},
+{
+"desc": "2 ½ lb, drawn butter, choice of 2 sides",
+"name": "Steamed or Grilled Lobster",
+"price": "$88"
+},
+{
+"desc": "(2) 1.5 lb. butter-steeped lobster tails, grilled lemon, herb butter; choice of 2 sides (serves 2+)",
+"name": "Twin Tail Harbor",
+"price": "$115"
+}
+],
+"title": "C&H Shareables"
+},
+{
+"items": [
+{
+"desc": "ages 12 & under only",
+"name": "Chicken Fingers & Fries",
+"price": "$12"
+},
+{
+"desc": "ages 12 & under only",
+"name": "Mac & Cheese",
+"price": "$11"
+},
+{
+"desc": "ages 12 & under only",
+"name": "Cheeseburger & Fries",
+"price": "$13"
+},
+{
+"desc": "ages 12 & under only",
+"name": "Grilled Cheese",
+"price": "$11"
+}
+],
+"title": "1st Mate's Menu"
+},
+{
+"items": [
+{
+"desc": "bibb lettuce, pickled onion, garlic-herb aioli, brioche bun",
+"name": "Crab Cake Sandwich",
+"price": "$27"
+},
+{
+"desc": "romaine, parmesan, brioche croutons, whole wheat tortilla",
+"name": "Lobster Caesar Wrap",
+"price": "$37"
+},
+{
+"desc": "kimchi, micro wasabi, sriracha aioli, brioche roll",
+"name": "Charred Octopus Roll",
+"price": "$27"
+},
+{
+"desc": "bibb lettuce, cheddar cheese, smoked tomato aioli, brioche bun",
+"name": "Grilled Chicken Sandwich",
+"price": "$21"
+},
+{
+"desc": "bibb lettuce, mustard sauce, chive, brioche roll",
+"name": "Crab Salad Roll",
+"price": "$27"
+}
+],
+"title": "Lunch Specials"
+},
+{
+"items": [
+{
+"desc": "aperol, prosecco, dry vermouth, orange",
+"name": "Seaside Spritz",
+"price": "$16"
+},
+{
+"desc": "siete leguas blanco, lime, watermelon, jalapeño",
+"name": "Harbor Heat",
+"price": "$17"
+},
+{
+"desc": "1792 small batch, mint, blackberry, simple, soda",
+"name": "Provision #5",
+"price": "$16"
+},
+{
+"desc": "lavazza espresso, stoli vanilla, kahlua; add baileys 2.",
+"name": "C&H Espresso Martini",
+"price": "$16"
+},
+{
+"desc": "silent pool gin, basil, cucumber, lemon, soda",
+"name": "Cliff Walk Collins",
+"price": "$15"
+},
+{
+"desc": "gin, vodka, white wine, seasonal berries",
+"name": "C&H White Sangria",
+"price": "$15"
+},
+{
+"desc": "1792 small batch, orange, luxardo, demerara syrup",
+"name": "The 1887",
+"price": "$17"
+},
+{
+"desc": "sparkling rosé wine, orange, elderflower liqueur",
+"name": "Brut & Bloom",
+"price": "$16"
+},
+{
+"desc": "npc widows walk vodka, tomato, c&h mud, tabasco, celery salt; add shrimp cocktail 5., medium stone crab claw 12.",
+"name": "C&H Bloody",
+"price": "$15"
+},
+{
+"desc": "prosecco, luxardo, elderflower",
+"name": "Thames St Spritz",
+"price": "$17"
+}
+],
+"title": "Specialty Cocktails"
+},
+{
+"items": [
+{
+"desc": "lime, luxardo, soda",
+"name": "Luxardo Spritz",
+"price": "$10"
+},
+{
+"desc": "seasonal berries, lemon, simple, soda",
+"name": "Berry Fizz",
+"price": "$10"
+},
+{
+"desc": "na gin, cucumber, lime, soda",
+"name": "Botanical Garden",
+"price": "$11"
+}
+],
+"title": "Mocktails"
+},
+{
+"items": [
+{
+"desc": "golden ale, 4.6%",
+"name": "C&H Ale",
+"price": "$7"
+},
+{
+"desc": "east coast ipa, 7%",
+"name": "Save the Robots",
+"price": "$9"
+},
+{
+"desc": "hazy double ipa, 9%",
+"name": "Rhode Rage",
+"price": "$10"
+},
+{
+"desc": "belgian wheat, 5.4%",
+"name": "Allagash White",
+"price": "$9"
+},
+{
+"desc": "american lager, 5%",
+"name": "Narragansett",
+"price": "$8"
+},
+{
+"desc": "irish dry stout, 4.2%",
+"name": "Guinness",
+"price": "$9"
+},
+{
+"desc": "boston lager, 5%",
+"name": "Samuel Adams",
+"price": "$8"
+},
+{
+"desc": "seasonal rotating tap",
+"name": "Samuel Adams Seasonal",
+"price": "$8"
+},
+{
+"desc": "italian lager, 5.0%",
+"name": "Peroni",
+"price": "$9"
+},
+{
+"desc": "amber ale, 5.3%",
+"name": "C&H Amber Ale",
+"price": "$8"
+}
+],
+"title": "Draught Beer"
+},
+{
+"items": [
+{
+"desc": "mendocino county, california",
+"name": "Scharffenberger Brut",
+"price": "16/60"
+},
+{
+"desc": "napa valley, california",
+"name": "Mumm Brut Rose",
+"price": "19/72"
+},
+{
+"desc": "veneto, italy",
+"name": "Mionetto Prosecco",
+"price": "12/44"
+}
+],
+"title": "Wine by the Glass · Bubbles"
 },
 {
 "items": [
 {
 "desc": "burgundy, france",
-"name": "CHARDONNAY",
+"name": "J.J. Vincent Bourgogne Chardonnay",
 "price": "18/68"
-}
-],
-"title": "J.J. Vincent Bourgogne"
 },
-{
-"items": [
 {
 "desc": "russian river valley, california",
-"name": "BLANC",
+"name": "Frei Brothers Sauvignon Blanc",
 "price": "13/48"
-}
-],
-"title": "Frei Brothers Sauvignon"
 },
 {
-"items": [
+"desc": "mosel, germany",
+"name": "Dr. Loosen Riesling",
+"price": "14/52"
+},
+{
+"desc": "willamette valley, oregon",
+"name": "Unsanctioned Pinot Gris",
+"price": "13/48"
+},
+{
+"desc": "santa maria valley, california",
+"name": "Cambria 'Katherine's Vineyard' Chardonnay",
+"price": "15/56"
+},
 {
 "desc": "salento igt, puglia, italy",
-"name": "ROSÉ",
+"name": "Tormaresca \"Calafuria\" Rosé",
 "price": "15/56"
 }
 ],
-"title": "Tormaresca “Calafuria”"
+"title": "Wine by the Glass · White"
 },
 {
 "items": [
+{
+"desc": "willamette valley, oregon",
+"name": "Siduri Pinot Noir",
+"price": "14/52"
+},
+{
+"desc": "russian river valley, california",
+"name": "Hartford Court Pinot Noir",
+"price": "21/80"
+},
+{
+"desc": "tuscany, italy",
+"name": "Tenuta di Nozzole Chianti",
+"price": "15/56"
+},
 {
 "desc": "napa valley, california",
-"name": "SAUVIGNON",
+"name": "Oberon Cabernet Sauvignon",
 "price": "17/64"
-}
-],
-"title": "Oberon Cabernet"
 },
 {
-"items": [
-{
 "desc": "paso robles, california",
-"name": "CABERNET SAUVIGNON",
+"name": "Canard 'The Resurgence' Cabernet Sauvignon",
 "price": "21/80"
 }
 ],
-"title": "Canard ‘The Resurgence’"
+"title": "Wine by the Glass · Red"
+},
+{
+"items": [
+{
+"desc": "brut, 2016, champagne, france",
+"name": "Pol Roger 'Blanc de Blancs'",
+"price": "$365"
+},
+{
+"desc": "brut, nv, reims, france; also available in ½ bottle 100.",
+"name": "Veuve Clicquot, Yellow Label",
+"price": "$195"
+},
+{
+"desc": "brut, 2015, champagne, france",
+"name": "Louis Roederer 'Cristal'",
+"price": "$825"
+},
+{
+"desc": "brut rose, nv, mareuil-sur-ay, france; also available in ½ bottle 135.",
+"name": "Billecart-Salmon",
+"price": "$255"
 }
 ],
-"source": "https://www.clawnhammer.com/menu"
+"title": "Wine by the Bottle · Bubbles"
+},
+{
+"items": [
+{
+"desc": "sancerre, 2023, loire valley, france",
+"name": "Alphonse Mellot 'La Moussiere'",
+"price": "$99"
+},
+{
+"desc": "gavi, 2023, piedmont, italy",
+"name": "Marchesi di Barolo",
+"price": "$69"
+},
+{
+"desc": "rosé, 2024, provence, france",
+"name": "Domaine Gavoty, 'La Cigale'",
+"price": "$48"
+},
+{
+"desc": "chardonnay, 2024, sonoma valley, california",
+"name": "Gail 'Sobre Vista Road'",
+"price": "$100"
+},
+{
+"desc": "pinot grigio, 2024, veneto, italy",
+"name": "Spasso",
+"price": "$42"
+},
+{
+"desc": "chardonnay, 2019, napa valley, california",
+"name": "Plumpjack 'Reserve'",
+"price": "$142"
+},
+{
+"desc": "rosé, 2024, méditerranée, france",
+"name": "Domaine les Mesclances \"Charmes\"",
+"price": "$52"
+}
+],
+"title": "Wine by the Bottle · White"
+},
+{
+"items": [
+{
+"desc": "pinot noir, 2024, slo coast, california",
+"name": "Scar of the Sea",
+"price": "$104"
+},
+{
+"desc": "pinot noir, 2021, central coast, california",
+"name": "Belle Glos 'Balade'",
+"price": "$94"
+},
+{
+"desc": "red blend, 2022, california",
+"name": "The Prisoner",
+"price": "$112"
+},
+{
+"desc": "cabernet, 2022, yakima valley, washington",
+"name": "Schmidt & Portteus \"Two Mountain\"",
+"price": "$79"
+},
+{
+"desc": "cabernet, 2021, alexander valley, california",
+"name": "Coppola 'Director's Cut'",
+"price": "$72"
+},
+{
+"desc": "cabernet, 2021, napa valley, california",
+"name": "Pine Ridge",
+"price": "$133"
+},
+{
+"desc": "merlot, 2019, napa valley, california",
+"name": "Trefethen 'Oak Knoll District'",
+"price": "$114"
+},
+{
+"desc": "zinfandel, 2022, california",
+"name": "The Prisoner 'Saldo'",
+"price": "$85"
+}
+],
+"title": "Wine by the Bottle · Red"
+},
+{
+"items": [
+{
+"desc": "semillon/sauvignon blanc, 2012, napa valley, california; ½ bottle",
+"name": "Dolce",
+"price": "$125"
+}
+],
+"title": "Wine by the Bottle · Dessert"
+}
+],
+"source": "https://www.clawnhammer.com/s/CLAW-AND-HAMMER-MENU-9226.pdf"
 },
 "cluck-house": {
 "checked": "2026-10-09T03:29:55+00:00",
@@ -5750,30 +6785,60 @@ const MENUS = {
 "source": "https://eastferrydeli.com/"
 },
 "food-shack": {
-"checked": "2026-10-09T03:29:55+00:00",
-"how": "structured",
+"checked": "2026-10-09T03:41:53+00:00",
+"how": "agent",
 "sections": [
 {
 "items": [
 {
-"desc": "Served with sour cream, tropical fruit salsa, & tallow chips. Cheese $11.00 | Black Bean $13.00 | Chicken or Pork $16.50 | Steak $19.00",
-"name": "Quesadillas",
-"price": ""
+"desc": "Served with sour cream, tropical fruit salsa, & tallow chips.",
+"name": "Quesadillas – Cheese",
+"price": "$11.00"
 },
 {
-"desc": "Tallow chips, smoked meat, BBQ, queso*, pickled onion, burnt end baked beans, pico de gallo, scallions, & lime. Pork $16.00 | Brisket $25.00",
-"name": "Nachos",
-"price": ""
+"desc": "Served with sour cream, tropical fruit salsa, & tallow chips.",
+"name": "Quesadillas – Black Bean",
+"price": "$13.00"
 },
 {
-"desc": "Tallow fried tortilla chips served with your favorite dip! Chips & Pico $9.00 | Chips & Guac $10.50 | Chips & Queso* $10.50",
-"name": "Chips & Dip",
-"price": ""
+"desc": "Served with sour cream, tropical fruit salsa, & tallow chips.",
+"name": "Quesadillas – Chicken or Pork",
+"price": "$16.50"
 },
 {
-"desc": "Seasoned and sauced for flavor in every bite! BBQ Citrus Mesquite | Pineapple Sweet Chili Half Dozen $9.00 | Full Dozen $17.00",
+"desc": "Served with sour cream, tropical fruit salsa, & tallow chips.",
+"name": "Quesadillas – Steak",
+"price": "$19.00"
+},
+{
+"desc": "Tallow chips, smoked meat, BBQ, queso*, pickled onion, burnt end baked beans, pico de gallo, scallions, & lime.",
+"name": "Nachos – Pork",
+"price": "$16.00"
+},
+{
+"desc": "Tallow chips, smoked meat, BBQ, queso*, pickled onion, burnt end baked beans, pico de gallo, scallions, & lime.",
+"name": "Nachos – Brisket",
+"price": "$25.00"
+},
+{
+"desc": "Tallow fried tortilla chips",
+"name": "Chips & Pico",
+"price": "$9.00"
+},
+{
+"desc": "Tallow fried tortilla chips",
+"name": "Chips & Guac",
+"price": "$10.50"
+},
+{
+"desc": "Tallow fried tortilla chips",
+"name": "Chips & Queso*",
+"price": "$10.50"
+},
+{
+"desc": "BBQ Citrus Mesquite or Pineapple Sweet Chili",
 "name": "Smoked Wings",
-"price": ""
+"price": "Half Dozen $9.00 / Full Dozen $17.00"
 }
 ],
 "title": "Shareables"
@@ -5783,37 +6848,37 @@ const MENUS = {
 {
 "desc": "Battered and fried cod with white sauce & sesame slaw.",
 "name": "Baja Fish*",
-"price": ""
+"price": "2 tacos $13.00 / 3 tacos $18.00"
 },
 {
 "desc": "Grilled shrimp with sesame slaw, pickled red onion, tropical salsa, & avocado aioli.",
 "name": "Grilled Shrimp",
-"price": ""
+"price": "2 tacos $13.00 / 3 tacos $18.00"
 },
 {
 "desc": "BBQ chicken, coleslaw, white sauce, cotija cheese, & pico de gallo.",
 "name": "BBQ Chicken",
-"price": ""
+"price": "2 tacos $13.00 / 3 tacos $18.00"
 },
 {
 "desc": "Grilled steak with coleslaw, white sauce, pico de gallo, & cotija cheese.",
 "name": "Carne Asada",
-"price": ""
+"price": "2 tacos $13.00 / 3 tacos $18.00"
 },
 {
 "desc": "Slate Hill Farm beef ginger with caramelized onion, tropical salsa, & white sauce.",
 "name": "Ginger Beef (S)",
-"price": ""
+"price": "2 tacos $13.00 / 3 tacos $18.00"
 },
 {
 "desc": "Smoked Kalua pulled pork with coleslaw, house BBQ sauce, white sauce, & grilled pineapple.",
 "name": "Kalua Pulled Pork",
-"price": ""
+"price": "2 tacos $13.00 / 3 tacos $18.00"
 },
 {
-"desc": "Smoked grass-fed beef brisket, white sauce, slaw, BBQ sauce, and pickled red onion.",
-"name": "Brisket Taco (+ each)",
-"price": "$1"
+"desc": "Smoked grass-fed beef brisket, white sauce, slaw, BBQ sauce, and pickled red onion. (+$1 each)",
+"name": "Brisket Taco",
+"price": "2 tacos $13.00 / 3 tacos $18.00 (+$1 eac"
 }
 ],
 "title": "Tacos"
@@ -5821,19 +6886,14 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "",
+"desc": "Sandwich: ⅓ lb meat, coleslaw, pickles, potato roll & sauce. Plate: ½ lb meat, coleslaw, pickles, sauce, cornbread & honey butter",
 "name": "Kalua Pulled Pork",
-"price": "$11.00"
+"price": "$11.00 sandwich / $17.00 plate"
 },
 {
-"desc": "",
+"desc": "Sauce: Original BBQ, Carolina, or Dijon",
 "name": "Beef Brisket",
-"price": "$16.00"
-},
-{
-"desc": "Original BBQ, Carolina, Dijon",
-"name": "Choose Your Sauce",
-"price": ""
+"price": "$16.00 sandwich / $25.50 plate"
 }
 ],
 "title": "Barbecue"
@@ -5841,39 +6901,29 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "",
+"desc": "Meat, rice, fried plantains, sauce, black beans, pickled red onions & scallions",
 "name": "Kalua Pulled Pork",
-"price": "$10.00"
+"price": "$10.00 small / $16.50 regular / $23.00 d"
 },
 {
 "desc": "",
 "name": "Chicken",
-"price": "$10.00"
+"price": "$10.00 small / $16.50 regular / $23.00 d"
 },
 {
 "desc": "",
 "name": "Shrimp",
-"price": "$11.00"
+"price": "$11.00 small / $17.00 regular / $24.00 d"
 },
 {
 "desc": "",
 "name": "Steak",
-"price": "$12.00"
+"price": "$12.00 small / $20.00 regular / $32.00 d"
 },
 {
-"desc": "Choose any 2 proteins • Additional Steak: Regular +$3.00 | Double +$6.00",
+"desc": "Any 2 proteins; additional steak regular +$3.00, double +$6.00. Rice: white or brown. Sauce: teriyaki, barbecue, or sweet chili",
 "name": "Combo Bowl",
-"price": "$17.00"
-},
-{
-"desc": "White Rice or Brown Rice",
-"name": "Choose Your Rice",
-"price": ""
-},
-{
-"desc": "Teriyaki, Barbecue, or Sweet Chili",
-"name": "Choose Your Sauce",
-"price": ""
+"price": "$17.00 regular / $24.00 double"
 },
 {
 "desc": "Brown rice, black beans, broccoli, sweet potato, brussels sprouts, crispy wontons, feta, & house spicy BBQ mayo.",
@@ -5941,7 +6991,7 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "",
+"desc": "16oz bowl of Italian 00 pasta with scratch-made artisan cheese sauce",
 "name": "Just Mac & Cheese",
 "price": "$11.00"
 },
@@ -5966,19 +7016,19 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "Sliced or Chopped",
+"desc": "Sliced or chopped",
 "name": "Grass-Fed Beef Brisket",
-"price": "$36.00"
+"price": "$36.00 / Lb"
 },
 {
 "desc": "",
 "name": "Kalua Pulled Pork",
-"price": "$17.00"
+"price": "$17.00 / Lb"
 },
 {
 "desc": "",
 "name": "Chicken Wings",
-"price": "$9.00"
+"price": "$9.00 / Half, $17.00 / Dozen"
 }
 ],
 "title": "Smoked Meats A La Carte"
@@ -6021,9 +7071,9 @@ const MENUS = {
 "price": "$12.00"
 },
 {
-"desc": "• Choose Your Base: Açai, Pitaya • Premium Toppings (+$0.75): Banana, Pineapple, Almonds, Walnuts, Nutella, Peanut Butter • Basic Toppings (+$0.50): Chocolate Flakes, Coconut Chips, Honey, Chia & Flax Seeds, Xtra Granola",
+"desc": "Açai or Pitaya base. Premium toppings +$0.75; basic toppings +$0.50; strawberries & blueberries market price",
 "name": "BYO Bowl",
-"price": "$9.00"
+"price": "$9.00 / +"
 }
 ],
 "title": "Acai & Pitaya"
@@ -6052,88 +7102,73 @@ const MENUS = {
 "items": [
 {
 "desc": "",
-"name": "HOT SIDES",
-"price": ""
-},
-{
-"desc": "",
 "name": "Burnt End Baked Beans",
-"price": "$7.00 / 1/2"
+"price": "$7.00 ½ pint / $14.00 pint / $20.00 quar"
 },
 {
 "desc": "",
 "name": "Mac & Cheese",
-"price": "$6.00 / 1/2"
+"price": "$6.00 ½ pint / $11.00 pint / $20.00 quar"
 },
 {
 "desc": "",
 "name": "Seasoned Veggies",
-"price": "$7.00 / 1/2"
+"price": "$7.00 ½ pint / $14.00 pint / $25.00 quar"
 },
 {
 "desc": "",
 "name": "Queso*",
-"price": "$7.00 / 1/2"
+"price": "$7.00 ½ pint / $14.00 pint"
 },
 {
 "desc": "",
 "name": "Brown or White Rice",
-"price": "$3.00 / 1/2"
+"price": "$3.00 ½ pint / $5.00 pint"
 },
 {
 "desc": "",
 "name": "Rice & Beans",
-"price": "$6.00"
+"price": "$6.00 / Pint"
 },
 {
 "desc": "",
 "name": "Fried Plantains (4)",
-"price": "$3.50 / 1/2"
-},
-{
-"desc": "",
-"name": "COLD SIDES",
-"price": ""
+"price": "$3.50 / ½ Pint"
 },
 {
 "desc": "",
 "name": "House Pickles",
-"price": "$5.00 / 1/2"
+"price": "$5.00 / ½ Pint"
 },
 {
 "desc": "",
 "name": "Coleslaw",
-"price": "$5.50 / 1/2"
+"price": "$5.50 / ½ Pint"
 },
 {
 "desc": "",
 "name": "Street Corn Salad",
-"price": "$5.50 / 1/2"
+"price": "$5.50 / ½ Pint"
 },
 {
 "desc": "",
 "name": "Guacamole",
-"price": "$7.00 / 1/2"
+"price": "$7.00 / ½ Pint"
 },
 {
 "desc": "",
 "name": "Pico De Gallo",
-"price": "$5.00 / 1/2"
-},
-{
-"desc": "",
-"name": "EXTRAS",
-"price": ""
+"price": "$5.00 / ½ Pint"
 },
 {
 "desc": "",
 "name": "Tallow Chips",
-"price": "$4.00"
+"price": "$4.00 small / $5.00 large"
 },
 {
 "desc": "With honey butter.",
 "name": "Cast Iron Cornbread",
-"price": "$4.50"
+"price": "$4.50 / Each"
 }
 ],
 "title": "Sides & Extras"
@@ -6172,6 +7207,11 @@ const MENUS = {
 },
 {
 "desc": "",
+"name": "Cookie*",
+"price": "$3.00"
+},
+{
+"desc": "",
 "name": "'Cup of Sand'*",
 "price": "$4.00"
 },
@@ -6186,492 +7226,52 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "Once chicken, baja, or pork taco + one sunshine or tropical bowl for $13",
-"name": "MEAL DEAL",
+"desc": "One chicken, baja, or pork taco + one sunshine or tropical bowl",
+"name": "Monday – Meal Deal",
+"price": "$13"
+},
+{
+"desc": "2 tacos; mix & match chicken, baja or pork tacos",
+"name": "Tuesday – Taco Twosday",
+"price": "$11"
+},
+{
+"desc": "Teachers, military, & first responders get 15% off every Wednesday (valid ID)",
+"name": "Wednesday – Local Legends",
+"price": "15% off"
+},
+{
+"desc": "3 PM – close: $3 off Mac & Cheese meals, Brisket & Pulled Pork Mac",
+"name": "Thursday – Afternoon sMACk Down",
+"price": "$3 off"
+},
+{
+"desc": "Text club members get an exclusive flash deal on the first Friday of every month (text JOIN to 1-844-616-8787)",
+"name": "Friday – Flash Deal Friday",
 "price": ""
+},
+{
+"desc": "Kids under 12 eat ½ off every Saturday (dine-in only)",
+"name": "Saturday – Family Day",
+"price": "½ off"
+},
+{
+"desc": "Weekdays 1:00 PM – 4:00 PM",
+"name": "After School Special – Rice Bowl & Drink",
+"price": "$9"
+},
+{
+"desc": "Weekdays 1:00 PM – 4:00 PM",
+"name": "After School Special – Kids Mac & Cheese + Water or Canned Soda",
+"price": "$5"
+},
+{
+"desc": "Active & retired military, every day",
+"name": "Military Appreciation",
+"price": "10% off"
 }
 ],
-"title": "Monday"
-},
-{
-"items": [
-{
-"desc": "2 Tacos for $11! Mix & match chicken, baja or pork tacos",
-"name": "TACO TWOSDAY",
-"price": ""
-}
-],
-"title": "Tuesday"
-},
-{
-"items": [
-{
-"desc": "Teachers, military, & first responders get 15% off every Wednesday! *with valid ID",
-"name": "LOCAL LEGENDS",
-"price": ""
-}
-],
-"title": "Wednesday"
-},
-{
-"items": [
-{
-"desc": "3 PM – Close / $3 Off Mac & Cheese Meals, Brisket & Pulled Pork Mac",
-"name": "Thursday Afternoon sMACk down",
-"price": ""
-}
-],
-"title": "Thursday"
-},
-{
-"items": [
-{
-"desc": "Join our text club and receive the exclusive first Friday flash deal on the first Friday of every month. ** text \"JOIN\" to 1-844-616-8787 to sign up",
-"name": "FLASH DEAL FRIDAY",
-"price": ""
-}
-],
-"title": "Friday"
-},
-{
-"items": [
-{
-"desc": "Kids under 12 eat 1/2 off all every day Saturday! *dine-in only",
-"name": "FAMILY DAY!",
-"price": ""
-}
-],
-"title": "Saturday"
-},
-{
-"items": [
-{
-"desc": "Hawaiian pineapple-glazed smoked meatballs.",
-"name": "Smoked Hawaiian Meatballs",
-"price": "$26.00"
-},
-{
-"desc": "Pineapple chili smoked chicken wings.",
-"name": "Smoked Chicken Wings",
-"price": "$27.00"
-},
-{
-"desc": "Slider rolls, BBQ pulled pork, & grilled pineapple.",
-"name": "Build Your Own Sliders",
-"price": "$60.00"
-},
-{
-"desc": "(12-15 servings) $45.00 Small | (25-30 servings) $70.00 Medium • Tallow chips with street corn salad.",
-"name": "Street Corn Nachos",
-"price": ""
-},
-{
-"desc": "(15-20 servings) $75.00 Small | (25-30 servings) $110.00 Medium • Tallow chips with housemade guac and fresh pico.",
-"name": "Chips with Guac & Pico",
-"price": ""
-}
-],
-"title": "Appetizers & Small Bites"
-},
-{
-"items": [
-{
-"desc": "Kalua Pulled Pork | Grass Fed Beef | Brisket +$4.00 |Grilled Shrimp | Ginger Beef +$ 2.25 | Grilled Tofu | Grilled Chicken",
-"name": "PROTEINS",
-"price": ""
-},
-{
-"desc": "Proteins: Choose two • Fixin‘s & Toppings: Pico de Gallo | Sour Cream | Cheddar Jack Cheese | Coleslaw",
-"name": "Basic",
-"price": "$19.00"
-},
-{
-"desc": "Proteins: Choose two • Fixin‘s & Toppings: Pico de Gallo | Sour Cream | Cheddar Jack Cheese | Grilled Pineapple | Coleslaw | Street Corn Salad | Pickled Red Onion",
-"name": "Fiesta Fix",
-"price": "$23.00"
-},
-{
-"desc": "Proteins: Choose three • Fixin‘s & Toppings: Pico de Gallo | Sour Cream | Cheddar Jack Cheese | Grilled Pineapple | Coleslaw | Pickled Fruit Salsa | Pickled Red Onion | Street Corn Salad",
-"name": "Crowd Pleaser",
-"price": "$32.00"
-},
-{
-"desc": "Proteins: Choose four • Fixin‘s & Toppings: Pico de Gallo | Sour Cream | Cheddar Jack Cheese | Coleslaw | Grilled Pineapple | Pickled Fruit Salsa | Pickled Red Onion | White Sauce | Fresh Homemade Guac | Street Corn Sala",
-"name": "The Works",
-"price": "$42.00"
-}
-],
-"title": "Taco Bars"
-},
-{
-"items": [
-{
-"desc": "Kalua Pulled Pork | Grilled Shrimp | Grilled Tofu | Shoyu Chicken | Citrus Mesquite | Chicken Quarters",
-"name": "Proteins",
-"price": ""
-},
-{
-"desc": "Teriyaki | Barbecue | Sweet Chili",
-"name": "Sauces",
-"price": ""
-},
-{
-"desc": "Apps: Hawaiian Meatballs | Smoked Pineapple Chili Wings • Proteins: Pick 4 • Sauce: All 3 • Sides: House Salad | Sticky White Rice | Brown Rice | Street Corn Salad | Seasonal Grilled Veggies • Sweet Treats: Fresh Baked C",
-"name": "Island Buffet",
-"price": "$45.00"
-},
-{
-"desc": "Proteins: Pick 3 • Sauce: Pick 2 • Sides: House Salad | Sticky White Rice | Brown Rice | Street Corn Salad | Seasonal Grilled Veggies",
-"name": "The Beach Buffet",
-"price": "$28.00"
-}
-],
-"title": "Island Buffets"
-},
-{
-"items": [
-{
-"desc": "Kalua Pulled Pork | Grass Fed Beef Brisket | St. Louis Pork Ribs | Citrus Mesquite Chicken Quarters",
-"name": "Proteins",
-"price": ""
-},
-{
-"desc": "Original | Dijon | Carolina",
-"name": "Sauce",
-"price": ""
-},
-{
-"desc": "Meats: Citrus Mesquite Chicken | Kalua Pulled Pork • Sauces: Pick 1 • Sides: Coleslaw | Pickle Bar | Cornbread | House Honey Butter | Burnt End Baked Beans",
-"name": "Cookout Kit",
-"price": "$22.00"
-},
-{
-"desc": "Meats: Citrus Mesquite Chicken | Kalua Pulled Pork | Grass Fed Beef Brisket • Sauces: Pick 2 • Sides: Coleslaw | Pickle Bar | Cornbread | Burnt End Baked Beans | Mac & Cheese | House Honey Butter | Slider Rolls • Dessert",
-"name": "Smoke Stack",
-"price": "$40.00"
-},
-{
-"desc": "Bites: Pineapple Chili Wings or Smoked Hawaiian Meatballs • Meats: Citrus Mesquite Chicken | Kalua Pulled Pork | Grass Fed Beef Brisket | St. Louis Pork Ribs • Sauces: All 3 • Sides: coleslaw | Pickle Bar | Cornbread | B",
-"name": "Pitmasters Pick",
-"price": "$58.00"
-}
-],
-"title": "Southern BBQ Buffets"
-},
-{
-"items": [
-{
-"desc": "Quart (8-12 Servings) | Half Tray (15-20 Servings) | Tray (35-40 Servings)",
-"name": "HOT SIDES",
-"price": ""
-},
-{
-"desc": "Half Tray $25.00 | Tray $45.00",
-"name": "White or Brown Rice",
-"price": ""
-},
-{
-"desc": "Half Tray $65.00 | Tray $85.00",
-"name": "Seasoned Sautéed Vegetables",
-"price": ""
-},
-{
-"desc": "Half Tray $55.00 | Tray $85.00",
-"name": "Food Shack Black Beans",
-"price": ""
-},
-{
-"desc": "Quart $20.00 | Half Tray $90.00 | Tray $140.00",
-"name": "Award Winning Mac & Cheese",
-"price": ""
-},
-{
-"desc": "Quart $20.00 | Half Tray $95.00 | Tray $150.00",
-"name": "Burnt End Baked Beans",
-"price": ""
-},
-{
-"desc": "",
-"name": "Fresh Grilled Pineapple",
-"price": "$20.00"
-},
-{
-"desc": "Small (36 Oz Bowl) | Medium (50 Oz Bowl) | Large (80 Oz Bowl)",
-"name": "COLD SIDES",
-"price": ""
-},
-{
-"desc": "",
-"name": "House Salad W. Dressing",
-"price": ""
-},
-{
-"desc": "Small $25.00 | Medium $35.00 | Large $55.00",
-"name": "Street Corn Salad",
-"price": ""
-},
-{
-"desc": "Small $20.00 | Medium $32.00 | Large $50.00",
-"name": "Coleslaw",
-"price": ""
-},
-{
-"desc": "Small $20.00 | Medium $30.00 | Large $45.00",
-"name": "Pico De Gallo",
-"price": ""
-},
-{
-"desc": "Small $30.00 | Medium $45.00 | Large $70.00",
-"name": "House Guacamole",
-"price": ""
-},
-{
-"desc": "Small $10.00 | Medium $19.00 | Large $28.00",
-"name": "House Pickles",
-"price": ""
-},
-{
-"desc": "Small $12.00 | Medium $21.00 | Large $30.00",
-"name": "Pickled Red Onion",
-"price": ""
-},
-{
-"desc": "Small $18.00 | Medium $38.00 | Large $50.00",
-"name": "Pickled Fruit Salsa",
-"price": ""
-},
-{
-"desc": "",
-"name": "ADD-ONS & EXTRAS",
-"price": ""
-},
-{
-"desc": "",
-"name": "Tallow Chips",
-"price": ""
-},
-{
-"desc": "Half Pint $13.00 | Pint $25.00",
-"name": "House Honey Butter",
-"price": ""
-},
-{
-"desc": "",
-"name": "Cast Iron Cornbread",
-"price": "$50.00"
-},
-{
-"desc": "",
-"name": "Slider Rolls",
-"price": ""
-},
-{
-"desc": "",
-"name": "DESSERT",
-"price": ""
-},
-{
-"desc": "",
-"name": "Homemade Key Lime Pie",
-"price": "$45.00 / 8"
-},
-{
-"desc": "",
-"name": "Chocolate “Dirt” Pudding",
-"price": "$25.00 / 10"
-},
-{
-"desc": "",
-"name": "Vanilla “Sand” Pudding",
-"price": "$25.00 / 10"
-},
-{
-"desc": "",
-"name": "PROTEINS",
-"price": ""
-},
-{
-"desc": "",
-"name": "St. Louis Ribs",
-"price": "$38.00"
-},
-{
-"desc": "",
-"name": "Kalua Pulled Pork",
-"price": "$17.00"
-},
-{
-"desc": "Chopped or sliced.",
-"name": "Grass Fed Beef Brisket",
-"price": "$36.00"
-},
-{
-"desc": "",
-"name": "Grilled Shrimp",
-"price": "$19.00"
-},
-{
-"desc": "",
-"name": "Ginger Beef",
-"price": "$22.00"
-},
-{
-"desc": "",
-"name": "Grilled Tofu",
-"price": "$9.00"
-},
-{
-"desc": "",
-"name": "Citrus Mesquite Chicken Qtr",
-"price": "$6.00"
-},
-{
-"desc": "",
-"name": "Shoyu Chicken",
-"price": "$13.00"
-},
-{
-"desc": "",
-"name": "Smoked Pineapple Chili Wings",
-"price": "$27.00"
-},
-{
-"desc": "",
-"name": "Smoked Hawaiian Meatballs",
-"price": "$26.00"
-},
-{
-"desc": "Teriyaki | Sweet Chili | Original BBQ | Carolina | Dijon BBQ | White Sauce | Avocado Aioli",
-"name": "Sauce",
-"price": "$4.50"
-}
-],
-"title": "A-La-Carte"
-},
-{
-"items": [
-{
-"desc": "",
-"name": "Stoke Water",
-"price": "$3.00"
-},
-{
-"desc": "",
-"name": "Assorted Spindrift",
-"price": "$3.65"
-},
-{
-"desc": "",
-"name": "Assorted Granny Squibb Iced Tea",
-"price": "$5.50"
-},
-{
-"desc": "",
-"name": "Assorted Dels Lemonade",
-"price": "$5.50"
-}
-],
-"title": "Beverages"
-},
-{
-"items": [
-{
-"desc": "Wrapped in a large flour tortilla and comes with tallow chips and white sauce",
-"name": "BURRITOS",
-"price": ""
-},
-{
-"desc": "Grass fed beef brisket, cheddar jack cheese, white rice & fried plantains",
-"name": "Brisket",
-"price": "$18.00"
-},
-{
-"desc": "Grilled chicken, white rice, black beans, cheddar jack cheese & avocado aioli",
-"name": "Grilled Chicken",
-"price": "$16.00"
-},
-{
-"desc": "Kalua pulled pork, cheddar jack cheese, black beans & white rice",
-"name": "Pulled Pork",
-"price": "$16.00"
-},
-{
-"desc": "Black beans, white rice, cheddar jack cheese & guac.",
-"name": "Avo Bean",
-"price": "$12.00"
-},
-{
-"desc": "Made with mixed greens and served with house made dressing",
-"name": "SALADS",
-"price": ""
-},
-{
-"desc": "Grilled sweet chili chicken, cucumber, tomato, chia & flax seeds, sesame slaw, shredded carrots, and ginger dressing",
-"name": "Kickin' Sesame Chicken",
-"price": "$17.00"
-},
-{
-"desc": "Grilled chicken, cucumber, pico de gallo, grilled pineapple & ginger dressing",
-"name": "Rhody Salad",
-"price": "$16.00"
-},
-{
-"desc": "Includes: cornbread, honey butter, burnt end beans, and BBQ sauce",
-"name": "BBQ PLATES",
-"price": ""
-},
-{
-"desc": "",
-"name": "Grass Fed Beef Brisket",
-"price": "$21.00"
-},
-{
-"desc": "",
-"name": "Kalua Pulled Pork",
-"price": "$15.00"
-},
-{
-"desc": "",
-"name": "Grilled Mesquite Chicken",
-"price": "$17.00"
-},
-{
-"desc": "Includes white rice, protein, black beans, fried plantains, pickled onion and sauce",
-"name": "BOWLS",
-"price": ""
-},
-{
-"desc": "",
-"name": "Teriyaki Chicken",
-"price": "$11.00"
-},
-{
-"desc": "",
-"name": "BBQ Pulled Pork",
-"price": "$11.00"
-},
-{
-"desc": "",
-"name": "Sweet Chili Shrimp",
-"price": "$12.00"
-},
-{
-"desc": "",
-"name": "Water",
-"price": "$3.00"
-},
-{
-"desc": "",
-"name": "Spindrift",
-"price": "$3.65"
-},
-{
-"desc": "",
-"name": "Lemonade",
-"price": "$5.50"
-}
-],
-"title": "Boxed Meals"
+"title": "Daily Deals"
 }
 ],
 "source": "https://www.401foodshack.com/menu/"
@@ -8050,35 +8650,55 @@ const MENUS = {
 "source": "https://hungrymonkeycafe.com/menu/"
 },
 "jos": {
-"checked": "2026-10-09T03:29:55+00:00",
-"how": "text",
+"checked": "2026-10-09T03:43:10+00:00",
+"how": "agent",
 "sections": [
 {
 "items": [
 {
-"desc": "",
-"name": "Jo’s Pizza",
-"price": "$14.25"
+"desc": "House-made crust, fig spread, mushroom, goat cheese, caramelized onion, arugula",
+"name": "Jo's Pizza",
+"price": "14.25"
 },
 {
-"desc": "",
+"desc": "Thai chile aioli, fried herbs, lemon",
 "name": "Point Judith Calamari",
-"price": "$18.95"
+"price": "18.95"
 },
 {
-"desc": "",
+"desc": "Shrimp, garlic, tomato, kale, white bean, grilled focaccia, grilled lemon",
+"name": "Shrimp Bruschetta",
+"price": "18.95"
+},
+{
+"desc": "Diced tomato, scallions, cheddar, red mole sauce",
 "name": "Duck & Lobster Quesadilla",
-"price": "$23.95"
+"price": "23.95"
 },
 {
-"desc": "",
+"desc": "Red onion, caper, arugula, shaved asiago, EVOO",
+"name": "*Beef Carpaccio",
+"price": "18.95"
+},
+{
+"desc": "Crisp vegetables, assorted olives, flat bread crisps & breads",
+"name": "Hummus Platter",
+"price": "13.95"
+},
+{
+"desc": "Honey-buttermilk & lemon dipping sauce",
 "name": "Southern Fried Chicken Bites",
-"price": "$13.95"
+"price": "13.95"
 },
 {
-"desc": "",
+"desc": "Rhode Island stuffie style broth with house sausage, pepper, onion, clam broth",
+"name": "Steamed Littlenecks",
+"price": "21.95"
+},
+{
+"desc": "Seared scallops over baguette crisps, grenoblaise sauce, caper, lemon, butter, parsley",
 "name": "*Scallop Grenoblaise",
-"price": "$23.95"
+"price": "23.95"
 }
 ],
 "title": "Starters"
@@ -8088,12 +8708,57 @@ const MENUS = {
 {
 "desc": "",
 "name": "New England Clam Chowder",
-"price": "$9.25"
+"price": "9.25"
 },
 {
 "desc": "",
 "name": "Lobster Bisque",
-"price": "$12.25"
+"price": "12.25"
+},
+{
+"desc": "Cucumber, tomato, gorgonzola, white balsamic-honey vinaigrette",
+"name": "Mixed Greens",
+"price": "13.95"
+},
+{
+"desc": "Romaine, house-made classic caesar dressing, parmesan, croutons",
+"name": "Caesar",
+"price": "14.95"
+},
+{
+"desc": "Baby iceberg, bacon, grape tomato, gorgonzola, blue cheese dressing",
+"name": "Wedge Salad",
+"price": "15.25"
+},
+{
+"desc": "Arugula, baby kale, romaine, goat cheese, asparagus, matchstick apple, dried cranberry, hibiscus vinaigrette",
+"name": "Bistro Salad",
+"price": "15.25"
+},
+{
+"desc": "",
+"name": "Add to Salad: Chicken",
+"price": "8.95"
+},
+{
+"desc": "",
+"name": "Add to Salad: *Shrimp (3)",
+"price": "12.95"
+},
+{
+"desc": "",
+"name": "Add to Salad: *Salmon",
+"price": "12.95"
+},
+{
+"desc": "",
+"name": "Add to Salad: *Hanger Steak",
+"price": "17.95"
+},
+{
+"desc": "",
+"name": "Add to Salad: *Scallops (3)",
+"price": "17.95"
 }
 ],
 "title": "Soups & Salads"
@@ -8101,29 +8766,129 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "swiss, mushrooms, & caramelized onions",
-"name": "Jo’s Way",
-"price": "$2.00"
+"desc": "All-natural beef, lettuce, tomato, hand-cut fries, house-made pickles",
+"name": "*Jo's Burger",
+"price": "20.95"
 },
 {
-"desc": "",
-"name": "Jo’s Fish & Chips",
-"price": "$25.95"
+"desc": "Swiss, mushrooms, & caramelized onions",
+"name": "Jo's Way (Burger Add-On)",
+"price": "2.00"
 },
 {
-"desc": "",
+"desc": "A family recipe from an iconic Newport restaurant",
+"name": "Jo's Fish & Chips",
+"price": "25.95"
+},
+{
+"desc": "Caramelized onion, tomato, brown-butter & sage sauce",
 "name": "Butternut Squash Agnolotti",
-"price": "$24.25"
+"price": "24.25"
 },
 {
-"desc": "",
+"desc": "12oz hanger steak, brandied dijon cream, hand-cut fries, garlic aioli",
+"name": "*Steak Frittes",
+"price": "40.95"
+},
+{
+"desc": "Crushed red pepper, blistered tomato, caramelized onion, arugula, olive oil & white wine sauce",
+"name": "Sausage & Orecchiette Pasta",
+"price": "25.95"
+},
+{
+"desc": "Matchstick apple, brie, toasted ciabatta, arugula, hibiscus vinaigrette, hand-cut fries, house-made pickles",
+"name": "Grilled Chicken Sandwich",
+"price": "18.95"
+},
+{
+"desc": "Traditional New England lobster salad, coleslaw, hand-cut fries, house-made pickles",
+"name": "Lobster Salad Roll",
+"price": "Market Price"
+},
+{
+"desc": "Sugar-pumpkin purée, caramelized apple, leek, shaved brussels sprouts, sage & brown-butter sauce, crispy pancetta",
+"name": "*Seared Scallops",
+"price": "41.95"
+},
+{
+"desc": "Bacon, tomato, & basil risotto, tomato-basil glaze",
+"name": "Grilled Shrimp",
+"price": "34.95"
+},
+{
+"desc": "Two 4oz filet tournedos, cheddar mashed potato, asparagus, bordelaise",
+"name": "*Filet Mignon",
+"price": "49.95"
+},
+{
+"desc": "Clams, potato, fennel, pernod, roasted tomato, white wine, grilled focaccia, romesco sauce",
+"name": "Pan-Roasted Cod Bouille",
+"price": "35.95"
+},
+{
+"desc": "Pomegranate glaze, tomato, caper, kale, & chive orzo",
 "name": "*Seared Salmon",
-"price": "$33.95"
+"price": "33.95"
+},
+{
+"desc": "Bacon, tomato, peas, parmesan cream sauce, spaghetti",
+"name": "Lobster Carbonara",
+"price": "Market Price"
+},
+{
+"desc": "All-natural beef, dijon, cheddar cheese, house special sauce, hand-cut fries, house-made pickles",
+"name": "*Bacon Onion Jam Burger",
+"price": "22.95"
+},
+{
+"desc": "Cheddar mashed potato, sautéed sausage, greens, pan jus",
+"name": "Roasted Half Chicken",
+"price": "28.50"
+},
+{
+"desc": "Sweet potato mash, bacon, shaved brussels sprouts, bacon & onion jam",
+"name": "*Grilled Pork Chop",
+"price": "28.95"
+},
+{
+"desc": "Bulky roll, lettuce and tomato, served with hand cut fries and house made pickles",
+"name": "Fried Fish Sandwich",
+"price": "18.95"
+},
+{
+"desc": "Caramelized onion, sundried tomato, gorgonzola, light cream",
+"name": "Chicken Penne",
+"price": "25.95"
+},
+{
+"desc": "Seasonal vegetables, fine herbs, EVOO",
+"name": "Vegan Farro Bowl",
+"price": "22.95"
+},
+{
+"desc": "Gochujang marinated & roasted portobella, house-made kimchi, toasted ciabatta roll, hand-cut fries, house-made pickles",
+"name": "\"Porto\" Burger",
+"price": "17.95"
 },
 {
 "desc": "",
-"name": "Fried Fish Sandwich",
-"price": "$18.95"
+"name": "Add: *Chicken",
+"price": "8.95"
+},
+{
+"desc": "",
+"name": "Add: *Shrimp (3)",
+"price": "12.95"
+},
+{
+"desc": "",
+"name": "Add: *Scallops (3)",
+"price": "17.95"
+},
+{
+"desc": "Additional charge",
+"name": "Gluten-Free Pasta & Rolls",
+"price": "$2.50"
 }
 ],
 "title": "Mains"
@@ -8131,40 +8896,450 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "",
-"name": "Vegan Farro Bowl",
-"price": "$22.95"
+"desc": "With bourbon caramel sauce and vanilla ice cream",
+"name": "Cinnamon Peach Bread Pudding",
+"price": "11.95"
+},
+{
+"desc": "Flourless chocolate torte with subtle Grand Marnier flavor",
+"name": "Grand Marnier Chocolate Torte",
+"price": "11.95"
+},
+{
+"desc": "Topped with fresh berries",
+"name": "Crème Brulee",
+"price": "10.95"
+},
+{
+"desc": "Oreo cookie crust with clear caramel sauce",
+"name": "Cappuccino Cheesecake",
+"price": "12.95"
+},
+{
+"desc": "With orange essence, served with fresh stone fruit medley in syrup and whipped cream",
+"name": "Traditional Italian Olive Oil Cake",
+"price": "10.95"
+},
+{
+"desc": "Add chocolate sauce and whipped cream 1.00",
+"name": "Vanilla Ice Cream",
+"price": "7.95"
 },
 {
 "desc": "",
-"name": "Gluten-Free Pasta & Rolls Additional Charge",
-"price": "$2.50"
+"name": "Raspberry Sorbet",
+"price": "7.95"
 },
 {
 "desc": "",
-"name": "4:30 to 8:30",
-"price": "$30"
-},
-{
-"desc": "",
-"name": "4:30 to 9:00",
-"price": "$00"
-},
-{
-"desc": "",
-"name": "12:00 to 9:00",
-"price": "$00"
-},
-{
-"desc": "",
-"name": "12:00 to 8:00",
-"price": "$00"
+"name": "Root Beer Float",
+"price": "8.95"
 }
 ],
-"title": "Chicken Penne"
+"title": "Dessert"
+},
+{
+"items": [
+{
+"desc": "Buffalo Trace bourbon cream, root beer & vanilla ice cream",
+"name": "Kentucky Bourbon Float",
+"price": ""
+},
+{
+"desc": "Plantation Rum, Amarula, espresso",
+"name": "Guilded",
+"price": ""
+},
+{
+"desc": "Makers Mark, Montenagro, Buffalo Trace Bourbon Cream, espresso",
+"name": "Zappatore",
+"price": ""
 }
 ],
-"source": "https://josamericanbistro.com/current-menu/"
+"title": "Adult Desserts"
+},
+{
+"items": [
+{
+"desc": "Speyside",
+"name": "Blavenie 12 yr",
+"price": "16.95"
+},
+{
+"desc": "Speyside",
+"name": "Balvenie 14 yr",
+"price": "21.00"
+},
+{
+"desc": "Speyside",
+"name": "Glenfiddich 12 yr",
+"price": "16.75"
+},
+{
+"desc": "Lowland",
+"name": "Glenkinchie 12 yr",
+"price": "15.25"
+},
+{
+"desc": "Highland",
+"name": "Glenmorangie 10 yr",
+"price": "15.25"
+},
+{
+"desc": "Islay",
+"name": "Lagavulin 16 yr",
+"price": "22.00"
+},
+{
+"desc": "Islay",
+"name": "Laphroaig 10 yr",
+"price": "20.25"
+},
+{
+"desc": "Highland",
+"name": "Oban 14 yr",
+"price": "18.25"
+}
+],
+"title": "After Dinner · Single Malts"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Chivas",
+"price": "12.95"
+},
+{
+"desc": "",
+"name": "Dewar's",
+"price": "11.75"
+},
+{
+"desc": "",
+"name": "Johnnie Walker Red",
+"price": "12.25"
+},
+{
+"desc": "",
+"name": "Johnnie Walker Black",
+"price": "15.50"
+},
+{
+"desc": "",
+"name": "Johnnie Walker Green",
+"price": "20.50"
+},
+{
+"desc": "",
+"name": "Johnnie Walker Gold",
+"price": "29.95"
+},
+{
+"desc": "",
+"name": "Johnnie Walker Blue",
+"price": "67.00"
+}
+],
+"title": "After Dinner · Blends"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Cockburn LBV",
+"price": "12.25"
+},
+{
+"desc": "",
+"name": "Fonseca 10 yr",
+"price": "10.50"
+},
+{
+"desc": "",
+"name": "Sandeman Founders Reserve",
+"price": "10.95"
+},
+{
+"desc": "",
+"name": "Taylor Fladgate 20 yr",
+"price": "15.50"
+},
+{
+"desc": "",
+"name": "Taylor Fladgate LBV",
+"price": "8.95"
+}
+],
+"title": "After Dinner · Ports"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Courvoisier",
+"price": "14.25"
+},
+{
+"desc": "",
+"name": "Hennessey VSOP",
+"price": "22.25"
+},
+{
+"desc": "",
+"name": "Grand Mariner",
+"price": "12.75"
+},
+{
+"desc": "",
+"name": "Grand Mariner Centenaire",
+"price": "39.50"
+}
+],
+"title": "After Dinner · Cognac"
+},
+{
+"items": [
+{
+"desc": "Tomato, mozzarella",
+"name": "Pizza",
+"price": "$9.95"
+},
+{
+"desc": "Penne with butter or marinara (add 2 meatballs $2.50)",
+"name": "Pasta",
+"price": "$9.95"
+},
+{
+"desc": "Lettuce, tomato, fries",
+"name": "Burger",
+"price": "$9.95"
+},
+{
+"desc": "Battered fish, fries, and cole slaw",
+"name": "Fish & Chips",
+"price": "$9.95"
+},
+{
+"desc": "French fries, vegetables",
+"name": "Grilled Chicken Breast",
+"price": "$9.95"
+}
+],
+"title": "Kids Corner"
+},
+{
+"items": [
+{
+"desc": "Keel vodka, coconut water, mango purée",
+"name": "Mango Overboard",
+"price": ""
+},
+{
+"desc": "Mad river bourbon, aperol, montenegro amaro, lemon",
+"name": "Barrel-Aged Paper Plane",
+"price": ""
+},
+{
+"desc": "Widows walk vodka infused with fresh pineapple",
+"name": "Doli",
+"price": ""
+},
+{
+"desc": "Buffalo trace bourbon, fresh peach, lemon, chamomile-honey syrup",
+"name": "The Joker",
+"price": ""
+},
+{
+"desc": "Don Fulano tequila, aperol, pink pepper berry, strawberry, agave, lime",
+"name": "In Pink",
+"price": ""
+},
+{
+"desc": "Thomas Tew rum, kiwi, mint, lime, simple, soda",
+"name": "Not Your Mom's Mojito",
+"price": ""
+},
+{
+"desc": "White squall blueberry vodka, del's lemonade",
+"name": "Blueberry Lemonade",
+"price": ""
+},
+{
+"desc": "White Squall gin, watermelon, radish, lime, honey syrup, soda",
+"name": "Dirty Dancing",
+"price": ""
+},
+{
+"desc": "Vida mezcal, yellow chartreuse, lillet, lime",
+"name": "Almost Famous",
+"price": ""
+},
+{
+"desc": "Siete leguas blanco tequila, passion fruit liqueur, vanilla bean, lime juice, ginger beer",
+"name": "Passion Fruit Mexican Mule",
+"price": ""
+},
+{
+"desc": "Widow's walk vodka, strawberry gifford rhubarb liqueur, lemon, la marca prosecco",
+"name": "Strawberry Rhubarb Martini",
+"price": ""
+},
+{
+"desc": "Aperol, strawberry, la marca prosecco rosé, soda",
+"name": "White Lotus",
+"price": ""
+},
+{
+"desc": "Rose-infused plymouth gin, lillet, suze",
+"name": "Barrel-Aged White Rosé Negroni",
+"price": ""
+},
+{
+"desc": "Ketel one vodka, basil, jasmine, lime, simple, soda",
+"name": "All That Jazz",
+"price": ""
+},
+{
+"desc": "Vida mezcal, cantaloupe, Velvet falernum, lemon",
+"name": "Like a Cantaloupe",
+"price": ""
+}
+],
+"title": "Cocktails"
+},
+{
+"items": [
+{
+"desc": "Nectarine purée, chamomile-honey syrup, lemon, soda",
+"name": "The Great Gatsby",
+"price": ""
+},
+{
+"desc": "Mango purée, white pepper syrup, lime, soda",
+"name": "Moonrise Kingdom",
+"price": ""
+}
+],
+"title": "Mocktails"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Budweiser",
+"price": "6.50"
+},
+{
+"desc": "",
+"name": "Bud Light",
+"price": "6.50"
+},
+{
+"desc": "",
+"name": "Coors Light",
+"price": "6.50"
+},
+{
+"desc": "",
+"name": "Corona Light",
+"price": "6.75"
+},
+{
+"desc": "",
+"name": "Guinness 16oz can",
+"price": "8.95"
+},
+{
+"desc": "",
+"name": "Heineken",
+"price": "6.75"
+},
+{
+"desc": "",
+"name": "High Noon",
+"price": "10.00"
+},
+{
+"desc": "",
+"name": "DOWNEAST Cider",
+"price": "9.75"
+},
+{
+"desc": "",
+"name": "New Castle",
+"price": "6.75"
+},
+{
+"desc": "",
+"name": "Narragansett 16oz can",
+"price": "7.00"
+},
+{
+"desc": "",
+"name": "Modelo",
+"price": "6.75"
+},
+{
+"desc": "",
+"name": "Sam Adams Boston Lager",
+"price": "6.50"
+},
+{
+"desc": "",
+"name": "Stella Artois",
+"price": "7.25"
+},
+{
+"desc": "",
+"name": "Athletic Mexican-Copper N/A",
+"price": "6.50"
+},
+{
+"desc": "",
+"name": "Heineken Zero N/A",
+"price": "6.75"
+}
+],
+"title": "Bottled Beers"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Bartender's Favorite",
+"price": "12.00"
+},
+{
+"desc": "",
+"name": "Gray Sail Little Sister IPA",
+"price": "9.25"
+},
+{
+"desc": "",
+"name": "Yuengling Lager",
+"price": "8.00"
+},
+{
+"desc": "",
+"name": "Whalers Rise",
+"price": "8.50"
+},
+{
+"desc": "",
+"name": "Miller Light",
+"price": "7.00"
+},
+{
+"desc": "",
+"name": "Narraganesett IPA",
+"price": "8.50"
+}
+],
+"title": "Draught Beers"
+}
+],
+"source": "https://josamericanbistro.com/current-menu/ (+ /dessert-menu/, /childrens-menu/, /cocktail-menu/)"
 },
 "jt-commons": {
 "checked": "2026-10-09T03:29:55+00:00",
@@ -9965,283 +11140,843 @@ const MENUS = {
 "source": "https://www.mainsail-restaurant.com/our-menus"
 },
 "mamma-luisas": {
-"checked": "2026-10-09T03:29:55+00:00",
-"how": "text",
+"checked": "2026-10-09T03:41:53+00:00",
+"how": "agent",
 "sections": [
 {
 "items": [
 {
-"desc": "",
-"name": "Daily selection of Italian cheeses",
+"desc": "Soup of the day",
+"name": "Zuppa del Giorno",
+"price": "$12.50"
+},
+{
+"desc": "Radicchio, arugola, dates, walnuts, goat cheese, grapes, dressed with honey mustard vinaigrette",
+"name": "Insalata Esotica",
+"price": "$14.50"
+},
+{
+"desc": "Mixed field greens and fresh vegetables with house dressing",
+"name": "Mista di Campo",
+"price": "$11.50"
+},
+{
+"desc": "Fresh mozzarella, vine ripened tomatoes with pesto sauce, basil and olives",
+"name": "Caprese al Pesto",
+"price": "$17.50"
+},
+{
+"desc": "Mashed fava beans, shaved pecorino cheese, prosciutto",
+"name": "Bruschette – Fava",
+"price": "$17.50"
+},
+{
+"desc": "Cherry tomatoes, fresh mozzarella, black olives, basil",
+"name": "Bruschette – Caprese",
+"price": "$17.50"
+},
+{
+"desc": "Goat cheese, roasted tomatoes, capers",
+"name": "Bruschette – Goat Cheese",
+"price": "$17.50"
+},
+{
+"desc": "Flavorful porcini mushroom sauce",
+"name": "Bruschette – Funghi",
+"price": "$17.50"
+},
+{
+"desc": "Daily selection of Italian cheeses",
+"name": "Formaggie Assortiti (enough for two)",
 "price": "$26"
+},
+{
+"desc": "Simmered small Mediterranean clams and mussels with Sardinian couscous, crushed red pepper, roasted garlic, fresh parsley and tomatoes",
+"name": "Zuppa di Frutti di Mare",
+"price": "$26"
+},
+{
+"desc": "Fresh cantaloupe, prosciutto di Parma, mozzarella and olives",
+"name": "Prosciutto e Melone",
+"price": "$18.50"
+},
+{
+"desc": "Thin slices of cured beef tenderloin with parmigiano, fresh mushrooms, capers, arugola and marinated artichokes",
+"name": "Carpaccio di Bresaola",
+"price": "$19.50"
+},
+{
+"desc": "Prosciutto di Parma, salame, mortadella, assorted Italian cheeses and marinated vegetables",
+"name": "Antipasto Misto all'Italiana (enough for two)",
+"price": "$26"
+},
+{
+"desc": "",
+"name": "Additional Basket of Bread (for two)",
+"price": "$2"
 }
 ],
-"title": "Zuppa del Giorno"
+"title": "Antipasti"
 },
 {
 "items": [
 {
-"desc": "",
-"name": "Additional basket of bread (for two)",
-"price": "$ 2"
+"desc": "Homemade ricotta and spinach gnocchi with our family's marinara sauce and arugola",
+"name": "Bombette Pomodoro e Rucola",
+"price": "$26"
 },
 {
-"desc": "",
-"name": "is added for splitting orders",
-"price": "$ 2"
+"desc": "Egg ribbon pasta with hearty meat sauce in the traditional style of Northern Italy",
+"name": "Tagliatelle al Ragu Bolognese",
+"price": "$26"
 },
 {
-"desc": "",
-"name": "black pepper",
+"desc": "Spicy marinara sauce with garlic and fresh parsley",
+"name": "Penne Arrabbiata",
+"price": "$24"
+},
+{
+"desc": "Spaghetti with pancetta, eggs, pecorino cheese, a touch of cream and black pepper",
+"name": "Spaghetti Carbonara",
 "price": "$25"
 },
 {
-"desc": "garlic and basil",
-"name": "olive oil",
+"desc": "Short rolled egg pasta with porcini mushroom, peas, pancetta in a tomato-cream sauce",
+"name": "Garganelli Boscaiola",
+"price": "$28"
+},
+{
+"desc": "Spicy classic Italian red clam sauce with roasted garlic and fresh parsley",
+"name": "Spaghetti alle Vongole",
+"price": "$29"
+},
+{
+"desc": "Egg ribbon pasta with sautéed shrimp and sea scallops with extra virgin olive oil, garlic and basil",
+"name": "Tagliatelle al Pesce",
 "price": "$31"
 },
 {
-"desc": "",
-"name": "prosciutto and provolone",
-"price": "$30"
+"desc": "Cheese ravioli, fava beans and a flavorful vegetarian tomato sauce rich in garlic",
+"name": "Ravioli alle Fave",
+"price": "$28"
+},
+{
+"desc": "Short rolled egg pasta with vegetarian Ragu' Bolognese sauce",
+"name": "Garganelli al Ragu' Vegetariano",
+"price": "$26"
+},
+{
+"desc": "Penne with roasted peppers, sun dried tomatoes, aged ricotta, capers, olives and spicy marinara sauce",
+"name": "Penne del Pastore",
+"price": "$26.50"
+},
+{
+"desc": "Butternut squash ravioli with roasted peppers, sage, pine nuts and a touch of cream",
+"name": "Ravioli di Zucca",
+"price": "$28"
+},
+{
+"desc": "Spaghetti sautéed with extra virgin olive oil, garlic, crushed red peppers, mushrooms and olives",
+"name": "Spaghetti Aglio, Olio e Peperoncino",
+"price": "$25"
 }
 ],
-"title": "Carpaccio di Bresaola"
+"title": "Pasta"
 },
 {
 "items": [
 {
-"desc": "and sun dried tomatoes",
-"name": "anchovies",
-"price": "$32.50"
+"desc": "Sautéed veal scaloppine with artichokes, capers, fresh lemon juice and white wine",
+"name": "Picatine di Vitello",
+"price": "$34.50"
 },
 {
-"desc": "peas,bell peppers and tomato sauce served with rosemary potatoes",
-"name": "Seitan stew with onions",
+"desc": "Breaded chicken breast placed on marinara sauce then topped with prosciutto and provolone",
+"name": "Cotoletta di Pollo",
+"price": "$30"
+},
+{
+"desc": "Grilled veal chop with porcini mushroom sauce served with rosemary potatoes",
+"name": "Costata ai Porcini*",
+"price": "$48"
+},
+{
+"desc": "Baked thin pork tenderloin stuffed with prosciutto and parmesan cheese, served with mushroom and spinach cream sauce",
+"name": "Maialino Ripieno",
 "price": "$31.50"
 },
 {
-"desc": "",
-"name": "Sautéed spinach with butter and parmigiano",
-"price": "$10"
+"desc": "Sliced grilled Black Angus sirloin steak drizzled with extra virgin olive oil, topped with arugola and shaved Parmigiano",
+"name": "Tagliata di Manzo*",
+"price": "$48"
 },
 {
-"desc": "",
-"name": "Baked onions with balsamic vinegar",
-"price": "$10"
+"desc": "Sautéed filet of sole with fresh thyme, lemon and white wine",
+"name": "Sogliola al Timo",
+"price": "$32.50"
 },
 {
-"desc": "",
-"name": "All three vegetables sm. 14 lg.",
-"price": "$24"
+"desc": "Seared tuna steak in a spicy tomato sauce with peppers, olives, anchovies, and sun dried tomatoes",
+"name": "Tonno alla Puttanesca*",
+"price": "$32.50"
 },
 {
-"desc": "",
-"name": "sm. 14 lg.",
-"price": "$24"
+"desc": "Seitan stew with onions, peas, bell peppers and tomato sauce served with rosemary potatoes",
+"name": "Spezzatino Vegetariano con Patate",
+"price": "$31.50"
 }
 ],
-"title": "Sogliola al Timo"
+"title": "Secondi"
 },
 {
 "items": [
 {
-"desc": "peas, bell peppers and tomatoes served with rosemary potatoes",
-"name": "Seitan stew with onions",
-"price": "$31"
+"desc": "Oven roasted potatoes with garlic and rosemary",
+"name": "Patate al Forno",
+"price": "$10"
+},
+{
+"desc": "Sautéed spinach with butter and parmigiano",
+"name": "Spinaci al Burro",
+"price": "$10"
+},
+{
+"desc": "Baked onions with balsamic vinegar",
+"name": "Cipolle al Forno",
+"price": "$10"
+},
+{
+"desc": "All three vegetables",
+"name": "Vegetable Medley",
+"price": "sm. $14 / lg. $24"
+}
+],
+"title": "Verdure"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Zuppa del Giorno",
+"price": "$12.50"
+},
+{
+"desc": "Daily selection of Italian cheeses",
+"name": "Formaggi Assortiti (enough for two)",
+"price": "$26"
+},
+{
+"desc": "Radicchio, arugola, dates, walnuts, goat cheese, grapes, dressed with honey mustard vinaigrette",
+"name": "Insalata Esotica",
+"price": "$14.50"
+},
+{
+"desc": "Mixed field and fresh vegetables with house dressing",
+"name": "Mista di Campo",
+"price": "$11.50"
+},
+{
+"desc": "Fresh mozzarella, vine ripened tomatoes with pesto sauce, basil and olives",
+"name": "Caprese al Pesto",
+"price": "$17.50"
+},
+{
+"desc": "Cherry tomatoes, fresh mozzarella, black olives, basil",
+"name": "Bruschetta Caprese",
+"price": "$17.50"
+},
+{
+"desc": "Flavorful porcini mushroom sauce",
+"name": "Bruschetta Funghi",
+"price": "$17.50"
+},
+{
+"desc": "Goat cheese, roasted tomatoes, capers",
+"name": "Bruschetta Goat Cheese",
+"price": "$17.50"
+},
+{
+"desc": "Seitan stew with onions, peas, bell peppers and tomatoes served with rosemary potatoes",
+"name": "Spezzatino Vegetariano con Patate",
+"price": "$31.50"
+},
+{
+"desc": "Homemade ricotta and spinach gnocchi with our family's marinara sauce and arugola",
+"name": "Bombette Pomodoro e Arugola",
+"price": "$26"
+},
+{
+"desc": "Spicy marinara sauce with garlic and fresh parsley",
+"name": "Penne Arrabbiata",
+"price": "$24"
+},
+{
+"desc": "Ricotta and basil filled ravioli, fava beans and flavorful vegetarian tomato sauce rich in garlic",
+"name": "Ravioli alle Fave",
+"price": "$28"
+},
+{
+"desc": "Butternut squash ravioli with roasted peppers, sage, pine nuts and a touch of cream",
+"name": "Ravioli di Zucca",
+"price": "$28"
+},
+{
+"desc": "Short rolled egg pasta with vegetarian Ragu' Bolognese sauce",
+"name": "Garganelli al Ragu' Vegetariano",
+"price": "$26"
+},
+{
+"desc": "Penne with roasted peppers, sun dried tomatoes, aged ricotta, capers, olives and spicy marinara sauce",
+"name": "Penne del Pastore",
+"price": "$26.50"
+},
+{
+"desc": "Spaghetti sautéed with extra virgin olive oil, garlic, crushed red peppers, mushrooms and olives",
+"name": "Spaghetti Aglio, Olio e Peperoncino",
+"price": "$25"
+},
+{
+"desc": "Oven roasted potatoes with rosemary",
+"name": "Patate al Forno",
+"price": "$10"
+},
+{
+"desc": "Sautéed spinach with butter and parmigiano",
+"name": "Spinaci al Burro",
+"price": "$10"
+},
+{
+"desc": "Baked onions with balsamic vinegar",
+"name": "Cipolle al Forno",
+"price": "$10"
+},
+{
+"desc": "All three vegetables",
+"name": "Vegetable Medley",
+"price": "sm. $14 / lg. $24"
+}
+],
+"title": "Menu Vegetariano"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Sparkling Mineral Water",
+"price": "Small $5 / Large $8"
 },
 {
 "desc": "",
-"name": "Small 5 Large",
-"price": "$8"
+"name": "Still Mineral Water",
+"price": "Small $5 / Large $8"
+},
+{
+"desc": "Chinotto, Lemon, Orange",
+"name": "Italian Sodas (S.Pellegrino)",
+"price": "$6"
 },
 {
 "desc": "",
-"name": "Glass 5 Bottle",
-"price": "$13.50"
+"name": "Ice Tea (summer only)",
+"price": "$5"
 },
 {
 "desc": "",
-"name": "Double",
-"price": "$7"
+"name": "Sparkling Apple Cider",
+"price": "Glass $5 / Bottle $13.50"
+},
+{
+"desc": "Sprite, peach and raspberry",
+"name": "Virgin Bellini",
+"price": "$6"
 },
 {
 "desc": "",
-"name": "Hot water",
+"name": "Coca-Cola ~ Ginger Ale ~ Sprite ~ Diet Coke",
+"price": ""
+},
+{
+"desc": "",
+"name": "Coffee ~ Decaf ~ Tea ~ Herbal Tea ~ Iced Tea",
+"price": "$5"
+},
+{
+"desc": "Regular or Decaf",
+"name": "Espresso",
+"price": "$5 / Double $7"
+},
+{
+"desc": "",
+"name": "Hot Water",
 "price": "$1"
+},
+{
+"desc": "",
+"name": "Cappuccino",
+"price": "$6 / Jumbo $8 / Iced $7.50"
 }
 ],
-"title": "Mushroom Sauce"
+"title": "Beverages"
 },
 {
 "items": [
 {
 "desc": "",
-"name": "Jumbo",
-"price": "$8"
+"name": "Biscotti e Vin Santo",
+"price": ""
 },
 {
 "desc": "",
-"name": "Iced",
-"price": "$7.50"
+"name": "Tartufo al Cioccolato",
+"price": ""
+},
+{
+"desc": "Ask for our daily selection of desserts on the Tray",
+"name": "Daily Selection of Sorbetti (Fruit Sorbet)",
+"price": "$12.50"
 }
 ],
-"title": "Cappuccino"
+"title": "Dolci"
 }
 ],
 "source": "https://mammaluisa.com/food/"
 },
 "marcos": {
-"checked": "2026-10-09T03:29:55+00:00",
-"how": "linked-pdf",
+"checked": "2026-10-09T03:43:10+00:00",
+"how": "agent",
 "sections": [
 {
 "items": [
 {
-"desc": "We will create a beautiful platter for your special day,",
-"name": "Per Person",
-"price": "$6"
+"desc": "Small 8'' · Medium 10'' · Large 20''. All medium grinders can be served as wraps.",
+"name": "Bacon Lettuce & Tomato",
+"price": "Sm $8.50 · Md $9.95 · Lg $19.90"
+},
+{
+"desc": "",
+"name": "Broccoli Rabe",
+"price": "Sm $9.50 · Md $10.95 · Lg $21.90"
+},
+{
+"desc": "",
+"name": "Chicken Cutlet & Cheese",
+"price": "Sm $8.50 · Md $10.95 · Lg $21.90"
+},
+{
+"desc": "",
+"name": "Chicken Salad",
+"price": "Sm $8.50 · Md $9.50 · Lg $19.00"
+},
+{
+"desc": "",
+"name": "Chourico",
+"price": "Sm $8.50 · Md $9.50 · Lg $19.00"
+},
+{
+"desc": "",
+"name": "Combo MB & Sausage",
+"price": "Sm $8.50 · Md $9.50 · Lg $21.90"
+},
+{
+"desc": "",
+"name": "Corned Beef",
+"price": "Sm $8.50 · Md $9.50 · Lg $19.00"
+},
+{
+"desc": "",
+"name": "Eggplant & Cheese",
+"price": "Sm $9.50 · Md $10.95 · Lg $21.90"
+},
+{
+"desc": "",
+"name": "Grilled Chicken & Cheese",
+"price": "Sm $8.50 · Md $10.95 · Lg $21.90"
+},
+{
+"desc": "",
+"name": "Ham & Cheese",
+"price": "Sm $8.50 · Md $9.50 · Lg $19.00"
+},
+{
+"desc": "",
+"name": "Italian Grinder",
+"price": "Sm $7.50 · Md $9.00 · Lg $18.00"
+},
+{
+"desc": "",
+"name": "Meatball",
+"price": "Sm $8.50 · Md $9.50 · Lg $19.00"
+},
+{
+"desc": "",
+"name": "Pastrami",
+"price": "Sm $8.50 · Md $9.50 · Lg $19.00"
+},
+{
+"desc": "",
+"name": "Pepperoni & Cheese",
+"price": "Sm $8.50 · Md $9.50 · Lg $19.00"
+},
+{
+"desc": "",
+"name": "Prosciutto",
+"price": "Sm $8.50 · Md $9.95 · Lg $19.90"
+},
+{
+"desc": "",
+"name": "Reuben",
+"price": "Sm $9.95 · Md $10.95 · Lg $21.90"
+},
+{
+"desc": "",
+"name": "Roast Beef",
+"price": "Sm $8.50 · Md $9.50 · Lg $19.00"
+},
+{
+"desc": "",
+"name": "Sausage",
+"price": "Sm $8.50 · Md $9.50 · Lg $19.00"
+},
+{
+"desc": "",
+"name": "Seafood Salad",
+"price": "Sm $8.50 · Md $9.50 · Lg $19.00"
+},
+{
+"desc": "",
+"name": "Steak & Onions",
+"price": "Sm $8.50 · Md $9.50 · Lg $19.00"
+},
+{
+"desc": "",
+"name": "Tuna Salad",
+"price": "Sm $8.50 · Md $9.50 · Lg $19.00"
+},
+{
+"desc": "",
+"name": "Turkey",
+"price": "Sm $8.50 · Md $9.50 · Lg $19.00"
+},
+{
+"desc": "",
+"name": "Veal & Cheese",
+"price": "Sm $9.50 · Md $10.95 · Lg $20.40"
 }
 ],
-"title": "Sweet Bakery Platter"
+"title": "Build Your Own"
 },
 {
 "items": [
 {
-"desc": "Bacon, Cheddar & Scallion",
-"name": "Savory  Feeds 8",
-"price": "$30"
+"desc": "",
+"name": "Olives",
+"price": ".40 / .50 / 1.00"
 },
 {
 "desc": "",
-"name": "Sweet  Feeds 8",
-"price": "$30"
+"name": "Pickles",
+"price": ".40 / .50 / 1.00"
 },
 {
 "desc": "",
-"name": "Per Person",
-"price": "$10"
+"name": "Extra Peppers",
+"price": ".60 / .75 / 1.50"
 },
 {
 "desc": "",
-"name": "each",
-"price": "$8"
+"name": "Lettuce & Tomatoes",
+"price": ".60 / .75 / 1.50"
+},
+{
+"desc": "",
+"name": "Cheese",
+"price": ".60 / .75 / 1.50"
+},
+{
+"desc": "",
+"name": "Meat (Cold Cuts)",
+"price": ".80 / 1.00 / 2.00"
 }
 ],
-"title": "Breakfast Bake"
+"title": "Extras"
+},
+{
+"items": [
+{
+"desc": "Prosciutto, roasted red peppers, provolone, arugula, oil + vinegar on our homemade bread",
+"name": "The Geo",
+"price": "Sm $10.95 · Md $11.95 · Lg $23.90"
+},
+{
+"desc": "Turkey, lettuce, red onion, avocado, bacon, sriracha, mayo, pepper jack, on our homemade bread, cold or toasted",
+"name": "The Chloe",
+"price": "Sm $10.95 · Md $11.95 · Lg $23.90"
+},
+{
+"desc": "Buffalo chicken (breaded or grilled), arugula, red onion and mozzarella on our homemade bread - toasted",
+"name": "Hot Chicken",
+"price": "Sm $9.95 · Md $10.95 · Lg $21.90"
+},
+{
+"desc": "Roast beef, Swiss cheese, lettuce, tomato, red onion, horseradish cream sauce on our homemade bread - toasted",
+"name": "The Beau",
+"price": "Sm $9.95 · Md $11.95 · Lg $23.90"
+},
+{
+"desc": "Turkey, ham, bacon, provolone, spicy mayo, lettuce, tomato, onion, oregano, oil + vinegar, on homemade bread, cold or toasted",
+"name": "Marco's Club",
+"price": "Sm $10.95 · Md $11.95 · Lg $23.90"
+},
+{
+"desc": "Lettuce, tomato, cucumber, olives, onion, roasted reds, balsamic dressing on your choice of wrap",
+"name": "Garden Wrap",
+"price": "$10.95"
+},
+{
+"desc": "Grilled chicken, hummus, spinach, red onion, roasted red peppers, olives, cucumbers and greek dressing on your choice of wrap",
+"name": "Greek Wrap",
+"price": "$10.20"
+},
+{
+"desc": "Grilled chicken, crisp romaine lettuce, grated parmesan cheese and caesar dressing on your choice of wrap",
+"name": "Chicken Caesar Wrap",
+"price": "$9.95"
+},
+{
+"desc": "Homemade Guinness corned beef, swiss cheese, caramelized onions, 1000 island dressing, sauerkraut on rye",
+"name": "Drunken Irishman",
+"price": "$12.95"
+},
+{
+"desc": "Slow roasted pulled pork, pot roast, bacon, caramelized onions, BBQ sauce and cheddar cheese on our homemade bread",
+"name": "The Rodeo",
+"price": "Sm $10.95 · Md $11.95 · Lg $23.90"
+},
+{
+"desc": "Shaved steak, american cheese, peppers, onion + mushrooms",
+"name": "Steak Bomb",
+"price": "Sm $9.95 · Md $11.95 · Lg $23.90"
+},
+{
+"desc": "Chicken cutlet or grilled chicken, lettuce, tomato, cheddar, bacon and ranch, toasted",
+"name": "Chicken - Bacon - Ranch",
+"price": "Sm $10.95 · Md $11.95 · Lg $23.90"
+},
+{
+"desc": "Slow roasted pulled pork, pickles, chipotle-aioli sauce and bacon",
+"name": "Cuban",
+"price": "Sm $10.95 · Md $11.95 · Lg $23.90"
+},
+{
+"desc": "Grilled chicken, avocado, tomatoes, red onions, cheddar cheese and chipotle-aioli sauce",
+"name": "Cali Chicken",
+"price": "Sm $10.95 · Md $11.95 · Lg $23.90"
+},
+{
+"desc": "Chicken salad, pepper jack cheese, pickles, hot peppers, and spicy mayo",
+"name": "Kicken Chicken",
+"price": "Sm $9.95 · Md $10.95 · Lg $21.90"
+},
+{
+"desc": "Grilled chicken, cheddar cheese, BBQ sauce, caramelized onions, bacon and roasted red peppers, toasted",
+"name": "BBQ",
+"price": "Sm $10.95 · Md $11.95 · Lg $23.90"
+},
+{
+"desc": "House made pulled pork, coleslaw, caramelized onions, cheddar cheese, bacon and honey BBQ sauce, toasted",
+"name": "Southern BBQ",
+"price": "Lg $21.90"
+},
+{
+"desc": "Chicken cutlet, mozzarella cheese, spinach, roasted red peppers, sweet chili sauce, toasted",
+"name": "Sweet Chili Cutlet",
+"price": "Lg $21.90"
+},
+{
+"desc": "Chicken cutlet, homemade marinara sauce, mozzarella cheese, toasted to ooey, gooey perfection",
+"name": "Chicken Parm",
+"price": "Sm $9.95 · Md $10.95 · Lg $21.90"
+},
+{
+"desc": "Slow cooked pot roast, cheddar cheese and onions on our homemade bread",
+"name": "Pot Roast",
+"price": "Sm $9.95 · Md $11.95 · Lg $23.90"
+},
+{
+"desc": "Homemade stuffing, thin sliced turkey and cranberry sauce, toasted",
+"name": "Thanksgiving",
+"price": "Sm $9.95 · Md $10.95 · Lg $21.90"
+},
+{
+"desc": "Chicken cutlet or grilled chicken, bacon, balsamic glaze, arugula, caramelized onion, mozzarella and nut free pesto - toasted",
+"name": "Pesto Supreme",
+"price": "Sm $9.95 · Md $10.95 · Lg $21.90"
+},
+{
+"desc": "Shaved steak, bleu cheese, spinach, roasted red peppers, balsamic glaze, blackened aioli on our homemade bread",
+"name": "Black & Bleu",
+"price": "Sm $9.95 · Md $10.95 · Lg $21.90"
+},
+{
+"desc": "Italian sausage, pepperoni, mozzarella cheese, pesto, garlic aioli, parmesan cheese on our homemade bread",
+"name": "The Primo",
+"price": "Sm $9.95 · Md $10.95 · Lg $21.90"
+}
+],
+"title": "Marco's Specialties Sandwiches"
+},
+{
+"items": [
+{
+"desc": "Grilled chicken, spinach, feta cheese, tomatoes, black olives and balsamic glaze in a tomato basil wrap",
+"name": "Mediterranean Wrap",
+"price": "$11.95"
+},
+{
+"desc": "Chicken cutlet, cheddar cheese, bacon, tomatoes, caramelized onion, spicy BBQ sauce",
+"name": "Blazing BBQ Chicken",
+"price": "Sm $9.95 · Md $11.95"
+},
+{
+"desc": "Grilled chicken, spinach, tomato, mozzarella, basil pesto, garlic aioli and balsamic glaze on a wrap of your choice",
+"name": "Margarita Chicken Wrap",
+"price": "$12.95"
+},
+{
+"desc": "Shaved steak, spicy onions, pepper jack cheese, banana peppers, chipotle honey mustard on our homemade bread",
+"name": "Sizzling Steak",
+"price": "$12.95"
+}
+],
+"title": "Rotating Specials"
 },
 {
 "items": [
 {
 "desc": "",
-"name": "Co\u0000fee/Decaf",
-"price": "$30"
+"name": "Tossed with Garlic Bread",
+"price": "$10.95"
 },
 {
 "desc": "",
-"name": "Tea",
-"price": "$3.75"
+"name": "Tossed with Choice of Meat",
+"price": "$12.00"
+},
+{
+"desc": "On rotation: homemade chili, kale soup, chicken noodle & more",
+"name": "Seasonal Soup",
+"price": "Cup $5.75"
 }
 ],
-"title": "Drinks"
+"title": "Soup & Salads"
 },
 {
 "items": [
 {
 "desc": "",
-"name": "Nitro",
-"price": "$5.35"
+"name": "Bakery Pizza Slice",
+"price": "$1.15"
 },
 {
 "desc": "",
-"name": "Iced Co\u0000fee",
+"name": "Bakery Pizza (6 Slices)",
+"price": "$6.90"
+},
+{
+"desc": "",
+"name": "Bakery Pizza Tray (30 slices)",
+"price": "$34.50"
+},
+{
+"desc": "",
+"name": "Meat Lasagna",
+"price": "$12.95"
+},
+{
+"desc": "",
+"name": "Macaroni & Cheese",
+"price": "$9.95"
+},
+{
+"desc": "",
+"name": "Stuffed Quahog",
+"price": "$4.50"
+},
+{
+"desc": "",
+"name": "Chourico Roll",
+"price": "$4.95"
+},
+{
+"desc": "",
+"name": "Spinach Roll",
+"price": "$4.00"
+}
+],
+"title": "Delicious Extras"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Macaroni Salad",
 "price": "$3.95"
 },
 {
 "desc": "",
-"name": "Coconut Water",
-"price": "$6.75"
+"name": "Potato Salad",
+"price": "$3.95"
 },
 {
 "desc": "",
-"name": "Dels Lemonade",
-"price": "$2.95"
-},
-{
-"desc": "",
-"name": "Bottled Water",
-"price": "$2.20"
-},
-{
-"desc": "",
-"name": "Sodas",
-"price": "$2.25"
-},
-{
-"desc": "",
-"name": "Gatorade",
-"price": "$2.45"
-},
-{
-"desc": "Peanut Butter & Jelly bars, Ginger Scones, Brownies,",
-"name": "Per Person",
-"price": "$5"
-},
-{
-"desc": "",
-"name": "Red Potato Salad Single  Half Pan $",
-"price": "$2.95"
+"name": "Fruit Cup",
+"price": "$4.25"
 }
 ],
-"title": "Earl Grey and more"
-},
-{
-"items": [
-{
-"desc": "Bowtie pasta with cut cherry tomatoes, red onion, arugula,",
-"name": "Pasta Salad Single  Half Pan $",
-"price": "$2.95"
-},
-{
-"desc": "",
-"name": "Macaroni & Cheese Single  Half Pan $",
-"price": "$ 9.95"
-},
-{
-"desc": "",
-"name": "Basket of Bread & Butter",
-"price": "$7"
-},
-{
-"desc": "",
-"name": "Chips",
-"price": "$1.80"
-},
-{
-"desc": "",
-"name": "@  per person",
-"price": "$1"
-}
-],
-"title": "Traditional mayonnaise"
+"title": "Sides"
 },
 {
 "items": [
 {
 "desc": "",
-"name": "Single location delivery",
-"price": "$10"
+"name": "Tiramisu",
+"price": "$4.95"
 },
 {
 "desc": "",
-"name": "Double location delivery",
-"price": "$20"
+"name": "Fresh Baked Cookies",
+"price": "$3.25"
 }
 ],
-"title": "Middletown and Newport"
+"title": "Desserts"
+},
+{
+"items": [
+{
+"desc": "With side of pasta salad",
+"name": "Ham & Swiss",
+"price": "$12.95"
+},
+{
+"desc": "With side of pasta salad",
+"name": "Turkey & Cheddar",
+"price": "$12.95"
+},
+{
+"desc": "With side of pasta salad",
+"name": "Chicken Salad",
+"price": "$12.95"
+},
+{
+"desc": "With side of pasta salad",
+"name": "Chicken Caesar",
+"price": "$12.95"
 }
 ],
-"source": "https://www.marcosri.com"
+"title": "Grab & Go"
+}
+],
+"source": "https://www.marcosri.com/ (+ catering PDF https://www.marcosri.com/_files/ugd/e3afd1_f53a39f598a0494db8ad3762944ee226.pdf)"
 },
 "martinos": {
 "checked": "2026-10-09T03:29:55+00:00",
@@ -12232,58 +13967,58 @@ const MENUS = {
 "source": "https://www.perrosalado.com/menu"
 },
 "pickles": {
-"checked": "2026-10-09T03:29:55+00:00",
-"how": "text",
+"checked": "2026-10-09T03:43:10+00:00",
+"how": "agent",
 "sections": [
 {
 "items": [
 {
-"desc": "lettuce, tomato, onion, cucumber, pickles, beets, green peppers in a wrap with mayo.",
-"name": "Maggie's Veggie",
-"price": "$10.25"
-},
-{
-"desc": "garden salad topped with ham, turkey and swiss cheese. ​",
-"name": "Chef’s Salad",
-"price": "$13.99"
-},
-{
-"desc": "garden salad topped with your choice of protein. ​",
-"name": "Salad Platter",
-"price": "$13.25"
-},
-{
-"desc": "lettuce, tomato, green pepper, cucumber, onion, feta cheese and kalamata olives.",
-"name": "Greek Salad",
-"price": "$13.99"
-},
-{
-"desc": "chicken breast, lettuce, tomato, onion, bacon, avocado, egg and crumbled blue cheese.",
-"name": "Cobb Salad",
-"price": "$13.99"
-},
-{
-"desc": "american cheese + choice of bacon, ham or sausage.",
-"name": "Egg",
+"desc": "Served until 11AM. Egg, american cheese + choice of bacon, ham or sausage",
+"name": "Classic Breakfast Sandwich",
 "price": "$5.50"
 },
 {
-"desc": "egg + american cheese with cream cheese on a plain or everything bagel.",
-"name": "Bacon",
+"desc": "Bacon, egg + american cheese with cream cheese on a plain or everything bagel",
+"name": "New York Rooster",
 "price": "$7.75"
 },
 {
-"desc": "",
-"name": "in a wrap, toasted.",
+"desc": "Shaved steak, cheddar cheese, seasoned potatoes + bell pepper with egg in a wrap",
+"name": "Hangover Helper",
+"price": "$9.99"
+},
+{
+"desc": "Egg, avocado, pepper-jack cheese, salsa on your choice of bread",
+"name": "South of The Border",
+"price": "$6.50"
+},
+{
+"desc": "Egg, steamed broccoli, roasted red pepper, tomato, provolone cheese in a wrap, toasted",
+"name": "Veggie Delight",
 "price": "$6.99"
+},
+{
+"desc": "Sausage, egg, smoked gouda, garlic herb cheese spread, Mike's Hot Honey, caramelized onions & roasted red peppers on a toasted croissant",
+"name": "The Smoke Show",
+"price": ""
+},
+{
+"desc": "Over hard egg, hash patty, bacon, smoked gouda & Mike's Hot Honey on a toasted croissant",
+"name": "Golden Hour Crunch",
+"price": ""
+},
+{
+"desc": "Topped with fresh berries",
+"name": "Overnight Oats",
+"price": ""
 }
 ],
-"title": "Light & Salads"
+"title": "Breakfast"
 },
 {
 "items": [
 {
-"desc": "",
+"desc": "Sandwich, wrap or 8'' grinder",
 "name": "Roast Beef",
 "price": "$9.95"
 },
@@ -12346,124 +14081,224 @@ const MENUS = {
 "desc": "",
 "name": "BLT",
 "price": "$9.95"
+},
+{
+"desc": "American, Swiss, Muenster, Herb Cheese, Jalapeño Jack, Cheddar, Provolone, Feta, Shredded Parm, Blue Cheese Crumble, Monterey Jack, Brie",
+"name": "Cheese",
+"price": "+$.75"
+},
+{
+"desc": "",
+"name": "3 or More Veggies",
+"price": "$.25 extra"
+},
+{
+"desc": "",
+"name": "Stuffing",
+"price": "+$.75"
+},
+{
+"desc": "",
+"name": "Avocado",
+"price": "+$1.50"
+},
+{
+"desc": "",
+"name": "Fried Egg",
+"price": "+$1.50"
+},
+{
+"desc": "",
+"name": "Bacon (Extra)",
+"price": "+$1.00"
 }
 ],
-"title": "Choose a protein base"
+"title": "Build Your Own"
 },
 {
 "items": [
 {
-"desc": "",
-"name": "Stuffing +$.75",
-"price": "$75"
-},
-{
-"desc": "",
-"name": "Avocado +",
-"price": "$1.50"
-},
-{
-"desc": "",
-"name": "Fried Egg +",
-"price": "$1.50"
-},
-{
-"desc": "",
-"name": "Bacon +",
-"price": "$1.00"
-}
-],
-"title": "Ranch"
-},
-{
-"items": [
-{
-"desc": "",
-"name": "mayo on pumpernickel.",
+"desc": "Roast beef, brie cheese spread, arugula & horseradish mayo on pumpernickel",
+"name": "Beef and Brie",
 "price": "$10.95"
 },
 {
-"desc": "",
-"name": "tomato and onion.",
+"desc": "Roast beef, ham, turkey, american cheese, lettuce, tomato and onion",
+"name": "American Grinder",
 "price": "$10.95"
 },
 {
-"desc": "bacon and mayo",
-"name": "tomato",
+"desc": "Sliced turkey on a croissant with lettuce, tomato, bacon and mayo",
+"name": "Croissant Sandwich",
 "price": "$10.95"
 },
 {
-"desc": "warmed roast beef topped with fresh mushrooms and melted cheddar cheese on deli roll.",
+"desc": "Warmed roast beef topped with fresh mushrooms and melted cheddar cheese on deli roll",
 "name": "Roast Beef Supreme",
 "price": "$10.95"
 },
 {
-"desc": "Mortadella, salami, hot ham, provolone cheese, lettuce, tomato, onion, hot peppers and oil + vinegar.",
+"desc": "Mortadella, salami, hot ham, provolone cheese, lettuce, tomato, onion, hot peppers and oil + vinegar",
 "name": "Italian Grinder",
 "price": "$9.95"
 },
 {
-"desc": "",
-"name": "on toasted rye with Russian dressing.",
+"desc": "The N.Y. Classic - hot corned beef, Swiss cheese and sauerkraut on toasted rye with Russian dressing",
+"name": "Rueben",
 "price": "$10.95"
 },
 {
-"desc": "tomato, bacon and mayo.",
-"name": "white bread topped with lettuce",
+"desc": "Turkey, roast beef or ham on toasted white bread topped with lettuce, tomato, bacon and mayo",
+"name": "Deli Club",
 "price": "$10.95"
 },
 {
-"desc": "our own tuna salad, muenster cheese and lots of tomato.",
+"desc": "Our own tuna salad, muenster cheese and lots of tomato",
 "name": "Jaws",
 "price": "$10.95"
 },
 {
-"desc": "pulled pork with bacon, swiss + cheddar cheese, pickles, onion, tomato and chipotle aioli.",
+"desc": "Pulled pork with bacon, swiss + cheddar cheese, pickles, onion, tomato and chipotle aioli",
 "name": "The Cuban",
 "price": "$11.95"
 },
 {
-"desc": "shaved steak, sautéed onions, american cheese on a grinder roll.",
+"desc": "Shaved steak, sautéed onions, american cheese on a grinder roll",
 "name": "Philly Cheese",
 "price": "$10.95"
 },
 {
-"desc": "homemade meatballs, marinara and melted provolone cheese.",
+"desc": "Homemade meatballs, marinara and melted provolone cheese",
 "name": "Meatball Grinder",
 "price": "$10.95"
 },
 {
-"desc": "turkey, bacon, lettuce, tomato, avocado, spicy mayo on a bulky roll.",
+"desc": "Turkey, bacon, lettuce, tomato, avocado, spicy mayo on a bulky roll",
 "name": "Southwest Club",
 "price": "$11.95"
 },
 {
-"desc": "fresh roasted turkey, cranberry, stuffing and gravy.",
+"desc": "Fresh roasted turkey, cranberry, stuffing and gravy",
 "name": "Turkey Special",
 "price": "$10.95"
 },
 {
-"desc": "chicken breast, bacon, pepper, jack cheese, lettuce, tomato, avocado and bistro sauce.",
+"desc": "Chicken breast, bacon, pepper, jack cheese, lettuce, tomato, avocado and bistro sauce",
 "name": "Sedona Chicken Wrap",
 "price": "$11.95"
 },
 {
-"desc": "lettuce, tomato, green peppers, mushroom, onion, cucumber, carrot and broccoli.",
+"desc": "Lettuce, tomato, green peppers, mushroom, onion, cucumber, carrot and broccoli",
 "name": "Veggie Wrap",
 "price": "$10.25"
 },
 {
-"desc": "chicken breast, brie cheese, fig glaze, bacon, arugula, tomato, onion and roasted red pepper.",
+"desc": "Chicken breast, brie cheese, fig glaze, bacon, arugula, tomato, onion and roasted red pepper",
 "name": "Napa Valley Wrap",
 "price": "$11.95"
 },
 {
-"desc": "breaded chicken, american cheese, bacon, lettuce, tomato, onion and mayo on a bulky roll.",
+"desc": "Breaded chicken, american cheese, bacon, lettuce, tomato, onion and mayo on a bulky roll",
 "name": "Chicken Cutlet",
 "price": "$10.95"
 }
 ],
 "title": "Specialty Sandwiches"
+},
+{
+"items": [
+{
+"desc": "Lettuce, tomato, onion, cucumber, pickles, beets, green peppers in a wrap with mayo",
+"name": "Maggie's Veggie",
+"price": "$10.25"
+},
+{
+"desc": "Garden salad topped with ham, turkey and swiss cheese",
+"name": "Chef's Salad",
+"price": "$13.99"
+},
+{
+"desc": "Garden salad topped with your choice of protein",
+"name": "Salad Platter",
+"price": "$13.25"
+},
+{
+"desc": "Lettuce, tomato, green pepper, cucumber, onion, feta cheese and kalamata olives",
+"name": "Greek Salad",
+"price": "$13.99"
+},
+{
+"desc": "Lettuce, tomato, cucumber, onion, roasted red pepper, artichokes, pepperoncini, kalamata olives, provolone, salami and ham",
+"name": "Antipasto Salad",
+"price": "$13.99"
+},
+{
+"desc": "Chicken breast, lettuce, tomato, onion, bacon, avocado, egg and crumbled blue cheese",
+"name": "Cobb Salad",
+"price": "$13.99"
+},
+{
+"desc": "Chicken breast, pecans, red onion, crumbled blue cheese, tomato, pear with lemon vinaigrette",
+"name": "Arugula & Spinach Salad",
+"price": "$13.99"
+}
+],
+"title": "Light & Salads"
+},
+{
+"items": [
+{
+"desc": "Smoked turkey, fresh spinach, herb + muenster cheese on a white wrap served warm",
+"name": "Club Med",
+"price": ""
+},
+{
+"desc": "Grilled chicken breast, parmesan cheese, romaine lettuce with a light caesar dressing, served in a wrap",
+"name": "Chicken Caesar Wrap",
+"price": ""
+},
+{
+"desc": "Breaded chicken in buffalo sauce, lettuce, tomato, red onion, carrot and blue cheese dressing, served warm in a wrap",
+"name": "Buffalo Chicken Wrap",
+"price": ""
+},
+{
+"desc": "Served on a grinder with provolone cheese",
+"name": "Chicken Parmesan",
+"price": ""
+},
+{
+"desc": "Sliced chicken, monterey jack cheese, chipotle pesto, roasted red peppers, lettuce, tomato + onion in a white wrap",
+"name": "Chipotle Chicken Wrap",
+"price": ""
+},
+{
+"desc": "Chicken salad, green apple and muenster cheese on rye bread",
+"name": "Chicken Applemun",
+"price": ""
+},
+{
+"desc": "Sautéed ground beef, bacon, cheddar, lettuce, tomato, onion, mayo, mustard, served warm in a wrap",
+"name": "Cheeseburger Wrap",
+"price": ""
+},
+{
+"desc": "Our own fresh roasted turkey, cranberry stuffing & gravy on a deli roll (all white meat)",
+"name": "Turkey Special",
+"price": ""
+},
+{
+"desc": "Cajun spiced chicken, sautéed onions, bacon, monterey jack cheese, lettuce, tomatoes with ranch dressing in a wrap",
+"name": "Cajun Chicken Wrap",
+"price": ""
+},
+{
+"desc": "Smoked turkey, jalapeño cranberry salsa, monterey jack cheese, lettuce and tomato in a wrap",
+"name": "The Lean Boy",
+"price": ""
+}
+],
+"title": "Specials"
 },
 {
 "items": [
@@ -12491,22 +14326,57 @@ const MENUS = {
 "desc": "",
 "name": "Whole Pickle",
 "price": "$1.95"
-},
-{
-"desc": "",
-"name": "Bowl , Cup , Quart",
-"price": "$6.00"
-},
-{
-"desc": "Oatmeal Raisin & White Chocolate Macadamia Nut",
-"name": "Chocolate Chip",
-"price": "$1.95"
 }
 ],
 "title": "Sides"
+},
+{
+"items": [
+{
+"desc": "Subject to change",
+"name": "NE England Chowder",
+"price": "Bowl $6.00, Cup $4.50, Quart $10.95"
+},
+{
+"desc": "Subject to change",
+"name": "Chili",
+"price": "Bowl $6.00, Cup $4.50, Quart $10.95"
+},
+{
+"desc": "Subject to change",
+"name": "Chicken Noodle",
+"price": "Bowl $6.00, Cup $4.50, Quart $10.95"
+},
+{
+"desc": "Subject to change",
+"name": "Broccoli + Cheese",
+"price": "Bowl $6.00, Cup $4.50, Quart $10.95"
+},
+{
+"desc": "Subject to change",
+"name": "Italian Wedding",
+"price": "Bowl $6.00, Cup $4.50, Quart $10.95"
+},
+{
+"desc": "Subject to change",
+"name": "Chourico + Kale",
+"price": "Bowl $6.00, Cup $4.50, Quart $10.95"
 }
 ],
-"source": "https://www.picklesdeliri.com"
+"title": "Soups"
+},
+{
+"items": [
+{
+"desc": "Chocolate Chip, Oatmeal Raisin & White Chocolate Macadamia Nut",
+"name": "Homemade Cookies",
+"price": "$1.95"
+}
+],
+"title": "Desserts"
+}
+],
+"source": "https://www.picklesdeliri.com/"
 },
 "pocket-cafe": {
 "checked": "2026-10-09T00:41:19+00:00",
@@ -12956,463 +14826,698 @@ const MENUS = {
 "source": "https://www.internationalpocketcafe.com/"
 },
 "portsmouth-publick": {
-"checked": "2026-10-09T03:29:55+00:00",
-"how": "structured+rendered",
+"checked": "2026-10-09T03:43:10+00:00",
+"how": "agent",
 "sections": [
 {
 "items": [
 {
-"desc": "",
-"name": "Raw Bar",
-"price": ""
-},
-{
-"desc": "",
+"desc": "Sauces: cocktail, horseradish, white balsamic mignonette",
 "name": "*Daily Local Oyster",
-"price": ""
+"price": "Each 3.25 | Dozen 35.99"
 },
 {
 "desc": "",
 "name": "Shrimp Cocktail",
-"price": ""
+"price": "Each 2.75 | Dozen 29.99"
 },
 {
 "desc": "",
 "name": "*Little Necks",
-"price": ""
+"price": "Each 2.49 | Dozen 24.99"
 },
 {
-"desc": "",
+"desc": "8 oysters, 8 little necks, 8 shrimp served with cocktail sauce and lemon",
 "name": "*The Queen Platter",
-"price": ""
+"price": "49.99"
 },
 {
-"desc": "",
+"desc": "12 oysters, 12 little necks, 12 shrimp served with cocktail sauce and lemon",
 "name": "*The King Platter",
-"price": ""
+"price": "69.99"
+}
+],
+"title": "Raw Bar"
 },
 {
-"desc": "",
-"name": "Starters",
-"price": ""
-},
+"items": [
 {
-"desc": "",
+"desc": "Corn tortilla chips with freshly made salsa (add guacamole +3.99)",
 "name": "Chips and Salsa",
-"price": ""
+"price": "7.99"
 },
 {
-"desc": "",
+"desc": "Chicken or pork dumplings, served with Asian dipping sauce",
 "name": "Asian Dumplings",
-"price": ""
+"price": "11.99"
 },
 {
-"desc": "",
+"desc": "8 breaded fried mozzarella sticks served with our marinara sauce",
 "name": "Mozarella Sticks",
-"price": ""
+"price": "10.99"
 },
 {
-"desc": "",
+"desc": "Thick cut onion rings fried golden brown served with buffalo ranch",
 "name": "Beer Battered Onion Rings",
-"price": ""
+"price": "12.99"
 },
 {
-"desc": "",
-"name": "Fried Calamari",
-"price": ""
+"desc": "Tossed with garlic butter, pepper rings with marinara",
+"name": "Fried Calamari – RI Traditional",
+"price": "18.99"
 },
 {
-"desc": "",
+"desc": "Tossed with General Tso sauce, scallions and sesame seeds",
+"name": "Fried Calamari – General Tso",
+"price": "18.99"
+},
+{
+"desc": "Tossed with garlic butter, chourico, and pepper rings",
+"name": "Fried Calamari – Azorean",
+"price": "18.99"
+},
+{
+"desc": "Tater tots loaded with cheddar cheese sauce, bacon, sour cream, and green onions",
 "name": "Loaded Tater Tots",
-"price": ""
+"price": "13.99"
 },
 {
-"desc": "",
+"desc": "Poke tuna tossed in house Asian sauce, over tortilla chips, topped with scallions, avocado, and sesame seeds",
 "name": "Poke Tuna Nachos",
-"price": ""
+"price": "19.99"
 },
 {
-"desc": "",
+"desc": "Shrimp, crab, scallops, seasoned bread crumbs, spicy mayo",
 "name": "Seafood Cakes",
-"price": ""
+"price": "15.99"
 },
 {
-"desc": "",
+"desc": "Breaded jalapenos stuffed with cheddar cheese served with ranch",
 "name": "Jalapeno Poppers",
-"price": ""
+"price": "12.99"
 },
 {
-"desc": "",
+"desc": "Breaded cauliflower bites tossed in our Sweet and Spicy sauce",
 "name": "Sweet and Spicy Cauliflower Bites",
-"price": ""
+"price": "14.99"
 },
 {
-"desc": "",
+"desc": "Freshly battered dill pickle chips, fried to order",
 "name": "Fried Pickles",
-"price": ""
+"price": "12.99"
 },
 {
-"desc": "",
+"desc": "Corn tortilla chips topped with chili, cheese, mixed greens, salsa, jalapenos and sour cream",
 "name": "Monster Nachos",
-"price": ""
+"price": "14.99"
 },
 {
 "desc": "",
+"name": "Add Pulled Pork (Monster Nachos)",
+"price": "5.99"
+},
+{
+"desc": "Little necks, sautéed in a garlic wine sauce, with dipping bread",
 "name": "Little Necks & Garlic Oil Dip",
-"price": ""
+"price": "19.99"
 },
 {
-"desc": "",
+"desc": "Fresh burrata, tomato, fresh basil, mayo, balsamic glaze",
 "name": "Burrata",
-"price": ""
+"price": "17.99"
+}
+],
+"title": "Starters"
+},
+{
+"items": [
+{
+"desc": "Sauces: BBQ Mango Habanero, Mild, Hot, Buffalo Ranch, Spicy Asian, General Tso, Spicy Peanut, Garlic Parmesan, Honey Sriracha, Sweet and Spicy",
+"name": "PPH Wings: Bone-In or Boneless",
+"price": "Small $11.99 | Large $21.99 | Xtra Large"
 },
 {
 "desc": "",
-"name": "PPH WINGS: Bone-in or Boneless",
-"price": ""
+"name": "Add French Fries",
+"price": "+4.99"
 },
 {
 "desc": "",
-"name": "Wing Sauces",
-"price": ""
+"name": "Add Truffle Oil Parmesan Fries",
+"price": "+7.99"
 },
 {
 "desc": "",
-"name": "Burgers",
-"price": ""
+"name": "Add Cheesy Fries",
+"price": "+7.99"
+}
+],
+"title": "Wings"
 },
 {
-"desc": "",
+"items": [
+{
+"desc": "Topped with our own chili, and cheddar cheese",
 "name": "*Abbey Burger",
-"price": ""
+"price": "18.99"
 },
 {
-"desc": "",
+"desc": "Topped with bacon, mushroom, Swiss cheese, BBQ sauce",
 "name": "*Patriot Burger",
-"price": ""
+"price": "18.99"
 },
 {
-"desc": "",
+"desc": "Topped with chourico, red pepper, provolone, fried egg",
 "name": "*Portuguese Burger",
-"price": ""
+"price": "18.99"
 },
 {
-"desc": "",
+"desc": "LTO, pickles, bacon, shredded cheddar cheese",
 "name": "*Bacon Cheddar Burger",
-"price": ""
+"price": "18.99"
 },
 {
-"desc": "",
-"name": "*Classic Hamburger Build your own",
-"price": ""
+"desc": "Topped with lettuce, tomato, onion and pickles",
+"name": "*Classic Hamburger – Build Your Own",
+"price": "14.99"
 },
 {
-"desc": "",
+"desc": "LTO, black bean patty, guacamole",
 "name": "*Black Bean Veggie Burger",
-"price": ""
+"price": "16.99"
 },
 {
 "desc": "",
-"name": "Pizza",
-"price": ""
+"name": "Add On: Bacon",
+"price": "$2"
 },
 {
 "desc": "",
+"name": "Add On: Cheese",
+"price": "$2"
+},
+{
+"desc": "",
+"name": "Add On: Avacado",
+"price": "$2"
+},
+{
+"desc": "",
+"name": "Add On: Mushrooms",
+"price": "$1"
+},
+{
+"desc": "",
+"name": "Add On: Caramelized Onions",
+"price": "$1"
+},
+{
+"desc": "",
+"name": "Add On: Fried Egg",
+"price": "$1"
+}
+],
+"title": "Burgers"
+},
+{
+"items": [
+{
+"desc": "Marinara sauce, three cheese blend",
 "name": "Cheese",
-"price": ""
+"price": "13.99"
 },
 {
-"desc": "",
+"desc": "Marinara sauce, three cheese blend, and pepperoni",
 "name": "Pepperoni",
-"price": ""
+"price": "15.99"
 },
 {
-"desc": "",
+"desc": "Marinara sauce, cheese blend, chourico, green pepper, onion",
 "name": "Chourico & Pepper",
-"price": ""
+"price": "19.99"
 },
 {
-"desc": "",
+"desc": "Marinara, cheese blend, sausage, bacon, onions, peppers, mushrooms",
 "name": "PPH House",
-"price": ""
+"price": "23.99"
 },
 {
-"desc": "",
+"desc": "Barbeque sauce, three cheese blend, our own pulled pork, caramelized onions, and parmesan cheese",
 "name": "PPH Pulled Pork",
-"price": ""
+"price": "24.99"
 },
 {
-"desc": "",
+"desc": "Marinara sauce, three cheese blend, bacon, pepperoni, sausage, and parmesan cheese",
 "name": "Meat Lovers",
-"price": ""
+"price": "24.99"
 },
 {
-"desc": "",
+"desc": "EVOO, goat cheese, bacon, spinach, red onion",
 "name": "Goat Cheese",
-"price": ""
+"price": "23.99"
 },
 {
-"desc": "",
+"desc": "Ranch dressing, cheese, breaded buffalo chicken, red onion",
 "name": "Buffalo Chicken",
-"price": ""
+"price": "23.99"
 },
 {
-"desc": "",
+"desc": "Olive oil, cheese, breaded Tso chicken, green onion, sesame seed",
 "name": "General Tso Chicken",
-"price": ""
+"price": "23.99"
 },
 {
-"desc": "",
+"desc": "Ranch, cheese, breaded chicken, bacon topped with romaine",
 "name": "Chicken Bacon Ranch",
-"price": ""
+"price": "23.99"
 },
 {
-"desc": "",
+"desc": "Marinara sauce, cheese blend, onions, mushrooms, tomato and green peppers",
 "name": "Veggie",
-"price": ""
+"price": "20.99"
 },
 {
-"desc": "",
+"desc": "Marinara sauce, fresh mozzarella, tomato and fresh basil",
 "name": "Margherita",
-"price": ""
+"price": "21.99"
 },
 {
-"desc": "",
+"desc": "Marinara, olives, spinach, tomato, red onion, green pepper, feta",
 "name": "Greek",
-"price": ""
+"price": "21.99"
 },
 {
-"desc": "",
-"name": "Truffle oil & mushroom",
-"price": ""
+"desc": "Truffle oil, mushrooms, three cheese blend, and parmesan",
+"name": "Truffle Oil & Mushroom",
+"price": "22.99"
 },
 {
-"desc": "",
+"desc": "Olive oil, cheese blend, chopped clams, red onion, and parmesan",
 "name": "Chopped Clam",
-"price": ""
+"price": "26.99"
+},
+{
+"desc": "Substitute on any pizza",
+"name": "14 in Cauliflower Pizza Crust (Gluten Free)",
+"price": "+5.99"
+}
+],
+"title": "Pizza"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "French Fries",
+"price": "4.99"
 },
 {
 "desc": "",
-"name": "Soups",
-"price": "$9.99"
+"name": "Mashed Potato",
+"price": "4.99"
 },
 {
 "desc": "",
-"name": "Salads/Bowl",
-"price": "$9.99"
+"name": "Butternut Squash",
+"price": "4.99"
 },
 {
 "desc": "",
-"name": "House Salad",
-"price": "$9.99"
+"name": "Vegetable of the Day",
+"price": "4.99"
 },
 {
 "desc": "",
-"name": "Caesar Salad",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Greek Salad",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Blueberry Goat Cheese",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Cobb Salad",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Thai Chicken Salad",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "California Bowl",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Hawaiian Poke Bowl",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Sandwiches",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Lobster Roll",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Spicy Fried Chicken Sandwich",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Cuban Sandwich",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Caprese Sub",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Steak Bomb Sub",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Reuben",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Buffalo Chicken Sub",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Chicken Pesto Sub",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Turkey Club",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "BLT Sandwich",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Pulled Pork Sandwich",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "*Poke Tuna Wrap",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Chicken Caesar Wrap",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Thanksgiving Day Wrap",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Entrees",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Fish and Chips",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Portuguese Steak Dinner",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Portuguese Pork & Little Necks",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Pasta and Little Necks",
-"price": "$9.99"
-},
-{
-"desc": "",
-"name": "Baked Haddock Dinner",
-"price": "$9.99"
+"name": "Coleslaw",
+"price": "3.99"
 },
 {
 "desc": "",
 "name": "Mac and Cheese",
-"price": "$9.99"
+"price": "7.99"
 },
 {
 "desc": "",
-"name": "Chili Shepherd’s Pie",
-"price": "$9.99"
+"name": "Sweet Potato Fries",
+"price": "6.99"
 },
 {
 "desc": "",
+"name": "Side Garden",
+"price": "6.99"
+},
+{
+"desc": "",
+"name": "Caesar Salad",
+"price": "6.99"
+},
+{
+"desc": "",
+"name": "Truffle Oil Parmesan Fries",
+"price": "7.99"
+},
+{
+"desc": "",
+"name": "Cheesy Fries",
+"price": "7.99"
+},
+{
+"desc": "",
+"name": "Onion Rings",
+"price": "6.99"
+}
+],
+"title": "A La Carte Sides"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "French Onion, Chili, or Clam Chowder",
+"price": "Cup 5.99 – Bowl 9.99"
+}
+],
+"title": "Soups"
+},
+{
+"items": [
+{
+"desc": "Romaine, tomato, cucumber, green pepper and onions",
+"name": "House Salad",
+"price": "10.99"
+},
+{
+"desc": "Romaine, garlic croutons and parmesan cheese",
+"name": "Caesar Salad",
+"price": "11.99"
+},
+{
+"desc": "Romaine, feta, olives, tomato, green pepper, cucumber, onion",
+"name": "Greek Salad",
+"price": "13.99"
+},
+{
+"desc": "Spinach, onion, walnuts, cucumber, blueberries, goat cheese",
+"name": "Blueberry Goat Cheese",
+"price": "13.99"
+},
+{
+"desc": "Romaine, tomato, cucumber, onion, blue cheese, egg, bacon, and avocado",
+"name": "Cobb Salad",
+"price": "13.99"
+},
+{
+"desc": "Romaine, red peppers, wonton strips, red onion, peanuts, cucumbers, grilled chicken",
+"name": "Thai Chicken Salad",
+"price": "19.99"
+},
+{
+"desc": "Jasmine rice, sliced avocado, broccoli, tomato, onion, cucumber, goat cheese, choice of grilled chicken or shrimp, pita bread",
+"name": "California Bowl",
+"price": "19.99"
+},
+{
+"desc": "Jasmine rice, seasoned ahi tuna poke, sliced avocado, cucumber, cherry tomato, scallions, sesame seeds",
+"name": "Hawaiian Poke Bowl",
+"price": "21.99"
+},
+{
+"desc": "",
+"name": "Add On: Beef Patty",
+"price": "8.99"
+},
+{
+"desc": "",
+"name": "Add On: Black Bean Burger",
+"price": "6.99"
+},
+{
+"desc": "",
+"name": "Add On: Poke Tuna",
+"price": "10.99"
+},
+{
+"desc": "",
+"name": "Add On: Grilled Chicken",
+"price": "6.99"
+},
+{
+"desc": "",
+"name": "Add On: Grilled Shrimp",
+"price": "8.99"
+},
+{
+"desc": "",
+"name": "Add On: Quinoa",
+"price": "4.99"
+},
+{
+"desc": "",
+"name": "Add On: Grilled Pita Bread",
+"price": "2.99"
+}
+],
+"title": "Salads/Bowl"
+},
+{
+"items": [
+{
+"desc": "Lobster meat tossed in your choice of light butter or mayo, served on grilled brioche hot dog roll",
+"name": "Lobster Roll",
+"price": "Market Price"
+},
+{
+"desc": "Fried chicken tenders tossed in hot honey, lettuce, tomato, onion, pickles on a brioche bun",
+"name": "Spicy Fried Chicken Sandwich",
+"price": "18.99"
+},
+{
+"desc": "Our own BBQ pulled pork, bacon, Swiss cheese, pickles, Dijon mustard, grilled in sub roll",
+"name": "Cuban Sandwich",
+"price": "18.99"
+},
+{
+"desc": "Fresh mozzarella, tomato, fresh basil, mayo, balsamic glaze",
+"name": "Caprese Sub",
+"price": "16.99"
+},
+{
+"desc": "Shaved ribeye steak, onions, mushrooms, peppers, cheddar sauce, provolone",
+"name": "Steak Bomb Sub",
+"price": "17.99"
+},
+{
+"desc": "Corned beef or turkey, sauerkraut, 1000 Island, Swiss, on rye",
+"name": "Reuben",
+"price": "17.99"
+},
+{
+"desc": "Fried chicken tenders, blue cheese, buffalo ranch sauce, red onion, topped with melted provolone in a toasted sub roll",
+"name": "Buffalo Chicken Sub",
+"price": "17.99"
+},
+{
+"desc": "Grilled chicken, pesto, peppers and onions, pesto mayo, topped with melted cheddar cheese in a toasted sub roll",
+"name": "Chicken Pesto Sub",
+"price": "17.99"
+},
+{
+"desc": "Turkey, bacon, lettuce, tomato, onion, mayo, toasted bread",
+"name": "Turkey Club",
+"price": "17.99"
+},
+{
+"desc": "Bacon, lettuce, tomato, mayo, with your choice of toasted bread",
+"name": "BLT Sandwich",
+"price": "15.99"
+},
+{
+"desc": "Our own BBQ pulled pork topped with coleslaw on a bun",
+"name": "Pulled Pork Sandwich",
+"price": "18.99"
+},
+{
+"desc": "Poke tuna, chopped romaine, tomato, cucumber and wasabi mayo",
+"name": "*Poke Tuna Wrap",
+"price": "22.99"
+},
+{
+"desc": "Grilled chicken, Caesar, romaine, parmesan cheese, croutons",
+"name": "Chicken Caesar Wrap",
+"price": "16.99"
+},
+{
+"desc": "Roasted turkey, stuffing, cranberry, mayo, side of gravy",
+"name": "Thanksgiving Day Wrap",
+"price": "17.99"
+},
+{
+"desc": "Substitute on any sandwich",
+"name": "Gluten Free Roll",
+"price": "+2.99"
+}
+],
+"title": "Sandwiches"
+},
+{
+"items": [
+{
+"desc": "Narragansett lager beer battered catch of the day served over French fries with sides of tartar sauce and coleslaw",
+"name": "Fish and Chips",
+"price": "20.99"
+},
+{
+"desc": "Sirloin steak finished with garlic and beef stock, topped with fried egg and red peppers, with French fries and rice",
+"name": "Portuguese Steak Dinner",
+"price": "24.99"
+},
+{
+"desc": "Marinated pork sauteed with little necks and fried potatoes in a savory wine sauce",
+"name": "Portuguese Pork & Little Necks",
+"price": "24.99"
+},
+{
+"desc": "Little necks in a butter and white wine sauce with red onion, garlic and chopped clams, tossed with linguine, with dipping bread",
+"name": "Pasta and Little Necks",
+"price": "21.99"
+},
+{
+"desc": "Fresh local haddock baked in white wine butter garlic sauce topped with Ritz crackers",
+"name": "Baked Haddock Dinner",
+"price": "23.99"
+},
+{
+"desc": "Cavatappi pasta, cheese sauce, Ritz and mozzarella topping, baked to perfection",
+"name": "Mac and Cheese",
+"price": "15.99"
+},
+{
+"desc": "",
+"name": "Pulled Pork Mac and Cheese",
+"price": "20.99"
+},
+{
+"desc": "",
+"name": "Buffalo Mac and Cheese",
+"price": "20.99"
+},
+{
+"desc": "",
+"name": "Lobster Mac and Cheese",
+"price": "Market"
+},
+{
+"desc": "Our own house chili, corn, house mashed potatoes covered in cheddar cheese baked to perfection",
+"name": "Chili Shepherd's Pie",
+"price": "19.99"
+},
+{
+"desc": "Baked turkey, stuffing, mashed potato, gravy and cranberry",
 "name": "Turkey Dinner",
-"price": "$9.99"
+"price": "19.99"
 },
 {
-"desc": "",
+"desc": "Haddock filled with house made seafood stuffing baked in lobster sauce topped with Ritz, served with choice of two sides",
 "name": "Baked Stuffed Haddock",
-"price": "$9.99"
+"price": "26.99"
 },
 {
-"desc": "",
+"desc": "Shrimp, garlic butter, white wine, basil, linguine, topped with parmesan cheese, served with dipping bread",
 "name": "Seafood Scampi",
-"price": "$9.99"
+"price": "23.99"
 },
 {
-"desc": "",
+"desc": "Grilled chicken, roasted red peppers, pesto, tossed with linguine and served with garlic bread",
 "name": "Chicken Pesto Pasta",
-"price": "$9.99"
+"price": "19.99"
+},
+{
+"desc": "Two soft shell tacos with fried fish, romaine, salsa, topped with spicy mayo, served with a side",
+"name": "Fish Tacos",
+"price": "21.99"
+},
+{
+"desc": "Two soft shell tacos, romaine, coleslaw, pulled pork, pickled red onions, served with choice of side",
+"name": "Pulled Pork Tacos",
+"price": "20.99"
+},
+{
+"desc": "Marinated poke tuna, romaine, spicy rice, red onion, tomato",
+"name": "Tuna Tacos",
+"price": "22.99"
+}
+],
+"title": "Entrees"
+},
+{
+"items": [
+{
+"desc": "Add on with sandwich, burger or entrée",
+"name": "Onion Rings",
+"price": "+3.99"
 },
 {
 "desc": "",
-"name": "Tacos",
-"price": "$9.99"
+"name": "Sweet Potato Fries",
+"price": "+2.99"
 },
+{
+"desc": "",
+"name": "Mac Cheese",
+"price": "+3.99"
+},
+{
+"desc": "",
+"name": "Truffle Oil Parmesan Fries",
+"price": "+3.99"
+},
+{
+"desc": "",
+"name": "Cheesy Fries",
+"price": "$3.99"
+},
+{
+"desc": "",
+"name": "Gluten-Free Pasta or Bun",
+"price": "+ $2.99"
+}
+],
+"title": "Specialty Sides"
+},
+{
+"items": [
 {
 "desc": "",
 "name": "Kids Chicken Fingers",
-"price": "$9.99"
+"price": "9.99"
 },
 {
 "desc": "",
-"name": "Kid’s Pasta",
-"price": "$9.99"
+"name": "Kid's Pasta",
+"price": "9.99"
 },
 {
 "desc": "",
 "name": "Kids Hamburger",
-"price": "$9.99"
+"price": "9.99"
 },
 {
 "desc": "",
 "name": "Grilled Cheese",
-"price": "$9.99"
+"price": "9.99"
 },
 {
 "desc": "",
 "name": "Kids Hot Dogs",
-"price": "$9.99"
+"price": "9.99"
 },
 {
 "desc": "",
-"name": "Kid’s Macaroni & Cheese",
-"price": "$9.99"
+"name": "Kid's Macaroni & Cheese",
+"price": "9.99"
 }
 ],
-"title": "Menu"
+"title": "Kids Menu"
 }
 ],
 "source": "https://portsmouthpublickhouse.com/menu/"

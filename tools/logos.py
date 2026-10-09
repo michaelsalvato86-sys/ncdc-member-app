@@ -14,7 +14,7 @@ UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 OUT = ROOT / 'logos'
 # Checked by eye 2026-10-08: these sites mark someone else's image as a logo (TripAdvisor badge, Marriott brand,
 # a booking-widget logo). Leave them on the letter badge until the restaurant sends its own.
-REJECT = {'annies', 'skiff-bar', 'stoneacre-brasserie', 'stoneacre-garden'}
+REJECT = {'annies', 'skiff-bar', 'stoneacre-brasserie', 'stoneacre-garden', 'lucia', 'one-bellevue'}  # agent-found logos replace the first four
 
 
 def get(url, **kw):
@@ -71,8 +71,13 @@ def main():
     js = (ROOT / 'info.js').read_text(encoding='utf8')
     info = json.loads(js[js.index('{'): js.rindex('};') + 1])
     OUT.mkdir(exist_ok=True)
-    got, report = {}, {}
+    # keep every logo already in logos.js (agent-found ones are checked by eye); only look for the missing
+    lj = ROOT / 'logos.js'
+    got = json.loads((t := lj.read_text(encoding='utf8'))[t.index('{'):t.index('};') + 1]) if lj.exists() else {}
+    report = {}
     for rid, i in info.items():
+        if rid in got and '--all' not in sys.argv:
+            report[rid] = 'kept'; continue
         url = i.get('url')
         if rid in REJECT:
             report[rid] = 'rejected by eye'; continue
