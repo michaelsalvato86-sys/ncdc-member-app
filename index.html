@@ -63,6 +63,12 @@ input{font:inherit}
 .err{color:var(--brick-600);font-size:14px;min-height:20px;margin:6px 0 4px;text-align:left}
 .si-foot{margin-top:24px;font-size:14px;color:var(--ink-500);line-height:1.6}
 .si-foot a{color:var(--water-500);font-weight:600}
+.dinein{margin:10px 0 0;padding:9px 12px;border-radius:12px;background:#eef6fb;border:1px solid #cfe3f0;font-size:13px;color:var(--ink-500)}
+.signup-qr{display:flex;gap:12px;align-items:center;margin:12px 0;font-size:13px;color:var(--ink-500)}
+.signup-qr #cl-qr{flex:none;width:96px;height:96px;background:#fff;border-radius:10px;padding:4px;border:1px solid #e3e7f1}
+.signup-qr #cl-qr svg{width:100%;height:100%}
+.applogo{display:flex;gap:10px;align-items:center;margin:16px 0;font-size:12px;color:var(--ink-500)}
+.applogo img{width:44px;height:44px;border-radius:10px}
 .demo-hint{margin-top:18px;background:#fff6f3;border:1px dashed var(--brick-500);border-radius:12px;padding:10px 12px;font-size:13px;color:var(--brick-600);text-align:left}
 
 /* home */
@@ -449,10 +455,11 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
     </div>
 
     <h2>For restaurant owners</h2>
-    <p class="body">Completely free for participating restaurants. The restaurant signup deadline is <b>October 31, 2026</b>.</p>
+    <p class="body">Completely free for participating restaurants. <b>Joining is by invitation:</b> send us your details and the Dinner Club team reviews eligibility before your restaurant is added. The restaurant signup deadline is <b>October 31, 2026</b>.</p>
+    <div class="signup-qr"><div id="cl-qr" aria-label="QR code for the restaurant interest form"></div><span>Share this code with a restaurant owner. It opens the interest form.</span></div>
     <div class="cl-btns">
-      <a class="btn ghost" id="cl-signup" target="_blank" rel="noopener" style="text-align:center;text-decoration:none">Sign up your restaurant</a>
-      <a class="btn ghost" href="partner/" style="text-align:center;text-decoration:none">Set up your Dinner Club code</a>
+      <a class="btn ghost" id="cl-signup" target="_blank" rel="noopener" style="text-align:center;text-decoration:none">Request to join (restaurants)</a>
+      <a class="btn ghost" href="partner/" style="text-align:center;text-decoration:none">Approved restaurants: set up your code</a>
     </div>
 
     <h2>Need to get in touch?</h2>
@@ -617,6 +624,8 @@ document.querySelectorAll('.pr-reg').forEach(e=>e.textContent=CLUB.price.regular
 document.querySelectorAll('.pr-retail').forEach(e=>e.textContent=CLUB.price.retail);
 document.querySelectorAll('#club .mail').forEach(e=>e.textContent=CLUB.email);
 $('#cl-signup').href=CLUB.partnerFormUrl;
+try{const q=qrcode(0,'M');q.addData(CLUB.partnerFormUrl);q.make();$('#cl-qr').innerHTML=q.createSvgTag({cellSize:4,margin:2,scalable:true})}catch(e){}
+(function(){const h=document.querySelector('#cl-signup');if(!h||!CLUB.appLogo)return;const box=document.createElement('div');box.className='applogo';box.innerHTML=`<img src="${CLUB.appLogo}" alt="App logo"><span>${CLUB.appLogoPending?'App logo: placeholder until the Dinner Club logo file arrives':'App logo'}</span>`;const fine=document.querySelector('.fine');if(fine)fine.parentNode.insertBefore(box,fine)})();
 $('#club [data-go=join]').addEventListener('click',()=>$('#opt-renew').click());
 
 // ---- welcome tour (shown after sign-in) ----
@@ -636,6 +645,7 @@ function seasonState(){
   return now<from?'pre':now>to?'expired':'active';
 }
 function usesFor(id){return (uses[id]||[]).length}
+function usedOn(id){const a=(uses[id]||[]);const lu=a[a.length-1];const t=lu&&lu.t?lu.t:lu;return t?new Date(t).toLocaleDateString('en-US',{month:'short',day:'numeric'}):''}
 function limitHit(id){return CLUB.usesPerRestaurant>0 && usesFor(id)>=CLUB.usesPerRestaurant}
 function renderHome(){
   $('#mc-season').textContent=CLUB.season+' Member';
@@ -793,10 +803,11 @@ function openDetail(id,push){
     r.phone?`<div><span>Phone</span><a href="${telHref(r.phone)}">${esc(r.phone)}</a></div>`:'',
     r.url?`<div><span>Website</span><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.url.replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,''))}</a></div>`:'',
     r.reserve?`<div><span>Booking</span><a href="${esc(r.reserve)}" target="_blank" rel="noopener">${esc(r.reservePlatform||'Reserve online')}</a></div>`:'',
-    r.order?`<div><span>Takeout</span><a href="${esc(r.order)}" target="_blank" rel="noopener">Order online</a></div>`:''
+    r.order?`<div><span>Takeout</span><a href="${esc(r.order)}" target="_blank" rel="noopener">Order online (Dinner Club discount not valid)</a></div>`:''
   ].join('');
   $('#dt-body').innerHTML=`
-    <button class="use${used?' used':''}" id="dt-use" type="button">${used?'Already used this season':'Use my card here'}<small>${used?'Tap to see the details':'Two-for-one entrées. Show this to your server.'}</small></button>
+    <button class="use${used?' used':''}" id="dt-use" type="button">${used?'Used '+usedOn(id):'Use my card here'}<small>${used?'One use per restaurant each season':'Two-for-one entrées, dine-in only. Show this to your server.'}</small></button>
+    <p class="dinein"><b>Dine-in only.</b> The Dinner Club discount is not valid on takeout, delivery or online orders.</p>
     <div class="acts">${book}${menu}${dir}${call}</div>
     <div class="dirs" id="dt-dirs" hidden>${maps}</div>
     ${hoursBlock(r)}
@@ -833,7 +844,7 @@ function openRedeem(id){
   let action;
   if(st==='expired') action=`<div class="blocked">Your ${CLUB.season} membership has ended. <a href="${CLUB.renewUrl}" target="_blank" rel="noopener">Renew here</a>.</div>`;
   else if(hit){const lu=uses[id][uses[id].length-1],last=lu&&lu.t?lu.t:lu;
-    action=`<div class="done">Already used here<small>${new Date(last).toLocaleString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</small></div>`;}
+    action=`<div class="done">Used here - one use per restaurant each season<small>${new Date(last).toLocaleString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</small></div>`;}
   else action=`<div class="srv-in"><div><label for="rd-total">Check total before discount</label><input id="rd-total" type="text" inputmode="decimal" placeholder="$0.00"></div><div><label for="rd-party">Guests</label><input id="rd-party" type="text" inputmode="numeric" placeholder="2"></div></div><p class="srv-note">Server: optional. It shows the restaurant what Dinner Club tables spend.</p><button class="hold" id="hold"><i></i><span>Server: press and hold to redeem</span></button><div class="hold-note">Hold for 1.5 seconds after the discount is applied. ${CLUB.usesPerRestaurant?`Good for ${CLUB.usesPerRestaurant} use${CLUB.usesPerRestaurant>1?'s':''} per season here.`:''}</div>`;
   const pre=st==='pre'?`<div class="blocked" style="margin-bottom:14px">Your card works from ${fmtDate(CLUB.validFrom)}. (Mockup: you can still try the screens.)</div>`:'';
   $('#rd').innerHTML=`
@@ -850,7 +861,7 @@ function openRedeem(id){
     ${pre}${codeBlock(r)}
     <div class="coupon"><div class="cp-top"><span class="cp-eye">Newport County Dinner Club</span><span class="cp-season">${CLUB.season}</span></div>
       <div class="cp-title">Two-for-one entrées</div><div class="cp-sub">${esc(r.name)}</div>
-      <div class="cp-fine">Order two qualifying entrées and the least expensive is deducted. Appetizers and desserts are not entrées. Valid ${fmtDate(CLUB.validFrom)} to ${fmtDate(CLUB.validTo)}.${r.code&&r.code.restrictions?'<br><b>'+esc(r.name)+':</b> '+esc(r.code.restrictions):' '+esc(r.name)+' may set its own dates, times, restrictions and blackout dates.'}</div></div>
+      <div class="cp-fine"><b>Dine-in only.</b> One use per restaurant each season. Order two qualifying entrées and the least expensive is deducted. Appetizers and desserts are not entrées. Valid ${fmtDate(CLUB.validFrom)} to ${fmtDate(CLUB.validTo)}.${r.code&&r.code.restrictions?'<br><b>'+esc(r.name)+':</b> '+esc(r.code.restrictions):' '+esc(r.name)+' may set its own dates, times, restrictions and blackout dates.'}</div></div>
     ${action}
     `;
   if(r.code&&r.code.type==='barcode'){try{JsBarcode('#bc',r.code.value,{format:'CODE128',width:2.2,height:90,displayValue:true,font:'monospace',fontSize:16,margin:6})}catch(e){}}

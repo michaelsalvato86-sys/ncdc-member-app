@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="App logo placeholder">
+  <!-- PLACEHOLDER app mark (light blue + navy). Replace with Katelyn's Dinner Club logo (picture only, no lettering), per the 2026-10-09 meeting. -->
+  <rect width="512" height="512" rx="112" fill="#1d3557"/>
+  <circle cx="256" cy="256" r="168" fill="none" stroke="#9fd3f0" stroke-width="22"/>
+  <path d="M176 210v-60M196 210v-60M216 210v-60M176 210q20 30 40 0M196 210v150" fill="none" stroke="#9fd3f0" stroke-width="16" stroke-linecap="round"/>
+  <path d="M316 150q40 40 0 110v100" fill="none" stroke="#9fd3f0" stroke-width="16" stroke-linecap="round"/>
+</svg>

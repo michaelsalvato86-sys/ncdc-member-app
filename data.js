@@ -16,9 +16,14 @@ const CLUB = {
   validTo: '2027-11-30',
   offer: 'Two-for-one entrées',
   offerDetail: 'Order two entrées and the lower-priced one comes off the bill. Appetizers and desserts are not entrées.',
-  // ASSUMPTION to confirm with the club: how many times a member may use each restaurant per season.
-  // The paper booklet's limit decides this. 0 = unlimited (every use is still logged).
+  // CONFIRMED by Katelyn, 2026-10-09 meeting: "they can only use it once" - one redemption per restaurant per member per season.
+  // Once redeemed, the restaurant shows as used and the server hold-to-redeem is disabled. 0 would mean unlimited (do not use).
   usesPerRestaurant: 1,
+  // Dine-in only (Katelyn, 2026-10-09): the discount never applies to takeout or online orders.
+  dineInOnly: true,
+  // App logo slot. Katelyn's Dinner Club logo (picture only, no lettering) in light blue + navy becomes the app logo.
+  // logo-app.svg is a PLACEHOLDER until her file arrives - do not treat it as her design.
+  appLogo: 'logo-app.svg', appLogoPending: true,
   email: 'newportcountydinnerclub@gmail.com',
   buyUrl: 'https://square.link/u/MWVwkI9s',
   renewUrl: 'https://square.link/u/XqJux7Uh',
