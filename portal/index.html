@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Dinner Club Restaurant Portal</title>
-<meta name="description" content="Participating restaurants see what Dinner Club members bring them: redemptions, guests, checks, specials and drinks.">
+<meta name="description" content="Participating restaurants see what Dinner Club members bring them: redemptions, average check, revenue and net per member.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="../icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -166,6 +166,7 @@ textarea{min-height:80px;resize:vertical}
 .toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translate(-50%,20px);opacity:0;background:var(--ink-800);color:#fff;padding:11px 16px;border-radius:12px;font-size:14px;transition:.25s;z-index:80;max-width:90%}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+tr.tot td{border-top:2px solid var(--ink-100)}
 </style>
 </head>
 <body>
@@ -173,7 +174,7 @@ textarea{min-height:80px;resize:vertical}
   <img src="../logo-white.png" alt="Newport County Dinner Club">
   <div class="hd-r"><span class="who" id="who"></span><a class="lnk" href="../">Member app</a><button id="signout" type="button" hidden>Sign out</button></div>
 </div></header>
-<div class="sample-bar"><div><b>Demo:</b> every number in this portal is SAMPLE data, generated so you can see the layout. The live portal fills from real Dinner Club redemptions and, where a restaurant connects it, its POS.</div></div>
+<div class="sample-bar"><div><b>Demo:</b> every number in this portal is SAMPLE data, generated so you can see the layout. The live portal fills from real Dinner Club redemptions. Dish and drink detail appears only for restaurants whose POS we are in (Heritage on Toast).</div></div>
 
 <!-- SIGN IN -->
 <section class="view" id="v-signin"><main>
@@ -217,19 +218,22 @@ const pct=n=>Math.round(n*100)+'%';
 const METRICS=[
   {k:'redemptions',  t:'Redemptions over time',       d:'Dinner Club visits by week',                    src:'app'},
   {k:'guests',       t:'Guests and repeat visits',    d:'Unique members, repeat rate, new to you',       src:'app'},
-  {k:'checks',       t:'Check size',                  d:'Average check and the spread of check totals',  src:'app'},
+  {k:'checks',       t:'Check size spread',           d:'How check totals are spread (needs the POS)',   src:'pos'},
   {k:'revenue',      t:'Revenue from Dinner Club tables', d:'Check totals, discount given, net revenue', src:'app'},
   {k:'when',         t:'When members come in',        d:'Day of week and time of day',                   src:'app'},
   {k:'zips',         t:'Top ZIP codes',               d:'Where members come from',                       src:'app'},
   {k:'origin',       t:'Locals vs visitors',          d:'Newport County, rest of RI, out of state',      src:'app'},
-  {k:'spenders',     t:'Top spenders',                d:'Members ranked by spend at this restaurant',    src:'app'},
+  {k:'permember',    t:'Value per member',            d:'Average revenue and net after discount per member', src:'app'},
+  {k:'spenders',     t:'Top visitors',                d:'Members ranked by visits to this restaurant',   src:'app'},
   {k:'specials',     t:'Specials ordered',            d:'Which specials Dinner Club tables order',       src:'pos'},
   {k:'drinks',       t:'Drinks ordered',              d:'Drink categories on Dinner Club checks',        src:'pos'},
   {k:'items',        t:'Top items ordered',           d:'Dishes Dinner Club tables order most',          src:'pos'},
   {k:'heat',         t:'Busiest day and hour',        d:'Heatmap of redemptions by day and hour',        src:'app'},
-  {k:'profile',      t:'Member profile',              d:'Visits per member, return gap, party size',     src:'app'},
+  {k:'profile',      t:'Member profile',              d:'Visits per member, return gap, locals share',   src:'app'},
 ];
 const SRC_LABEL={app:'From the app',pos:'From your POS',hrg:'Heritage only'};
+// Item, drink and special detail needs a live feed from the restaurant's POS. We only have that where we are in the
+// POS (Heritage venues on Toast), so every other restaurant gets the app-captured numbers only.
 const K_SHARE='ncdc_portal_sharing', K_SPECIALS='ncdc_specials', K_USES='ncdc_uses';
 function sharing(){return LS.get(K_SHARE,{})}
 function isShared(rid,k){const s=sharing();return !(s[rid]&&s[rid][k]===false)}   // default: everything on
@@ -237,6 +241,7 @@ function isShared(rid,k){const s=sharing();return !(s[rid]&&s[rid][k]===false)} 
 // Heritage Restaurant Group venues get member-level detail for marketing. Confirm the full list.
 const HRG=(typeof HRG_VENUES!=='undefined'?HRG_VENUES:[]);
 const isHRG=rid=>HRG.includes(rid);
+const hasPOS=rid=>isHRG(rid);
 
 // ---------- seeded SAMPLE data (deterministic per restaurant) ----------
 function seed(str){let h=1779033703^str.length;for(let i=0;i<str.length;i++){h=Math.imul(h^str.charCodeAt(i),3432918353);h=h<<13|h>>>19}return()=>{h=Math.imul(h^h>>>16,2246822507);h=Math.imul(h^h>>>13,3266489909);return((h^=h>>>16)>>>0)/4294967296}}
@@ -304,6 +309,19 @@ function barChart(el,rows,{fmt=v=>v,lw=150}={}){
     s+=`<rect class="hit" x="0" y="${y}" width="${W}" height="${rh}" data-i="${i}"/>`;});
   s+='</svg><div class="tip"></div>';el.innerHTML=s;hover(el,rows,fmt);
 }
+function stackChart(el,rows,{labelEvery=1,h=180}={}){ // net (dark) with the discount given (light) on top; one axis
+  const W=560,H=h,pl=48,pb=24,pt=10,max=Math.max(1,...rows.map(r=>r.net+r.disc));
+  const nice=Math.ceil(max/400)*400||400,bw=(W-pl)/rows.length,gap=Math.min(6,bw*.28),sy=v=>(H-pt-pb)*(v/nice);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(el.dataset.title||'chart')}">`;
+  for(let i=0;i<=4;i++){const y=pt+(H-pt-pb)*(1-i/4);s+=`<line x1="${pl}" x2="${W}" y1="${y}" y2="${y}" stroke="var(--grid)" stroke-width="1"/><text x="${pl-6}" y="${y+4}" text-anchor="end">${money(nice*i/4)}</text>`}
+  rows.forEach((r,i)=>{const x=pl+i*bw+gap/2,w=Math.max(2,bw-gap),hn=sy(r.net),hd=Math.max(0,sy(r.disc)-2),yn=H-pb-hn,top=yn-2-hd,rr=Math.min(4,hd,w/2);
+    s+=`<rect class="b" x="${x}" y="${yn}" width="${w}" height="${hn}" fill="var(--bar)" data-i="${i}"/>`;
+    if(hd>0)s+=`<path class="b" d="M${x},${yn-2} V${top+rr} q0,-${rr} ${rr},-${rr} H${x+w-rr} q${rr},0 ${rr},${rr} V${yn-2} Z" fill="#c9d6ea" data-i="${i}"/>`;
+    s+=`<rect class="hit" x="${pl+i*bw}" y="${pt}" width="${bw}" height="${H-pt-pb}" data-i="${i}"/>`;
+    if(i%labelEvery===0)s+=`<text x="${x+w/2}" y="${H-8}" text-anchor="middle">${esc(r.l)}</text>`;});
+  s+='</svg><div class="tip"></div>';el.innerHTML=s;
+  hover(el,rows.map(r=>({tip:'Week of '+r.l+' · net '+money(r.net)+' · discount '+money(r.disc)+' · checks',v:r.net+r.disc})),money);
+}
 function hover(el,rows,fmt){const tip=el.querySelector('.tip'),svg=el.querySelector('svg');
   el.querySelectorAll('.hit').forEach(h=>{h.addEventListener('pointerenter',()=>{const i=+h.dataset.i,r=rows[i];
       el.querySelectorAll('.b').forEach(b=>b.classList.toggle('hl',b.dataset.i==h.dataset.i));
@@ -348,6 +366,7 @@ function bindPicker(){const p=$('#pick');if(p)p.addEventListener('change',()=>{v
 function card(k,title,desc,src,body,wide){
   const shared=isShared(viewRid,k), admin=session.role==='admin';
   if(!shared&&!admin)return '';                                    // restaurant never sees withheld metrics
+  if(src==='pos'&&!hasPOS(viewRid))return '';                      // no POS feed for this restaurant
   return `<section class="card${wide?' wide':''}"><div class="card-h"><div><h2>${esc(title)}</h2><p class="d">${esc(desc)}</p></div><span class="src ${src}">${SRC_LABEL[src]}</span></div>
     ${!shared?'<div class="hidden-note">Hidden from this restaurant. Admin preview only.</div>':''}${body}</section>`;
 }
@@ -367,11 +386,13 @@ function renderDash(){
     <div class="kpis">
       ${k('redemptions','Redemptions',V.length.toLocaleString(),'Dinner Club tables')}
       ${k('guests','Members served',uniq.size.toLocaleString(),pct(repeat)+' came back')}
-      ${k('guests','Guests seated',guests.toLocaleString(),'incl. friends at the table')}
+      ${!hasPOS(viewRid)?'':k('guests','Guests seated',guests.toLocaleString(),'incl. friends at the table')}
       ${k('checks','Average check',money2(withTot.reduce((a,v)=>a+v.total,0)/Math.max(1,withTot.length)),'before the discount')}
       ${k('revenue','Revenue from members',money(tot),'check totals')}
       ${k('revenue','Net after discount',money(tot-disc),money(disc)+' given back')}
-      ${k('checks','Spend per guest',money2(tot/Math.max(1,guests)),'check total ÷ guests')}
+      ${hasPOS(viewRid)?k('checks','Spend per guest',money2(tot/Math.max(1,guests)),'check total ÷ guests'):''}
+      ${k('permember','Revenue per member',money2(tot/Math.max(1,uniq.size)),'check totals ÷ members')}
+      ${k('permember','Net per member',money2((tot-disc)/Math.max(1,uniq.size)),'after the discount')}
       ${k('revenue','Return on the discount',(tot/Math.max(1,disc)).toFixed(1)+'×','revenue per $1 given back')}
     </div>
     ${isShared(viewRid,'zips')||session.role==='admin'?`<section class="card hero-map"><div class="card-h"><div><h2>Where your Dinner Club guests come from</h2><p class="d">Each circle is a home ZIP code, sized by visits. Your restaurant is the red pin.</p></div><span class="src app">From the app</span></div>
@@ -382,16 +403,17 @@ function renderDash(){
       ${card('when','By time of day','When the check opens','app','<div class="chart" id="c-hour" data-title="Redemptions by hour"></div>')}
       ${card('zips','Top ZIP codes','Where your Dinner Club guests live','app','<div class="chart" id="c-zip" data-title="Top ZIP codes"></div>')}
       ${card('origin','Locals vs visitors','Share of redemptions by home area','app','<div id="c-origin"></div>')}
-      ${card('checks','Check size','Spread of check totals before the discount','app','<div class="chart" id="c-check" data-title="Check size"></div>')}
+      ${card('checks','Check size','Spread of check totals before the discount','pos','<div class="chart" id="c-check" data-title="Check size"></div>')}
       ${card('heat','Busiest day and hour','Darker means more Dinner Club tables','app','<div id="c-heat"></div>',true)}
       ${card('items','Top items ordered','Dishes on Dinner Club checks'+(mm0?' (your menu, sample counts)':''),'pos','<div class="chart" id="c-items" data-title="Top items"></div>')}
+      ${card('revenue','Revenue and net by week','Net after the discount, with the discount given on top','app','<div class="chart" id="c-net" data-title="Net after discount per week"></div><div class="legend" style="margin-top:6px"><span><i style="background:var(--bar)"></i>Net after discount</span><span><i style="background:#c9d6ea"></i>Discount given</span></div>',true)}
       ${card('profile','Member profile','How Dinner Club members use you','app','<div id="c-profile"></div>')}
       ${card('guests','New vs returning','First visit here vs a repeat visit, by week','app','<div class="chart" id="c-newret" data-title="Returning share"></div>')}
       ${card('drinks','Drinks ordered','Share of Dinner Club checks with each drink type','pos','<div class="chart" id="c-drinks" data-title="Drinks ordered"></div>')}
       ${card('specials','Specials ordered','Specials on Dinner Club checks','pos','<div class="tbl-wrap" id="c-specials"></div>')}
-      ${card('spenders','Top spenders','Members ranked by total spend here'+(hrgView?'':' (shown by member number only)'),hrgView?'hrg':'app','<div class="tbl-wrap" id="c-spend"></div>',true)}
+      ${card('spenders','Top visitors','Members ranked by visits here'+(hrgView?'':' (shown by member number only)'),hrgView?'hrg':'app','<div class="tbl-wrap" id="c-spend"></div>',true)}
     </div>
-    <p class="note">"From the app" metrics come from Dinner Club redemptions: the member's ZIP from sign-up, plus the check total and party size the server enters at redemption. "From your POS" metrics need a connected POS (Toast is supported first). Member names and emails go only to Heritage Restaurant Group venues, for members who agreed to marketing.</p>`;
+    <p class="note">"From the app" numbers come from Dinner Club redemptions: the member's ZIP from sign-up, plus the check total the server enters at redemption.${hasPOS(viewRid)?' Items, drinks and specials come from your Toast POS.':' Check spread, party size, dishes, drinks and specials need a live POS connection, which this restaurant does not have.'} Member names and emails go only to Heritage Restaurant Group venues, for members who agreed to marketing.</p>`;
   document.querySelectorAll('#t-dash .chip').forEach(c=>c.addEventListener('click',()=>{range=+c.dataset.r;renderDash()}));
   bindPicker();
   const draw=(id,fn)=>{const el=document.getElementById(id);if(el)fn(el)};
@@ -441,18 +463,29 @@ function renderDash(){
     const gaps=[];ms.forEach(m=>{const ds=V.filter(v=>v.member.num===m.m.num).map(v=>+v.date).sort((a,b)=>a-b);for(let i=1;i<ds.length;i++)gaps.push((ds[i]-ds[i-1])/864e5)});
     const gap=gaps.length?gaps.reduce((a,b)=>a+b,0)/gaps.length:0;const ps={};V.forEach(v=>ps[v.party]=(ps[v.party]||0)+1);
     const loc=V.filter(v=>v.member.area==='county').length/Math.max(1,V.length);
-    el.innerHTML=`<div class="prof"><div><b>${per.toFixed(1)}</b><small>visits per member</small></div><div><b>${gap?Math.round(gap)+' days':'—'}</b><small>between repeat visits</small></div><div><b>${pct(loc)}</b><small>live in Newport County</small></div><div><b>${(V.reduce((a,v)=>a+v.party,0)/Math.max(1,V.length)).toFixed(1)}</b><small>guests per table</small></div></div>
-      <div class="chart" id="c-party" data-title="Party size"></div>`;
-    colChart(document.getElementById('c-party'),Object.keys(ps).sort((a,b)=>a-b).map(k=>({l:k+(k>=5?'+':''),tip:'Party of '+k,v:ps[k]})),{h:130})});
+    el.innerHTML=`<div class="prof"><div><b>${per.toFixed(1)}</b><small>visits per member</small></div><div><b>${gap?Math.round(gap)+' days':'—'}</b><small>between repeat visits</small></div><div><b>${pct(loc)}</b><small>live in Newport County</small></div>${hasPOS(viewRid)?`<div><b>${(V.reduce((a,v)=>a+v.party,0)/Math.max(1,V.length)).toFixed(1)}</b><small>guests per table</small></div>`:''}</div>
+      ${hasPOS(viewRid)?'<div class="chart" id="c-party" data-title="Party size"></div>':''}`;
+    if(hasPOS(viewRid))colChart(document.getElementById('c-party'),Object.keys(ps).sort((a,b)=>a-b).map(k=>({l:k+(k>=5?'+':''),tip:'Party of '+k,v:ps[k]})),{h:130})});
   draw('c-newret',el=>{const seen=new Set(),rows=[];const step=Math.max(1,Math.ceil(range/13));
     for(let i=D.weeks-range;i<D.weeks;i+=step){const wk=V.filter(v=>v.w>=i&&v.w<i+step).sort((a,b)=>a.date-b.date);let ret=0;wk.forEach(v=>{if(seen.has(v.member.num))ret++;seen.add(v.member.num)});
       const d=new Date();d.setDate(d.getDate()-(D.weeks-1-i)*7);rows.push({l:d.toLocaleDateString('en-US',{month:'short',day:'numeric'}),tip:'Returning, week of '+d.toLocaleDateString('en-US',{month:'short',day:'numeric'}),v:wk.length?ret/wk.length:0})}
     colChart(el,rows,{fmt:pct,labelEvery:Math.ceil(rows.length/6),h:150})});
+  draw('c-permember',el=>{const per=new Map();V.forEach(v=>{const m=per.get(v.member.num)||{num:v.member.num,zip:v.member.zip,n:0,rev:0,net:0,guests:0};m.n++;m.rev+=v.total;m.net+=v.total-v.discount;m.guests+=v.party;per.set(v.member.num,m)});
+    const rows=[...per.values()].sort((a,b)=>b.rev-a.rev),show=rows.slice(0,12),sum=f=>rows.reduce((a,m)=>a+f(m),0);
+    el.innerHTML=`<table><thead><tr><th>Member</th><th>Home ZIP</th><th class="n">Visits</th><th class="n">Revenue</th><th class="n">Net after discount</th><th class="n">Avg check</th><th class="n">Net per visit</th></tr></thead><tbody>${show.map(m=>`<tr><td>Member ${esc(m.num)}</td><td>${esc(m.zip)}</td><td class="n">${m.n}</td><td class="n">${money(m.rev)}</td><td class="n">${money(m.net)}</td><td class="n">${money2(m.rev/m.n)}</td><td class="n">${money2(m.net/m.n)}</td></tr>`).join('')}
+      <tr class="tot"><td><b>All ${rows.length} members</b></td><td></td><td class="n"><b>${V.length}</b></td><td class="n"><b>${money(sum(m=>m.rev))}</b></td><td class="n"><b>${money(sum(m=>m.net))}</b></td><td class="n"><b>${money2(sum(m=>m.rev)/Math.max(1,V.length))}</b></td><td class="n"><b>${money2(sum(m=>m.net)/Math.max(1,V.length))}</b></td></tr></tbody></table>
+      ${rows.length>show.length?`<p class="note">Top ${show.length} of ${rows.length} members by revenue. The total row covers all of them.</p>`:''}`});
+  draw('c-net',el=>{const step=Math.max(1,Math.ceil(range/13)),rows=[];
+    for(let i=D.weeks-range;i<D.weeks;i+=step){const wk=V.filter(v=>v.w>=i&&v.w<i+step);const d=new Date();d.setDate(d.getDate()-(D.weeks-1-i)*7);
+      rows.push({l:d.toLocaleDateString('en-US',{month:'short',day:'numeric'}),net:wk.reduce((a,v)=>a+v.total-v.discount,0),disc:wk.reduce((a,v)=>a+v.discount,0)})}
+    stackChart(el,rows,{labelEvery:Math.ceil(rows.length/6)})});
   draw('c-drinks',el=>{const n=Math.max(1,V.filter(v=>!v.live).length);barChart(el,DRINKS_S.map(d=>({l:d,v:V.filter(v=>v.drinks.includes(d)).length/n})).sort((a,b)=>b.v-a.v),{fmt:pct})});
   draw('c-specials',el=>{const m={};V.forEach(v=>{if(v.special){m[v.special]=m[v.special]||{n:0,rev:0};m[v.special].n++;m[v.special].rev+=v.total}});
     el.innerHTML=`<table><thead><tr><th>Special</th><th class="n">Ordered</th><th class="n">Avg check</th></tr></thead><tbody>${Object.entries(m).sort((a,b)=>b[1].n-a[1].n).map(([s,o])=>`<tr><td>${esc(s)}</td><td class="n">${o.n}</td><td class="n">${money2(o.rev/o.n)}</td></tr>`).join('')}</tbody></table>`});
-  draw('c-spend',el=>{const rows=[...uniq.values()].sort((a,b)=>b.spend-a.spend).slice(0,10);
-    el.innerHTML=`<table><thead><tr><th>#</th><th>Member</th>${hrgView?'<th>Marketing</th>':''}<th>Home ZIP</th><th class="n">Visits</th><th class="n">Total spend</th><th class="n">Last visit</th></tr></thead><tbody>${rows.map((m,i)=>`<tr><td>${i+1}</td><td>${hrgView?esc(m.m.num)+' <span class="mask">· name and email in the live portal</span>':'Member '+esc(m.m.num)}</td>${hrgView?`<td>${m.m.loyal>.3?'Opted in':'<span class="mask">Not opted in</span>'}</td>`:''}<td>${esc(m.m.zip)}</td><td class="n">${m.n}</td><td class="n">${money(m.spend)}</td><td class="n">${m.last.toLocaleDateString('en-US',{month:'short',day:'numeric'})}</td></tr>`).join('')}</tbody></table>`});
+  draw('c-spend',el=>{const sp=hasPOS(viewRid);   // spend per member only where we read the POS
+    const gapOf=m=>{const ds=V.filter(v=>v.member.num===m.m.num).map(v=>+v.date).sort((a,b)=>a-b);return ds.length>1?Math.round((ds[ds.length-1]-ds[0])/864e5/(ds.length-1)):null};
+    const rows=[...uniq.values()].sort((a,b)=>b.n-a.n||b.last-a.last).slice(0,10);
+    el.innerHTML=`<table><thead><tr><th>#</th><th>Member</th>${hrgView?'<th>Marketing</th>':''}<th>Home ZIP</th><th class="n">Visits</th><th class="n">Every</th>${sp?'<th class="n">Total spend</th>':''}<th class="n">Last visit</th></tr></thead><tbody>${rows.map((m,i)=>{const g=gapOf(m);return `<tr><td>${i+1}</td><td>${hrgView?esc(m.m.num)+' <span class="mask">· name and email in the live portal</span>':'Member '+esc(m.m.num)}</td>${hrgView?`<td>${m.m.loyal>.3?'Opted in':'<span class="mask">Not opted in</span>'}</td>`:''}<td>${esc(m.m.zip)}</td><td class="n">${m.n}</td><td class="n">${g?g+' days':'—'}</td>${sp?`<td class="n">${money(m.spend)}</td>`:''}<td class="n">${m.last.toLocaleDateString('en-US',{month:'short',day:'numeric'})}</td></tr>`}).join('')}</tbody></table>`});
 }
 
 // ---------- MENU (restaurant-submitted, overrides the weekly scrape) ----------
@@ -561,7 +594,7 @@ function renderSharing(){
     <div class="row"><div><h1>What restaurants see</h1><p class="sub">Turn each dashboard section on or off for a restaurant. Everything starts on.</p></div></div>
     <section class="card">
       <div class="share-h">${restPicker()}<button class="btn alt" id="sh-all" type="button">Apply these settings to all restaurants</button><button class="btn alt" id="sh-view" type="button">Preview as this restaurant</button></div>
-      ${METRICS.map(m=>`<div class="tg"><div><b>${esc(m.t)}${m.k==='spenders'?'<span class="locked">Names: Heritage only</span>':''}</b><small>${esc(m.d)} · ${SRC_LABEL[m.src]}</small></div>
+      ${METRICS.map(m=>`<div class="tg"><div><b>${esc(m.t)}${m.k==='spenders'?'<span class="locked">Names: Heritage only</span>':''}</b><small>${esc(m.d)} · ${m.src==='pos'?(hasPOS(viewRid)?'From Toast':'Needs POS access; not shown to this restaurant'):SRC_LABEL[m.src]}</small></div>
         <label class="sw"><input type="checkbox" data-k="${m.k}"${cur[m.k]===false?'':' checked'} aria-label="Show ${esc(m.t)}"><i></i></label></div>`).join('')}
     </section>
     <p class="note">Demo: settings save on this device. In the live portal they save for the club and apply the next time a restaurant opens its dashboard.</p>`;
