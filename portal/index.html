@@ -231,9 +231,10 @@ const METRICS=[
   {k:'heat',         t:'Busiest day and hour',        d:'Heatmap of redemptions by day and hour',        src:'app'},
   {k:'profile',      t:'Member profile',              d:'Visits per member, return gap, locals share',   src:'app'},
 ];
-const SRC_LABEL={app:'From the app',pos:'From your POS',hrg:'Heritage only'};
-// Item, drink and special detail needs a live feed from the restaurant's POS. We only have that where we are in the
-// POS (Heritage venues on Toast), so every other restaurant gets the app-captured numbers only.
+const SRC_LABEL={app:'From the app',pos:'From the Toast check',hrg:'Heritage only'};
+// Item, drink and special detail needs the restaurant's POS. At Heritage venues the Dinner Club discount code ties the
+// redemption to the Toast check (and the guest can be enrolled in Toast loyalty there), so Heritage and the club admin
+// get the full detail. Every other restaurant gets the app-captured numbers only.
 const K_SHARE='ncdc_portal_sharing', K_SPECIALS='ncdc_specials', K_USES='ncdc_uses';
 function sharing(){return LS.get(K_SHARE,{})}
 function isShared(rid,k){const s=sharing();return !(s[rid]&&s[rid][k]===false)}   // default: everything on
@@ -393,6 +394,7 @@ function renderDash(){
       ${hasPOS(viewRid)?k('checks','Spend per guest',money2(tot/Math.max(1,guests)),'check total ÷ guests'):''}
       ${k('permember','Revenue per member',money2(tot/Math.max(1,uniq.size)),'check totals ÷ members')}
       ${k('permember','Net per member',money2((tot-disc)/Math.max(1,uniq.size)),'after the discount')}
+      ${hasPOS(viewRid)?k('guests','Joined our loyalty',Math.round(uniq.size*0.62).toLocaleString(),pct(0.62)+' of Dinner Club guests'):''}
       ${k('revenue','Return on the discount',(tot/Math.max(1,disc)).toFixed(1)+'×','revenue per $1 given back')}
     </div>
     ${isShared(viewRid,'zips')||session.role==='admin'?`<section class="card hero-map"><div class="card-h"><div><h2>Where your Dinner Club guests come from</h2><p class="d">Each circle is a home ZIP code, sized by visits. Your restaurant is the red pin.</p></div><span class="src app">From the app</span></div>
@@ -413,7 +415,7 @@ function renderDash(){
       ${card('specials','Specials ordered','Specials on Dinner Club checks','pos','<div class="tbl-wrap" id="c-specials"></div>')}
       ${card('spenders','Top visitors','Members ranked by visits here'+(hrgView?'':' (shown by member number only)'),hrgView?'hrg':'app','<div class="tbl-wrap" id="c-spend"></div>',true)}
     </div>
-    <p class="note">"From the app" numbers come from Dinner Club redemptions: the member's ZIP from sign-up, plus the check total the server enters at redemption.${hasPOS(viewRid)?' Items, drinks and specials come from your Toast POS.':' Check spread, party size, dishes, drinks and specials need a live POS connection, which this restaurant does not have.'} Member names and emails go only to Heritage Restaurant Group venues, for members who agreed to marketing.</p>`;
+    <p class="note">"From the app" numbers come from Dinner Club redemptions: the member's ZIP from sign-up, plus the check total the server enters at redemption.${hasPOS(viewRid)?' At this Heritage venue the Dinner Club discount code ties each redemption to its Toast check, so check size, party size, dishes, drinks, specials and spend per member come from Toast, and guests can be enrolled in Toast loyalty at the table.':' Check spread, party size, dishes, drinks and specials need a live POS connection, which this restaurant does not have.'} Member names and emails go only to Heritage Restaurant Group venues, for members who agreed to marketing.</p>`;
   document.querySelectorAll('#t-dash .chip').forEach(c=>c.addEventListener('click',()=>{range=+c.dataset.r;renderDash()}));
   bindPicker();
   const draw=(id,fn)=>{const el=document.getElementById(id);if(el)fn(el)};
