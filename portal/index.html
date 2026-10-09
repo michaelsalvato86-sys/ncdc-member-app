@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dinner Club Restaurant Portal</title>
+<meta name="description" content="Participating restaurants see what Dinner Club members bring them: redemptions, guests, checks, specials and drinks.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script src="../data.js"></script>
+<script src="../info.js"></script>
+<script src="../menus.js"></script>
+<style>
+/* Layout: brand header, sticky tab row, a single column of cards that becomes a two-column grid on wide screens. */
+:root{
+  --water-500:#194e8f; --water-600:#133b6d; --water-800:#19304c; --water-300:#7f9cc8;
+  --harbor-100:#eceff8; --harbor-50:#f6f7fb;
+  --brick-500:#b8492e; --brick-600:#9c3c25;
+  --ink-100:#e3e7f1; --ink-300:#8d93a3; --ink-500:#545a68; --ink-800:#191c22;
+  --paper:#ffffff; --bg:#f4f6fb; --ok:#1f7a4d; --warn:#a35a12;
+  --bar:#194e8f; --bar-hover:#0f3566; --grid:#e8ecf4;
+  --sans:"Instrument Sans","Helvetica Neue",Helvetica,sans-serif;
+  --serif:"Instrument Serif",Georgia,serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg)}
+body{font-family:var(--sans);color:var(--ink-800);-webkit-font-smoothing:antialiased;min-height:100%}
+button,select,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+a{color:var(--water-500)}
+.hd{background:var(--water-600);color:#fff;padding:calc(env(safe-area-inset-top,0px) + 14px) 16px 14px}
+.hd-in{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.hd img{height:32px}
+.hd-r{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.who{font-size:13px;color:#cdd8ee}
+.who b{color:#fff}
+.hd button,.hd a.lnk{font-size:13px;font-weight:600;color:#cdd8ee;text-decoration:none}
+.sample-bar{background:#fff4ef;color:var(--brick-600);font-size:13px;line-height:1.45;padding:9px 16px;border-bottom:1px solid #f3d6cb}
+.sample-bar div{max-width:1100px;margin:0 auto}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(244,246,251,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--ink-100)}
+.tabs-in{max-width:1100px;margin:0 auto;padding:0 16px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.tabs-in::-webkit-scrollbar{display:none}
+.tab{flex:none;padding:13px 12px;font-weight:600;font-size:14px;color:var(--ink-500);border-bottom:2.5px solid transparent}
+.tab.on{color:var(--water-600);border-color:var(--water-600)}
+.tab.admin{color:var(--brick-600)}
+.tab.admin.on{border-color:var(--brick-500)}
+main{max-width:1100px;margin:0 auto;padding:18px 16px calc(env(safe-area-inset-bottom,0px) + 48px)}
+.view{display:none}
+.view.on{display:block}
+h1{font-family:var(--serif);font-weight:400;font-size:34px;color:var(--water-600);line-height:1.1;text-wrap:balance}
+.sub{color:var(--ink-500);margin-top:4px;font-size:15px;line-height:1.5}
+.row{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.ranges{display:flex;gap:6px;flex-wrap:wrap}
+.chip{padding:7px 12px;border-radius:99px;border:1.5px solid var(--ink-100);background:#fff;font-size:13px;font-weight:600;color:var(--ink-500)}
+.chip.on{background:var(--water-600);border-color:var(--water-600);color:#fff}
+.chip:focus-visible,.tab:focus-visible,.btn:focus-visible{outline:2px solid var(--water-500);outline-offset:2px}
+
+/* KPI tiles */
+.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:14px}
+.kpi{background:#fff;border:1px solid var(--ink-100);border-radius:14px;padding:13px 14px;min-width:0}
+.kpi small{display:block;font-size:12px;font-weight:600;color:var(--ink-500);letter-spacing:.02em}
+.kpi b{display:block;font-size:26px;font-weight:700;color:var(--ink-800);font-variant-numeric:tabular-nums;margin-top:4px;line-height:1.1}
+.kpi span{display:block;font-size:12px;color:var(--ink-300);margin-top:3px}
+
+/* cards */
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:900px){.grid{grid-template-columns:1fr 1fr}.grid .wide{grid-column:1/-1}}
+.card{background:#fff;border:1px solid var(--ink-100);border-radius:16px;padding:16px;min-width:0;position:relative}
+.card-h{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:10px}
+.card h2{font-size:16px;color:var(--ink-800)}
+.card p.d{font-size:13px;color:var(--ink-500);margin-top:2px;line-height:1.45}
+.src{flex:none;font-size:11px;font-weight:700;letter-spacing:.04em;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.src.app{background:var(--harbor-100);color:var(--water-600)}
+.src.pos{background:#eef6f1;color:var(--ok)}
+.src.hrg{background:#fff1ec;color:var(--brick-600)}
+.hidden-note{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-300);padding:10px 0}
+.chart{position:relative;width:100%}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart text{font-family:var(--sans);font-size:11px;fill:var(--ink-500)}
+.chart .val{fill:var(--ink-800);font-weight:600}
+.chart rect.b{fill:var(--bar);transition:fill .12s}
+.chart rect.b.hl,.chart rect.b:hover{fill:var(--bar-hover)}
+.chart rect.hit{fill:transparent;cursor:default}
+.tip{position:absolute;pointer-events:none;background:var(--ink-800);color:#fff;font-size:12px;padding:6px 9px;border-radius:8px;white-space:nowrap;transform:translate(-50%,-110%);opacity:0;transition:opacity .1s;z-index:3}
+.tip b{font-variant-numeric:tabular-nums}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-size:12px;color:var(--ink-500);font-weight:600;padding:8px 8px;border-bottom:1px solid var(--ink-100);white-space:nowrap}
+td{padding:9px 8px;border-bottom:1px solid #f0f2f7;font-variant-numeric:tabular-nums}
+td.n,th.n{text-align:right}
+tr:last-child td{border-bottom:0}
+.split{display:flex;height:14px;border-radius:7px;overflow:hidden;gap:2px;margin:6px 0 10px}
+.split i{display:block;height:100%}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--ink-500)}
+.legend span{display:flex;align-items:center;gap:6px}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.mask{color:var(--ink-500)}
+.heat{display:grid;grid-template-columns:34px repeat(11,1fr);gap:3px;font-size:11px;color:var(--ink-500)}
+.heat .hh{text-align:center}
+.heat .hdl{display:flex;align-items:center}
+.heat .hc{height:24px;border-radius:4px}
+.prof{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:10px}
+.prof div{background:var(--harbor-50);border-radius:10px;padding:10px}
+.prof b{display:block;font-size:20px;font-variant-numeric:tabular-nums}
+.prof small{font-size:12px;color:var(--ink-500)}
+
+/* sign in */
+.signin{max-width:520px;margin:20px auto 0;background:#fff;border:1px solid var(--ink-100);border-radius:18px;padding:22px}
+.signin h1{font-size:32px}
+label.f{display:block;font-size:13px;font-weight:600;color:var(--water-800);margin:14px 0 6px}
+select,input[type=text],input[type=date],textarea{width:100%;padding:12px;border:1.5px solid #cfd6e6;border-radius:10px;background:#fff;font-size:16px}
+textarea{min-height:80px;resize:vertical}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:13px 18px;border-radius:12px;background:var(--water-600);color:#fff;font-weight:600;font-size:15px;text-decoration:none}
+.btn.full{width:100%;margin-top:16px}
+.btn.alt{background:#fff;color:var(--water-600);border:1.5px solid var(--water-600)}
+.btn.brick{background:var(--brick-500)}
+.or{text-align:center;color:var(--ink-300);font-size:13px;margin:16px 0 0}
+.note{font-size:13px;color:var(--ink-500);line-height:1.55;margin-top:12px}
+
+/* specials */
+.sp-list{display:grid;gap:10px;margin-top:12px}
+.sp{border:1px solid var(--ink-100);border-radius:12px;padding:12px 14px;display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.sp b{display:block}
+.sp small{color:var(--ink-500);font-size:13px;line-height:1.45;display:block;margin-top:2px}
+.sp button{font-size:13px;font-weight:600;color:var(--brick-600);flex:none}
+
+/* sharing toggles */
+.share-h{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.share-h select{max-width:340px}
+.tg{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #f0f2f7}
+.tg:last-child{border-bottom:0}
+.tg b{display:block;font-size:15px}
+.tg small{font-size:13px;color:var(--ink-500)}
+.sw{position:relative;flex:none;width:46px;height:28px}
+.sw input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer;z-index:1}
+.sw i{position:absolute;inset:0;border-radius:99px;background:#cfd6e6;transition:.15s}
+.sw i:after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:.15s}
+.sw input:checked+i{background:var(--ok)}
+.sw input:checked+i:after{transform:translateX(18px)}
+.sw input:focus-visible+i{outline:2px solid var(--water-500);outline-offset:2px}
+.locked{font-size:11px;font-weight:700;color:var(--brick-600);background:#fff1ec;border-radius:99px;padding:2px 7px;margin-left:6px;vertical-align:1px}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translate(-50%,20px);opacity:0;background:var(--ink-800);color:#fff;padding:11px 16px;border-radius:12px;font-size:14px;transition:.25s;z-index:80;max-width:90%}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hd"><div class="hd-in">
+  <img src="../logo-white.png" alt="Newport County Dinner Club">
+  <div class="hd-r"><span class="who" id="who"></span><a class="lnk" href="../">Member app</a><button id="signout" type="button" hidden>Sign out</button></div>
+</div></header>
+<div class="sample-bar"><div><b>Demo:</b> every number in this portal is SAMPLE data, generated so you can see the layout. The live portal fills from real Dinner Club redemptions and, where a restaurant connects it, its POS.</div></div>
+
+<!-- SIGN IN -->
+<section class="view" id="v-signin"><main>
+  <div class="signin">
+    <h1>Restaurant portal</h1>
+    <p class="sub">See what Dinner Club members bring to your restaurant, post specials, and set up your code.</p>
+    <label class="f" for="si-rest">Your restaurant</label>
+    <select id="si-rest"></select>
+    <button class="btn full" id="si-go" type="button">Open my dashboard</button>
+    <p class="or">or</p>
+    <button class="btn full brick" id="si-admin" type="button">Sign in as Club admin (Heritage)</button>
+    <p class="note">In the live portal each restaurant manager signs in with an emailed link, and sees only their own restaurant. Club admins see every restaurant and choose what each one is shown.</p>
+  </div>
+</main></section>
+
+<!-- APP -->
+<section class="view" id="v-app">
+  <nav class="tabs" aria-label="Portal sections"><div class="tabs-in" id="tabs"></div></nav>
+  <main>
+    <div class="view" id="t-dash"></div>
+    <div class="view" id="t-menu"></div>
+    <div class="view" id="t-specials"></div>
+    <div class="view" id="t-code"></div>
+    <div class="view" id="t-members"></div>
+    <div class="view" id="t-sharing"></div>
+  </main>
+</section>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}};
+function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('on'),2400)}
+const money=n=>'$'+Math.round(n).toLocaleString('en-US');
+const money2=n=>'$'+n.toFixed(2);
+const pct=n=>Math.round(n*100)+'%';
+
+// ---------- metrics the club can share or withhold, per restaurant ----------
+const METRICS=[
+  {k:'redemptions',  t:'Redemptions over time',       d:'Dinner Club visits by week',                    src:'app'},
+  {k:'guests',       t:'Guests and repeat visits',    d:'Unique members, repeat rate, new to you',       src:'app'},
+  {k:'checks',       t:'Check size',                  d:'Average check and the spread of check totals',  src:'app'},
+  {k:'revenue',      t:'Revenue from Dinner Club tables', d:'Check totals, discount given, net revenue', src:'app'},
+  {k:'when',         t:'When members come in',        d:'Day of week and time of day',                   src:'app'},
+  {k:'zips',         t:'Top ZIP codes',               d:'Where members come from',                       src:'app'},
+  {k:'origin',       t:'Locals vs visitors',          d:'Newport County, rest of RI, out of state',      src:'app'},
+  {k:'spenders',     t:'Top spenders',                d:'Members ranked by spend at this restaurant',    src:'app'},
+  {k:'specials',     t:'Specials ordered',            d:'Which specials Dinner Club tables order',       src:'pos'},
+  {k:'drinks',       t:'Drinks ordered',              d:'Drink categories on Dinner Club checks',        src:'pos'},
+  {k:'items',        t:'Top items ordered',           d:'Dishes Dinner Club tables order most',          src:'pos'},
+  {k:'heat',         t:'Busiest day and hour',        d:'Heatmap of redemptions by day and hour',        src:'app'},
+  {k:'profile',      t:'Member profile',              d:'Visits per member, return gap, party size',     src:'app'},
+];
+const SRC_LABEL={app:'From the app',pos:'From your POS',hrg:'Heritage only'};
+const K_SHARE='ncdc_portal_sharing', K_SPECIALS='ncdc_specials', K_USES='ncdc_uses';
+function sharing(){return LS.get(K_SHARE,{})}
+function isShared(rid,k){const s=sharing();return !(s[rid]&&s[rid][k]===false)}   // default: everything on
+
+// Heritage Restaurant Group venues get member-level detail for marketing. Confirm the full list.
+const HRG=(typeof HRG_VENUES!=='undefined'?HRG_VENUES:[]);
+const isHRG=rid=>HRG.includes(rid);
+
+// ---------- seeded SAMPLE data (deterministic per restaurant) ----------
+function seed(str){let h=1779033703^str.length;for(let i=0;i<str.length;i++){h=Math.imul(h^str.charCodeAt(i),3432918353);h=h<<13|h>>>19}return()=>{h=Math.imul(h^h>>>16,2246822507);h=Math.imul(h^h>>>13,3266489909);return((h^=h>>>16)>>>0)/4294967296}}
+const ZIPS=[ // real ZIP codes, sample weights
+  ['02840','Newport, RI',30,'county'],['02842','Middletown, RI',16,'county'],['02871','Portsmouth, RI',12,'county'],
+  ['02835','Jamestown, RI',5,'county'],['02878','Tiverton, RI',4,'county'],['02837','Little Compton, RI',2,'county'],
+  ['02809','Bristol, RI',4,'ri'],['02806','Barrington, RI',3,'ri'],['02818','East Greenwich, RI',3,'ri'],['02903','Providence, RI',3,'ri'],['02886','Warwick, RI',2,'ri'],['02852','North Kingstown, RI',2,'ri'],
+  ['02720','Fall River, MA',3,'out'],['02116','Boston, MA',3,'out'],['06830','Greenwich, CT',2,'out'],['10021','New York, NY',2,'out'],['02790','Westport, MA',2,'out']];
+const SPECIALS_S=['Fish of the day','Chef’s pasta special','Weekend prime rib','Soup of the day','Seasonal risotto','Market steak'];
+const DRINKS_S=['Draft beer','Wine by the glass','Cocktails','Bottle of wine','Non-alcoholic','Coffee & espresso'];
+const DOW=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+const HOURS=['11a','12p','1p','2p','3p','4p','5p','6p','7p','8p','9p'];
+function pick(rnd,arr,wIdx){const tot=arr.reduce((a,x)=>a+x[wIdx],0);let r=rnd()*tot;for(const x of arr){r-=x[wIdx];if(r<=0)return x}return arr[arr.length-1]}
+
+function buildData(rid,weeks){
+  const rnd=seed(rid+':ncdc');
+  const scale=0.6+rnd()*1.2;                       // restaurant size
+  const avgCheck=48+rnd()*70;                       // two-entree check
+  const mm=(typeof MENUS!=='undefined'&&MENUS[rid])||null;   // real dish names, sample counts
+  const dishes=mm?mm.sections.filter(x=>!/drink|wine|beer|cocktail|beverage|dessert|kids|side/i.test(x.title)).flatMap(x=>x.items.map(i=>i.name)).slice(0,60):[];
+  const members=[];const nMem=Math.round(90*scale)+20;
+  for(let i=0;i<nMem;i++){const z=pick(rnd,ZIPS,2);members.push({num:'27-'+String(100+Math.floor(rnd()*9800)).padStart(5,'0'),zip:z[0],town:z[1],area:z[3],loyal:rnd()})}
+  const visits=[];const now=new Date();
+  for(let w=weeks-1;w>=0;w--){
+    const season=1+0.5*Math.sin((w/52)*Math.PI*2+1.4);
+    const n=Math.max(0,Math.round((3+rnd()*6)*scale*season));
+    for(let j=0;j<n;j++){
+      const m=members[Math.floor(Math.pow(rnd(),1.6)*members.length)];
+      const dow=pick(rnd,[[0,4],[1,5],[2,7],[3,10],[4,18],[5,20],[6,12]].map(x=>[x[0],0,x[1]]),2)[0];
+      const hr=pick(rnd,HOURS.map((h,i)=>[i,0,[2,3,2,1,1,3,9,12,10,6,3][i]]),2)[0];
+      const total=Math.max(28,avgCheck*(0.6+rnd()*0.9)+(rnd()<.3?rnd()*60:0));
+      const discount=Math.min(total*0.45,(total*0.5)*(0.55+rnd()*0.35));
+      const d=new Date(now);d.setDate(d.getDate()-w*7-Math.floor(rnd()*7));
+      visits.push({w:weeks-1-w,date:d,dow,hr,member:m,total,discount,party:2+(rnd()<.35?Math.ceil(rnd()*3):0),
+        special:rnd()<.55?SPECIALS_S[Math.floor(Math.pow(rnd(),1.4)*SPECIALS_S.length)]:null,
+        drinks:DRINKS_S.filter((_,i)=>rnd()<[.45,.5,.38,.18,.2,.15][i]),
+        items:dishes.length?[0,1].map(()=>dishes[Math.floor(Math.pow(rnd(),2.2)*dishes.length)]):[]});
+    }
+  }
+  // fold in real redemptions recorded on this device by the member app (demo)
+  const live=(LS.get(K_USES,{})[rid]||[]).map(u=>typeof u==='string'?{t:u}:u);
+  live.forEach(u=>{const d=new Date(u.t);visits.push({w:weeks-1,date:d,dow:(d.getDay()+6)%7,hr:Math.max(0,Math.min(10,d.getHours()-11)),member:{num:u.member||'27-demo',zip:u.zip||'—',town:u.zip?'':'(this device)',area:'county'},total:u.total||0,discount:u.total?u.total*0.4:0,party:u.party||2,special:null,drinks:[],live:true})});
+  return {visits,live:live.length,weeks};
+}
+
+// ---------- tiny SVG chart kit (single hue, thin bars, hover tooltips) ----------
+function colChart(el,rows,{fmt=v=>v,labelEvery=1,h=180}={}){
+  const W=560,H=h,pl=34,pb=24,pt=10,max=Math.max(1,...rows.map(r=>r.v));
+  const nice=max<=1?1:(Math.ceil(max/4)*4||4),bw=(W-pl)/rows.length,gap=Math.min(6,bw*.28);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(el.dataset.title||'chart')}">`;
+  for(let i=0;i<=4;i++){const y=pt+(H-pt-pb)*(1-i/4);s+=`<line x1="${pl}" x2="${W}" y1="${y}" y2="${y}" stroke="var(--grid)" stroke-width="1"/><text x="${pl-6}" y="${y+4}" text-anchor="end">${fmt(nice*i/4)}</text>`}
+  rows.forEach((r,i)=>{const x=pl+i*bw+gap/2,bh=(H-pt-pb)*(r.v/nice),y=H-pb-bh,w=Math.max(2,bw-gap);
+    s+=`<path class="b" d="M${x},${H-pb} V${y+Math.min(4,bh)} q0,-${Math.min(4,bh)} ${Math.min(4,w/2)},-${Math.min(4,bh)} H${x+w-Math.min(4,w/2)} q${Math.min(4,w/2)},0 ${Math.min(4,w/2)},${Math.min(4,bh)} V${H-pb} Z" fill="var(--bar)" data-i="${i}"/>`;
+    s+=`<rect class="hit" x="${pl+i*bw}" y="${pt}" width="${bw}" height="${H-pt-pb}" data-i="${i}"/>`;
+    if(i%labelEvery===0)s+=`<text x="${x+w/2}" y="${H-8}" text-anchor="middle">${esc(r.l)}</text>`;});
+  s+='</svg><div class="tip"></div>';el.innerHTML=s;hover(el,rows,fmt);
+}
+function barChart(el,rows,{fmt=v=>v,lw=150}={}){
+  const W=560,rh=28,H=rows.length*rh+4,max=Math.max(1,...rows.map(r=>r.v)),aw=W-lw-60;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(el.dataset.title||'chart')}">`;
+  rows.forEach((r,i)=>{const y=i*rh+4,w=Math.max(3,aw*(r.v/max));
+    s+=`<text x="0" y="${y+15}">${esc(r.l)}</text>`;
+    s+=`<path class="b" d="M${lw},${y+4} H${lw+w-4} q4,0 4,4 V${y+16} q0,4 -4,4 H${lw} Z" fill="var(--bar)" data-i="${i}"/>`;
+    s+=`<text class="val" x="${lw+w+6}" y="${y+16}">${esc(fmt(r.v))}</text>`;
+    s+=`<rect class="hit" x="0" y="${y}" width="${W}" height="${rh}" data-i="${i}"/>`;});
+  s+='</svg><div class="tip"></div>';el.innerHTML=s;hover(el,rows,fmt);
+}
+function hover(el,rows,fmt){const tip=el.querySelector('.tip'),svg=el.querySelector('svg');
+  el.querySelectorAll('.hit').forEach(h=>{h.addEventListener('pointerenter',()=>{const i=+h.dataset.i,r=rows[i];
+      el.querySelectorAll('.b').forEach(b=>b.classList.toggle('hl',b.dataset.i==h.dataset.i));
+      tip.innerHTML=`${esc(r.tip||r.l)}: <b>${esc(fmt(r.v))}</b>`;
+      const bb=h.getBoundingClientRect(),eb=el.getBoundingClientRect();tip.style.left=(bb.left-eb.left+bb.width/2)+'px';tip.style.top=(bb.top-eb.top+8)+'px';tip.style.opacity=1});
+    h.addEventListener('pointerleave',()=>{tip.style.opacity=0;el.querySelectorAll('.b').forEach(b=>b.classList.remove('hl'))});});
+}
+
+// ---------- state ----------
+let session=LS.get('ncdc_portal_session',null);   // {role:'restaurant'|'admin', rid}
+let range=26, viewRid=null, tab='dash';
+const restName=id=>(RESTAURANTS.find(r=>r.id===id)||{}).name||id;
+
+// sign in
+$('#si-rest').innerHTML=RESTAURANTS.map(r=>`<option value="${r.id}">${esc(r.name)}${isHRG(r.id)?' (Heritage)':''}</option>`).join('');
+$('#si-go').addEventListener('click',()=>{session={role:'restaurant',rid:$('#si-rest').value};LS.set('ncdc_portal_session',session);boot()});
+$('#si-admin').addEventListener('click',()=>{session={role:'admin',rid:RESTAURANTS[0].id};LS.set('ncdc_portal_session',session);boot()});
+$('#signout').addEventListener('click',()=>{session=null;LS.set('ncdc_portal_session',null);boot()});
+
+function show(id){document.querySelectorAll('body > .view').forEach(v=>v.classList.toggle('on',v.id===id))}
+function boot(){
+  if(!session){show('v-signin');$('#who').textContent='';$('#signout').hidden=true;return}
+  viewRid=session.rid; show('v-app'); $('#signout').hidden=false;
+  $('#who').innerHTML=session.role==='admin'?'<b>Club admin</b> · Heritage':'<b>'+esc(restName(viewRid))+'</b>';
+  const tabs=[['dash','Dashboard'],['menu','Menu'],['specials','Specials'],['code','Dinner Club code']];
+  if(session.role==='admin')tabs.push(['members','Members & marketing','admin'],['sharing','What restaurants see','admin']);
+  $('#tabs').innerHTML=tabs.map(([k,t,c])=>`<button class="tab ${c||''}${k===tab?' on':''}" data-t="${k}" type="button">${t}</button>`).join('');
+  if(!tabs.some(t=>t[0]===tab))tab='dash';
+  render();
+}
+$('#tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;tab=b.dataset.t;boot()});
+function render(){['dash','menu','specials','code','members','sharing'].forEach(t=>{const el=$('#t-'+t);el.classList.toggle('on',t===tab);if(t!==tab)el.innerHTML=''});
+  ({dash:renderDash,menu:renderMenu,specials:renderSpecials,code:renderCode,members:renderMembers,sharing:renderSharing})[tab]();}
+
+function restPicker(){ // admins can look at any restaurant
+  if(session.role!=='admin')return '';
+  return `<select id="pick" aria-label="Restaurant" style="max-width:320px">${RESTAURANTS.map(r=>`<option value="${r.id}"${r.id===viewRid?' selected':''}>${esc(r.name)}${isHRG(r.id)?' (Heritage)':''}</option>`).join('')}</select>`;
+}
+function bindPicker(){const p=$('#pick');if(p)p.addEventListener('change',()=>{viewRid=p.value;render()})}
+
+// ---------- DASHBOARD ----------
+function card(k,title,desc,src,body,wide){
+  const shared=isShared(viewRid,k), admin=session.role==='admin';
+  if(!shared&&!admin)return '';                                    // restaurant never sees withheld metrics
+  return `<section class="card${wide?' wide':''}"><div class="card-h"><div><h2>${esc(title)}</h2><p class="d">${esc(desc)}</p></div><span class="src ${src}">${SRC_LABEL[src]}</span></div>
+    ${!shared?'<div class="hidden-note">Hidden from this restaurant. Admin preview only.</div>':''}${body}</section>`;
+}
+function renderDash(){
+  const D=buildData(viewRid,range), V=D.visits.filter(v=>v.w>=D.weeks-range);
+  const hrgView=isHRG(viewRid)||session.role==='admin';
+  const uniq=new Map();V.forEach(v=>{const m=uniq.get(v.member.num)||{m:v.member,n:0,spend:0,last:v.date};m.n++;m.spend+=v.total;if(v.date>m.last)m.last=v.date;uniq.set(v.member.num,m)});
+  const tot=V.reduce((a,v)=>a+v.total,0),disc=V.reduce((a,v)=>a+v.discount,0),withTot=V.filter(v=>v.total>0);
+  const repeat=[...uniq.values()].filter(m=>m.n>1).length/Math.max(1,uniq.size);
+  const guests=V.reduce((a,v)=>a+v.party,0);
+  const k=(key,label,val,note)=>isShared(viewRid,key)||session.role==='admin'?`<div class="kpi"><small>${label}</small><b>${val}</b>${note?`<span>${note}</span>`:''}</div>`:'';
+  const r=RESTAURANTS.find(x=>x.id===viewRid)||{};
+  const mm0=(typeof MENUS!=='undefined'&&MENUS[viewRid]);
+  $('#t-dash').innerHTML=`
+    <div class="row"><div><h1>${esc(r.name||'')}</h1><p class="sub">What Dinner Club members brought you${D.live?` · includes ${D.live} real test redemption${D.live>1?'s':''} from this device`:''}.</p></div>
+      <div class="ranges">${restPicker()}${[[4,'4 weeks'],[13,'13 weeks'],[26,'26 weeks'],[52,'52 weeks']].map(([n,t])=>`<button class="chip${n===range?' on':''}" data-r="${n}" type="button">${t}</button>`).join('')}</div></div>
+    <div class="kpis">
+      ${k('redemptions','Redemptions',V.length.toLocaleString(),'Dinner Club tables')}
+      ${k('guests','Members served',uniq.size.toLocaleString(),pct(repeat)+' came back')}
+      ${k('guests','Guests seated',guests.toLocaleString(),'incl. friends at the table')}
+      ${k('checks','Average check',money2(withTot.reduce((a,v)=>a+v.total,0)/Math.max(1,withTot.length)),'before the discount')}
+      ${k('revenue','Revenue from members',money(tot),'check totals')}
+      ${k('revenue','Net after discount',money(tot-disc),money(disc)+' given back')}
+      ${k('checks','Spend per guest',money2(tot/Math.max(1,guests)),'check total ÷ guests')}
+      ${k('revenue','Return on the discount',(tot/Math.max(1,disc)).toFixed(1)+'×','revenue per $1 given back')}
+    </div>
+    <div class="grid">
+      ${card('redemptions','Redemptions over time','Dinner Club visits per week','app','<div class="chart" id="c-weeks" data-title="Redemptions per week"></div>',true)}
+      ${card('when','By day of week','Which nights members choose','app','<div class="chart" id="c-dow" data-title="Redemptions by day"></div>')}
+      ${card('when','By time of day','When the check opens','app','<div class="chart" id="c-hour" data-title="Redemptions by hour"></div>')}
+      ${card('zips','Top ZIP codes','Where your Dinner Club guests live','app','<div class="chart" id="c-zip" data-title="Top ZIP codes"></div>')}
+      ${card('origin','Locals vs visitors','Share of redemptions by home area','app','<div id="c-origin"></div>')}
+      ${card('checks','Check size','Spread of check totals before the discount','app','<div class="chart" id="c-check" data-title="Check size"></div>')}
+      ${card('heat','Busiest day and hour','Darker means more Dinner Club tables','app','<div id="c-heat"></div>',true)}
+      ${card('items','Top items ordered','Dishes on Dinner Club checks'+(mm0?' (your menu, sample counts)':''),'pos','<div class="chart" id="c-items" data-title="Top items"></div>')}
+      ${card('profile','Member profile','How Dinner Club members use you','app','<div id="c-profile"></div>')}
+      ${card('guests','New vs returning','First visit here vs a repeat visit, by week','app','<div class="chart" id="c-newret" data-title="Returning share"></div>')}
+      ${card('drinks','Drinks ordered','Share of Dinner Club checks with each drink type','pos','<div class="chart" id="c-drinks" data-title="Drinks ordered"></div>')}
+      ${card('specials','Specials ordered','Specials on Dinner Club checks','pos','<div class="tbl-wrap" id="c-specials"></div>')}
+      ${card('spenders','Top spenders','Members ranked by total spend here'+(hrgView?'':' (shown by member number only)'),hrgView?'hrg':'app','<div class="tbl-wrap" id="c-spend"></div>',true)}
+    </div>
+    <p class="note">"From the app" metrics come from Dinner Club redemptions: the member's ZIP from sign-up, plus the check total and party size the server enters at redemption. "From your POS" metrics need a connected POS (Toast is supported first). Member names and emails go only to Heritage Restaurant Group venues, for members who agreed to marketing.</p>`;
+  document.querySelectorAll('#t-dash .chip').forEach(c=>c.addEventListener('click',()=>{range=+c.dataset.r;renderDash()}));
+  bindPicker();
+  const draw=(id,fn)=>{const el=document.getElementById(id);if(el)fn(el)};
+  draw('c-weeks',el=>{const rows=[];for(let i=D.weeks-range;i<D.weeks;i++){const n=V.filter(v=>v.w===i).length;const d=new Date();d.setDate(d.getDate()-(D.weeks-1-i)*7);rows.push({l:d.toLocaleDateString('en-US',{month:'short',day:'numeric'}),tip:'Week of '+d.toLocaleDateString('en-US',{month:'short',day:'numeric'}),v:n})}colChart(el,rows,{labelEvery:Math.ceil(range/8)})});
+  draw('c-dow',el=>colChart(el,DOW.map((d,i)=>({l:d,v:V.filter(v=>v.dow===i).length})),{h:160}));
+  draw('c-hour',el=>colChart(el,HOURS.map((h,i)=>({l:h,v:V.filter(v=>v.hr===i).length})),{h:160}));
+  draw('c-zip',el=>{const m={};V.forEach(v=>{const key=v.member.zip;m[key]=m[key]||{n:0,town:v.member.town};m[key].n++});
+    barChart(el,Object.entries(m).sort((a,b)=>b[1].n-a[1].n).slice(0,8).map(([z,o])=>({l:z+'  '+o.town,v:o.n})),{lw:190})});
+  draw('c-origin',el=>{const a={county:0,ri:0,out:0};V.forEach(v=>a[v.member.area]++);const t=Math.max(1,V.length);
+    const parts=[['county','Newport County','#194e8f'],['ri','Rest of Rhode Island','#7f9cc8'],['out','Out of state','#b8492e']];
+    el.innerHTML=`<div class="split">${parts.map(([k,,c])=>a[k]?`<i style="width:${a[k]/t*100}%;background:${c}" title="${pct(a[k]/t)}"></i>`:'').join('')}</div>
+      <div class="legend">${parts.map(([k,l,c])=>`<span><i style="background:${c}"></i>${l} <b style="color:var(--ink-800)">${pct(a[k]/t)}</b></span>`).join('')}</div>`});
+  draw('c-check',el=>{const b=[[0,40],[40,60],[60,80],[80,100],[100,130],[130,170],[170,9999]];
+    colChart(el,b.map(([lo,hi])=>({l:hi>999?'$'+lo+'+':'$'+lo+'–'+hi,tip:hi>999?'$'+lo+' and up':'$'+lo+' to $'+hi,v:withTot.filter(v=>v.total>=lo&&v.total<hi).length})),{h:160})});
+  draw('c-heat',el=>{const g=Array.from({length:7},()=>Array(HOURS.length).fill(0));V.forEach(v=>g[v.dow][v.hr]++);const mx=Math.max(1,...g.flat());
+    const shade=n=>n===0?'#f1f3f8':`rgba(25,78,143,${(0.18+0.82*n/mx).toFixed(2)})`;
+    el.innerHTML=`<div class="heat"><div></div>${HOURS.map(h=>`<div class="hh">${h}</div>`).join('')}${DOW.map((d,i)=>`<div class="hdl">${d}</div>${g[i].map((n,j)=>`<div class="hc" style="background:${shade(n)}" title="${d} ${HOURS[j]}: ${n} redemption${n===1?'':'s'}"></div>`).join('')}`).join('')}</div>
+      <div class="legend" style="margin-top:8px"><span><i style="background:#f1f3f8"></i>None</span><span><i style="background:rgba(25,78,143,.4)"></i>Some</span><span><i style="background:rgba(25,78,143,1)"></i>Busiest</span></div>`});
+  draw('c-items',el=>{const m={};V.forEach(v=>(v.items||[]).forEach(n=>m[n]=(m[n]||0)+1));const rows=Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,10);
+    if(!rows.length){el.innerHTML='<p class="note">Appears when the POS is connected. We could not read this restaurant\u2019s menu from its website yet.</p>';return}
+    barChart(el,rows.map(([n,c])=>({l:n.length>28?n.slice(0,27)+'…':n,tip:n,v:c})),{lw:200})});
+  draw('c-profile',el=>{const ms=[...uniq.values()];const per=V.length/Math.max(1,ms.length);
+    const gaps=[];ms.forEach(m=>{const ds=V.filter(v=>v.member.num===m.m.num).map(v=>+v.date).sort((a,b)=>a-b);for(let i=1;i<ds.length;i++)gaps.push((ds[i]-ds[i-1])/864e5)});
+    const gap=gaps.length?gaps.reduce((a,b)=>a+b,0)/gaps.length:0;const ps={};V.forEach(v=>ps[v.party]=(ps[v.party]||0)+1);
+    const loc=V.filter(v=>v.member.area==='county').length/Math.max(1,V.length);
+    el.innerHTML=`<div class="prof"><div><b>${per.toFixed(1)}</b><small>visits per member</small></div><div><b>${gap?Math.round(gap)+' days':'—'}</b><small>between repeat visits</small></div><div><b>${pct(loc)}</b><small>live in Newport County</small></div><div><b>${(V.reduce((a,v)=>a+v.party,0)/Math.max(1,V.length)).toFixed(1)}</b><small>guests per table</small></div></div>
+      <div class="chart" id="c-party" data-title="Party size"></div>`;
+    colChart(document.getElementById('c-party'),Object.keys(ps).sort((a,b)=>a-b).map(k=>({l:k+(k>=5?'+':''),tip:'Party of '+k,v:ps[k]})),{h:130})});
+  draw('c-newret',el=>{const seen=new Set(),rows=[];const step=Math.max(1,Math.ceil(range/13));
+    for(let i=D.weeks-range;i<D.weeks;i+=step){const wk=V.filter(v=>v.w>=i&&v.w<i+step).sort((a,b)=>a.date-b.date);let ret=0;wk.forEach(v=>{if(seen.has(v.member.num))ret++;seen.add(v.member.num)});
+      const d=new Date();d.setDate(d.getDate()-(D.weeks-1-i)*7);rows.push({l:d.toLocaleDateString('en-US',{month:'short',day:'numeric'}),tip:'Returning, week of '+d.toLocaleDateString('en-US',{month:'short',day:'numeric'}),v:wk.length?ret/wk.length:0})}
+    colChart(el,rows,{fmt:pct,labelEvery:Math.ceil(rows.length/6),h:150})});
+  draw('c-drinks',el=>{const n=Math.max(1,V.filter(v=>!v.live).length);barChart(el,DRINKS_S.map(d=>({l:d,v:V.filter(v=>v.drinks.includes(d)).length/n})).sort((a,b)=>b.v-a.v),{fmt:pct})});
+  draw('c-specials',el=>{const m={};V.forEach(v=>{if(v.special){m[v.special]=m[v.special]||{n:0,rev:0};m[v.special].n++;m[v.special].rev+=v.total}});
+    el.innerHTML=`<table><thead><tr><th>Special</th><th class="n">Ordered</th><th class="n">Avg check</th></tr></thead><tbody>${Object.entries(m).sort((a,b)=>b[1].n-a[1].n).map(([s,o])=>`<tr><td>${esc(s)}</td><td class="n">${o.n}</td><td class="n">${money2(o.rev/o.n)}</td></tr>`).join('')}</tbody></table>`});
+  draw('c-spend',el=>{const rows=[...uniq.values()].sort((a,b)=>b.spend-a.spend).slice(0,10);
+    el.innerHTML=`<table><thead><tr><th>#</th><th>Member</th>${hrgView?'<th>Marketing</th>':''}<th>Home ZIP</th><th class="n">Visits</th><th class="n">Total spend</th><th class="n">Last visit</th></tr></thead><tbody>${rows.map((m,i)=>`<tr><td>${i+1}</td><td>${hrgView?esc(m.m.num)+' <span class="mask">· name and email in the live portal</span>':'Member '+esc(m.m.num)}</td>${hrgView?`<td>${m.m.loyal>.3?'Opted in':'<span class="mask">Not opted in</span>'}</td>`:''}<td>${esc(m.m.zip)}</td><td class="n">${m.n}</td><td class="n">${money(m.spend)}</td><td class="n">${m.last.toLocaleDateString('en-US',{month:'short',day:'numeric'})}</td></tr>`).join('')}</tbody></table>`});
+}
+
+// ---------- MENU (restaurant-submitted, overrides the weekly scrape) ----------
+const K_MENU='ncdc_menu_submissions';
+function parseMenu(text){
+  const secs=[];let cur=null;
+  text.split(/\r?\n/).map(l=>l.trim()).filter(Boolean).forEach(l=>{
+    const priceM=l.match(/(\$\s?\d+(?:\.\d{2})?(?:\s*[|/]\s*\$?\d+(?:\.\d{2})?)*|\bMP\b|market price)\s*$/i);
+    if(!priceM&&(l===l.toUpperCase()&&/[A-Z]/.test(l)&&l.length<=40||/:$/.test(l))){cur={title:l.replace(/:$/,'').replace(/\b\w+/g,w=>w[0].toUpperCase()+w.slice(1).toLowerCase()),items:[]};secs.push(cur);return}
+    const body=priceM?l.slice(0,priceM.index).trim().replace(/[\s.\u2026-]+$/,''):l;
+    const m=body.match(/^(.{2,70}?)\s+[-\u2013\u2014:]\s+(.+)$/);
+    if(!cur){cur={title:'Menu',items:[]};secs.push(cur)}
+    if(!priceM&&cur.items.length&&!cur.items[cur.items.length-1].desc&&body.length>20){cur.items[cur.items.length-1].desc=body;return}
+    cur.items.push({name:m?m[1]:body,desc:m?m[2]:'',price:priceM?priceM[1]:''});
+  });
+  return secs.filter(x=>x.items.length);
+}
+function renderMenu(){
+  const scraped=(typeof MENUS!=='undefined'&&MENUS[viewRid])||null, sub=(LS.get(K_MENU,{})[viewRid])||null;
+  const live=sub||scraped, n=live?live.sections.reduce((a,x)=>a+x.items.length,0):0;
+  $('#t-menu').innerHTML=`
+    <div class="row"><div><h1>Menu</h1><p class="sub">The menu members see on ${esc(restName(viewRid))}'s page. We check your website every week; send an update any time and it replaces ours.</p></div><div class="ranges">${restPicker()}</div></div>
+    <div class="grid">
+      <section class="card"><h2>Send an updated menu</h2><p class="d">Paste it as text. Put each section name on its own line (like STARTERS), then one dish per line: name, a dash, the description, and the price at the end.</p>
+        <label class="f" for="mn-t">Menu text</label><textarea id="mn-t" style="min-height:240px" placeholder="STARTERS&#10;Clam chowder - Cup or bowl, oyster crackers $9&#10;Fried calamari - Banana peppers, garlic butter $16&#10;&#10;ENTREES&#10;Fish and chips - Beer-battered cod, fries, slaw $24"></textarea>
+        <button class="btn full" id="mn-prev" type="button">Preview</button>
+        <div id="mn-out"></div></section>
+      <section class="card"><h2>Live on the member app</h2>
+        <p class="d">${live?`${n} items · ${sub?'sent by the restaurant '+new Date(sub.checked).toLocaleDateString('en-US',{month:'short',day:'numeric'}):'from your website, checked '+new Date(scraped.checked).toLocaleDateString('en-US',{month:'short',day:'numeric'})}`:'We could not read a menu from your website yet. Send one on the left.'}</p>
+        ${live?live.sections.slice(0,6).map(x=>`<p style="margin-top:10px"><b>${esc(x.title)}</b> <span class="mask">· ${x.items.length} items</span></p><p class="note" style="margin-top:2px">${esc(x.items.slice(0,4).map(i=>i.name).join(', '))}${x.items.length>4?'…':''}</p>`).join(''):''}
+        ${sub?'<button class="btn alt full" id="mn-clear" type="button">Go back to the menu from our website</button>':''}</section>
+    </div>
+    <p class="note">Demo: a menu you send saves on this device, so the member app on the same phone or computer shows it. The live portal publishes it for every member after a quick check by the club.</p>`;
+  bindPicker();
+  $('#mn-prev').addEventListener('click',()=>{const secs=parseMenu($('#mn-t').value);const n=secs.reduce((a,x)=>a+x.items.length,0);
+    $('#mn-out').innerHTML=n?`<p class="note"><b>${n} items in ${secs.length} section${secs.length>1?'s':''}.</b> ${esc(secs.map(x=>x.title).join(', '))}</p><button class="btn full brick" id="mn-send" type="button">Publish to the member app</button>`:'<p class="note">No dishes found. Put one dish per line.</p>';
+    const b=$('#mn-send');if(b)b.addEventListener('click',()=>{const a=LS.get(K_MENU,{});a[viewRid]={checked:new Date().toISOString(),by:'restaurant',sections:secs};LS.set(K_MENU,a);toast('Menu published');renderMenu()})});
+  const c=$('#mn-clear');if(c)c.addEventListener('click',()=>{const a=LS.get(K_MENU,{});delete a[viewRid];LS.set(K_MENU,a);toast('Using the menu from your website');renderMenu()});
+}
+
+// ---------- SPECIALS ----------
+function renderSpecials(){
+  const all=LS.get(K_SPECIALS,{}), list=all[viewRid]||[];
+  $('#t-specials').innerHTML=`
+    <div class="row"><div><h1>Specials</h1><p class="sub">Post a special and it shows on ${esc(restName(viewRid))}'s page in the member app.</p></div><div class="ranges">${restPicker()}</div></div>
+    <div class="grid">
+      <section class="card"><h2>Post a special</h2>
+        <form id="sp-f" novalidate>
+          <label class="f" for="sp-t">Title</label><input type="text" id="sp-t" maxlength="60" placeholder="e.g. Lobster mac and cheese">
+          <label class="f" for="sp-d">Details</label><textarea id="sp-d" maxlength="240" placeholder="What it is, the price if you want to show it, and when it runs"></textarea>
+          <label class="f" for="sp-u">Runs until (optional)</label><input type="date" id="sp-u">
+          <button class="btn full" type="submit">Post special</button>
+        </form></section>
+      <section class="card"><h2>Live on the member app</h2><p class="d">Members see these on your restaurant page.</p>
+        <div class="sp-list" id="sp-list">${list.length?list.map((s,i)=>`<div class="sp"><div><b>${esc(s.title)}</b><small>${esc(s.details)}${s.until?' · until '+esc(new Date(s.until+'T12:00').toLocaleDateString('en-US',{month:'short',day:'numeric'})):''}</small></div><button type="button" data-del="${i}">Remove</button></div>`).join(''):'<p class="note">No specials yet. Post your first one on the left.</p>'}</div></section>
+    </div>
+    <p class="note">Demo: specials save on this device, so the member app on the same phone or computer shows them. The live portal publishes them for every member.</p>`;
+  bindPicker();
+  $('#sp-f').addEventListener('submit',e=>{e.preventDefault();const t=$('#sp-t').value.trim(),d=$('#sp-d').value.trim();
+    if(!t){toast('Give the special a title');return}
+    const a=LS.get(K_SPECIALS,{});(a[viewRid]=a[viewRid]||[]).unshift({title:t,details:d,until:$('#sp-u').value||null,posted:new Date().toISOString()});LS.set(K_SPECIALS,a);toast('Posted to the member app');renderSpecials()});
+  document.querySelectorAll('[data-del]').forEach(b=>b.addEventListener('click',()=>{const a=LS.get(K_SPECIALS,{});a[viewRid].splice(+b.dataset.del,1);LS.set(K_SPECIALS,a);renderSpecials()}));
+}
+
+// ---------- CODE ----------
+function renderCode(){
+  $('#t-code').innerHTML=`<div class="row"><div><h1>Dinner Club code</h1><p class="sub">Choose what members show your server: your own QR, barcode or coupon graphic, a promo code, or a discount button.</p></div><div class="ranges">${restPicker()}</div></div>
+    <section class="card"><p class="d" style="font-size:15px">Code setup has its own page with a live phone preview.</p><a class="btn full" href="../partner/?r=${encodeURIComponent(viewRid)}">Set up ${esc(restName(viewRid))}'s code</a></section>`;
+  bindPicker();
+}
+
+// ---------- MEMBERS & MARKETING (Heritage / club admin only) ----------
+function renderMembers(){
+  const all=[];RESTAURANTS.forEach(r=>{buildData(r.id,26).visits.forEach(v=>all.push({...v,rid:r.id}))});
+  const mem=new Map();all.forEach(v=>{const m=mem.get(v.member.num)||{num:v.member.num,zip:v.member.zip,town:v.member.town,opt:v.member.loyal>.3,n:0,spend:0,rests:new Set()};m.n++;m.spend+=v.total;m.rests.add(v.rid);mem.set(v.member.num,m)});
+  const M=[...mem.values()].sort((a,b)=>b.spend-a.spend), opted=M.filter(m=>m.opt);
+  const zipAgg={};M.forEach(m=>{zipAgg[m.zip]=zipAgg[m.zip]||{n:0,town:m.town,spend:0};zipAgg[m.zip].n++;zipAgg[m.zip].spend+=m.spend});
+  $('#t-members').innerHTML=`
+    <div class="row"><div><h1>Members &amp; marketing</h1><p class="sub">Heritage Restaurant Group only. Member-level data for marketing, from members who opted in.</p></div></div>
+    <div class="kpis">
+      <div class="kpi"><small>Members active</small><b>${M.length.toLocaleString()}</b><span>last 26 weeks, all restaurants</span></div>
+      <div class="kpi"><small>Opted in to marketing</small><b>${opted.length.toLocaleString()}</b><span>${pct(opted.length/Math.max(1,M.length))} of members</span></div>
+      <div class="kpi"><small>Redemptions</small><b>${all.length.toLocaleString()}</b><span>across ${RESTAURANTS.length} restaurants</span></div>
+      <div class="kpi"><small>Member spend</small><b>${money(all.reduce((a,v)=>a+v.total,0))}</b><span>check totals</span></div>
+    </div>
+    <div class="grid">
+      <section class="card"><div class="card-h"><div><h2>Top ZIP codes, all restaurants</h2><p class="d">Members by home ZIP</p></div><span class="src hrg">Heritage only</span></div><div class="chart" id="m-zip" data-title="Members by ZIP"></div></section>
+      <section class="card"><div class="card-h"><div><h2>Busiest restaurants</h2><p class="d">Redemptions, last 26 weeks</p></div><span class="src hrg">Heritage only</span></div><div class="chart" id="m-rest" data-title="Redemptions by restaurant"></div></section>
+      <section class="card wide"><div class="card-h"><div><h2>Top members, opted in</h2><p class="d">Ranked by spend across all Dinner Club restaurants</p></div><span class="src hrg">Heritage only</span></div>
+        <div class="tbl-wrap"><table><thead><tr><th>Member</th><th>Home ZIP</th><th class="n">Restaurants</th><th class="n">Visits</th><th class="n">Spend</th></tr></thead><tbody>${opted.slice(0,15).map(m=>`<tr><td>${esc(m.num)} <span class="mask">· name and email in the live portal</span></td><td>${esc(m.zip)} <span class="mask">${esc(m.town)}</span></td><td class="n">${m.rests.size}</td><td class="n">${m.n}</td><td class="n">${money(m.spend)}</td></tr>`).join('')}</tbody></table></div>
+        <button class="btn alt full" id="m-csv" type="button">Download opted-in members (CSV)</button></section>
+    </div>
+    <p class="note"><b>Before this goes live:</b> members must agree at sign-up (the member app now asks), the club needs a privacy policy that names Heritage as a recipient, and counsel should review the consent wording. Only opted-in members appear here or in the export.</p>`;
+  barChart($('#m-zip'),Object.entries(zipAgg).sort((a,b)=>b[1].n-a[1].n).slice(0,10).map(([z,o])=>({l:z+'  '+o.town,v:o.n})),{lw:190});
+  const byR={};all.forEach(v=>byR[v.rid]=(byR[v.rid]||0)+1);
+  barChart($('#m-rest'),Object.entries(byR).sort((a,b)=>b[1]-a[1]).slice(0,10).map(([r,n])=>({l:restName(r).slice(0,26),v:n})),{lw:190});
+  $('#m-csv').addEventListener('click',()=>{const rows=[['member_number','home_zip','town','restaurants','visits','spend','sample']].concat(opted.map(m=>[m.num,m.zip,m.town,m.rests.size,m.n,m.spend.toFixed(2),'SAMPLE']));
+    const blob=new Blob([rows.map(r=>r.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(',')).join('\n')],{type:'text/csv'});
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='dinner-club-opted-in-SAMPLE.csv';a.click();toast('Downloaded (sample data)')});
+}
+
+// ---------- SHARING (what each restaurant sees) ----------
+function renderSharing(){
+  const s=sharing(), cur=s[viewRid]||{};
+  $('#t-sharing').innerHTML=`
+    <div class="row"><div><h1>What restaurants see</h1><p class="sub">Turn each dashboard section on or off for a restaurant. Everything starts on.</p></div></div>
+    <section class="card">
+      <div class="share-h">${restPicker()}<button class="btn alt" id="sh-all" type="button">Apply these settings to all restaurants</button><button class="btn alt" id="sh-view" type="button">Preview as this restaurant</button></div>
+      ${METRICS.map(m=>`<div class="tg"><div><b>${esc(m.t)}${m.k==='spenders'?'<span class="locked">Names: Heritage only</span>':''}</b><small>${esc(m.d)} · ${SRC_LABEL[m.src]}</small></div>
+        <label class="sw"><input type="checkbox" data-k="${m.k}"${cur[m.k]===false?'':' checked'} aria-label="Show ${esc(m.t)}"><i></i></label></div>`).join('')}
+    </section>
+    <p class="note">Demo: settings save on this device. In the live portal they save for the club and apply the next time a restaurant opens its dashboard.</p>`;
+  bindPicker();
+  document.querySelectorAll('#t-sharing input[data-k]').forEach(c=>c.addEventListener('change',()=>{const a=sharing();a[viewRid]=a[viewRid]||{};a[viewRid][c.dataset.k]=c.checked;LS.set(K_SHARE,a);toast((c.checked?'Shown to ':'Hidden from ')+restName(viewRid))}));
+  $('#sh-all').addEventListener('click',()=>{const a=sharing(),src=a[viewRid]||{};RESTAURANTS.forEach(r=>a[r.id]={...src});LS.set(K_SHARE,a);toast('Applied to all '+RESTAURANTS.length+' restaurants')});
+  $('#sh-view').addEventListener('click',()=>{session={role:'restaurant',rid:viewRid,preview:true};tab='dash';boot();toast('Previewing as '+restName(viewRid)+'. Sign out to return.')});
+}
+
+boot();
+})();
+</script>
+</body>
+</html>

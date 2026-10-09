@@ -93,3 +93,8 @@ const RESTAURANTS = [
 const DEMO_MEMBERS = [
   { number: '27-00001', email: 'demo@newportcountydinnerclub.com', name: 'Demo Member' },
 ];
+
+// Heritage Restaurant Group venues on the Dinner Club list. They get member-level detail (names, emails) for
+// marketing, from members who opted in. Confirmed from each venue's own site or ordering links on 2026-10-08;
+// the full list must be confirmed by Heritage before launch.
+const HRG_VENUES = ['brick-alley', 'caleb-broad', 'wallys', 'red-parrot'];

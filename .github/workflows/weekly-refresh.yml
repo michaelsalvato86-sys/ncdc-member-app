@@ -1,0 +1,43 @@
+name: Weekly restaurant refresh
+
+# Every Monday 09:00 UTC (5am Eastern in summer, 4am in winter). Also runnable by hand from the Actions tab.
+on:
+  schedule:
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install
+        run: |
+          pip install requests beautifulsoup4 pypdf playwright
+          python -m playwright install --with-deps chromium
+      - name: Refresh menus, social links, ratings, hours, map
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+        run: python tools/weekly_refresh.py
+      - name: Report
+        if: always()
+        run: cat tools/weekly_report.md >> "$GITHUB_STEP_SUMMARY" || true
+      - name: Publish changes
+        run: |
+          git config user.name "dinner-club-refresh"
+          git config user.email "actions@users.noreply.github.com"
+          git add menus.js social.js places.js geo.js tools/menu_report.json tools/weekly_report.md
+          if git diff --cached --quiet; then echo "No changes this week"; exit 0; fi
+          git commit -m "Weekly refresh: menus, social links, ratings, hours, map ($(date -u +%F))"
+          git push
