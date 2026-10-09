@@ -271,6 +271,7 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
 .find-in svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--ink-300)}
 .find-in input{width:100%;padding:14px 14px 14px 40px;border-radius:12px;border:1.5px solid #d6dcea;background:#fff;font-size:16px}
 .btn.near{display:flex;align-items:center;justify-content:center;gap:8px}
+.hmap{height:170px;border-radius:14px;overflow:hidden;border:1px solid #e3e7f1;cursor:pointer;z-index:0}
 #rests{background:var(--bg)}
 .rs-head{background:var(--water-600);color:#fff;padding:calc(var(--safe-t) + 16px) 0 12px}
 .rs-in{max-width:560px;margin:0 auto;padding:0 16px}
@@ -492,6 +493,7 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
     <input id="hq" type="search" placeholder="Search 58 restaurants or a town" aria-label="Search restaurants"></div>
     <button class="btn near" id="h-near" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>Near me</button>
+    <div class="hmap" id="hmap" role="button" tabindex="0" aria-label="Open the restaurant map"></div>
     <button class="btn ghost" id="h-all" type="button">See all on the map</button></div>
   <div class="foot">Each restaurant sets its own dates, times and blackout days. Check with your server before ordering.<br><a id="ft-mail"></a></div>
 </section>
@@ -547,7 +549,7 @@ $('#si-buy').href=CLUB.buyUrl;
 [$('#si-mail'),$('#ft-mail')].forEach(a=>{a.href='mailto:'+CLUB.email;a.textContent=CLUB.email});
 $('#offer-t').textContent=CLUB.offer; $('#offer-d').textContent=CLUB.offerDetail;
 
-function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===id));document.body.classList.toggle('tabbed',!!member&&(id==='home'||id==='club'||id==='rests'));if(id==='home')setTab('card');window.scrollTo(0,0)}
+function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===id));document.body.classList.toggle('tabbed',!!member&&(id==='home'||id==='club'||id==='rests'));if(id==='home'){setTab('card');setTimeout(homeMap,30)}window.scrollTo(0,0)}
 
 // ---- sign in ----
 $('#si-demo').addEventListener('click',()=>{const d=DEMO_MEMBERS[0];$('#si-email').value=d.email;$('#si-num').value=d.number;$('#si-zip').value='02840';$('#si-form').requestSubmit()});
@@ -694,6 +696,14 @@ $('#hq').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();o
 $('#hq').addEventListener('search',()=>openRests($('#hq').value));
 $('#h-near').addEventListener('click',async()=>{openRests('');await locate();renderList()});
 $('#h-all').addEventListener('click',()=>openRests(''));
+let hmap=null;
+function homeMap(){const el=$('#hmap');if(!el||typeof L==='undefined'||!$('#home').classList.contains('on'))return;
+  if(!hmap){hmap=L.map(el,{zoomControl:false,dragging:false,scrollWheelZoom:false,doubleClickZoom:false,touchZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18}).addTo(hmap);
+    const pts=RESTAURANTS.filter(r=>r.geo).map(r=>{L.circleMarker(r.geo,{radius:5,weight:1.5,color:'#fff',fillColor:'#194e8f',fillOpacity:1}).addTo(hmap);return r.geo});
+    hmap.fitBounds(L.latLngBounds(pts).pad(0.08));
+    el.addEventListener('click',()=>openRests(''));el.addEventListener('keydown',e=>{if(e.key==='Enter')openRests('')});}
+  setTimeout(()=>hmap.invalidateSize(),60);}
 $('#near').addEventListener('click',async()=>{if(here){here=null;$('#near').classList.remove('on');$('#loc').textContent='';renderList();return}await locate();renderList()});
 
 // ---- restaurant page ----
