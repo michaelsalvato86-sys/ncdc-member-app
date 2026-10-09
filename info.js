@@ -532,6 +532,36 @@ const RESTAURANT_INFO = {
   "reservePlatform": "Eat App",
   "order": "https://app.upserve.com/s/yagi-noodles-newport",
   "_confidence": "verified"
+ },
+ "flos": {
+  "address": "4 Wave Avenue, Middletown, RI 02840",
+  "town": "Middletown",
+  "phone": "(401) 847-8141",
+  "url": "https://flosclamshacks.com/",
+  "menu": "https://flosclamshacks.com/menu",
+  "reserve": "https://resy.com/cities/middletown-ri/venues/flos-clamshack-middletown",
+  "reservePlatform": "Resy",
+  "_confidence": "verified"
+ },
+ "flos-drive-in": {
+  "address": "324 Park Ave, Portsmouth, RI 02871",
+  "town": "Portsmouth",
+  "url": "https://flosclamshacks.com/",
+  "menu": "https://flosclamshacks.com/drive-in-menu",
+  "reserve": "https://resy.com/cities/portsmouth-ri-ri/venues/flos-drive-in-portsmouth",
+  "reservePlatform": "Resy",
+  "_confidence": "verified"
+ },
+ "mews": {
+  "address": "456 Main St, Wakefield, RI 02879",
+  "town": "Wakefield",
+  "phone": "(401) 783-9370",
+  "url": "https://www.mewstavern.com/",
+  "menu": "https://www.mewstavern.com/fullmenu",
+  "order": "https://order.toasttab.com/online/mews-tavern",
+  "reserve": "https://resy.com/cities/south-kingstown-ri/venues/mews-tavern",
+  "reservePlatform": "Resy",
+  "_confidence": "verified"
  }
 };
 RESTAURANTS.forEach(r => { const i = RESTAURANT_INFO[r.id]; if (i) Object.assign(r, i); });

@@ -49,6 +49,12 @@ const SOCIAL = {
 "facebook": "https://www.facebook.com/EastFerryDeli/",
 "x": "https://www.x.com/EastFerryDeli"
 },
+"flos": {
+"facebook": "https://www.facebook.com/FlosClamShack/"
+},
+"flos-drive-in": {
+"facebook": "https://www.facebook.com/FlosClamShack/"
+},
 "food-shack": {
 "facebook": "https://www.facebook.com/119490138087021",
 "instagram": "https://www.instagram.com/401foodshack"
@@ -90,6 +96,10 @@ const SOCIAL = {
 },
 "martinos": {
 "facebook": "https://www.facebook.com/Martinos-Pizzeria-424950744306336"
+},
+"mews": {
+"facebook": "https://www.facebook.com/mewstavern/",
+"instagram": "https://www.instagram.com/mews_tavern"
 },
 "mooring": {
 "facebook": "https://www.facebook.com/mooringrestaurant/",

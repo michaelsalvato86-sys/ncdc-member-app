@@ -7294,6 +7294,730 @@ const MENUS = {
 ],
 "source": "https://eastferrydeli.com/"
 },
+"flos": {
+"checked": "2026-10-09T05:42:52+00:00",
+"how": "agent",
+"sections": [
+{
+"items": [
+{
+"desc": "Creamy, Classic Clear, or R.I. Red",
+"name": "Hot Homemade Chowda",
+"price": "Cup $6.95 | Bowl $9.95"
+},
+{
+"desc": "",
+"name": "Flo's Fiery Stuffed Quahog",
+"price": "$4.95"
+},
+{
+"desc": "Over 40 million sold!",
+"name": "Flo's World Famous Clamcakes",
+"price": "1/2 Doz. $7.95 | Baker's Dozen $12.95"
+},
+{
+"desc": "",
+"name": "Cup of Chowda, 3 Clamcakes",
+"price": "$9.95"
+},
+{
+"desc": "made by a Greek",
+"name": "Greek Salad",
+"price": "$10.95"
+}
+],
+"title": "Shack Starters"
+},
+{
+"items": [
+{
+"desc": "All include Fries & Soda. Chicken Fingers | Hot Dog | Fish & Chips | Hamburger | Cheeseburger | RI Hot Cheese",
+"name": "Kids Meal",
+"price": "$10.95"
+}
+],
+"title": "For the Kids"
+},
+{
+"items": [
+{
+"desc": "All Platters Include Fries and Homemade Coleslaw. Rolls are buttered and toasted Hot Dog Rolls",
+"name": "Platter info",
+"price": ""
+},
+{
+"desc": "",
+"name": "Flo's World Famous Fried Clams",
+"price": "$30.95"
+},
+{
+"desc": "",
+"name": "Fried Campeche Shrimp",
+"price": "$19.95"
+},
+{
+"desc": "",
+"name": "Tendersweet Clam Strips",
+"price": "$20.95"
+},
+{
+"desc": "",
+"name": "Plump & Juicy Chesapeake Oysters",
+"price": "$26.95"
+},
+{
+"desc": "",
+"name": "Tendersweet Clam Strip Roll",
+"price": "$18.95"
+},
+{
+"desc": "",
+"name": "Crunchy Fish & Chips",
+"price": "$18.95"
+},
+{
+"desc": "",
+"name": "Calamari Platter",
+"price": "$17.95"
+},
+{
+"desc": "",
+"name": "Fresh Sea Scallops",
+"price": "$26.95"
+},
+{
+"desc": "",
+"name": "Flo's Fried Clam Roll",
+"price": "$23.95"
+},
+{
+"desc": "",
+"name": "Fried Oyster Roll",
+"price": "$21.95"
+},
+{
+"desc": "all lobsta meat on a toasted buttered roll with mayo on the side",
+"name": "Flo's No-Nonsense Lobsta Roll Platter",
+"price": "$33.95"
+},
+{
+"desc": "fried clams, clam strips, calamari, shrimp, scallops, fish, topped off with a clamcake.",
+"name": "Flo's Fisherman Platter",
+"price": "$39.95"
+}
+],
+"title": "Flo's Seafood Platters"
+},
+{
+"items": [
+{
+"desc": "Combos include fries, homemade coleslaw, and a soda or draught beer.",
+"name": "Combo info",
+"price": "$12.95"
+},
+{
+"desc": "",
+"name": "#1 Juicy Hamburger",
+"price": "$12.95"
+},
+{
+"desc": "natural casing German frankfurter",
+"name": "#2 \"Gourmet\" Hot Dog",
+"price": "$12.95"
+},
+{
+"desc": "crunchy fish on a toasted bun",
+"name": "#3 Fresh Fish Sandwich",
+"price": "$12.95"
+},
+{
+"desc": "",
+"name": "#4 Juicy Cheeseburger",
+"price": "$12.95"
+},
+{
+"desc": "same good dog with R.I. lunch cheese.",
+"name": "#5 \"Gourmet\" Cheese Dog",
+"price": "$12.95"
+},
+{
+"desc": "",
+"name": "#6 Crabby Cake Sandwich",
+"price": "$12.95"
+},
+{
+"desc": "",
+"name": "#7 Chicken Tenders",
+"price": "$12.95"
+},
+{
+"desc": "Bottle of Moet & 2 Gourmet Hot Dogs",
+"name": "Flo's Famous #9",
+"price": "$90.00"
+}
+],
+"title": "Flo's $12.95 Combos"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Domestic",
+"price": "$5.25"
+},
+{
+"desc": "",
+"name": "Imported",
+"price": "$6.75"
+},
+{
+"desc": "",
+"name": "Domestic Pitcher",
+"price": "Pitcher $17.00 | 16 oz. cup $4.25"
+},
+{
+"desc": "",
+"name": "Craft Beer Pitcher",
+"price": "Pitcher $27.00 | 16 oz. cup $6.75"
+},
+{
+"desc": "More Wines Topside",
+"name": "Wine",
+"price": "$8.00"
+}
+],
+"title": "Ice Cold Beer & Wine"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Fried Clams",
+"price": "Small M.P. | Large M.P."
+},
+{
+"desc": "",
+"name": "Clam Strips",
+"price": "Small $18.95 | Large $24.95"
+},
+{
+"desc": "",
+"name": "Fried Scallops",
+"price": "Small M.P. | Large M.P."
+},
+{
+"desc": "",
+"name": "Fried Shrimp",
+"price": "Small $16.95 | Large $20.95"
+},
+{
+"desc": "",
+"name": "Fried Calamari",
+"price": "Small $15.95 | Large $20.95"
+},
+{
+"desc": "",
+"name": "Fried Oysters",
+"price": "Small $25.95 | Large $34.95"
+},
+{
+"desc": "",
+"name": "Crabby Cake Sandwich",
+"price": "$8.95"
+},
+{
+"desc": "",
+"name": "Fresh Fish Sandwich",
+"price": "$10.95"
+},
+{
+"desc": "",
+"name": "Fish Only",
+"price": "$12.95"
+},
+{
+"desc": "",
+"name": "Lobsta Roll",
+"price": "$28.95"
+},
+{
+"desc": "",
+"name": "Fried Clam Roll",
+"price": "$19.95"
+},
+{
+"desc": "",
+"name": "Clam Strip Roll",
+"price": "$16.95"
+},
+{
+"desc": "",
+"name": "Oyster Roll",
+"price": "$18.95"
+},
+{
+"desc": "",
+"name": "\"Gourmet\" Hot Dog",
+"price": "$5.75"
+},
+{
+"desc": "",
+"name": "\"Gourmet\" Cheese Dog",
+"price": "$5.95"
+},
+{
+"desc": "",
+"name": "Juicy Hamburger",
+"price": "$7.75"
+},
+{
+"desc": "",
+"name": "Juicy Cheeseburger",
+"price": "$8.25"
+},
+{
+"desc": "",
+"name": "Flo's Fiery Stuffed Quahog",
+"price": "$4.95"
+},
+{
+"desc": "",
+"name": "R.I. Lunch Hot Cheese",
+"price": "$3.75"
+},
+{
+"desc": "",
+"name": "French Fries",
+"price": "Small $4.95 | Large $9.95"
+},
+{
+"desc": "",
+"name": "Cheese Fries",
+"price": "Small $6.50"
+},
+{
+"desc": "",
+"name": "Homemade Coleslaw",
+"price": "$2.25"
+},
+{
+"desc": "",
+"name": "Jersey Shore Onion Rings",
+"price": "$7.95"
+},
+{
+"desc": "",
+"name": "Soda",
+"price": "$2.95"
+}
+],
+"title": "Flo's A La Carte"
+},
+{
+"items": [
+{
+"desc": "Raw Bar menu items must be ordered and paid for with the bartender topside. As it is downstairs, all food is cooked or shucked to order.",
+"name": "Raw bar info",
+"price": ""
+},
+{
+"desc": "",
+"name": "Native Littlenecks",
+"price": "$2.50 ea."
+},
+{
+"desc": "",
+"name": "Clams Casino (4)",
+"price": "$12.95"
+},
+{
+"desc": "",
+"name": "Scallops & Bacon",
+"price": "$12.95"
+},
+{
+"desc": "",
+"name": "Creamy Chowda",
+"price": "Cup $6.75 | Bowl $9.95"
+},
+{
+"desc": "",
+"name": "Peel & Eat Shrimp",
+"price": "$9.95 1/4lb"
+},
+{
+"desc": "",
+"name": "Crab Legs",
+"price": "M.P."
+},
+{
+"desc": "",
+"name": "Oysters",
+"price": "$2.75 ea."
+},
+{
+"desc": "",
+"name": "Oysters Rockefeller (4)",
+"price": "$12.95"
+},
+{
+"desc": "",
+"name": "Coconut Shrimp",
+"price": "$12.95"
+},
+{
+"desc": "",
+"name": "Crabby Cakes (2)",
+"price": "$10.95"
+},
+{
+"desc": "",
+"name": "Jumbo Shrimp",
+"price": "$3.95 ea."
+},
+{
+"desc": "",
+"name": "Greek Salad",
+"price": "$9.95"
+},
+{
+"desc": "2 Littlenecks, 2 Oystas, Crab Legs, Lobsta, Shrimps",
+"name": "Flo's Raw Bar Sampler",
+"price": "$23.95"
+}
+],
+"title": "Flo's Topside Raw Bar Menu"
+},
+{
+"items": [
+{
+"desc": "All dinners served with small salad and a choice of rice or potato",
+"name": "Dinner info",
+"price": ""
+},
+{
+"desc": "",
+"name": "Fresh Baked Scrod",
+"price": "$20.95"
+},
+{
+"desc": "",
+"name": "Swordfish",
+"price": "$23.95"
+},
+{
+"desc": "",
+"name": "Salmon",
+"price": "$20.95"
+},
+{
+"desc": "",
+"name": "Baked Sea Scallops",
+"price": "M.P."
+}
+],
+"title": "Baked Fresh Seafood Dinners"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Friday Night Prime Rib Night! Thick Cut",
+"price": "$9.95"
+}
+],
+"title": "Nightly Specials"
+}
+],
+"source": "https://flosclamshacks.com/menu"
+},
+"flos-drive-in": {
+"checked": "2026-10-09T05:42:52+00:00",
+"how": "agent",
+"sections": [
+{
+"items": [
+{
+"desc": "Creamy, or Classic Clear",
+"name": "Homemade Chowda",
+"price": "Cup $4.95 | Bowl $7.95"
+},
+{
+"desc": "",
+"name": "Flo's Fiery Stuffed Quahog",
+"price": "$3.95"
+},
+{
+"desc": "Over 40 Million sold",
+"name": "Flo's World Famous Clamcakes",
+"price": "1/2 Dozen $5.95 | Baker's Dozen $9.95"
+},
+{
+"desc": "",
+"name": "Greek Salad Made by a Greek",
+"price": "$9.95"
+},
+{
+"desc": "Now serving Flavor Burst Soft Serve Ice Cream! (no price listed)",
+"name": "Flavor Burst Soft Serve Ice Cream",
+"price": ""
+}
+],
+"title": "Flo's Favorites"
+},
+{
+"items": [
+{
+"desc": "Combos Include French Fries, Homemade Coleslaw, & Soda. #1 Combo does not include French Fries & Coleslaw",
+"name": "Combo info",
+"price": ""
+},
+{
+"desc": "Cup of Chowda, 3 Clamcakes",
+"name": "#1. Chowda Combo",
+"price": "$8.95"
+},
+{
+"desc": "",
+"name": "#2. Juicy Hamburger",
+"price": "$9.25"
+},
+{
+"desc": "",
+"name": "#3. Juicy Cheeseburger",
+"price": "$9.75"
+},
+{
+"desc": "Natural Casing German Frankfurter",
+"name": "#4. \"Gourmet\" Hot Dog",
+"price": "$8.25"
+},
+{
+"desc": "Same good dog with R.I. lunch cheese",
+"name": "#5. \"Gourmet\" Cheese Dog",
+"price": "$8.50"
+},
+{
+"desc": "Crunchy Fish on a Toasted Bun",
+"name": "#6. Fresh Fish Sandwich",
+"price": "$9.95"
+},
+{
+"desc": "",
+"name": "#7. Crabby Cake Sandwich",
+"price": "$8.75"
+},
+{
+"desc": "",
+"name": "#8. Chicken Fingers",
+"price": "$8.95"
+}
+],
+"title": "Flo's Combos"
+},
+{
+"items": [
+{
+"desc": "All Platters Include Fries and Homemade Coleslaw. Rolls are buttered and toasted Hot Dog Rolls.",
+"name": "Platter info",
+"price": ""
+},
+{
+"desc": "",
+"name": "Flo's World Famous Fried Clams",
+"price": "$24.95"
+},
+{
+"desc": "",
+"name": "Fried Campeche Shrimp",
+"price": "$17.95"
+},
+{
+"desc": "",
+"name": "Tendersweet Clam Strips",
+"price": "$16.95"
+},
+{
+"desc": "",
+"name": "Plump & Juicy Chesapeake Oysters",
+"price": "$21.95"
+},
+{
+"desc": "",
+"name": "Tendersweet Clam Strip Roll",
+"price": "$14.95"
+},
+{
+"desc": "",
+"name": "Crunchy Fish & Chips",
+"price": "$13.95"
+},
+{
+"desc": "",
+"name": "Calamari Platter",
+"price": "$15.95"
+},
+{
+"desc": "",
+"name": "Fresh Sea Scallops",
+"price": "$19.95"
+},
+{
+"desc": "",
+"name": "Flo's Fried Clam Roll",
+"price": "$16.95"
+},
+{
+"desc": "",
+"name": "Fried Oyster Roll",
+"price": "$19.95"
+},
+{
+"desc": "all lobsta meat on a toasted buttered roll with mayo on the side or topped with drawn butter",
+"name": "Flo's No-Nonsense Lobsta Roll Platter",
+"price": "$24.95"
+}
+],
+"title": "Flo's Seafood Platters"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Crabby Cake Sandwich",
+"price": "$7.25"
+},
+{
+"desc": "",
+"name": "Fresh Fish Sandwich",
+"price": "$7.95"
+},
+{
+"desc": "",
+"name": "Fish Only",
+"price": "$8.95"
+},
+{
+"desc": "",
+"name": "Lobsta Roll",
+"price": "$18.95"
+},
+{
+"desc": "",
+"name": "Fried Clam Roll",
+"price": "$15.95"
+},
+{
+"desc": "",
+"name": "Clam Strip Roll",
+"price": "$12.95"
+},
+{
+"desc": "",
+"name": "Oyster Roll",
+"price": "$15.95"
+},
+{
+"desc": "",
+"name": "\"Gourmet\" Hot Dog",
+"price": "$3.50"
+},
+{
+"desc": "",
+"name": "\"Gourmet\" Cheese Dog",
+"price": "$3.75"
+},
+{
+"desc": "",
+"name": "Juicy Hamburger",
+"price": "$6.00"
+},
+{
+"desc": "",
+"name": "Juicy Cheeseburger",
+"price": "$6.50"
+},
+{
+"desc": "",
+"name": "Flo's Fiery Stuffed Quahog",
+"price": "$3.95"
+},
+{
+"desc": "",
+"name": "French Fries",
+"price": "small $4.25 | large $8.50"
+},
+{
+"desc": "",
+"name": "Cheese Fries",
+"price": "$4.95"
+},
+{
+"desc": "",
+"name": "Jersey Shore Onion Rings",
+"price": "$6.95"
+},
+{
+"desc": "",
+"name": "Homemade Coleslaw",
+"price": "$1.25"
+},
+{
+"desc": "",
+"name": "Soda",
+"price": "$1.95"
+}
+],
+"title": "Sandwiches & Starters"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Fried Clams",
+"price": "small M.P. | large M.P."
+},
+{
+"desc": "",
+"name": "Clam Strips",
+"price": "small $14.95 | large $19.95"
+},
+{
+"desc": "",
+"name": "Fried Scallops",
+"price": "small $19.95 | large $28.95"
+},
+{
+"desc": "",
+"name": "Fried Shrimp",
+"price": "small $14.95 | large $19.95"
+},
+{
+"desc": "",
+"name": "Fried Calamari",
+"price": "small $14.95 | large $19.95"
+},
+{
+"desc": "",
+"name": "Fried Oysters",
+"price": "small $22.95 | large $34.95"
+}
+],
+"title": "Flo's A La Carte"
+},
+{
+"items": [
+{
+"desc": "All include Fries & Soda. Chicken Fingers | Hot Dog | Juicy Hamburger | Juicy Cheeseburger | Fish & Chips",
+"name": "Kids Meal",
+"price": "$7.95"
+}
+],
+"title": "For the Kids"
+}
+],
+"source": "https://flosclamshacks.com/drive-in-menu"
+},
 "food-shack": {
 "checked": "2026-10-09T03:41:53+00:00",
 "how": "agent",
@@ -12947,6 +13671,513 @@ const MENUS = {
 }
 ],
 "source": "https://www.martinospizzeria.com/pizza-calzones-menu"
+},
+"mews": {
+"checked": "2026-10-09T05:42:52+00:00",
+"how": "agent",
+"sections": [
+{
+"items": [
+{
+"desc": "Hand Breaded Whole Milk Mozzarella | Marinara",
+"name": "Mozzarella Triangles",
+"price": "11"
+},
+{
+"desc": "Golden Fried Pickle Chips | House Ranch. House Zesty Sauce +1. (Mews Favorite)",
+"name": "Fried Pickles",
+"price": "12"
+},
+{
+"desc": "Fried Sweet Corn, Chipotle Aioli, Cotija Cheese, Scallions, Cilantro, Lime",
+"name": "Street Corn",
+"price": "8"
+},
+{
+"desc": "Pulled Chicken, Roasted Peppers, Buffalo-Cream Cheese, Roasted Garlic, Gorgonzola, Scallions | House Tortilla Chips & Fresh Celery",
+"name": "Buffalo Chicken Dip",
+"price": "16"
+},
+{
+"desc": "Golden Fried Rings and Tentacles, Scallions, Pineapple, Sweet Chili Garlic Sauce, Lemon (Mews Favorite)",
+"name": "Fried Calamari",
+"price": "18"
+},
+{
+"desc": "Jumbo Garlic Shrimp with Butter & White Wine, Kettle Chips, Fresh Herbs, Lemon",
+"name": "Garlic Shrimp Chips",
+"price": "14"
+},
+{
+"desc": "Stir Fried Soba Noodles, Crispy Garlic, Scallions, Sesame Seeds",
+"name": "Garlic Noodles",
+"price": "10"
+},
+{
+"desc": "Tortilla Chips, Cheddar-Jack, Tomatoes, Black Beans, Red Onion, Jalapeños | House Salsa & Sour Cream. Chicken/Pork +3 | Guac +2",
+"name": "Mews Nachos",
+"price": "14"
+},
+{
+"desc": "Tortilla Chips, Cheddar-Jack, Pulled Pork, Jalapeños, House BBQ, Scallions | House Salsa & Sour Cream | Guac +2",
+"name": "BBQ Pork Nachos",
+"price": "17"
+},
+{
+"desc": "Breaded and tossed in one of our Signature Sauces. Celery & House Blue Cheese",
+"name": "Tendies (6)",
+"price": "16"
+},
+{
+"desc": "Traditional or Smoked. Tossed in one of our Signature Sauces | Celery & House Blue Cheese",
+"name": "Wings",
+"price": "6 wings - 11 | 10 wings - 16"
+},
+{
+"desc": "Buffalo | House BBQ (Made with Fiddlehead IPA) | Honey Hot | Mews Signature Hot | Bourbon Teriyaki | Golden BBQ | Sweet Chili Garlic | Thermo Nuclear | Chipotle-Maple BBQ | Dry Rub | Cajun",
+"name": "Signature Sauces",
+"price": ""
+}
+],
+"title": "Starters & Bites"
+},
+{
+"items": [
+{
+"desc": "Black Angus Beef, Guajillo Chili, Cotija, Scallions. House Tortilla Chips",
+"name": "Texas Chili",
+"price": "Cup 7 | Crock 10"
+},
+{
+"desc": "Guinness Stout Broth, Caramelized Onions, Garlic Croutons. Swiss Cheese Gratin",
+"name": "French Onion",
+"price": "8"
+},
+{
+"desc": "House made Classic, Creamy Clam Chowder Served with Oyster Crackers",
+"name": "New England Clam Chowder",
+"price": "Cup 6 | Crock 8"
+}
+],
+"title": "Soup"
+},
+{
+"items": [
+{
+"desc": "Atlantic Salmon +10 | Grilled/Fried Chicken +7 | Mahi-Mahi +9 | Lobster Salad +20",
+"name": "Salad Add-Ons",
+"price": ""
+},
+{
+"desc": "Arcadia Greens, Hard Boiled Egg, Scallions, Bacon, Cherry Tomato, Gorgonzola, Avocado | Green Goddess Dressing. Add Grilled/Fried Chicken +7 (Mews Favorite)",
+"name": "Cobb Salad",
+"price": "14"
+},
+{
+"desc": "Sweet Corn, Baby Arugula, Shaved Brussels, Red Onion, Cherry Tomato, Feta Cheese, Avocado, Warm Pita | Champagne Vinaigrette",
+"name": "Sweet Corn Salad",
+"price": "15"
+},
+{
+"desc": "Arcadia Greens, Cherry Tomato, Onion, Carrot, Cucumber. Choice of Dressing",
+"name": "Tavern Salad",
+"price": "Side 5 | Full 11"
+},
+{
+"desc": "Romaine, Croutons, Bellavitano | Caesar Dressing",
+"name": "Caesar",
+"price": "Side 5 | Full 11"
+},
+{
+"desc": "Balsamic | Champagne Vinaigrette | Blue Cheese | Ranch | Green Goddess | Caesar",
+"name": "House Made Dressings",
+"price": ""
+}
+],
+"title": "Salads"
+},
+{
+"items": [
+{
+"desc": "All Mexi Items Served with House Tortilla Chips. Regular Fries/Curly Fries +2 | Sweet Potato Tots +2.5",
+"name": "Mexi Sides",
+"price": ""
+},
+{
+"desc": "Pulled Brisket, Zesty Sauce, Cilantro Rice, Black Beans, Cotija Cheese, Fried Onion Straws, Pico de Gallo, Guacamole | Salsa & Sour Cream",
+"name": "Brisket Burrito",
+"price": "20"
+},
+{
+"desc": "Chicken Tinga, Cilantro Rice, Black Beans, Cheddar, Pico de Gallo, Guacamole | Salsa & Sour Cream",
+"name": "Pollo Loco Burrito",
+"price": "18"
+},
+{
+"desc": "Spice Rubbed Mahi-Mahi, Sweet Corn, Shredded Cabbage, French Fries, Pico de Gallo, Guacamole, Chipotle Aioli | Salsa & Sour Cream (Mews Favorite)",
+"name": "Mahi Burrito",
+"price": "19"
+},
+{
+"desc": "Smoked Brisket, Local Corn Tortillas, Cotija Cheese, Pickled Onion, Shredded Cabbage, Cilantro, Sriracha Aioli | Salsa & Lime",
+"name": "Brisket Tacos",
+"price": "16"
+},
+{
+"desc": "Spice Rubbed Mahi-Mahi, Shredded Cabbage, Pickled Onion, Cotija Cheese, Guacamole, Cilantro, Chipotle Aioli | Salsa & Lime",
+"name": "Mahi Tacos",
+"price": "16"
+},
+{
+"desc": "Flour tortilla, cheddar-jack, Pico de Gallo, and your choice of Chicken Tinga, Pork Shoulder, and Pulled Brisket | Salsa & Sour Cream",
+"name": "Mews Quesadilla",
+"price": "15"
+}
+],
+"title": "Mexi"
+},
+{
+"items": [
+{
+"desc": "Pulled Pork Shoulder | Pork Belly Burnt Ends | Shredded Brisket | St. Louis Ribs | Italian Sausage. Smoked In House Daily. Sauces: House BBQ | Golden BBQ | Chipotle-Maple BBQ",
+"name": "House Smoked Meats",
+"price": ""
+},
+{
+"desc": "Choice of House Smoked Meat, Fries, House Slaw, Pickles & Onion, Maple Butter Cornbread. +Add Another Meat 10",
+"name": "Classic Platter",
+"price": "25"
+},
+{
+"desc": "Baked Mac & Cheese Served along side one of our House Smoked Meats. +Add Another Meat 10",
+"name": "Mac Platter",
+"price": "26"
+}
+],
+"title": "Mews BBQ"
+},
+{
+"items": [
+{
+"desc": "Caramelized Onions, Gorgonzola, Fried Onion Straws. Blue Cheese Mayo | Brioche Roll (Mews Favorite)",
+"name": "Tangled Up In Blue*",
+"price": "19"
+},
+{
+"desc": "American Cheese, House BBQ Sauce, Peppered Bacon, Fried Onion Straws | Brioche Roll",
+"name": "Rhody-O Burger*",
+"price": "19"
+},
+{
+"desc": "Cajun Spice, Pepper-Jack, Fried Onion Straws, Jalapeños, House Zesty Sauce | Brioche Roll",
+"name": "Zesty Burger*",
+"price": "19"
+},
+{
+"desc": "Cheddar Cheese, Peppered Bacon, Fried Egg, Bacon Jam | Brioche Roll",
+"name": "Bacon Jam Burger*",
+"price": "19"
+},
+{
+"desc": "Black Bean & Quinoa Burger, Pepper-Jack Cheese, Pico de Gallo, Guacamole, Chipotle Aioli. Pressed Flour Tortilla",
+"name": "Black Bean Burger",
+"price": "17"
+},
+{
+"desc": "Blackened Atlantic Salmon Burger, Shredded Cabbage, Sriracha Aioli, Pickled Onion | Brioche Roll",
+"name": "Salmon Burger*",
+"price": "19"
+},
+{
+"desc": "Choose from our selection of house made burgers and toppings. Served with lettuce, tomato, and Mews side. Black Angus Beef | Black Bean Burger | Salmon Burger (+4)",
+"name": "Build Your Own Patty*",
+"price": "Starting at 15"
+},
+{
+"desc": "Caramelized Onions | Marinated Mushrooms | Raw Red Onion | House Jalapeños | Fried Onion Straws | Peppered Bacon +2.25 | Avocado +2 | Fried Egg +1.25",
+"name": "Toppings",
+"price": "+.75 Each"
+},
+{
+"desc": "American | Cheddar | Swiss | Pepper-Jack | Gorgonzola | Fresh Mozzarella +2",
+"name": "Cheeses",
+"price": "+.75 Each"
+},
+{
+"desc": "Buffalo | House BBQ | Zesty Sauce | Sriracha Aioli | Special Sauce | Blue Cheese mayo",
+"name": "Sauces",
+"price": "+1 Each"
+},
+{
+"desc": "1/3 lb. Black Angus Beef Patty, Made into one of our Signature Burgers. Lunch Burger Only Available from 11am - 4pm",
+"name": "Lunch Burger*",
+"price": "15"
+},
+{
+"desc": "Served with Lettuce, Tomato and Mews Side, Toppings Extra",
+"name": "Build your own Lunch Burger",
+"price": "Starting at 12"
+}
+],
+"title": "Burgers"
+},
+{
+"items": [
+{
+"desc": "Buttermilk Fried Chicken, Bacon Jam, Blue Cheese Mayo, Lettuce, Tomato",
+"name": "Bacon Blue",
+"price": "18"
+},
+{
+"desc": "Buttermilk Fried Chicken, Chipotle-Maple BBQ, Pepper-Jack, Peppered Bacon, Fried Onion Straws (Mews Favorite)",
+"name": "CMBC",
+"price": "18"
+},
+{
+"desc": "Buttermilk Fried Chicken, Mews Hot Sauce, House Slaw, Pickle Chips",
+"name": "Mews Hot",
+"price": "18"
+},
+{
+"desc": "Build your own with our selection of toppings. Served with Lettuce, Tomato, and Mews side",
+"name": "Build Your Own",
+"price": "15"
+},
+{
+"desc": "All burgers & sandwiches served with choice of side: French Fries | Curly Fries | Coleslaw | Vegetable of the day | Sweet Potato Tots +2.5 | Side Salad/Side Caesar +2.5",
+"name": "Sides (burgers & sandwiches)",
+"price": ""
+}
+],
+"title": "Chicken Sandos"
+},
+{
+"items": [
+{
+"desc": "Shaved Ribeye Steak, Caramelized Onions, Marinated Mushrooms, Whalers Beer Cheese | Baguette",
+"name": "Philly Cheesesteak",
+"price": "18"
+},
+{
+"desc": "House Smoked Pastrami, Sauerkraut, Melted Swiss, Special Sauce | Toasted Rye",
+"name": "Pastrami Reuben",
+"price": "17"
+},
+{
+"desc": "Choice of Pulled Pork Shoulder or Smoked Brisket on a Brioche Roll, any Signature BBQ Sauce, House Slaw. House BBQ | Golden BBQ | Chipotle-Maple BBQ",
+"name": "12-Hour Smoked BBQ Sandwich",
+"price": "Pork 15 | Brisket 18"
+},
+{
+"desc": "Pepper-Jack & Cotija Cheese, Chipotle Aioli, Peppered Bacon, Sweet Corn | Sourdough Bread",
+"name": "Elote Grilled Cheese",
+"price": "16"
+},
+{
+"desc": "Whalers 'Rise' Beer Battered Haddock Filet, Arcadia Greens, Pickle Chips, Sriracha Aioli | Brioche Roll (Mews Favorite)",
+"name": "The Whaler",
+"price": "18"
+}
+],
+"title": "Sandos"
+},
+{
+"items": [
+{
+"desc": "Soba Noodles, Edamame, Mushroom, Onion, and Broccoli. Topped with Pickled Vegetables, Scallions & Sesame Seeds.",
+"name": "Yakisoba Noodle",
+"price": "w/Teriyaki Salmon 23 | w/Teriyaki Pork Belly or Panko Chicken 21"
+},
+{
+"desc": "Soba Noodles with Broccoli, Onion & Smoky Chili-Peanut Sauce. Topped with Pickled Vegetables, Lime & Sriracha Aioli Drizzle.",
+"name": "Peanut Noodle",
+"price": "w/Teriyaki Salmon 23 | w/Teriyaki Pork Belly or Panko Chicken 21"
+},
+{
+"desc": "Blackened Chicken & Bell Peppers, Cilantro Rice, Pico de Gallo, Pickled Onion, Chipotle Aioli, Cilantro | Tortilla Chips & Lime",
+"name": "Fajita Rice Bowl",
+"price": "21"
+},
+{
+"desc": "Blackened Mahi-Mahi, Cilantro Rice, Cucumber, Black Beans, Shredded Cabbage, Chipotle Aioli, Cilantro, Scallions, Sesame Seeds | Tortilla Chips & Lime",
+"name": "Mahi Rice Bowl",
+"price": "22"
+},
+{
+"desc": "Smoked Pork Shoulder, Cilantro Rice, Shredded Cabbage, Pico de Gallo, Pickled Onion, Cotija Cheese, Chipotle Aioli, Cilantro | Tortilla Chips & Lime",
+"name": "Pork Rice Bowl",
+"price": "21"
+},
+{
+"desc": "Whalers Beer Battered Haddock Filet, Crispy Fries, House Slaw, Tartar & Lemon (Mews Favorite)",
+"name": "Fish & Chips",
+"price": "21"
+},
+{
+"desc": "Grilled Skirt Steak, Crisp Golden Fries, Bourbon au Poivre, Gorgonzola | Fresh Chives",
+"name": "Steak Frites*",
+"price": "25"
+},
+{
+"desc": "Pan Seared Shrimp, Mezzi Rigatoni Pasta, Bell Peppers, Creamy Creole Alfredo Sauce",
+"name": "Creole Shrimp Alfredo",
+"price": "19"
+},
+{
+"desc": "Mezzi Rigatoni Pasta, Whalers Beer Cheese, Baked with Crumbled Kettle Chips",
+"name": "Mews Mac",
+"price": "16"
+},
+{
+"desc": "Ask your server about our rotating lobster special. Pricing & availability subject to change",
+"name": "Lobster Special",
+"price": "MKT"
+}
+],
+"title": "Entrees"
+},
+{
+"items": [
+{
+"desc": "House made hand-spun dough cooked in a wood fired oven",
+"name": "Specialty Pizzas & Calzones (pricing)",
+"price": "Small Pizza 17 | Large Pizza 25 | Calzone 17"
+},
+{
+"desc": "House Cheese, Pepperoni, Cherry Peppers, Bellavitano, Hot Honey Drizzle",
+"name": "Hot Honey & Pepperoni",
+"price": "Small 17 | Large 25 | Calzone 17"
+},
+{
+"desc": "Marinated Chicken, Crispy Bacon, Cheddar-Jack, House Ranch | Garnished with Lettuce & Diced Tomatoes",
+"name": "Rancho Relaxo",
+"price": "Small 17 | Large 25 | Calzone 17"
+},
+{
+"desc": "Marinated Chicken, Prosciutto, Fontina, Pasta, House Made Pink Vodka Sauce (Mews Favorite)",
+"name": "Pink Panther",
+"price": "Small 17 | Large 25 | Calzone 17"
+},
+{
+"desc": "Breaded Chicken, House Cheese Blend, Bellavitano, Marinara, Fresh Basil",
+"name": "Chicken Parm",
+"price": "Small 17 | Large 25 | Calzone 17"
+},
+{
+"desc": "Marinated Chicken, House BBQ Sauce, Crispy Bacon, Cherry Peppers, Red Onion, Pineapple, House Cheese, Ranch Dressing",
+"name": "Muggle Pie",
+"price": "Small 17 | Large 25 | Calzone 17"
+},
+{
+"desc": "Artichoke Hearts, Tomatoes, Red Onion, Olives, Roasted Garlic Puree, Fresh Mozzarella, Feta, House Blend & Parmesan Cheeses",
+"name": "Big, Fat, Greek",
+"price": "Small 17 | Large 25 | Calzone 17"
+},
+{
+"desc": "All-Natural Italian Sausage, Caramelized Onions, Roasted Garlic Puree, House Blend Cheese, Fresh Basil (Mews Favorite)",
+"name": "Caramelized Onion & Sausage",
+"price": "Small 17 | Large 25 | Calzone 17"
+},
+{
+"desc": "Fresh Mozzarella, Fontina, Tomato, Roasted Garlic Puree, Fresh Basil",
+"name": "The Mews",
+"price": "Small 17 | Large 25 | Calzone 17"
+},
+{
+"desc": "All-Natural Italian Sausage, Pepperoni, Red Onion, Green Peppers, Olives, Mushrooms, Spinach, House Red Sauce, Three Cheese Blend.",
+"name": "The Kitchen Sink",
+"price": "Small 17 | Large 25 | Calzone 17"
+},
+{
+"desc": "House Blend Cheese, Spinach, Mushrooms, Olives, Roasted Garlic Puree",
+"name": "Popeye's Pick",
+"price": "Small 17 | Large 25 | Calzone 17"
+},
+{
+"desc": "House Blend & Fontina Cheese, Buffalo Sauce, Chicken Tenders, Red Onion, Baby Arugula | Ranch Drizzle (Mews Favorite)",
+"name": "Buffalo Sister",
+"price": "Small 17 | Large 25 | Calzone 17"
+},
+{
+"desc": "Garlic Puree, Fontina Cheese, Sweet Corn, Proscuitto, Baby Arugula | Balsamic Glaze",
+"name": "Sweet Corn Pizza",
+"price": "Small 17 | Large 25 | Calzone 17"
+}
+],
+"title": "Wood Fired Pizza & Calzones"
+},
+{
+"items": [
+{
+"desc": "Price includes House Sauce & House Cheese. Modifications or additional toppings extra. Add ons +.75 unless indicated.",
+"name": "Create Your Own",
+"price": "Small Pizza 13 | Large Pizza 18 | Calzone 13"
+},
+{
+"desc": "House Red Sauce | Roasted Garlic Puree | Pink Vodka Sauce | Marinara | House Ranch | Buffalo Sauce | House BBQ | Balsamic Reduction +1.50",
+"name": "Sauces",
+"price": ""
+},
+{
+"desc": "House Blend (Mozzarella, Asiago, Provolone) | Fontina | Cheddar-Jack | Parmesan | Blue Cheese Crumbles | Feta | Fresh Mozzarella +2sm/+4lg",
+"name": "Cheeses",
+"price": ""
+},
+{
+"desc": "Tomatoes | Mushrooms | Caramelized Onions | Scallions | Red Onion | Olives | Green Peppers | Cherry Peppers | Artichoke Hearts | Spinach | Pineapple | Fresh Basil | Lettuce | Baby Arugula",
+"name": "Veggies",
+"price": ""
+},
+{
+"desc": "Marinated Chicken | Bacon | Prosciutto | Pepperoni +1 | All-natural Italian Sausage | Pulled Pork +2sm/+4lg",
+"name": "Meats",
+"price": ""
+}
+],
+"title": "Create Your Own Pizza"
+},
+{
+"items": [
+{
+"desc": "Coke | Diet Coke | Sprite | Ginger Ale | Fanta Orange | Dr. Pepper | Minute Maid Lemonade | Hi-C Fruit Punch | Peak Iced Tea (Unsweetened, Sweet, Raspberry) | Powerade (Mountain Blast) | Vitamin Water (xxx) | Minute Maid Apple Juice",
+"name": "Coca-Cola Products",
+"price": "2.95"
+},
+{
+"desc": "Cranberry | Orange | Pineapple | Whole/Chocolate Milk",
+"name": "Juices & Milk",
+"price": "2.95"
+},
+{
+"desc": "Captain Eli's Handcrafted Root Beer",
+"name": "\"On Tap\"",
+"price": "4.95"
+},
+{
+"desc": "20oz Bottle",
+"name": "Smart Water",
+"price": "3"
+}
+],
+"title": "Beverages"
+},
+{
+"items": [
+{
+"desc": "Muddled Mint, RIPE Mojito Mix, Raspberry Syrup, Soda Water, Fresh Squeezed Lemon",
+"name": "Raspberry Mint Sparkler",
+"price": ""
+},
+{
+"desc": "RIPE Agave Margarita Mix, Fresh Jalapenos, Ginger Beer, Lime, Tajin Rim",
+"name": "Spicy Ginger Mule",
+"price": ""
+}
+],
+"title": "Mocktails"
+}
+],
+"source": "https://www.mewstavern.com/fullmenu"
 },
 "mooring": {
 "checked": "2026-10-09T03:29:55+00:00",

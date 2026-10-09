@@ -87,6 +87,9 @@ const RESTAURANTS = [
   { id: 'wharf-fishhouse', name: 'Wharf Fishhouse & Tiki Bar', url: 'https://wharffishhousenewport.com' },
   { id: 'wharf-southern', name: 'Wharf Southern Kitchen & Whiskey Bar', url: 'https://www.wharfsouthernkitchen.com/' },
   { id: 'yagi', name: 'Yagi Noodles', url: 'https://www.yaginoodles.com' },
+  { id: 'flos', name: "Flo's Clam Shack", url: 'https://flosclamshacks.com/', status: 'seasonal', note: 'Seasonal · Heritage Restaurant Group' },
+  { id: 'flos-drive-in', name: "Flo's Drive-In", url: 'https://flosclamshacks.com/', status: 'seasonal', note: 'Seasonal · Heritage Restaurant Group' },
+  { id: 'mews', name: "Mews Tavern", url: 'https://www.mewstavern.com/', note: 'Heritage Restaurant Group' },
 ];
 
 // DEMO members. The real build checks the Square customer list (purchases and renewals already run through Square).
@@ -97,4 +100,4 @@ const DEMO_MEMBERS = [
 // Heritage Restaurant Group venues on the Dinner Club list. They get member-level detail (names, emails) for
 // marketing, from members who opted in. Reef, Claw & Hammer, Cluck House, Jo's, La Forge and Quencher added 2026-10-09 from our Toast/DoorDash/ad lists;
 // Quencher confirmed by Michael 2026-10-09; Heritage should still confirm the rest before launch.
-const HRG_VENUES = ['brick-alley', 'caleb-broad', 'claw-hammer', 'cluck-house', 'jos', 'la-forge', 'quencher', 'red-parrot', 'reef', 'wallys'];
+const HRG_VENUES = ['brick-alley', 'caleb-broad', 'claw-hammer', 'cluck-house', 'jos', 'la-forge', 'quencher', 'red-parrot', 'reef', 'wallys', 'flos', 'flos-drive-in', 'mews'];

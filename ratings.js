@@ -112,6 +112,20 @@ const RATINGS = {
 "url": "https://wanderlog.com/list/geoCategory/316956/best-spots-for-lunch-in-jamestown",
 "value": 4.4
 },
+"flos": {
+"asOf": "2026-10-09",
+"count": 2622,
+"source": "Google",
+"url": "https://www.google.com/maps/place/Flo's+Clam+Shack/@41.4900715,-71.2848989,17z/data=!3m1!4b1!4m6!3m5!1s0x89e5a8b55fd785f7:0x70917ea5540438b4!8m2!3d41.4900715!4d-71.2848989!16s%2Fg%2F1tjz4d7z",
+"value": 4.2
+},
+"flos-drive-in": {
+"asOf": "2026-10-09",
+"count": 1004,
+"source": "Google",
+"url": "https://www.google.com/maps/place/Flo's+Drive+In/@41.6221618,-71.2341194,17z/data=!3m1!4b1!4m6!3m5!1s0x89e455294c8ceb87:0x2627beb8409d29f5!8m2!3d41.6221618!4d-71.2341194!16s%2Fg%2F11cnx89gd6",
+"value": 4.3
+},
 "food-shack": {
 "asOf": "2026-10-09",
 "count": 892,
@@ -195,6 +209,13 @@ const RATINGS = {
 "source": "Google",
 "url": "https://www.google.com/maps/place/Marco's+Subs/@41.559827,-71.2864476,17z/data=!3m1!4b1!4m6!3m5!1s0x89e5ad15a15e2cf1:0xc2a84cfdf6c84b46!8m2!3d41.559827!4d-71.2864476!16s%2Fg%2F11h54h7nm2?hl=en&entry=ttu&g_ep=EgoyMDI2MTAwNi4wIKXMDSoASAFQAw%3D%3D",
 "value": 4.2
+},
+"mews": {
+"asOf": "2026-10-09",
+"count": 1221,
+"source": "Google",
+"url": "https://www.google.com/maps/place/Mews+Tavern/@41.4361215,-71.5025909,17z/data=!3m1!4b1!4m6!3m5!1s0x89e5b936389acc9b:0xe63fb8a3574ca2fb!8m2!3d41.4361215!4d-71.5025909!16s%2Fg%2F1tfv_55f",
+"value": 4.4
 },
 "mooring": {
 "asOf": "2026-10-09",
