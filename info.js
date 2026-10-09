@@ -131,8 +131,9 @@ const RESTAURANT_INFO = {
   "town": "Newport",
   "phone": null,
   "_confidence": "partial",
-  "url": null,
-  "reserve": null
+  "url": "https://atthedeck.com",
+  "reserve": null,
+  "_note": "Official site found by research agent 2026-10-08 (old waiteswharf.com is dead)"
  },
  "diegos": {
   "address": "116 Aquidneck Ave., Middletown, RI 02842",

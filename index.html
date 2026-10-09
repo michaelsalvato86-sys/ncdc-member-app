@@ -21,6 +21,8 @@
 <script src="menus.js"></script>
 <script src="geo.js"></script>
 <script src="places.js"></script>
+<script src="ratings.js"></script>
+<script src="logos.js"></script>
 <script src="social.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -107,6 +109,9 @@ input{font:inherit}
 .tag.later{background:#fff3e8;color:#a35a12}
 .tag.season{background:var(--harbor-100);color:var(--water-500)}
 .r-chev{flex:none;color:var(--ink-300)}
+.r-logo{flex:none;width:42px;height:42px;border-radius:12px;object-fit:cover;background:#fff;border:1px solid #e3e7f1}
+.dt-title{display:flex;align-items:center;gap:12px}
+.dt-logo{flex:none;width:56px;height:56px;border-radius:14px;background:#fff;object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,.2)}
 .empty{text-align:center;color:var(--ink-500);padding:30px 10px;font-size:15px}
 .foot{max-width:560px;margin:26px auto 0;padding:0 16px;font-size:13px;color:var(--ink-500);line-height:1.6;text-align:center}
 .foot a{color:var(--water-500);font-weight:600}
@@ -517,7 +522,7 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
     <button class="pass" id="dt-pass" type="button" aria-label="Show my Dinner Club pass"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 17h4v4h-4"/></svg>My pass</button>
     <div class="dt-eye">Dinner Club restaurant</div>
     <div class="dt-rate" id="dt-rate"></div>
-    <div class="dt-name" id="dt-name"></div>
+    <div class="dt-title"><img class="dt-logo" id="dt-logo" alt="" hidden><div class="dt-name" id="dt-name"></div></div>
     <div class="dt-addr" id="dt-addr"></div>
   </div></div>
   <div class="dt-body" id="dt-body"></div>
@@ -659,14 +664,18 @@ function renderList(){
     if(usesFor(r.id)) tag=`<span class="tag used">Used</span>`;
     else if(r.status==='later') tag=`<span class="tag later">Later</span>`;
     else if(r.status==='seasonal') tag=`<span class="tag season">Seasonal</span>`;
-    const pl=(typeof PLACES!=='undefined'&&PLACES[r.id])||{};
+    const rt=rateOf(r);
     const meta=[r.town,r.note,here&&r.geo?miles(here,r.geo).toFixed(1)+' mi':''].filter(Boolean).join(' · ');
-    return `<button class="r" data-id="${r.id}"><span class="r-ini">${esc(ini)}</span><span class="r-main"><span class="r-name" style="display:block">${esc(r.name)}${pl.rating?` <span class="stars" aria-label="${pl.rating} stars on Google">★ ${pl.rating.toFixed(1)}</span>`:''}</span>${meta?`<span class="r-note" style="display:block">${esc(meta)}</span>`:''}</span>${tag}<svg class="r-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button>`;
+    return `<button class="r" data-id="${r.id}">${r.logo?`<img class="r-logo" src="${esc(r.logo)}" alt="" loading="lazy">`:`<span class="r-ini">${esc(ini)}</span>`}<span class="r-main"><span class="r-name" style="display:block">${esc(r.name)}${rt?` <span class="stars" aria-label="${rt.value} stars on ${esc(rt.source)}">★ ${(+rt.value).toFixed(1)}</span>`:''}</span>${meta?`<span class="r-note" style="display:block">${esc(meta)}</span>`:''}</span>${tag}<svg class="r-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button>`;
   }).join(''):`<div class="empty">No restaurant matches “${esc(q)}”.</div>`;
 }
 $('#q').addEventListener('input',renderList);
 $('#chips').addEventListener('click',e=>{const c=e.target.closest('.chip');if(!c)return;filter=c.dataset.f;renderHome()});
 $('#rlist').addEventListener('click',e=>{const r=e.target.closest('.r');if(r)openDetail(r.dataset.id)});
+
+// ---- ratings: Google Places (weekly) first, then the sourced rating from research ----
+function rateOf(r){const p=(typeof PLACES!=='undefined'&&PLACES[r.id]);if(p&&p.rating)return {value:p.rating,count:p.count,source:'Google',url:p.url};
+  const x=(typeof RATINGS!=='undefined'&&RATINGS[r.id]);return x&&x.value?x:null}
 
 // ---- location + map ----
 let here=null, map=null, layer=null, meMark=null;
@@ -745,8 +754,9 @@ function menuBlock(r){
 function openDetail(id,push){
   const r=RESTAURANTS.find(x=>x.id===id); if(!r)return;
   $('#dt-name').textContent=r.name;
-  const pl=(typeof PLACES!=='undefined'&&PLACES[r.id])||{};
-  $('#dt-rate').innerHTML=pl.rating?`<a href="${esc(pl.url||'#')}" target="_blank" rel="noopener"><span class="stars big">★ ${pl.rating.toFixed(1)}</span> ${pl.count?`(${pl.count.toLocaleString()} Google reviews)`:'on Google'}</a>`:'';
+  const lg=$('#dt-logo');if(r.logo){lg.src=r.logo;lg.alt=r.name+' logo';lg.hidden=false}else{lg.hidden=true}
+  const rt=rateOf(r);
+  $('#dt-rate').innerHTML=rt?`<a href="${esc(rt.url||'#')}" target="_blank" rel="noopener"><span class="stars big">★ ${(+rt.value).toFixed(1)}</span> ${rt.count?`${(+rt.count).toLocaleString()} ${esc(rt.source)} reviews`:'on '+esc(rt.source)}</a>`:'';
   $('#dt-pass').onclick=()=>openRedeem(id);
   $('#dt-addr').innerHTML=[r.address?esc(r.address):'',r.note?'<b style="color:#fff">'+esc(r.note)+'</b>':''].filter(Boolean).join('<br>')||'Newport County';
   const used=usesFor(id)>0&&limitHit(id);

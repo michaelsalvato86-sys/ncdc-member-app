@@ -14,6 +14,7 @@
 <script src="../menus.js"></script>
 <script src="../geo.js"></script>
 <script src="../zips.js"></script>
+<script src="../logos.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
@@ -102,6 +103,8 @@ tr:last-child td{border-bottom:0}
 .legend span{display:flex;align-items:center;gap:6px}
 .legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
 .mask{color:var(--ink-500)}
+.plh{display:flex;align-items:center;gap:12px}
+.plh img{width:48px;height:48px;border-radius:12px;border:1px solid var(--ink-100);background:#fff}
 .hero-map{margin-bottom:14px}
 .hm{display:grid;grid-template-columns:1fr;gap:14px}
 @media (min-width:900px){.hm{grid-template-columns:2.2fr 1fr}}
@@ -359,7 +362,7 @@ function renderDash(){
   const r=RESTAURANTS.find(x=>x.id===viewRid)||{};
   const mm0=(typeof MENUS!=='undefined'&&MENUS[viewRid]);
   $('#t-dash').innerHTML=`
-    <div class="row"><div><h1>${esc(r.name||'')}</h1><p class="sub">What Dinner Club members brought you${D.live?` · includes ${D.live} real test redemption${D.live>1?'s':''} from this device`:''}.</p></div>
+    <div class="row"><div><h1 class="plh">${r.logo?`<img src="../${esc(r.logo)}" alt="">`:''}${esc(r.name||'')}</h1><p class="sub">What Dinner Club members brought you${D.live?` · includes ${D.live} real test redemption${D.live>1?'s':''} from this device`:''}.</p></div>
       <div class="ranges">${restPicker()}${[[4,'4 weeks'],[13,'13 weeks'],[26,'26 weeks'],[52,'52 weeks']].map(([n,t])=>`<button class="chip${n===range?' on':''}" data-r="${n}" type="button">${t}</button>`).join('')}</div></div>
     <div class="kpis">
       ${k('redemptions','Redemptions',V.length.toLocaleString(),'Dinner Club tables')}
