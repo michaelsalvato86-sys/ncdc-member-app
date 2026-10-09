@@ -17,6 +17,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js"></script>
 <script src="data.js"></script>
+<script>window.SB_CONFIG={url:"https://tjzxgrworbbauqtvcnjh.supabase.co",anon:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRqenhncndvcmJiYXVxdHZjbmpoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE1ODE1MjgsImV4cCI6MjEwNzE1NzUyOH0.JcjA5NlzSWZR8HYSHEQoV_aH6lV7nJUTdN7JVJWs6GY",app:"dinnerclub",storageKey:"sb-dinnerclub",guest:false};</script>
+<script src="sb.js"></script>
 <script src="info.js"></script>
 <script src="menus.js"></script>
 <script src="geo.js"></script>
@@ -366,9 +368,14 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
     <form id="si-form" autocomplete="on" novalidate>
       <div class="field"><label for="si-email">Email used to buy or renew</label>
         <input id="si-email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required></div>
+      <div class="field"><label for="si-pw">Password</label>
+        <input id="si-pw" type="password" autocomplete="current-password" minlength="8" placeholder="At least 8 characters">
+        <small>First time? Choose one now. It keeps your card on this phone and any new one.</small></div>
       <div class="field"><label for="si-num">Member number</label>
-        <input id="si-num" type="text" autocomplete="off" placeholder="27-00001" required>
-        <small>Printed on your booklet and on your Square receipt.</small></div>
+        <input id="si-num" type="text" autocomplete="off" placeholder="27-00001">
+        <small>Printed on your booklet and on your Square receipt. Not needed with a password.</small></div>
+      <details class="field" id="si-invd"><summary style="cursor:pointer;font-size:14px">Have an invite code?</summary>
+        <input id="si-inv" type="text" autocomplete="off" autocapitalize="characters" placeholder="Invite code" style="margin-top:8px"></details>
       <div class="field"><label for="si-zip">Home ZIP code</label>
         <input id="si-zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="02840">
         <small>Helps the club show restaurants where their guests come from. Restaurants never see your name from this.</small></div>
@@ -378,7 +385,7 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
     </form>
     <div class="si-foot">Not a member yet? <a id="si-buy" href="#join">Join and pay with Apple Pay</a><br>
       Questions: <a id="si-mail"></a></div>
-    <div class="demo-hint"><b>Mockup:</b> any email and member number will activate. In the live app this checks the club's member list and emails a one-time sign-in link.</div>
+    <div class="demo-hint"><b>Demo:</b> leave the password blank and any email and member number open a sample card. With a password, your card is checked against the club's member list.</div>
   </div>
 </section>
 
@@ -550,8 +557,9 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
 (function(){
 const $=s=>document.querySelector(s);
 const LS={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
-const K_MEMBER='ncdc_member', K_USES='ncdc_uses', K_PARTNER='ncdc_partner_codes';
-let member=LS.get(K_MEMBER,null), uses=LS.get(K_USES,{}), filter='all';
+const K_MEMBER='ncdc_member', K_USES='ncdc_uses', K_USES_LIVE='ncdc_uses_live', K_PARTNER='ncdc_partner_codes';
+let member=LS.get(K_MEMBER,null), uses=member&&member.live?LS.get(K_USES_LIVE,{}):LS.get(K_USES,{}), filter='all';
+const isLive=()=>!!(member&&member.live);
 const partner=LS.get(K_PARTNER,{});            // codes saved from /partner/ on this device (demo)
 RESTAURANTS.forEach(r=>{ if(partner[r.id]) r.code=partner[r.id]; });
 
@@ -573,15 +581,66 @@ $('#si-form').addEventListener('submit',e=>{
   e.preventDefault();
   const email=$('#si-email').value.trim(), num=$('#si-num').value.trim();
   if(!/^\S+@\S+\.\S+$/.test(email)) return $('#si-err').textContent='Enter the email you used to buy or renew.';
-  if(num.length<3) return $('#si-err').textContent='Enter your member number.';
+  const pw=$('#si-pw').value, inv=$('#si-inv').value.trim();
+  if(pw){ liveActivate(email,pw,inv); return; }
+  if(num.length<3) return $('#si-err').textContent='Enter your member number, or a password to use your real card.';
   const known=DEMO_MEMBERS.find(m=>m.email.toLowerCase()===email.toLowerCase()||m.number===num);
   const pend=LS.get(K_PENDING,null);
   const name=known?known.name:(pend&&pend.email.toLowerCase()===email.toLowerCase())?pend.name:email.split('@')[0].replace(/[._-]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
   const zip=($('#si-zip').value||'').replace(/\D/g,'').slice(0,5);
-  member={email,number:num,name,zip,optIn:$('#si-opt').checked,activated:new Date().toISOString()};
-  LS.set(K_MEMBER,member); $('#si-err').textContent=''; renderHome(); show('home'); showTour(true); toast('Card activated on this phone');
+  member={email,number:num,name,zip,optIn:$('#si-opt').checked,activated:new Date().toISOString(),demo:true};
+  uses=LS.get(K_USES,{});
+  LS.set(K_MEMBER,member); $('#si-err').textContent=''; renderHome(); show('home'); showTour(true); toast('Demo card on this phone');
 });
-$('#signout').addEventListener('click',()=>{ if(confirm('Sign out of your card on this phone?')){member=null;LS.set(K_MEMBER,null);show('signin')} });
+
+// ---- live card (Supabase): sign in or create the account, then link the membership bought with this email ----
+const nameFrom=email=>email.split('@')[0].replace(/[._-]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+async function liveActivate(email,pw,inv){
+  const btn=$('#si-form button[type=submit]'), err=$('#si-err');
+  if(pw.length<8) return err.textContent='Use at least 8 characters for the password.';
+  err.textContent=''; btn.disabled=true; const label=btn.textContent; btn.textContent='Checking your membership\u2026';
+  try{
+    await SB.ready; if(!SB.ok) throw new Error('No connection to the club right now. Try again in a moment.');
+    try{ await SB.signIn(email,pw); }
+    catch(e){
+      if(!/wrong/i.test(e.message)) throw e;
+      try{ await SB.signUp(email,pw); }
+      catch(e2){ throw new Error(/already has an account/i.test(e2.message)?'Email or password is wrong':e2.message); }
+    }
+    try{ await SB.rpc('club','activate'); }
+    catch(e){
+      if(!/No membership/i.test(e.message)) throw e;
+      if(!inv) throw new Error(`We couldn't find a ${CLUB.season} membership for ${email}. Use the email you paid with, or join first.`);
+      await SB.rpc('club','use_invite',{p_code:inv,p_name:nameFrom(email)});
+    }
+    const zip=($('#si-zip').value||'').replace(/\D/g,'').slice(0,5);
+    await SB.rpc('club','set_prefs',{p_opt_in:$('#si-opt').checked,p_zip:zip||null}).catch(()=>{});
+    member={email,number:'',name:nameFrom(email),zip,optIn:$('#si-opt').checked,activated:new Date().toISOString(),live:true,status:'active'};
+    uses=LS.get(K_USES_LIVE,{});
+    LS.set(K_MEMBER,member); $('#si-pw').value='';
+    await syncLive();
+    renderHome(); show('home'); showTour(true);
+    toast(member.status==='active'?'Card activated on this phone':'Membership pending: your card works once payment is confirmed');
+  }catch(e){ err.textContent=e.message; }
+  finally{ btn.disabled=false; btn.textContent=label; }
+}
+// Pull my membership, my redemptions and the restaurants' real codes. Offline: keep what is cached.
+async function syncLive(){
+  if(!isLive()) return;
+  await SB.ready; if(!SB.ok) return;
+  if(!SB.user){ member.signedOut=true; return; }
+  const rows=await SB.select('club','members',q=>q.eq('user_id',SB.user.id).order('created_at',{ascending:false}).limit(1)).catch(()=>null);
+  if(!rows) return;
+  const m=rows[0];
+  if(!m){ member.status='none'; LS.set(K_MEMBER,member); return; }
+  Object.assign(member,{number:m.member_number||'Pending',name:m.name||member.name,status:m.status,signedOut:false});
+  LS.set(K_MEMBER,member);
+  const red=await SB.select('club','redemptions',q=>q.eq('member_id',m.id).eq('season_id',m.season_id)).catch(()=>null);
+  if(red){ uses={}; red.forEach(d=>(uses[d.restaurant_id]=uses[d.restaurant_id]||[]).push({t:d.redeemed_at,total:(d.check_total_cents||0)/100,party:d.party_size||0})); LS.set(K_USES_LIVE,uses); }
+  const codes=await SB.select('club','codes').catch(()=>null);
+  (codes||[]).forEach(c=>{ const r=RESTAURANTS.find(x=>x.id===c.restaurant_id); if(r) r.code={type:c.type,value:c.type==='image'?c.image_path:c.value,pos:c.pos,sample:!!c.sample}; });
+}
+$('#signout').addEventListener('click',()=>{ if(confirm('Sign out of your card on this phone?')){ const wasLive=isLive(); member=null;LS.set(K_MEMBER,null);uses=LS.get(K_USES,{});show('signin'); if(wasLive) SB.signOut().catch(()=>{}).then(()=>location.reload()); } });
 
 
 // ---- join / pay ----
@@ -652,6 +711,8 @@ function renderHome(){
   const st=seasonState(), b=$('#mc-badge');
   b.className='mc-badge'+(st==='active'?' ok':'');
   b.textContent=st==='active'?'Active':st==='pre'?'Starts '+fmtDate(CLUB.validFrom,{month:'short',day:'numeric'}):'Expired';
+  if(isLive()&&member.status!=='active'){b.className='mc-badge';b.textContent=member.status==='pending'?'Pending':member.status==='expired'?'Expired':'Not found';}
+  else if(member.demo){b.textContent+=' \u00b7 Demo';}
   $('#mc-name').textContent=member.name;
   $('#mc-num').textContent=member.number;
   $('#mc-valid').textContent=fmtDate(CLUB.validFrom,{month:'short',year:'numeric'})+' – '+fmtDate(CLUB.validTo,{month:'short',year:'numeric'});
@@ -842,7 +903,9 @@ function openRedeem(id){
   const r=RESTAURANTS.find(x=>x.id===id); if(!r)return;
   const n=usesFor(id), hit=limitHit(id), st=seasonState();
   let action;
-  if(st==='expired') action=`<div class="blocked">Your ${CLUB.season} membership has ended. <a href="${CLUB.renewUrl}" target="_blank" rel="noopener">Renew here</a>.</div>`;
+  if(isLive()&&member.signedOut) action=`<div class="blocked">Sign in again to use your card on this phone.</div>`;
+  else if(isLive()&&member.status!=='active') action=`<div class="blocked">${member.status==='pending'?'Your membership is pending until the club confirms your payment.':'No active '+CLUB.season+' membership on this account.'} Questions: <a href="mailto:${CLUB.email}">${CLUB.email}</a></div>`;
+  else if(st==='expired') action=`<div class="blocked">Your ${CLUB.season} membership has ended. <a href="${CLUB.renewUrl}" target="_blank" rel="noopener">Renew here</a>.</div>`;
   else if(hit){const lu=uses[id][uses[id].length-1],last=lu&&lu.t?lu.t:lu;
     action=`<div class="done">Used here - one use per restaurant each season<small>${new Date(last).toLocaleString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</small></div>`;}
   else action=`<div class="srv-in"><div><label for="rd-total">Check total before discount</label><input id="rd-total" type="text" inputmode="decimal" placeholder="$0.00"></div><div><label for="rd-party">Guests</label><input id="rd-party" type="text" inputmode="numeric" placeholder="2"></div></div><p class="srv-note">Server: optional. It shows the restaurant what Dinner Club tables spend.</p><button class="hold" id="hold"><i></i><span>Server: press and hold to redeem</span></button><div class="hold-note">Hold for 1.5 seconds after the discount is applied. ${CLUB.usesPerRestaurant?`Good for ${CLUB.usesPerRestaurant} use${CLUB.usesPerRestaurant>1?'s':''} per season here.`:''}</div>`;
@@ -882,8 +945,21 @@ function bindHold(btn,id){
   const step=()=>{const p=Math.min(1,(performance.now()-t0)/DUR);bar.style.transform=`scaleX(${p})`;if(p<1)raf=requestAnimationFrame(step);else finish()};
   const start=e=>{e.preventDefault();t0=performance.now();raf=requestAnimationFrame(step)};
   const stop=()=>{cancelAnimationFrame(raf);if(t0&&performance.now()-t0<DUR)bar.style.transform='scaleX(0)';t0=0};
-  const finish=()=>{t0=0;const tv=parseFloat(String(($('#rd-total')||{}).value||'').replace(/[^0-9.]/g,''))||0,pv=parseInt(String(($('#rd-party')||{}).value||''),10)||0;
-    (uses[id]=uses[id]||[]).push({t:new Date().toISOString(),total:tv,party:pv,member:member.number,zip:member.zip||''});LS.set(K_USES,uses);
+  const finish=async()=>{t0=0;const tv=parseFloat(String(($('#rd-total')||{}).value||'').replace(/[^0-9.]/g,''))||0,pv=parseInt(String(($('#rd-party')||{}).value||''),10)||0;
+    if(isLive()){
+      btn.disabled=true; const sp=btn.querySelector('span'); if(sp) sp.textContent='Checking with the club\u2026';
+      try{ await SB.rpc('club','redeem',{p_restaurant_id:id}); }
+      catch(e){
+        const hn=document.querySelector('.hold-note'); if(hn)hn.remove();
+        btn.outerHTML=`<div class="blocked">${esc(e.message)}</div>`;
+        if(/Already used/i.test(e.message)) syncLive().catch(()=>{});
+        return;
+      }
+      if(tv||pv) SB.rpc('club','record_check',{p_restaurant_id:id,p_total:tv||null,p_party:pv||null}).catch(()=>{});
+      (uses[id]=uses[id]||[]).push({t:new Date().toISOString(),total:tv,party:pv});LS.set(K_USES_LIVE,uses);
+    } else {
+      (uses[id]=uses[id]||[]).push({t:new Date().toISOString(),total:tv,party:pv,member:member.number,zip:member.zip||''});LS.set(K_USES,uses);
+    }
     if(navigator.vibrate)navigator.vibrate(60);
     btn.outerHTML=`<div class="done">Redeemed. Enjoy your dinner.<small>${new Date().toLocaleString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</small></div>`;
     const hn=document.querySelector('.hold-note'); if(hn)hn.remove();};
@@ -894,6 +970,7 @@ function bindHold(btn,id){
 // boot
 if(location.hash==='#join'){openJoin()}
 else if(member){renderHome();show('home');
+  if(isLive()) syncLive().then(()=>{ if(member){ renderHome(); if(member.signedOut) toast('Sign in again to use your card'); } }).catch(()=>{});
   const deep=new URLSearchParams(location.search).get('r'); if(deep)openDetail(deep);
 }else{
   show('signin'); const d=DEMO_MEMBERS[0]; $('#si-email').placeholder=d.email; $('#si-num').placeholder=d.number;
