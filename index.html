@@ -260,15 +260,19 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
 .spc:first-of-type{border-top:0}
 .spc b{font-size:15px}
 .spc p{font-size:14px;color:var(--ink-500);line-height:1.45;margin-top:2px}
-.msec{border-top:1px solid #eef1f7}
-.msec:first-of-type{border-top:0}
-.msec summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:12px 0;font-weight:700;font-size:15px;color:var(--ink-800)}
-.msec summary::-webkit-details-marker{display:none}
-.msec summary span{font-size:12px;font-weight:600;color:var(--ink-500);background:var(--bg);border-radius:99px;padding:2px 8px}
-.msec ul{list-style:none;padding-bottom:8px}
-.msec li{padding:7px 0}
-.msec li b{font-weight:600;font-size:14.5px}
-.msec li p{font-size:13px;color:var(--ink-500);line-height:1.45;margin-top:1px}
+.mnav{position:sticky;top:0;z-index:2;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:4px -16px 4px;padding:10px 16px;background:#fff;border-bottom:1px solid #eef1f7}
+.mnav::-webkit-scrollbar{display:none}
+.mnav button{flex:none;padding:8px 14px;border-radius:99px;border:1.5px solid #d6dcea;background:#fff;font-size:14px;font-weight:600;color:var(--ink-800);white-space:nowrap}
+.mnav button.on{background:var(--water-600);border-color:var(--water-600);color:#fff}
+.mgrp{padding-top:14px;scroll-margin-top:60px}
+.mgrp h4{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--brick-500);font-weight:700;padding-bottom:6px;border-bottom:1px solid #eef1f7}
+.mgrp ul{list-style:none}
+.mgrp li{padding:9px 0;border-bottom:1px solid #f3f5fa}
+.mgrp li:last-child{border-bottom:0}
+.mgrp .mi{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.mgrp li b{font-weight:600;font-size:15px}
+.mgrp .mi span{font-weight:600;font-size:14.5px;font-variant-numeric:tabular-nums;color:var(--ink-800);white-space:nowrap}
+.mgrp li p{font-size:13px;color:var(--ink-500);line-height:1.45;margin-top:2px}
 .mnote{font-size:12.5px;color:var(--ink-500);line-height:1.5;margin-top:8px}
 
 .find{max-width:560px;margin:0 auto;padding:0 16px;display:grid;gap:8px}
@@ -748,9 +752,22 @@ function menuBlock(r){
   const m=sub||(typeof MENUS!=='undefined'&&MENUS[r.id]);
   if(!m||!m.sections||!m.sections.length)return r.menu?`<div class="sec"><h3>Menu</h3><p class="mnote">This menu is a PDF or image on the restaurant's site. <a href="${esc(r.menu)}" target="_blank" rel="noopener">Open the full menu</a></p></div>`:'';
   const when=m.checked?new Date(m.checked).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'';
-  return `<div class="sec" id="dt-menu"><h3>Menu</h3>${m.sections.map((sec,i)=>`<details class="msec"${i===0?' open':''}><summary>${esc(sec.title||'Menu')}<span>${sec.items.length}</span></summary><ul>${sec.items.map(it=>`<li><div class="mi"><b>${esc(it.name)}</b>${it.price?`<span>${esc(it.price)}</span>`:''}</div>${it.desc?`<p>${esc(it.desc)}</p>`:''}</li>`).join('')}</ul></details>`).join('')}
-    <p class="mnote">${sub?'Updated by the restaurant':'From the restaurant\u2019s website'}${when?', checked '+when:''}. Prices and dishes can change; the restaurant has the final word. ${r.menu?`<a href="${esc(r.menu)}" target="_blank" rel="noopener">Full menu</a>`:''}</p></div>`;
+  const secs=m.sections.filter(x=>x.items&&x.items.length);
+  const nav=secs.length>1?`<nav class="mnav" aria-label="Menu sections">${secs.map((sec,i)=>`<button type="button" data-go="m-${i}"${i===0?' class="on"':''}>${esc(sec.title||'Menu')}</button>`).join('')}</nav>`:'';
+  return `<div class="sec" id="dt-menu"><h3>Menu</h3>${nav}${secs.map((sec,i)=>`<div class="mgrp" id="m-${i}"><h4>${esc(sec.title||'Menu')}</h4><ul>${sec.items.map(it=>`<li><div class="mi"><b>${esc(it.name)}</b>${it.price?`<span>${esc(it.price)}</span>`:''}</div>${it.desc?`<p>${esc(it.desc)}</p>`:''}</li>`).join('')}</ul></div>`).join('')}
+    <p class="mnote">${sub?'Updated by the restaurant':'From the restaurant’s website'}${when?', checked '+when:''}. Prices and dishes can change; the restaurant has the final word. ${r.menu?`<a href="${esc(r.menu)}" target="_blank" rel="noopener">Full menu</a>`:''}</p></div>`;
 }
+function menuNav(){const dt=$('#detail'),nav=dt.querySelector('.mnav');if(!nav)return;
+  nav.querySelectorAll('button').forEach(bt=>bt.addEventListener('click',()=>{const g=document.getElementById(bt.dataset.go);if(!g)return;
+    dt.scrollTo({top:g.getBoundingClientRect().top-dt.getBoundingClientRect().top+dt.scrollTop-nav.offsetHeight-6,behavior:'smooth'})}));}
+let _mnRaf=0;
+function menuSpy(){const dt=$('#detail'),nav=dt.querySelector('.mnav');if(!nav)return;
+  const top=nav.getBoundingClientRect().bottom+12;let cur=null;
+  dt.querySelectorAll('.mgrp').forEach(g=>{if(g.getBoundingClientRect().top<=top)cur=g.id});
+  cur=cur||'m-0';const on=nav.querySelector('button.on');if(on&&on.dataset.go===cur)return;
+  nav.querySelectorAll('button').forEach(bt=>bt.classList.toggle('on',bt.dataset.go===cur));
+  const b=nav.querySelector('button.on');if(b)nav.scrollTo({left:b.offsetLeft-nav.clientWidth/2+b.offsetWidth/2,behavior:'smooth'});}
+$('#detail').addEventListener('scroll',()=>{cancelAnimationFrame(_mnRaf);_mnRaf=requestAnimationFrame(menuSpy)},{passive:true});
 function openDetail(id,push){
   const r=RESTAURANTS.find(x=>x.id===id); if(!r)return;
   $('#dt-name').textContent=r.name;
@@ -791,6 +808,7 @@ function openDetail(id,push){
     <p class="dt-note">Each restaurant sets its own dates, times, restrictions and blackout dates. Check with your server before ordering.</p>`;
   $('#dt-use').addEventListener('click',()=>openRedeem(id));
   const d=$('#dt-dir'); if(d)d.addEventListener('click',()=>{const x=$('#dt-dirs');x.hidden=!x.hidden;d.classList.toggle('on',!x.hidden)});
+  menuNav();
   $('#detail').dataset.id=id; $('#detail').classList.add('on'); $('#detail').scrollTop=0;
   if(push!==false){try{history.pushState({d:id},'')}catch(e){}}
 }

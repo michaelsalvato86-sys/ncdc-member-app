@@ -62,7 +62,11 @@ def from_structured(soup):
     sections, cur = [], None
     for el in soup.find_all(True):
         cls = ' '.join(el.get('class') or [])
-        if el.name in ('h1', 'h2', 'h3') or (cls and HEAD_CLASS.search(cls) and not ITEM_CLASS.search(cls)):
+        # a heading that is, holds, or sits inside a dish name is the dish, not a new section
+        is_head = el.name in ('h1', 'h2', 'h3') or (cls and HEAD_CLASS.search(cls) and not ITEM_CLASS.search(cls))
+        if is_head and (el in names or any(n in names for n in el.find_all(True)) or any(p in names for p in el.parents)):
+            is_head = False
+        if is_head:
             t = clean(el.get_text(' '))
             if 2 <= len(t) <= 50 and not JUNK.search(t):
                 cur = {'title': t, 'items': []}; sections.append(cur)
@@ -130,7 +134,44 @@ def pdf_lines(data):
     return out
 
 
+def normalize(sections):
+    """One heading per real section. Fixes pages where every dish name was read as a heading,
+    repeated section titles (lunch and dinner copies), and menus shattered into one-dish sections."""
+    out, seen_names = [], set()
+    for s in sections:
+        t = re.sub(r'\s+', ' ', s.get('title') or 'Menu').strip()
+        if t.isupper() and len(t) > 3:
+            t = t.title().replace("'S ", "'s ")
+        items = list(s.get('items') or [])
+        if out and (t.lower() in seen_names or t.lower() == 'menu'):
+            out[-1]['items'] += items          # a dish name read as a heading
+        else:
+            same = next((o for o in out if o['title'].lower() == t.lower()), None)
+            if same is not None:
+                same['items'] += items         # the same section again (lunch/dinner copies)
+            else:
+                out.append({'title': t, 'items': items})
+        seen_names.update(i['name'].lower() for i in items)
+    for o in out:                              # drop repeated dishes within a section
+        u, k = [], set()
+        for i in o['items']:
+            if i['name'].lower() not in k:
+                k.add(i['name'].lower()); u.append(i)
+        o['items'] = u
+    out = [o for o in out if o['items']]
+    if len(out) >= 8 and sum(1 for o in out if len(o['items']) == 1) > 0.5 * len(out):
+        merged = []                            # shattered menu: fold one-dish sections into the one before
+        for o in out:
+            if merged and len(o['items']) == 1:
+                merged[-1]['items'] += o['items']
+            else:
+                merged.append(o)
+        out = merged
+    return out
+
+
 def tidy(sections):
+    sections = normalize(sections)
     out, total = [], 0
     for s in sections:
         items = [i for i in s['items'] if 2 <= len(i['name']) <= 80 and not re.fullmatch(r'[\d\W]+', i['name'])]
@@ -264,7 +305,11 @@ def main():
             report[rid] = 'no menu url'; menus.pop(rid, None); continue
         try:
             secs, total, how = scrape(rid, url)
-            if total >= MIN_ITEMS:
+            prev = menus.get(rid) or {}
+            if total >= MIN_ITEMS and prev.get('how') == 'agent' and how.split('+')[0] in ('text', 'pdf', 'linked-pdf'):
+                # a hand-checked copy beats a line-by-line text guess; keep it and say so
+                report[rid] = f'kept checked copy (scrape found {total} items by {how})'
+            elif total >= MIN_ITEMS:
                 menus[rid] = {'checked': now, 'source': url, 'how': how, 'sections': secs}
                 report[rid] = f'ok {total} items ({how})'
             else:
