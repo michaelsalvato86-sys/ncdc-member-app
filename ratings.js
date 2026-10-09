@@ -112,6 +112,13 @@ const RATINGS = {
 "url": "https://wanderlog.com/list/geoCategory/316956/best-spots-for-lunch-in-jamestown",
 "value": 4.4
 },
+"food-shack": {
+"asOf": "2026-10-09",
+"count": 892,
+"source": "Google",
+"url": "https://www.google.com/maps/search/The%20Food%20Shack%2C%201130%20Aquidneck%20Ave%2C%20Middletown%2C%20RI%2002842",
+"value": 4.7
+},
 "foodworks": {
 "asOf": "2026-10-09",
 "count": 60,
@@ -131,6 +138,13 @@ const RATINGS = {
 "count": 15,
 "source": "Yelp",
 "url": "https://www.yelp.com/biz/hooked-newport",
+"value": 4.2
+},
+"hungry-monkey": {
+"asOf": "2026-10-09",
+"count": 821,
+"source": "Google",
+"url": "https://www.google.com/maps/search/The%20Hungry%20Monkey%2C%20124%20Broadway%2C%20Newport%2C%20RI%2002840",
 "value": 4.2
 },
 "jos": {
@@ -210,6 +224,13 @@ const RATINGS = {
 "url": "https://wanderlog.com/place/details/1046484/one-pelham-east-bar--grill",
 "value": 3.8
 },
+"perro-salado": {
+"asOf": "2026-10-09",
+"count": 923,
+"source": "Google",
+"url": "https://www.google.com/maps/search/Perro%20Salado%2C%2019%20Charles%20St%2C%20Newport%2C%20RI%2002840",
+"value": 4.4
+},
 "pickles": {
 "asOf": "2026-10-09",
 "count": 84,
@@ -244,6 +265,13 @@ const RATINGS = {
 "source": "Yelp",
 "url": "https://www.yelp.com/biz/the-quencher-newport",
 "value": 4.0
+},
+"red-parrot": {
+"asOf": "2026-10-09",
+"count": 5223,
+"source": "Google",
+"url": "https://www.google.com/maps/search/The%20Red%20Parrot%2C%20348%20Thames%20St%2C%20Newport%2C%20RI%2002840",
+"value": 4.4
 },
 "reef": {
 "asOf": "2026-10-09",
@@ -335,5 +363,12 @@ const RATINGS = {
 "source": "Yelp",
 "url": "https://www.yelp.com/biz/wharf-southern-kitchen-and-whiskey-bar-newport",
 "value": 3.7
+},
+"yagi": {
+"asOf": "2026-10-09",
+"count": 433,
+"source": "Google",
+"url": "https://www.google.com/maps/search/Yagi%20Noodles%2C%2020%20Long%20Wharf%20Mall%2C%20Newport%2C%20RI%2002840",
+"value": 4.6
 }
 };

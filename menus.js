@@ -2896,6 +2896,288 @@ const MENUS = {
 ],
 "source": "https://www.bar12newport.com/s/BAR-12-menu-5-6-26-1.pdf"
 },
+"ben-jerrys": {
+"checked": "2026-10-09T00:48:15+00:00",
+"how": "agent",
+"sections": [
+{
+"items": [
+{
+"desc": "Two scoops of your favorite flavor(s) served in a cup",
+"name": "Small (2 scoops)",
+"price": "$7.75"
+},
+{
+"desc": "Three scoops of your favorite flavor(s) served in a cup",
+"name": "Large (3 scoops)",
+"price": "$9.00"
+},
+{
+"desc": "Two scoops of non-dairy flavor(s) in a cup",
+"name": "Non-Dairy Small (2 scoops)",
+"price": "$7.75"
+},
+{
+"desc": "Three scoops of non-dairy flavor(s) in a cup",
+"name": "Non-Dairy Large (3 scoops)",
+"price": "$9.00"
+}
+],
+"title": "Cups"
+},
+{
+"items": [
+{
+"desc": "Pick two of your favorite flavors blended into a shake",
+"name": "Custom Milkshake (20oz)",
+"price": "$10.00"
+},
+{
+"desc": "Two flavors and up to two toppings blended into a shake",
+"name": "Custom Topping Twist Milkshake (20oz)",
+"price": "$11.00"
+},
+{
+"desc": "Up to two non-dairy flavors blended into a shake",
+"name": "Custom Non-Dairy Shake (20oz)",
+"price": "$9.25"
+},
+{
+"desc": "Two scoops of your favorite flavor(s) & three toppings",
+"name": "Custom Ice Cream Sundae (2 scoops)",
+"price": "$9.00"
+},
+{
+"desc": "Two scoops with freshly baked chocolate chunk cookies",
+"name": "Custom Cookie Sundae (2 scoops)",
+"price": "$12.00"
+},
+{
+"desc": "Two scoops with a freshly baked brownie",
+"name": "Custom Brownie Sundae (2 scoops)",
+"price": "$12.00"
+},
+{
+"desc": "Your favorite sorbet flavor(s) blended with carbonated water",
+"name": "Sorbet Slush (20oz)",
+"price": "$9.00"
+}
+],
+"title": "Shakes, Sundaes & Slushes"
+},
+{
+"items": [
+{
+"desc": "Honey Graham Latte ice cream, milk and cold brew",
+"name": "Honey Graham Latte Shake (20 oz)",
+"price": "$10.00"
+},
+{
+"desc": "Lemonade Sorbet blended into a creamy frozen lemonade",
+"name": "Frozen Lemonade (20 oz)",
+"price": "$9.27"
+}
+],
+"title": "Specials"
+},
+{
+"items": [
+{
+"desc": "Choose up to 2 flavors",
+"name": "Fresh Packed Pint (16oz)",
+"price": "$10.00"
+},
+{
+"desc": "Choose up to 2 flavors",
+"name": "Fresh Packed Quart (32oz)",
+"price": "$19.50"
+},
+{
+"desc": "Choose up to 2 non-dairy flavors",
+"name": "Non-Dairy Fresh Packed Pint (16oz)",
+"price": "$10.00"
+},
+{
+"desc": "Choose up to 2 non-dairy flavors",
+"name": "Non-Dairy Fresh Packed Quart (32oz)",
+"price": "$19.50"
+},
+{
+"desc": "Two freshly packed pints and two baked goods",
+"name": "2 Fresh Packed Pints & 2 Baked Goods",
+"price": "$26.00"
+},
+{
+"desc": "Three flavors freshly packed into pints",
+"name": "Fresh Packed Pint Party Pack",
+"price": "$60.00"
+}
+],
+"title": "Fresh Packed"
+},
+{
+"items": [
+{
+"desc": "A best-seller classic cake for any celebration",
+"name": "Celebration Cake",
+"price": ""
+},
+{
+"desc": "Drizzles of fudge and caramel",
+"name": "Fudge Caramel Drizzle Cake",
+"price": ""
+},
+{
+"desc": "Non-dairy version of the classic celebration cake",
+"name": "Non-Dairy Celebration Cake",
+"price": ""
+},
+{
+"desc": "Loaded with sprinkles",
+"name": "Sprinkle Explosion Cake",
+"price": ""
+},
+{
+"desc": "Chocolate-frosted celebration cake",
+"name": "Chocolate Celebration Cake",
+"price": ""
+}
+],
+"title": "Ice Cream Cakes (order 48 hours ahead)"
+},
+{
+"items": [
+{
+"desc": "Frozen Dog Treat with Peanut Butter & Pretzel Swirls",
+"name": "Pontch's Mix (4oz)",
+"price": "$3.50"
+},
+{
+"desc": "Frozen Dog Treat with Pumpkin & Mini Cookies",
+"name": "Rosie's Batch (4oz)",
+"price": "$3.50"
+}
+],
+"title": "Doggie Desserts"
+},
+{
+"items": [
+{
+"desc": "Vanilla Ice Cream with Fudge-Covered Waffle Cone Pieces & a Caramel Swirl",
+"name": "Americone Dream",
+"price": ""
+},
+{
+"desc": "Rich Buttery Ice Cream with Roasted Pecans",
+"name": "Butter Pecan",
+"price": ""
+},
+{
+"desc": "Cherry Ice Cream with Cherries & Fudge Flakes",
+"name": "Cherry Garcia",
+"price": ""
+},
+{
+"desc": "Chocolate Ice Cream",
+"name": "Chocolate",
+"price": ""
+},
+{
+"desc": "Vanilla Ice Cream with Gobs of Chocolate Chip Cookie Dough",
+"name": "Chocolate Chip Cookie Dough",
+"price": ""
+},
+{
+"desc": "Chocolate Ice Cream with Fudge Brownies",
+"name": "Chocolate Fudge Brownie",
+"price": ""
+},
+{
+"desc": "Chocolate Peanut Butter Ice Cream with Peanut Butter Swirls & Fudge Flakes",
+"name": "Chocolate PB Chunk",
+"price": ""
+},
+{
+"desc": "Banana Ice Cream with Fudge Chunks & Walnuts",
+"name": "Chunky Monkey",
+"price": ""
+},
+{
+"desc": "Coffee Ice Cream with Espresso Bean Fudge Chunks",
+"name": "Coffee, Coffee BuzzBuzzBuzz",
+"price": ""
+},
+{
+"desc": "Chocolate & Vanilla Ice Creams mixed with Gobs of Chocolate Chip Cookie Dough & Fudge Brownies",
+"name": "Half Baked",
+"price": ""
+},
+{
+"desc": "Marshmallow ice cream with marshmallow swirls & gobs of chocolate chip and chocolate chocolate chip cookie dough",
+"name": "Marshmallow Sky",
+"price": ""
+},
+{
+"desc": "Vanilla Ice Cream with a Chocolate Cookie Swirl, Chocolate Chip & Chocolate Chocolate Chip Cookies",
+"name": "Milk & Cookies",
+"price": ""
+},
+{
+"desc": "Mint Ice Cream with Fudge Chunks",
+"name": "Mint Chocolate Chunk",
+"price": ""
+},
+{
+"desc": "Chocolate Ice Cream with Gooey Marshmallow & Caramel Swirls & Fudge Fish",
+"name": "Phish Food",
+"price": ""
+},
+{
+"desc": "Sweet Cream Ice Cream with Blonde Brownies & a Salted Caramel Swirl",
+"name": "Salted Caramel Blondie",
+"price": ""
+},
+{
+"desc": "Strawberry Ice Cream with chunks of Strawberries",
+"name": "Strawberry",
+"price": ""
+},
+{
+"desc": "Strawberry Cheesecake Ice Cream with Strawberries & a Thick Graham Cracker Swirl",
+"name": "Strawberry Cheesecake",
+"price": ""
+},
+{
+"desc": "Sweet Cream Ice Cream with Chocolate Sandwich Cookies",
+"name": "Sweet Cream & Cookies",
+"price": ""
+},
+{
+"desc": "Caramel & Chocolate Ice Creams with Chocolate Cookie Swirls & Gobs of Chocolate Chip & Peanut Butter Cookie Dough",
+"name": "The Tonight Dough",
+"price": ""
+},
+{
+"desc": "Vanilla Ice Cream",
+"name": "Vanilla",
+"price": ""
+},
+{
+"desc": "Swirls of Blueberry and Raspberry Fruit Sorbet",
+"name": "Berry Berry Extraordinary Sorbet",
+"price": ""
+},
+{
+"desc": "Lemon Sorbet",
+"name": "Lemonade Sorbet",
+"price": ""
+}
+],
+"title": "Flavors"
+}
+],
+"source": "https://order.benjerry.com/menu/thamesstreet ; https://www.benjerry.com/thamesstreet/menu"
+},
 "blue-plate": {
 "checked": "2026-10-09T00:28:47+00:00",
 "how": "linked-pdf",
@@ -8464,6 +8746,478 @@ const MENUS = {
 }
 ],
 "source": "https://hookednewport.com/wp-content/uploads/2025/06/Hooked-Food-Menu.png"
+},
+"hungry-monkey": {
+"checked": "2026-10-09T00:48:15+00:00",
+"how": "agent",
+"sections": [
+{
+"items": [
+{
+"desc": "Add chocolate chips, blueberries, bananas, walnuts, strawberries or bacon for 1.29 per item",
+"name": "Short Stack",
+"price": "6.29"
+},
+{
+"desc": "",
+"name": "Tall Stack",
+"price": "7.29"
+}
+],
+"title": "Pancakes"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "(2) Eggs w/ Home Fries & Toast",
+"price": "6.99"
+},
+{
+"desc": "Add .99 for Chourico Hash or Corned Beef Hash",
+"name": "(2) Eggs w/ choice of Meat, Home Fries + Toast",
+"price": "10.99"
+}
+],
+"title": "Eggs Any Style"
+},
+{
+"items": [
+{
+"desc": "Add Home Fries 1.99; add Bagel or Bolo .99; Gluten Free Bagel or Toast 1.99",
+"name": "(2) Eggs & Cheese",
+"price": "5.99"
+},
+{
+"desc": "",
+"name": "(2) Eggs & Cheese w/ Meat",
+"price": "7.99"
+}
+],
+"title": "Egg Sandwich"
+},
+{
+"items": [
+{
+"desc": "Spinach, Feta Cheese, Tomatoes + Onions",
+"name": "Greek Omelette",
+"price": "12.99"
+},
+{
+"desc": "Diced Ham, Onions, Peppers + Cheddar Cheese",
+"name": "Western Omelette",
+"price": "12.99"
+},
+{
+"desc": "Corned Beef, Sauerkraut, Thousand Island + Swiss Cheese",
+"name": "Reuben Omelette",
+"price": "12.99"
+},
+{
+"desc": "Chourico, Onions, Peppers + Cheddar Cheese",
+"name": "Portuguese Omelette",
+"price": "12.99"
+},
+{
+"desc": "Grilled Chicken tossed in Buffalo Sauce w/ American Cheese",
+"name": "Buffalo Chicken Omelette",
+"price": "12.99"
+},
+{
+"desc": "Homemade Chili w/ Cheddar Cheese",
+"name": "Chili Cheese Omelette",
+"price": "12.99"
+},
+{
+"desc": "Corned Beef Hash w/ American Cheese",
+"name": "Hash Omelette",
+"price": "12.99"
+},
+{
+"desc": "Spinach, Mushrooms, Tomatoes, Onions, Peppers, Broccoli + Swiss Cheese",
+"name": "Veggie Omelette",
+"price": "12.99"
+},
+{
+"desc": "Starts w/ just Cheese for 9.99 or Meat & Cheese for 11.99. All omelettes served w/ Home Fries + Toast; wrap 1.29, GF wrap 1.99, egg whites 2.29",
+"name": "Build Your Own",
+"price": "9.99 | 11.99"
+}
+],
+"title": "Omelettes"
+},
+{
+"items": [
+{
+"desc": "English Muffin topped w/ Ham + Hollandaise; all benedicts served w/ Home Fries",
+"name": "Traditional",
+"price": "15.99"
+},
+{
+"desc": "Biscuit topped w/ Ham + Homemade Sausage Gravy",
+"name": "Redneck Style",
+"price": "15.99"
+},
+{
+"desc": "English Muffin topped w/ Corned Beef Hash + Hollandaise",
+"name": "Irish Style",
+"price": "15.99"
+},
+{
+"desc": "English Muffin topped w/ Tomato, Spinach + Hollandaise",
+"name": "Eggs Florentine",
+"price": "15.99"
+},
+{
+"desc": "English Muffin topped w/ Guacamole, Tomato, Bacon + Chipotle Hollandaise Sauce",
+"name": "California Style",
+"price": "15.99"
+},
+{
+"desc": "English Muffin topped w/ Smoked Salmon, Red Onions, Capers + Hollandaise Sauce",
+"name": "Salmon",
+"price": "15.99"
+}
+],
+"title": "International Benedicts"
+},
+{
+"items": [
+{
+"desc": "(2) pieces 6.29, (3) pieces 7.49",
+"name": "Sweet Bread French Toast",
+"price": "6.29 | 7.49"
+},
+{
+"desc": "(2) slices stuffed w/ Cream Cheese Icing + choice of strawberry, blueberry, banana or apple. Third slice 1.49; extra fruit 1.49",
+"name": "Famous Stuffed Sweet Bread French Toast",
+"price": "8.49"
+},
+{
+"desc": "(2) slices Sweet Bread French Toast filled w/ Creamy Peanut Butter, sliced Bananas + drizzled in Honey",
+"name": "Chimpanzee",
+"price": "10.29"
+},
+{
+"desc": "Plain; add (1) fruit 1.99, each additional fruit 1.99, chocolate chips .99",
+"name": "Belgian Waffle",
+"price": "7.99"
+},
+{
+"desc": "6oz. Ribeye + (2) Eggs served w/ Home Fries + Toast",
+"name": "Steak 'n' Eggs",
+"price": "19.99"
+},
+{
+"desc": "(3) Eggs, (2) Pancakes + your choice of Meat served w/ Home Fries",
+"name": "The Gorilla",
+"price": "15.99"
+},
+{
+"desc": "(2) Poached Eggs on Corned Beef Hash served w/ Home Fries + Toast",
+"name": "Spider Monkey",
+"price": "12.99"
+},
+{
+"desc": "(3) Scrambled Egg Burrito w/ Salsa, Green Peppers, Onions, Sausage + Cheddar Cheese served w/ Home Fries",
+"name": "Spicy Monkey",
+"price": "12.99"
+},
+{
+"desc": "(2) Biscuits smothered w/ homemade White Sausage Gravy served w/ Home Fries + Toast",
+"name": "Southern Style Biscuits",
+"price": "12.99"
+}
+],
+"title": "Breakfast Specialties"
+},
+{
+"items": [
+{
+"desc": "Add Fruit for 2.99",
+"name": "Low-Fat Yogurt w/ Granola",
+"price": "5.99"
+},
+{
+"desc": "",
+"name": "Fresh Seasonal Fruit",
+"price": "5.99"
+},
+{
+"desc": "Add Cheese 1.29",
+"name": "Choice of Oatmeal or Grits",
+"price": "5.99"
+},
+{
+"desc": "",
+"name": "(2) Egg Whites, Turkey Bacon & Fruit Cup",
+"price": "9.49"
+},
+{
+"desc": "w/ Tomatoes, Onions + (2) Eggs",
+"name": "Avocado Toast",
+"price": "12.49"
+},
+{
+"desc": "Cheddar Cheese, Onion, Mushroom, Green Peppers, Tomatoes + Broccoli. Add Chicken 2.99 or make it Gluten Free 1.99",
+"name": "Veggie Quesadilla",
+"price": "9.29"
+},
+{
+"desc": "w/ Capers, Cream Cheese + Red Onions",
+"name": "Smoked Salmon on a Bagel",
+"price": "14.99"
+},
+{
+"desc": "Romaine Lettuce, Tomatoes, Cucumbers, Onions. Add grilled Chicken 2.99",
+"name": "House Salad",
+"price": "7.99"
+},
+{
+"desc": "Romaine Lettuce tossed in Croutons, Parmesan Cheese + Caesar dressing. Add grilled Chicken 2.99",
+"name": "Caesar Salad",
+"price": "11.99"
+}
+],
+"title": "Light + Healthy"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Bacon, Sausage, Ham or Chourico",
+"price": "4.49"
+},
+{
+"desc": "",
+"name": "Corned Beef Hash",
+"price": "5.29"
+},
+{
+"desc": "",
+"name": "Chourico Hash",
+"price": "5.29"
+},
+{
+"desc": "",
+"name": "Turkey Bacon",
+"price": "5.29"
+},
+{
+"desc": "",
+"name": "Homefries, French Fries or Onion Rings",
+"price": "3.99"
+},
+{
+"desc": "White, Whole Wheat, Marbled Rye, Sourdough or Raisin",
+"name": "Toast",
+"price": "1.99"
+},
+{
+"desc": "",
+"name": "Grilled Bagel w/ Cream Cheese",
+"price": "3.79"
+},
+{
+"desc": "",
+"name": "Grilled English Muffin or Bolo",
+"price": "2.29"
+},
+{
+"desc": "Plain or grilled",
+"name": "Muffin of the Day",
+"price": "3.49"
+},
+{
+"desc": "",
+"name": "Monkey Bread",
+"price": "5.29"
+},
+{
+"desc": "",
+"name": "Gluten Free Bread",
+"price": "2.79"
+},
+{
+"desc": "",
+"name": "GF Bagel w/ Cream Cheese",
+"price": "4.29"
+}
+],
+"title": "Breakfast Sides"
+},
+{
+"items": [
+{
+"desc": "With choice of Pancake, Waffle or French Toast w/ a side of Fruit; 2.99 upcharge for Belgian Waffle",
+"name": "(1) Scrambled Egg",
+"price": "6.99"
+},
+{
+"desc": "",
+"name": "(3) Chicken Tenders + French Fries",
+"price": "6.99"
+},
+{
+"desc": "",
+"name": "Grilled Cheese w/ French Fries",
+"price": "6.99"
+},
+{
+"desc": "",
+"name": "Hot Dog w/ French Fries",
+"price": "6.99"
+}
+],
+"title": "Kids Menu"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Homemade Chili",
+"price": "Cup 4.99 | Bowl 5.99"
+},
+{
+"desc": "",
+"name": "Jackie O's Chowdah",
+"price": "Cup 4.99 | Bowl 5.99"
+},
+{
+"desc": "Add Bacon 1.99",
+"name": "Hamburger or Cheeseburger",
+"price": "8.99/9.99"
+},
+{
+"desc": "w/ French Fries",
+"name": "(2) Hot Dogs",
+"price": "8.99"
+},
+{
+"desc": "w/ French Fries",
+"name": "Chicken Tenders",
+"price": "11.99"
+},
+{
+"desc": "",
+"name": "Chicken + Waffles",
+"price": "14.99"
+}
+],
+"title": "Lunch"
+},
+{
+"items": [
+{
+"desc": "w/ Onions on a Bulky Roll; sandwiches served w/ French Fries + a Pickle",
+"name": "Chourico + Green Peppers",
+"price": "8.99"
+},
+{
+"desc": "Tuna Salad, Bacon + Tomatoes w/ Melted Cheese on Rye",
+"name": "Monkey Melt",
+"price": "10.99"
+},
+{
+"desc": "Guacamole, Swiss, Lettuce, Tomato + Onion",
+"name": "Impossible Veggie Burger",
+"price": "13.99"
+},
+{
+"desc": "Bacon, Fried Egg + American Cheese on a Bulky Roll",
+"name": "Monkey Burger",
+"price": "13.79"
+},
+{
+"desc": "Mushroom, Onion + Swiss Cheese on grilled Marbled Rye",
+"name": "Swiss Patty Melt",
+"price": "13.79"
+},
+{
+"desc": "6oz Beef Patty w/ Swiss Cheese, Sauerkraut + Thousand Island on grilled Marbled Rye",
+"name": "Grilled Reuben Burger or Sandwich",
+"price": "13.99"
+},
+{
+"desc": "Turkey, Ham, Hamburger or Cheeseburger on Toast w/ Bacon, Lettuce, Tomato + Mayo",
+"name": "Club Sandwich",
+"price": "14.29"
+},
+{
+"desc": "Chicken Salad, Bacon, Spinach + Pesto in a Flour Tortilla Wrap",
+"name": "Orangutan",
+"price": "12.99"
+},
+{
+"desc": "Fried Chicken, Bacon, Chipotle Mayo, Lettuce + Tomato in a Flour Tortilla Wrap",
+"name": "Chipotle Chicken Wrap",
+"price": "13.29"
+},
+{
+"desc": "Grilled Chicken, Romaine Lettuce + Croutons tossed in Parmesan Cheese + Caesar Dressing in a Flour Tortilla Wrap",
+"name": "Chicken Caesar Wrap",
+"price": "10.29"
+},
+{
+"desc": "Chopped Chicken in Buffalo Sauce w/ American Cheese",
+"name": "Buffalo Chicken Grill Cheese",
+"price": "10.49"
+},
+{
+"desc": "w/ oven-roasted Turkey, Stuffing, Cranberry + Mayo",
+"name": "Thanksgiving Sandwich",
+"price": "12.99"
+}
+],
+"title": "Specialty Sandwiches"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Bottomless Regular/Decaf Coffee",
+"price": "2.79"
+},
+{
+"desc": "",
+"name": "Iced Coffee or Unsweetened Iced Tea",
+"price": "2.79"
+},
+{
+"desc": "",
+"name": "Tomato Juice",
+"price": "3.29"
+},
+{
+"desc": "",
+"name": "Orange, Apple, Grapefruit, or Cranberry Juice",
+"price": "3.29"
+},
+{
+"desc": "Strawberry, Chocolate and Coffee available",
+"name": "Milk",
+"price": "3.49"
+},
+{
+"desc": "",
+"name": "Hot Chocolate w/ Whip Cream",
+"price": "3.29"
+},
+{
+"desc": "Pepsi, Diet Pepsi, Root Beer, Mountain Dew, Orange Crush, Sierra Mist, Pink Lemonade or Seltzer",
+"name": "Soda, Pink Lemonade or Seltzer",
+"price": "2.79"
+},
+{
+"desc": "Cork fee per person",
+"name": "BYOB",
+"price": "2.99"
+}
+],
+"title": "Beverages"
+}
+],
+"source": "https://hungrymonkeycafe.com/menu/"
 },
 "jos": {
 "checked": "2026-10-09T00:28:47+00:00",
@@ -14989,6 +15743,628 @@ const MENUS = {
 }
 ],
 "source": "https://images.squarespace-cdn.com/content/v1/621f7eb1f3e99538a10af1fa/b6e1c94f-02f9-42f2-b26f-14bde9bb525a/AAA+Q+WEB+DIN.jpg"
+},
+"red-parrot": {
+"checked": "2026-10-09T00:48:15+00:00",
+"how": "agent",
+"sections": [
+{
+"items": [
+{
+"desc": "*Fresh mussels and clams simmering in white wine with scallions, butter, capers, fresh tomatoes and garlic",
+"name": "Island Mussels and Clams",
+"price": "$23.95"
+},
+{
+"desc": "*Four large shrimp pan seared with fresh garlic, butter and lemon. Yum Yum!",
+"name": "Yum Yum Shrimp",
+"price": "$16.95"
+},
+{
+"desc": "*Four large shrimp chilled and served with housemade cocktail sauce and fresh horseradish",
+"name": "Shrimp Cocktail",
+"price": "$16.95"
+},
+{
+"desc": "Fresh chilled lobster salad topped off with a U-15 shrimp. Served with a side of cocktail sauce",
+"name": "Lobster Martini",
+"price": "$32.95"
+},
+{
+"desc": "*Mussles, clams and shrimp in a herb infused roasted tomato broth. Served with homemade crostini.",
+"name": "Mussel Soup",
+"price": "$29.95"
+},
+{
+"desc": "*A big bucket full of fresh steamer clams simmering in white wine, garlic and onion with drawn butter",
+"name": "Bucket O' Steamers",
+"price": "Market Price"
+},
+{
+"desc": "*Sesame Encrusted Sashimi grade Tuna, Sliced and Seared. Served rare with Wasabi and Soy Sauce",
+"name": "Seared Tuna Tataki",
+"price": "$22.95"
+},
+{
+"desc": "Minimum order of 6 pieces.",
+"name": "Oysters On The Half Shell*",
+"price": ""
+},
+{
+"desc": "Minimum order of 6 pieces.",
+"name": "Clams On The Half Shell*",
+"price": "$2.00 each"
+}
+],
+"title": "The Raw Bar"
+},
+{
+"items": [
+{
+"desc": "Succulent calamari breaded and served RI Style with hot cherry peppers -or- NY Style with marinara Sauce",
+"name": "Calamari Risqué",
+"price": "$19.95"
+},
+{
+"desc": "Tender sweet lobster meat sautéed in garlic and butter with sun dried tomato pesto cream, baked with mozzarella & monterey jack cheeses, melted over tortilla chips and topped with scallions",
+"name": "Lobster Nachos",
+"price": "$35.95"
+},
+{
+"desc": "*Pan seared scallops carmelized and served over wilted greens, drizzled with a spicy plum sauce",
+"name": "Pan Seared Scallops",
+"price": "$19.95"
+},
+{
+"desc": "Chunks of fresh white fish, batter-fried, served with cocktail sauce",
+"name": "Brucey Bites!!!",
+"price": "$17.95"
+},
+{
+"desc": "New England Lobster sauteed in garlic butter served over a huge bowl of our housemade lobster bisque",
+"name": "The RFP Lobster Bisque",
+"price": "$24.95"
+},
+{
+"desc": "Maryland blue crab cakes sauteed lightly and served with hot horseradish for dipping",
+"name": "Maryland Blue Crab Cakes",
+"price": "$19.95"
+},
+{
+"desc": "Jumbo shrimp rolled in fresh coconut and zesty cajun spices, lightly fried and served with our sweet & spicy red chili sauce for dipping",
+"name": "Coconut Prawns",
+"price": "$16.95"
+},
+{
+"desc": "New England Lobster sauteed in a sriracha cream chili sauce over crispy double dipped french fries. Topped off with scallions and sour cream",
+"name": "Lobsta' S'Mac Fries",
+"price": "$24.95"
+}
+],
+"title": "Norman's Baits"
+},
+{
+"items": [
+{
+"desc": "Tender white meat dusted in coconut and cajun spices, with a sweet red chili dipping sauce",
+"name": "Coco-\"ribbean\" Chicken",
+"price": "$17.95"
+},
+{
+"desc": "Wings tossed in a blend of honey butter and Jamaican jerk dry spices. Straight from the Caribbean, served with ranch dressing",
+"name": "Jamaican Jerk Wings",
+"price": "$18.95"
+},
+{
+"desc": "Tossed in our sticky honey teriyaki sauce and coated with toasted sesame seeds...if you please!",
+"name": "Siamese Sticky Wings",
+"price": "$18.95"
+},
+{
+"desc": "Boneless chicken, tempura battered and fried 'til golden. Served with honey mustard",
+"name": "Chicken Little's Feet",
+"price": "$17.95"
+},
+{
+"desc": "Mild, Hot or Wicked Hot",
+"name": "Buffalo Wings",
+"price": "$18.95"
+},
+{
+"desc": "Lobster and crab meat blended in cream cheese, wrapped and flash fried. Served with sweet red chili sauce.",
+"name": "Lobster Rangoons",
+"price": "$16.95"
+}
+],
+"title": "Teasers"
+},
+{
+"items": [
+{
+"desc": "Crock of our own homemade beef broth, caramelized onions & toasted french bread, topped with melted cheese",
+"name": "French Onion Soup",
+"price": "$11.95"
+},
+{
+"desc": "Fresh clams, hearty potatoes, celery, onions, heavy cream and a touch of dill. Thick and creamy...An award-winning chowder!",
+"name": "New England Clam Chowder",
+"price": "$11.95"
+},
+{
+"desc": "Thick beef chili with beans. Topped with melted cheese and served with tortilla chips",
+"name": "Crock-a-Chili",
+"price": "$11.95"
+},
+{
+"desc": "Fresh lobster meat pureed with heavy cream butter and a touch of sherry. Topped with garlic croutons",
+"name": "Cape Cod Lobster Bisque",
+"price": "$11.95"
+}
+],
+"title": "The Hot Spot"
+},
+{
+"items": [
+{
+"desc": "Piled high with chili, cheddar and jack cheeses, cherry peppers, & chopped tomatoes. Topped with sour cream, guacamole and salsa",
+"name": "Mucho Nachos",
+"price": "$22.95"
+},
+{
+"desc": "Jerk spiced chicken, cheddar & boursin cheese baked in a tortilla shell served with fresh mango salsa",
+"name": "Jerk Chicken Quesadilla",
+"price": "$16.95"
+},
+{
+"desc": "Baked with a blend of Cheddar, Monterey Jack, and fresh mozzarella cheeses",
+"name": "Three Cheese Quesadilla",
+"price": "$14.95"
+},
+{
+"desc": "Cajun spiced chicken baked with Monterey Jack & cheddar cheese in a tortilla shell",
+"name": "Cajun Burnt Chicken Quesadilla",
+"price": "$16.95"
+},
+{
+"desc": "Tender and sweet lobster meat baked together with mozzarella cheeses & diced tomatoes. Served with Caribbean sauce on the side",
+"name": "Lobster Quesadilla",
+"price": "$24.95"
+},
+{
+"desc": "Dill pickle chips battered and southern fried 'til crispy served with sriracha dipping sauce. In limited supply.",
+"name": "Whistle Stop Cafe's Southern Fried Pickles",
+"price": "$12.95"
+},
+{
+"desc": "Wonton wrappers lightly fried & filled with vegetables, bean vermicelli and Thai seasonings. Served with sweet red chili sauce",
+"name": "Thai Spring Rolls",
+"price": "$13.95"
+},
+{
+"desc": "Fire grilled dough, fig spread, carmelized onions, spring greens, and crumbled goat cheese.",
+"name": "Fig & Goat Cheese Flatbread",
+"price": "$15.95"
+},
+{
+"desc": "Fire grilled dough, with caramelized onions, Portobello mushrooms. Topped with garlic herb and mozzarella cheese.",
+"name": "'Shroom Flatbread",
+"price": "$14.95"
+}
+],
+"title": "Teasers, Too"
+},
+{
+"items": [
+{
+"desc": "Romaine with pepperoncini peppers, feta cheese, tomatoes, cucumbers, red onion, greek olives and croutons tossed in olive oil, lemon, garlic and balsamic vinegar",
+"name": "Babylonian Greek",
+"price": "$18.95"
+},
+{
+"desc": "Grilled, blackened or cajun with romaine lettuce, garlic croutons and parmesan cheese tossed in garlic caesar dressing",
+"name": "Chicken Caesar Salad",
+"price": "$19.95"
+},
+{
+"desc": "Sliced avocado & baby spinach topped with bacon, crumbled bleu cheese, walnuts, dried cranberries, grape tomatoes, and red onion with a strawberry balsamic vinaigrette",
+"name": "Avocado Spinach Salad",
+"price": "$19.95"
+},
+{
+"desc": "Crispy breaded calamari tossed with hot cherry peppers over a classic caesar salad",
+"name": "Calamari Caesar Salad",
+"price": "$22.95"
+},
+{
+"desc": "Field greens topped with strawberries & blueberries, candied walnuts & crumbled goat cheese in a strawberry balsamic",
+"name": "Berry & Goat Cheese",
+"price": "$14.95"
+},
+{
+"desc": "\"Something on the side\" A blend of greens, red onions, croutons, tomatoes, cucumbers, shredded carrots and peppers",
+"name": "The Mistress...",
+"price": "$12.95"
+},
+{
+"desc": "Spring mesclun greens with crumbled gorgonzola, walnuts & mandarin oranges served with strawberry balsamic",
+"name": "Gorgonzola Salad",
+"price": "$14.95"
+},
+{
+"desc": "Romaine lettuce, garlic croutons and parmesan cheese tossed in garlic caesar dressing",
+"name": "Baby Caesar Salad",
+"price": "$12.95"
+},
+{
+"desc": "Fresh lobster with lemon, scallions, black pepper and light mayonnaise served on a bed of greens surrounded by fresh fruits and avocado",
+"name": "New England Lobster Salad",
+"price": "$35.95"
+},
+{
+"desc": "Teriyaki glazed chicken breast over greens with pineapple, strawberries, bananas, oranges and lime juice sprinkled with shredded coconut and walnuts",
+"name": "Tropical Island Salad",
+"price": "$21.95"
+},
+{
+"desc": "Grilled with sesame teriyaki glaze on a bed of field greens with fresh pineapple, strawberries and crispy asian noodles and strawberry balsamic dressing",
+"name": "Sesame Salmon Salad",
+"price": "$25.95"
+},
+{
+"desc": "Jumbo fried coconut shrimp over field greens, with pineapple, mandarin oranges and avocado. Served with sweet chili sauce and strawberry balsamic",
+"name": "Coconut Shrimp Salad",
+"price": "$22.95"
+},
+{
+"desc": "*Black and white sesame encrusted Ahi Tuna, sliced, served rare over cucumbers and field greens with soy and wasabi",
+"name": "Tuxedo Tuna",
+"price": "$24.95"
+},
+{
+"desc": "Grilled flat iron steak, gorgonzola, and field greens with mandarin oranges, red onion and olives. Topped with warm caramelized onions and mushrooms",
+"name": "Sexy Steak & Gorgonzola",
+"price": "$26.95"
+}
+],
+"title": "GREEN BACKS"
+},
+{
+"items": [
+{
+"desc": "Coconut Shrimp, avocado, fresh pineapple, mandarin oranges, field greens and sweet and spicy plum sauce in a tortilla wrap. Served with tortilla chips and mango salsa",
+"name": "Coco Loco Coconut Shrimp Wrap",
+"price": "$20.95"
+},
+{
+"desc": "Grilled chicken, avocado, bacon, crumbled blue cheese, hickory bbq sauce & romaine lettuce with tortilla chips & salsa",
+"name": "Chicken Avocado Wrap",
+"price": "$19.95"
+},
+{
+"desc": "*Sesame encrusted rare tuna in a soy glaze with field greens, sriracha mayo, & crunchy noodles. Served with jasmine rice",
+"name": "Maui Ahi Tuna Wrap",
+"price": "$24.95"
+},
+{
+"desc": "Portabella mushrooms, mozzarella, red onions, tomato & fresh basil on rosemary focaccia. Warmed in the oven",
+"name": "Isabella Mutzzabella",
+"price": "$16.95"
+},
+{
+"desc": "With sriracha mayonnaise and served with sweet potato fries",
+"name": "Crab Cake Sandwich",
+"price": "$23.95"
+},
+{
+"desc": "Sauteed spinach & melted gorgonzola cheese on a grilled chicken breast, served with sweet fries",
+"name": "Chicken Popeye Sandwich",
+"price": "$19.95"
+},
+{
+"desc": "Blackened Mahi Mahi on 3 flour tortillas, with avocado, chopped tomatoes, red onion, cilantro, and a drizzle of sriracha cream sauce. Served with corn tortilla chips and salsa.",
+"name": "Island Fish Tacos",
+"price": "$29.95"
+},
+{
+"desc": "On focaccia bread with sriracha mayo, served with tortilla chips and mango salsa",
+"name": "Blackened Mahi Sandwich",
+"price": "$23.95"
+},
+{
+"desc": "Succulent lobster meat sautéed in garlic butter on 3 flour tortillas, with avocado, chopped tomatoes, red onion, cilantro, and a drizzle of sriracha cream sauce. Served with corn tortilla chips...",
+"name": "Tacos de Langosta \"Lobster Tacos\"",
+"price": "$36.95"
+},
+{
+"desc": "Fresh Lobster Salad stuffed in a soft roll with sweet potato fries, Caribbean sauce and homemade slaw",
+"name": "Lobster \"Rock n' Roll\"",
+"price": "$35.95"
+},
+{
+"desc": "*Toasted basil focaccia layered with fresh lobster salad, thick bacon slices, roma tomatoes & field greens. With a side of Caribbean sauce & sweet fries",
+"name": "Monsta Lobsta' BLT",
+"price": "$35.95"
+},
+{
+"desc": "*The Best Burger on this paradise island! Pick a cheese - American, Swiss, cheddar, bleu or boursin",
+"name": "Cheeseburger in Paradise",
+"price": "$19.95"
+},
+{
+"desc": "*Fried Egg, Crispy bacon and cheddar cheese. Salt, Pepper, Ketchup?",
+"name": "Bacon Egg & Cheese Burger",
+"price": "$21.95"
+},
+{
+"desc": "*Topped with melted Swiss, sliced avocado and red onion",
+"name": "Avocado Burger",
+"price": "$21.95"
+},
+{
+"desc": "Our signature burger topped with fresh lobster scampi. Served on a brioche bun with Sweet Potato Fries",
+"name": "Surf & Turf Burger",
+"price": "$27.95"
+},
+{
+"desc": "*Barbeque sauce, bacon, Monterey Jack and cheddar cheeses, sautéed onions",
+"name": "Sunset Strip Burger",
+"price": "$21.95"
+},
+{
+"desc": "*Boursin cheese, bacon, cajun spices, and sauteéd onion",
+"name": "Bourbon Street Burger",
+"price": "$21.95"
+},
+{
+"desc": "*Crumbled Bleu cheese with sautéed onions and bacon",
+"name": "Bleu Burger",
+"price": "$21.95"
+},
+{
+"desc": "Double dipped fried chicken breast with RFP Hot Honey & pickles on a potato roll. Served with sweet fries and house-made slaw",
+"name": "Nashville Fried Chicken",
+"price": "$21.95"
+},
+{
+"desc": "Teriyaki grilled chicken breast topped with bacon, swiss and grilled pineapple.",
+"name": "Hei Hei Chicken Sandwich",
+"price": "$19.95"
+},
+{
+"desc": "Flat iron steak topped with gorgonzola cream sauce, caramelized onion & sautéed mushrooms, served on toasted french bread.",
+"name": "Fork&Knife Steak Sandwich",
+"price": "$26.95"
+}
+],
+"title": "Between the Bread"
+},
+{
+"items": [
+{
+"desc": "Crispy fried calamari tossed in garlic & olive oil with hot cherry peppers on a marinara and mozzarella pizza shell",
+"name": "Crispy Calamari Pizza",
+"price": "$24.95"
+},
+{
+"desc": "Marinara topped with romaine lettuce, tomatoes, pepperoncini, kalamata olives, cucumber, feta cheese and red onion. Tossed in olive oil and balsamic dressing",
+"name": "My Big Fat Greek Salad Pizza",
+"price": "$21.95"
+},
+{
+"desc": "Whole shrimp and scallops with extra virgin olive oil and garlic baked with mozzarella and parmesan cheeses. He sleeps with the fishes...",
+"name": "Luca Bratsie's Hot Seafood Pizza",
+"price": "$34.95"
+},
+{
+"desc": "Succulent tender lobster sauteed in garlic butter, topped with olive oil, chopped tomatoes, fresh mozzarella and parmesan cheese",
+"name": "Lobster! Lobster! Pizza! Pizza!",
+"price": "$35.95"
+},
+{
+"desc": "The classic pizza with marinara and mozzarella cheese",
+"name": "Classic Cheese Pizza",
+"price": "$19.95"
+},
+{
+"desc": "Chicken with Smokey BBQ sauce, topped with red onion, hickory bacon, cheddar & jack cheeses. Drizzled with Ranch dressing.",
+"name": "Bar-B-Que C.B.R. Pizza",
+"price": "$22.95"
+}
+],
+"title": "Eclectic Pizza"
+},
+{
+"items": [
+{
+"desc": "Fresh whole and chopped clams simmering in a garlic white wine broth, with crushed red pepper over linguini pasta",
+"name": "Linguini with Clams",
+"price": "$34.95"
+},
+{
+"desc": "Lobster mac-n-cheese with a touch of spicy Sriracha chili sauce, with the bottle on the side for more to your liking! Topped with crunchy Ritz butter crumbles. YUM!",
+"name": "Lobster S'Mac-n-Cheese",
+"price": "$36.95"
+},
+{
+"desc": "Lobster, scallops, & shrimp and in a creamy alfredo sauce. Served over linguini",
+"name": "Lobster & Seafood Alfredo",
+"price": "$38.95"
+},
+{
+"desc": "Shrimp and Scallops sautéed in garlic, olive oil, butter, lemon, parsley and white wine over linguini",
+"name": "Shrimp & Scallop Scampi",
+"price": "$32.95"
+},
+{
+"desc": "Lobster & Shrimp sauteed in garlic & crushed red pepper in a creamy pink sauce topped with basil and garlic crostini",
+"name": "Lobster & Shrimp Pasta",
+"price": "$36.95"
+},
+{
+"desc": "Penne pasta with Sundried tomatoes, kalamata olives, garlic, olive oil & white wine, topped with fresh baby spinach, feta & chopped tomato",
+"name": "Taziki Pasta",
+"price": "$23.95"
+},
+{
+"desc": "Penne in a marinara pink cream sauce, with parmesan cheese and a dollop of fresh ricotta and basil.",
+"name": "Sicilian Style Penne",
+"price": "$23.95"
+},
+{
+"desc": "Shrimp and blackened chicken with sundried tomato, and tri-color roasted peppers in a parmesan cream sauce tossed with penne",
+"name": "Rasta Pasta",
+"price": "$34.95"
+}
+],
+"title": "Pasta Pasta"
+},
+{
+"items": [
+{
+"desc": "*Mussles, clams and shrimp in a herb infused roasted tomato broth. Served with homemade crostini.",
+"name": "Mussel Soup",
+"price": "$29.95"
+},
+{
+"desc": "*Grilled and topped with shrimp, scallops, capers, tomatoes & garlic. Served with jasmine rice",
+"name": "Swordfish Mediterranean",
+"price": "$37.95"
+},
+{
+"desc": "Seared Norwegian salmon with sautéed spinach over jasmine rice",
+"name": "Pan Seared Salmon",
+"price": "$29.95"
+},
+{
+"desc": "*Brought in fresh daily. Served Grilled -or- Blackened",
+"name": "Grilled Swordfish Steak",
+"price": "$31.95"
+},
+{
+"desc": "Locally caught fresh white fish, tempura battered & fried. Served with fries & homemade slaw",
+"name": "The RFP Fish & Chips",
+"price": "$31.95"
+},
+{
+"desc": "*Blackened Mahi Mahi topped with grilled pineapple, mango salsa and jasmine rice",
+"name": "Blackened Mahi Mahi",
+"price": "$29.95"
+},
+{
+"desc": "Lobster meets blackened Mahi Mahi steak with a sriracha cream sauce. Served over jasmine rice.",
+"name": "Lobster Mahi",
+"price": "$35.95"
+},
+{
+"desc": "*Served over wilted greens & drizzled with spicy plum sauce over jasmine rice.",
+"name": "Pan Seared Scallops",
+"price": "$29.95"
+},
+{
+"desc": "*Jumbo shrimp sauteed in Thai spices and cream served over jasmine rice",
+"name": "Thai Curry Shrimp",
+"price": "$27.95"
+},
+{
+"desc": "U-15 shrimp dipped in Cajun spices, rolled in coconut & lightly fried. Served with red chili dipping sauce",
+"name": "Coconut Shrimp",
+"price": "$28.95"
+},
+{
+"desc": "*Black and white sesame encrusted tuna steak, pan seared rare over wilted spinach with soy and wasabi dipping sauces",
+"name": "Black & White Tuna",
+"price": "$28.95"
+},
+{
+"desc": "Baked in butter. garlic and Ritz crumbles, and tipped wit shrimp, scallops and garlic parmesan.",
+"name": "Parmesan Crusted Cod",
+"price": "$29.95"
+},
+{
+"desc": "Grilled Mahi topped with sautéed spinach, capers, olives and tomatoes with garlic and lemon on a bed of jasmine rice.",
+"name": "Cyprus Mahi",
+"price": "$29.95"
+},
+{
+"desc": "Black & White sesame crusted tuna served over rice, with avocado and crunchy noodles. Served with plum sauce, soy & wasabi on the side.",
+"name": "Sesame Tuna Bowl",
+"price": "$28.95"
+},
+{
+"desc": "Blackened salmon served over rice, with avocado, scallions, crunchy noodles. Drizzled with creamy sriracha.",
+"name": "Blackened Salmon Bowl",
+"price": "$29.95"
+}
+],
+"title": "Fish Tales"
+},
+{
+"items": [
+{
+"desc": "*A 1/2 rack of our tender pork ribs and BBQ'd chicken breast, Served with sweet fries and house made slaw",
+"name": "Uncle Ernie's Chicken & Ribs",
+"price": "$29.95"
+},
+{
+"desc": "Simply grilled or blackened served with your choice of side",
+"name": "Grilled Chicken",
+"price": "$23.95"
+},
+{
+"desc": "*A full rack of tender pork ribs marinated in our top secret BBQ sauce. (\"The Terminator\" ate them here! He'll be back…and you'll be back for more!",
+"name": "Our Famous Baby Back Ribs",
+"price": "$32.95"
+},
+{
+"desc": "Chicken breast with glazed Jerk seasoning topped with grilled pineapple and a side of mango salsa",
+"name": "Jerk Chicken",
+"price": "$24.95"
+},
+{
+"desc": "Boneless Bar-b-que chicken breast, in our hickory smoked bbq glaze. Served with sweet fries and house made slaw.",
+"name": "BBQ Yard Bird",
+"price": "$23.95"
+},
+{
+"desc": "Teriyaki grilled chicken served over rice and topped wit grilled pineapple, scallions, and crunchy noodles.",
+"name": "Yak & Yeti Chicken Bowl",
+"price": "$23.95"
+}
+],
+"title": "Hot and Heavy"
+},
+{
+"items": [
+{
+"desc": "An 8 ounce filet mignon grilled to your liking and topped with a succulent lobster scampi in garlic butter. What a way to go!",
+"name": "The Red Parrot's Surf & Turf \"The Best of the Best!\"",
+"price": "$54.95"
+},
+{
+"desc": "12 ounces, thick and juicy, grilled to your liking - a perfect steak!",
+"name": "N.Y. Strip Steak",
+"price": "$42.95"
+},
+{
+"desc": "Grilled 12 ounce N.Y. strip stuffed with tender sweet lobster, brushed with garlic butter and topped with roasted tomatoes...This is it folks!",
+"name": "Lobster Stuffed New York Strip",
+"price": "$46.95"
+},
+{
+"desc": "Petite filet in a mushroom merlot demi-glace served with mashed potatoes and our vegetable of the day",
+"name": "Petite Filet Mignon",
+"price": "$29.95"
+},
+{
+"desc": "8 ounce center cut tenderloin. Melts in your mouth!",
+"name": "Filet Mignon",
+"price": "$44.95"
+}
+],
+"title": "When only A Steak Will Do"
+}
+],
+"source": "https://www.redparrotrestaurant.com/main-menu"
 },
 "reef": {
 "checked": "2026-10-09T00:28:47+00:00",
@@ -22806,5 +24182,182 @@ const MENUS = {
 }
 ],
 "source": "https://wharfcoastalseafood.com/https/porpoise-bugle-t4a8squarespacecom/menus/pages"
+},
+"yagi": {
+"checked": "2026-10-09T00:48:15+00:00",
+"how": "agent",
+"sections": [
+{
+"items": [
+{
+"desc": "blood orange, cara cara, grapefruit, farm radishes, pistachio, ramen crunchies, chicken, oriental dressing",
+"name": "Good Fortune Citrus Salad",
+"price": "12"
+},
+{
+"desc": "sesame dressing, wasabi peas, nori",
+"name": "Miso Snap Pea Salad",
+"price": "12"
+},
+{
+"desc": "1 per order / tempura flowers, chunks of krab, dad's rangoon mix, aonori, sweet chili",
+"name": "Squash Blossom Krab Rangoon",
+"price": "6"
+},
+{
+"desc": "japanese fried chicken tossed in gochujang glaze",
+"name": "Chicken Karaage",
+"price": "14"
+},
+{
+"desc": "choice of chicken, pork or veggie; with black vinegar-soy",
+"name": "Seared Dumplings",
+"price": "9"
+},
+{
+"desc": "chili oil, black vinegar, cilantro, scallion; your choice of pork, chicken or veggie",
+"name": "Sichuan Chili Oil Dumplings",
+"price": "12"
+}
+],
+"title": "Apps"
+},
+{
+"items": [
+{
+"desc": "char siu pork belly, hoisin, namasu, peanuts, cilantro",
+"name": "O.G.",
+"price": "5"
+},
+{
+"desc": "pickled cucumber, napa, scallions",
+"name": "Gochujang Fried Chicken",
+"price": "5"
+},
+{
+"desc": "local corn tempura fritter, dill kewpie",
+"name": "Corn Kakiage",
+"price": "5"
+},
+{
+"desc": "panko breaded shrimp patty, yum yum sauce, napa slaw",
+"name": "Filet-O Ebi",
+"price": "8"
+}
+],
+"title": "Bao Buns (Pick 1 / Pick 3)"
+},
+{
+"items": [
+{
+"desc": "chilled ramen dressed in yuzu vinaigrette, heirloom tomato, peppers, cucumber, red onion, shiso, and tofu \"feta\"",
+"name": "Hiyashi Chuka",
+"price": "20"
+}
+],
+"title": "The Cold Noodle"
+},
+{
+"items": [
+{
+"desc": "breaded pork cutlet, japanese style curry, root veggies, sticky rice, herbs, marinated egg",
+"name": "Curry Katsu",
+"price": "20"
+}
+],
+"title": "The Rice Dish"
+},
+{
+"items": [
+{
+"desc": "16 hr rich pork broth, cantonese style char siu, crispy mushroom, alfalfa, pickled red onion, black garlic oil",
+"name": "Tonkotsu",
+"price": "20"
+},
+{
+"desc": "sesame soup, aquidneck farm beef soboro, peanuts, red cabbage, edamame, chili crisp, cilantro",
+"name": "Tantanmen",
+"price": "20"
+},
+{
+"desc": "sichuan chicken, brown rice miso, garlic butter, doubanjiang, charred corn, bean sprout, toasted nori",
+"name": "Spicy Miso",
+"price": "20"
+},
+{
+"desc": "chicken broth, shio tare, napa, green crab oil, shrimp and pork wontons, mizuna",
+"name": "Wantanmen",
+"price": "20"
+},
+{
+"desc": "shiitake dashi, sugar snap pea, pea shoots, thai basil, fried garlic, yuzu shio; add crispy tofu",
+"name": "Spring Pea Yuzu",
+"price": "20"
+}
+],
+"title": "Ramen"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "Kaedama (noodle refill)",
+"price": "4"
+},
+{
+"desc": "",
+"name": "Char Siu Pork",
+"price": "4"
+},
+{
+"desc": "",
+"name": "Sichuan Chicken",
+"price": "4"
+},
+{
+"desc": "",
+"name": "Beef Soboro",
+"price": "4"
+},
+{
+"desc": "",
+"name": "Crispy Tofu",
+"price": "3"
+},
+{
+"desc": "",
+"name": "Choice of One Veg",
+"price": "2"
+},
+{
+"desc": "",
+"name": "Kimchi",
+"price": "3"
+},
+{
+"desc": "",
+"name": "Chili Crisp",
+"price": "1.50"
+},
+{
+"desc": "",
+"name": "Marinated Egg",
+"price": "2"
+}
+],
+"title": "Add to Your Bowl"
+},
+{
+"items": [
+{
+"desc": "puffed rice, newport sea salt",
+"name": "Warm Chocolate Chip Cookie",
+"price": "5"
+}
+],
+"title": "Something Sweet"
+}
+],
+"source": "https://www.yaginoodles.com/menu (image: JULY 25, 2026.png)"
 }
 };
