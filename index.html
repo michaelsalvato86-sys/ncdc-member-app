@@ -17,6 +17,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js"></script>
 <script src="data.js"></script>
+<script src="info.js"></script>
 <style>
 :root{
   --water-500:#194e8f; --water-600:#133b6d; --water-800:#19304c;
@@ -145,6 +146,109 @@ input{font:inherit}
 .toast{position:fixed;left:50%;bottom:calc(var(--safe-b) + 20px);transform:translate(-50%,20px);opacity:0;background:var(--ink-800);color:#fff;padding:11px 16px;border-radius:12px;font-size:14px;transition:.25s;z-index:80;max-width:90%}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 
+/* options after sign-in */
+.opts{max-width:560px;margin:14px auto 0;padding:0 16px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.opt{display:flex;flex-direction:column;align-items:flex-start;gap:2px;background:#fff;border:1px solid #e3e7f1;border-radius:14px;padding:12px;text-align:left;text-decoration:none;color:var(--water-600);min-width:0}
+.opt:active,.opt.on{background:var(--harbor-100);border-color:var(--harbor-400)}
+.opt svg{margin-bottom:6px}
+.opt b{font-size:14px;color:var(--ink-800);line-height:1.2}
+.opt small{font-size:12px;color:var(--ink-500);line-height:1.3}
+.help{max-width:528px;margin:8px auto 0;background:#fff;border:1px solid #e3e7f1;border-radius:14px;padding:14px 16px;font-size:14px;color:var(--ink-500);line-height:1.5;width:calc(100% - 32px)}
+.help b{color:var(--water-600);display:block;margin-bottom:4px}
+.help ol{padding-left:18px;margin-bottom:6px}
+#help-mail{user-select:all;color:var(--water-500);font-weight:600}
+
+/* welcome tour */
+.tour{max-width:528px;margin:14px auto 0;width:calc(100% - 32px);background:#fff;border:1.5px solid var(--harbor-400);border-radius:16px;padding:14px;display:grid;gap:8px}
+.tour[hidden]{display:none}
+.tour-head{display:flex;justify-content:space-between;align-items:center;gap:8px;color:var(--water-600);font-size:16px}
+.tour-head button{font-size:13px;font-weight:600;color:var(--ink-500);padding:4px}
+.tour-i{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--bg);border-radius:12px;padding:11px 12px;text-decoration:none;color:var(--ink-800)}
+.tour-i:active{background:var(--harbor-100)}
+.tour-i span{flex:none;width:28px;height:28px;border-radius:50%;background:var(--water-600);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
+.tour-i b{display:block;font-size:15px}
+.tour-i small{font-size:13px;color:var(--ink-500)}
+
+/* tab bar */
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid #e3e7f1;padding:6px 8px calc(var(--safe-b) + 6px);display:none}
+body.tabbed .tabs{display:block}
+body.tabbed #home,body.tabbed #club{padding-bottom:calc(var(--safe-b) + 84px)}
+.tabs div{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr)}
+.tab{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;font-weight:600;color:var(--ink-300);padding:6px 0}
+.tab.on{color:var(--water-600)}
+body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
+
+/* the club (book) */
+#club{background:var(--bg)}
+.cl-hero{background:var(--water-600);color:#fff;padding:calc(var(--safe-t) + 26px) 20px 30px;text-align:center}
+.cl-hero img{width:200px;max-width:60%;display:block;margin:0 auto 18px}
+.cl-tag{font-family:var(--serif);font-size:34px;line-height:1.08;text-wrap:balance}
+.cl-tag i{color:#f3c9b9;font-style:italic}
+.cl-hero p{color:#cdd8ee;margin-top:10px;font-size:15px}
+.cl{max-width:560px;margin:0 auto;padding:0 16px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:-18px 0 0}
+.stat{background:#fff;border:1px solid #e3e7f1;border-radius:14px;padding:12px 8px;text-align:center}
+.stat b{display:block;font-family:var(--serif);font-weight:400;font-size:30px;color:var(--water-600);line-height:1}
+.stat small{font-size:12px;color:var(--ink-500);line-height:1.3;display:block;margin-top:4px}
+.cl h2{font-family:var(--serif);font-weight:400;font-size:28px;color:var(--water-600);margin:28px 0 8px;text-wrap:balance}
+.cl p.body{color:var(--ink-500);line-height:1.6;font-size:15px}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.feat div{background:#fff;border:1px solid #e3e7f1;border-radius:14px;padding:12px;font-size:13px;color:var(--ink-500);line-height:1.45;min-width:0}
+.feat b{display:block;color:var(--ink-800);font-size:14px;margin-bottom:2px}
+.quote{margin-top:12px;border-left:3px solid var(--brick-500);padding:6px 0 6px 14px;font-family:var(--serif);font-size:22px;color:var(--water-800);line-height:1.25}
+.quote small{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--brick-500);font-weight:700;margin-top:6px}
+.honors{margin-top:10px;font-size:14px;color:var(--ink-500);line-height:1.6}
+.stores{background:#fff;border:1px solid #e3e7f1;border-radius:14px;margin-top:10px}
+.stores div{display:flex;justify-content:space-between;gap:12px;padding:11px 14px;border-top:1px solid #eef1f7;font-size:14px}
+.stores div:first-child{border-top:0}
+.stores span{color:var(--ink-500);text-align:right}
+.cl-btns{display:grid;gap:8px;margin-top:12px}
+.fine{font-size:12px;color:var(--ink-500);line-height:1.55;margin:28px 0 10px;padding-top:14px;border-top:1px solid #e3e7f1}
+.mail{user-select:all;color:var(--water-500);font-weight:600}
+
+/* restaurant page */
+#detail{position:fixed;inset:0;z-index:35;background:var(--bg);overflow-y:auto;display:none}
+#detail.on{display:block;animation:up .2s ease-out}
+.dt-hero{background:linear-gradient(160deg,var(--water-500),var(--water-800));color:#fff;padding:calc(var(--safe-t) + 10px) 16px 26px}
+.dt-hero .rd-bar{padding:0 0 10px;justify-content:flex-start}
+.dt-hero .rd-bar button{color:#fff;padding:8px 0}
+.dt-wrap{max-width:560px;margin:0 auto}
+.dt-eye{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#f3c9b9;font-weight:700}
+.dt-name{font-family:var(--serif);font-size:38px;line-height:1.05;margin:6px 0 6px;text-wrap:balance}
+.dt-addr{color:#cdd8ee;font-size:14px;line-height:1.5}
+.dt-body{max-width:560px;margin:0 auto;padding:0 16px calc(var(--safe-b) + 30px)}
+.use{display:block;width:100%;margin:-16px 0 14px;padding:17px;border-radius:14px;background:var(--brick-500);color:#fff;font-weight:700;font-size:17px;box-shadow:0 10px 22px rgba(156,60,37,.28)}
+.use small{display:block;font-weight:500;font-size:13px;opacity:.85;margin-top:2px}
+.use.used{background:#eef6f1;color:var(--ok);box-shadow:none;border:1.5px solid #bfe2cd}
+.acts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.act{display:flex;flex-direction:column;align-items:center;gap:5px;background:#fff;border:1px solid #e3e7f1;border-radius:14px;padding:12px 4px;font-size:12.5px;font-weight:600;color:var(--water-600);text-decoration:none;text-align:center;min-width:0}
+.act:active,.act.on{background:var(--harbor-100)}
+.act.off{color:var(--ink-300);background:#fafbfd}
+.act.book{background:var(--water-600);color:#fff;border-color:var(--water-600)}
+.dirs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.dirs[hidden]{display:none}
+.dirs a{display:flex;align-items:center;justify-content:center;gap:6px;padding:12px;border-radius:12px;background:#fff;border:1.5px solid var(--water-600);color:var(--water-600);font-weight:600;font-size:14px;text-decoration:none}
+.info{background:#fff;border:1px solid #e3e7f1;border-radius:14px;margin-top:14px}
+.info div{display:flex;gap:12px;padding:12px 14px;border-top:1px solid #eef1f7;font-size:14px;align-items:flex-start}
+.info div:first-child{border-top:0}
+.info span{flex:none;width:72px;color:var(--ink-500);font-size:13px;padding-top:1px}
+.info a,.info b{color:var(--ink-800);font-weight:600;text-decoration:none;word-break:break-word;min-width:0}
+.info a{color:var(--water-500)}
+.dt-note{margin-top:14px;font-size:12.5px;color:var(--ink-500);line-height:1.5}
+.r-town{font-size:13px;color:var(--ink-500);margin-top:1px}
+
+/* booklet coupon on the show-the-server screen */
+.coupon{position:relative;text-align:left;background:#fff;border:2px dashed var(--harbor-400);border-radius:16px;padding:16px 18px;margin-bottom:16px}
+.coupon:before,.coupon:after{content:"";position:absolute;top:50%;width:18px;height:18px;border-radius:50%;background:var(--paper);border:2px dashed var(--harbor-400);transform:translateY(-50%)}
+.coupon:before{left:-11px;border-left-color:transparent;border-bottom-color:transparent;transform:translateY(-50%) rotate(45deg)}
+.coupon:after{right:-11px;border-right-color:transparent;border-top-color:transparent;transform:translateY(-50%) rotate(45deg)}
+.cp-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.cp-eye{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--brick-500);font-weight:700}
+.cp-season{font-size:12px;color:var(--ink-500);font-variant-numeric:tabular-nums}
+.cp-title{font-family:var(--serif);font-size:30px;color:var(--water-600);line-height:1.05;margin:6px 0 2px}
+.cp-sub{font-size:14px;color:var(--ink-800);font-weight:600}
+.cp-fine{font-size:12.5px;color:var(--ink-500);line-height:1.5;margin-top:10px;padding-top:10px;border-top:1px solid #eef1f7}
+
 /* join */
 #join{background:linear-gradient(180deg,var(--paper) 0%,var(--harbor-100) 100%);padding:calc(var(--safe-t) + 18px) 20px 40px}
 .jn{max-width:440px;margin:0 auto}
@@ -177,6 +281,8 @@ input{font:inherit}
     <img class="si-logo" src="logo-vert.png" alt="Newport County Dinner Club">
     <h1>Your card, on your phone</h1>
     <p class="lead">Activate your <span id="si-season"></span> membership once. Then tap a restaurant and show your server the screen.</p>
+    <div class="demo-hint" style="margin:0 0 16px"><b>Preview:</b> skip sign-in and see the whole app as a sample member.
+      <button class="btn" id="si-demo" type="button" style="margin-top:10px;background:var(--brick-500)">Try the demo</button></div>
     <button class="btn pay" id="si-join" type="button" style="margin-bottom:18px">New member? Join and pay</button>
     <form id="si-form" autocomplete="on" novalidate>
       <div class="field"><label for="si-email">Email used to buy or renew</label>
@@ -221,6 +327,70 @@ input{font:inherit}
   </div>
 </section>
 
+<!-- THE CLUB (the book) -->
+<section class="view" id="club">
+  <div class="cl-hero">
+    <img src="logo-white.png" alt="Newport County Dinner Club">
+    <div class="cl-tag">Dine Local. <i>Discover More.</i> Save More.</div>
+    <p>The only dining program exclusively local to Newport County.</p>
+  </div>
+  <div class="cl">
+    <div class="stats">
+      <div class="stat"><b>38</b><small>years of dinners in Newport County</small></div>
+      <div class="stat"><b>50+</b><small>restaurants in the book</small></div>
+      <div class="stat"><b>5–15</b><small>minutes from downtown Newport</small></div>
+    </div>
+
+    <h2>Two entrées. One great deal.</h2>
+    <p class="body">When dining at a participating restaurant, order two qualifying entrées and the least expensive entrée is deducted from your bill.* That means more opportunities to dine out, explore Newport County and experience restaurants you may not have tried before.</p>
+    <div class="feat">
+      <div><b>Discover New Favorites</b>Explore participating restaurants throughout Newport County and find your next go-to spot.</div>
+      <div><b>Dine &amp; Save</b>Enjoy two-for-one dining offers at participating restaurants throughout the 2026–2027 season.</div>
+      <div><b>Support Local Restaurants</b>Every visit supports the restaurants and hospitality community that make Newport County such a special place.</div>
+      <div><b>Make a Night of It</b>Start with an appetizer, enjoy a cocktail or bottle of wine, and save room for dessert.</div>
+    </div>
+
+    <h2>Good through</h2>
+    <p class="body">Books are valid from <b>December 1st</b> through <b>November 30th</b>. Your card follows the same season.</p>
+
+    <h2>In good company</h2>
+    <div class="quote">“The Newport County Dinner Club is a wise investment.”<small>Money Magazine</small></div>
+    <div class="honors">Small business award: proud recipient, Newport County Chamber of Commerce.<br>Recently featured in Providence Business News.</div>
+
+    <h2>Buy new, or renew</h2>
+    <p class="body">Perfect for locals, visitors and gifts. <b>$<span class="pr-online"></span></b> online <s>$<span class="pr-reg"></span></s> (end of year special).</p>
+    <div class="cl-btns"><button class="btn pay" type="button" data-go="join">Join or renew with Apple Pay</button></div>
+    <p class="body" style="margin-top:14px">Or pick one up locally for $<span class="pr-retail"></span>:</p>
+    <div class="stores">
+      <div><b>Shaw's</b><span>Middletown</span></div>
+      <div><b>Gold's Wine &amp; Spirits</b><span>Middletown</span></div>
+      <div><b>A Market</b><span>Newport</span></div>
+      <div><b>Allen's Wine &amp; Spirits</b><span>Portsmouth</span></div>
+      <div><b>Clement's Market</b><span>Portsmouth and Bristol</span></div>
+      <div><b>Conanicut Marine Store</b><span>Jamestown</span></div>
+      <div><b>MWR GOTickets</b><span>Newport Navy Base</span></div>
+    </div>
+
+    <h2>For restaurant owners</h2>
+    <p class="body">Completely free for participating restaurants. The restaurant signup deadline is <b>October 31, 2026</b>.</p>
+    <div class="cl-btns">
+      <a class="btn ghost" id="cl-signup" target="_blank" rel="noopener" style="text-align:center;text-decoration:none">Sign up your restaurant</a>
+      <a class="btn ghost" href="partner/" style="text-align:center;text-decoration:none">Set up your Dinner Club code</a>
+    </div>
+
+    <h2>Need to get in touch?</h2>
+    <p class="body">Email us and we'll get back to you: <span class="mail"></span></p>
+
+    <p class="fine">*The Newport County Dinner Club is a two-for-one dining program. An entrée is defined as the main course of a meal as identified on the participating restaurant's standard menu. When two entrées of different prices are ordered, the least expensive qualifying entrée will be deducted. Appetizers and desserts are not considered entrées. Participating restaurants may establish individual valid dates, times, restrictions and blackout dates.<br>© 2026 Newport County Dinner Club.</p>
+  </div>
+</section>
+
+<nav class="tabs" aria-label="Sections"><div>
+  <button class="tab" data-tab="card" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg>My card</button>
+  <button class="tab" data-tab="list" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3v8a2 2 0 0 0 2 2v8M5 3v5M9 3v5M17 21V3c-2 0-3 3-3 7h3"/></svg>Restaurants</button>
+  <button class="tab" data-tab="club" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5zM4 19a2 2 0 0 1 2-2h13"/></svg>The Club</button>
+</div></nav>
+
 <!-- HOME -->
 <section class="view" id="home">
   <div class="top"><div class="top-row"><img src="logo-white.png" alt="Newport County Dinner Club"><button id="signout">Sign out</button></div></div>
@@ -231,6 +401,24 @@ input{font:inherit}
       <div class="mc-meta"><div>Member no.<b id="mc-num"></b></div><div>Valid<b id="mc-valid"></b></div><div>Used<b id="mc-used"></b></div></div>
     </div>
   </div>
+  <div class="tour" id="tour" hidden>
+    <div class="tour-head"><b>You're in. Here's what's inside.</b><button id="tour-x" type="button" aria-label="Close">Close</button></div>
+    <button class="tour-i" data-t="list" type="button"><span>1</span><div><b>See every restaurant</b><small>All 58, with search and filters</small></div></button>
+    <button class="tour-i" data-t="scan" type="button"><span>2</span><div><b>Show a code to the server</b><small>Try Brick Alley Pub (sample QR)</small></div></button>
+    <button class="tour-i" data-t="pay" type="button"><span>3</span><div><b>Join or renew with Apple Pay</b><small>The payment screen</small></div></button>
+    <button class="tour-i" data-t="club" type="button"><span>4</span><div><b>The Club</b><small>About, rules, where to buy, contact</small></div></button>
+    <a class="tour-i" href="partner/"><span>5</span><div><b>What restaurants see</b><small>How each one sets up its code</small></div></a>
+  </div>
+  <nav class="opts" aria-label="More options">
+    <button class="opt" id="opt-renew" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6.5 15h4"/></svg><b>Join or renew</b><small>Pay with Apple Pay</small></button>
+    <a class="opt" href="partner/"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10h18M5 10v10h14V10M3 10l2-6h14l2 6M10 20v-5h4v5"/></svg><b>Restaurant view</b><small>How codes get set up</small></a>
+    <button class="opt" id="opt-help" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6M12 17h.01"/></svg><b>Help</b><small>Tour and how it works</small></button>
+  </nav>
+  <div class="help" id="help" hidden>
+    <b>How your card works</b>
+    <ol><li>When you're ready to pay, tap the restaurant below.</li><li>Show your server the screen. The live clock proves it's your real card.</li><li>Your server applies the discount, then presses and holds the red button.</li></ol>
+    <p>Questions: <span id="help-mail"></span></p>
+  </div>
   <div class="offer"><div><b id="offer-t"></b><span id="offer-d"></span></div></div>
   <div class="list-head"><h2>Where are you dining?</h2><p>Tap the restaurant when you're ready to pay.</p></div>
   <div class="search"><div>
@@ -239,6 +427,17 @@ input{font:inherit}
     <div class="chips" id="chips"></div></div>
   <div class="rlist" id="rlist"></div>
   <div class="foot">Each restaurant sets its own dates, times and blackout days. Check with your server before ordering.<br><a id="ft-mail"></a></div>
+</section>
+
+<!-- RESTAURANT PAGE -->
+<section id="detail" aria-modal="true" role="dialog">
+  <div class="dt-hero"><div class="dt-wrap">
+    <div class="rd-bar"><button id="dt-back" type="button"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m15 18-6-6 6-6"/></svg>Restaurants</button></div>
+    <div class="dt-eye">Dinner Club restaurant</div>
+    <div class="dt-name" id="dt-name"></div>
+    <div class="dt-addr" id="dt-addr"></div>
+  </div></div>
+  <div class="dt-body" id="dt-body"></div>
 </section>
 
 <!-- REDEEM -->
@@ -267,9 +466,10 @@ $('#si-buy').href=CLUB.buyUrl;
 [$('#si-mail'),$('#ft-mail')].forEach(a=>{a.href='mailto:'+CLUB.email;a.textContent=CLUB.email});
 $('#offer-t').textContent=CLUB.offer; $('#offer-d').textContent=CLUB.offerDetail;
 
-function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===id));window.scrollTo(0,0)}
+function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===id));document.body.classList.toggle('tabbed',!!member&&(id==='home'||id==='club'));if(id==='home')setTab('card');window.scrollTo(0,0)}
 
 // ---- sign in ----
+$('#si-demo').addEventListener('click',()=>{const d=DEMO_MEMBERS[0];$('#si-email').value=d.email;$('#si-num').value=d.number;$('#si-form').requestSubmit()});
 $('#si-form').addEventListener('submit',e=>{
   e.preventDefault();
   const email=$('#si-email').value.trim(), num=$('#si-num').value.trim();
@@ -279,7 +479,7 @@ $('#si-form').addEventListener('submit',e=>{
   const pend=LS.get(K_PENDING,null);
   const name=known?known.name:(pend&&pend.email.toLowerCase()===email.toLowerCase())?pend.name:email.split('@')[0].replace(/[._-]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
   member={email,number:num,name,activated:new Date().toISOString()};
-  LS.set(K_MEMBER,member); $('#si-err').textContent=''; renderHome(); show('home'); toast('Card activated on this phone');
+  LS.set(K_MEMBER,member); $('#si-err').textContent=''; renderHome(); show('home'); showTour(true); toast('Card activated on this phone');
 });
 $('#signout').addEventListener('click',()=>{ if(confirm('Sign out of your card on this phone?')){member=null;LS.set(K_MEMBER,null);show('signin')} });
 
@@ -303,7 +503,39 @@ $('#jn-form').addEventListener('submit',e=>{e.preventDefault();
   window.open(renew?CLUB.renewUrl:CLUB.buyUrl,'_blank','noopener');
   $('#jn-paid').hidden=false; $('#jn-paid').scrollIntoView({behavior:'smooth',block:'center'});
 });
-$('#jn-activate').addEventListener('click',()=>{const p=LS.get(K_PENDING,null);show('signin');if(p){$('#si-email').value=p.email;$('#si-num').focus()}});
+$('#jn-activate').addEventListener('click',()=>{const p=LS.get(K_PENDING,null);if(member){show('home');toast('Your card is already active on this phone');return}show('signin');if(p){$('#si-email').value=p.email;$('#si-num').focus()}});
+
+// ---- options after sign-in ----
+$('#opt-renew').addEventListener('click',()=>{
+  if(member){$('#jn-name').value=member.name;$('#jn-email').value=member.email;document.querySelector('input[name=jt][value=renew]').checked=true}
+  $('#jn-paid').hidden=true; renderPrice(); show('join');
+});
+$('#help-mail').textContent=CLUB.email;
+
+// ---- tabs + the club ----
+function setTab(t){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('on',b.dataset.tab===t))}
+document.querySelector('.tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;const t=b.dataset.tab;
+  if(t==='club'){show('club');setTab('club');return}
+  show('home');setTab(t);
+  if(t==='list')requestAnimationFrame(()=>$('.list-head').scrollIntoView({behavior:'smooth'}));
+});
+document.querySelectorAll('.pr-online').forEach(e=>e.textContent=CLUB.price.online);
+document.querySelectorAll('.pr-reg').forEach(e=>e.textContent=CLUB.price.regular);
+document.querySelectorAll('.pr-retail').forEach(e=>e.textContent=CLUB.price.retail);
+document.querySelectorAll('#club .mail').forEach(e=>e.textContent=CLUB.email);
+$('#cl-signup').href=CLUB.partnerFormUrl;
+$('#club [data-go=join]').addEventListener('click',()=>$('#opt-renew').click());
+
+// ---- welcome tour (shown after sign-in) ----
+function showTour(on){$('#tour').hidden=!on}
+$('#tour-x').addEventListener('click',()=>showTour(false));
+$('#tour').addEventListener('click',e=>{const t=e.target.closest('[data-t]');if(!t)return;
+  if(t.dataset.t==='list'){showTour(false);$('.list-head').scrollIntoView({behavior:'smooth'})}
+  if(t.dataset.t==='scan')openRedeem('brick-alley');
+  if(t.dataset.t==='pay')$('#opt-renew').click();
+  if(t.dataset.t==='club'){show('club');setTab('club')}
+});
+$('#opt-help').addEventListener('click',()=>{const h=$('#help');h.hidden=!h.hidden;$('#opt-help').classList.toggle('on',!h.hidden);if(!h.hidden)showTour(true)});
 
 // ---- home ----
 function seasonState(){
@@ -328,7 +560,7 @@ function renderHome(){
 function renderList(){
   const q=$('#q').value.trim().toLowerCase().normalize('NFD').replace(/\p{M}/gu,'');
   const rows=RESTAURANTS.filter(r=>{
-    const n=r.name.toLowerCase().normalize('NFD').replace(/\p{M}/gu,'');
+    const n=(r.name+' '+(r.town||'')).toLowerCase().normalize('NFD').replace(/\p{M}/gu,'');
     if(q&&!n.includes(q))return false;
     if(filter==='used')return usesFor(r.id)>0;
     if(filter==='ready')return usesFor(r.id)===0&&!r.status;
@@ -341,12 +573,59 @@ function renderList(){
     if(usesFor(r.id)) tag=`<span class="tag used">Used</span>`;
     else if(r.status==='later') tag=`<span class="tag later">Later</span>`;
     else if(r.status==='seasonal') tag=`<span class="tag season">Seasonal</span>`;
-    return `<button class="r" data-id="${r.id}"><span class="r-ini">${esc(ini)}</span><span class="r-main"><span class="r-name" style="display:block">${esc(r.name)}</span>${r.note?`<span class="r-note" style="display:block">${esc(r.note)}</span>`:''}</span>${tag}<svg class="r-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button>`;
+    return `<button class="r" data-id="${r.id}"><span class="r-ini">${esc(ini)}</span><span class="r-main"><span class="r-name" style="display:block">${esc(r.name)}</span>${(r.town||r.note)?`<span class="r-note" style="display:block">${esc([r.town,r.note].filter(Boolean).join(' · '))}</span>`:''}</span>${tag}<svg class="r-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button>`;
   }).join(''):`<div class="empty">No restaurant matches “${esc(q)}”.</div>`;
 }
 $('#q').addEventListener('input',renderList);
 $('#chips').addEventListener('click',e=>{const c=e.target.closest('.chip');if(!c)return;filter=c.dataset.f;renderHome()});
-$('#rlist').addEventListener('click',e=>{const r=e.target.closest('.r');if(r)openRedeem(r.dataset.id)});
+$('#rlist').addEventListener('click',e=>{const r=e.target.closest('.r');if(r)openDetail(r.dataset.id)});
+
+// ---- restaurant page ----
+const IOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+const ICON={
+  book:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8.5 14.5l2 2 4-4"/></svg>',
+  menu:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12v18H6zM9 7h6M9 11h6M9 15h4"/></svg>',
+  dir:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+  call:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.5a11 11 0 0 0 6.5 6.5l1.5-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5C10.6 20 4 13.4 3.5 5.1A1.5 1.5 0 0 1 5 3.5z"/></svg>'
+};
+function mapLinks(r){const q=encodeURIComponent(r.name+', '+r.address);
+  return {apple:'https://maps.apple.com/?daddr='+q+'&dirflg=d', google:'https://www.google.com/maps/dir/?api=1&destination='+q};}
+function telHref(p){return 'tel:+1'+String(p).replace(/\D/g,'').replace(/^1/,'')}
+function openDetail(id,push){
+  const r=RESTAURANTS.find(x=>x.id===id); if(!r)return;
+  $('#dt-name').textContent=r.name;
+  $('#dt-addr').innerHTML=[r.address?esc(r.address):'',r.note?'<b style="color:#fff">'+esc(r.note)+'</b>':''].filter(Boolean).join('<br>')||'Newport County';
+  const used=usesFor(id)>0&&limitHit(id);
+  const book=r.reserve?`<a class="act book" href="${esc(r.reserve)}" target="_blank" rel="noopener">${ICON.book}Book a table</a>`
+    : r.reserveByPhone&&r.phone?`<a class="act" href="${telHref(r.phone)}">${ICON.book}Call to book</a>`
+    : r.url?`<a class="act" href="${esc(r.url)}" target="_blank" rel="noopener">${ICON.book}Booking info</a>`
+    : `<span class="act off">${ICON.book}No online booking</span>`;
+  const menu=r.menu?`<a class="act" href="${esc(r.menu)}" target="_blank" rel="noopener">${ICON.menu}Menu</a>`:`<span class="act off">${ICON.menu}No menu online</span>`;
+  const dir=r.address?`<button class="act" id="dt-dir" type="button">${ICON.dir}Directions</button>`:`<span class="act off">${ICON.dir}Directions</span>`;
+  const call=r.phone?`<a class="act" href="${telHref(r.phone)}">${ICON.call}Call</a>`:`<span class="act off">${ICON.call}Call</span>`;
+  const m=r.address?mapLinks(r):null;
+  const maps=m?(IOS?[['Apple Maps',m.apple],['Google Maps',m.google]]:[['Google Maps',m.google],['Apple Maps',m.apple]]).map(([t,u])=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`).join(''):'';
+  const rows=[
+    r.address?`<div><span>Address</span><b>${esc(r.address)}</b></div>`:'',
+    r.phone?`<div><span>Phone</span><a href="${telHref(r.phone)}">${esc(r.phone)}</a></div>`:'',
+    r.url?`<div><span>Website</span><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.url.replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,''))}</a></div>`:'',
+    r.reserve?`<div><span>Booking</span><a href="${esc(r.reserve)}" target="_blank" rel="noopener">${esc(r.reservePlatform||'Reserve online')}</a></div>`:'',
+    r.order?`<div><span>Takeout</span><a href="${esc(r.order)}" target="_blank" rel="noopener">Order online</a></div>`:''
+  ].join('');
+  $('#dt-body').innerHTML=`
+    <button class="use${used?' used':''}" id="dt-use" type="button">${used?'Already used this season':'Use my card here'}<small>${used?'Tap to see the details':'Two-for-one entrées. Show this to your server.'}</small></button>
+    <div class="acts">${book}${menu}${dir}${call}</div>
+    <div class="dirs" id="dt-dirs" hidden>${maps}</div>
+    ${rows?`<div class="info">${rows}</div>`:''}
+    ${r._confidence==='partial'?'<p class="dt-note"><b>Please call ahead.</b> Some of these details come from public listings, not the restaurant website.</p>':''}
+    <p class="dt-note">Each restaurant sets its own dates, times, restrictions and blackout dates. Check with your server before ordering.</p>`;
+  $('#dt-use').addEventListener('click',()=>openRedeem(id));
+  const d=$('#dt-dir'); if(d)d.addEventListener('click',()=>{const x=$('#dt-dirs');x.hidden=!x.hidden;d.classList.toggle('on',!x.hidden)});
+  $('#detail').dataset.id=id; $('#detail').classList.add('on'); $('#detail').scrollTop=0;
+  if(push!==false){try{history.pushState({d:id},'')}catch(e){}}
+}
+function closeDetail(){$('#detail').classList.remove('on');renderHome()}
+$('#dt-back').addEventListener('click',()=>history.back());
 
 // ---- redeem ----
 let clockT=null, wakeLock=null;
@@ -381,9 +660,11 @@ function openRedeem(id){
       <div class="live-num">Member ${esc(member.number)}${n?` · used here ${n}×`:''}</div>
     </div>
     ${pre}${codeBlock(r)}
-    <div class="terms"><b>${esc(CLUB.offer)}.</b> ${esc(CLUB.offerDetail)} ${r.code&&r.code.restrictions?'<br><b>'+esc(r.name)+':</b> '+esc(r.code.restrictions):esc(r.name)+' may set its own dates, times and blackout days.'}</div>
+    <div class="coupon"><div class="cp-top"><span class="cp-eye">Newport County Dinner Club</span><span class="cp-season">${CLUB.season}</span></div>
+      <div class="cp-title">Two-for-one entrées</div><div class="cp-sub">${esc(r.name)}</div>
+      <div class="cp-fine">Order two qualifying entrées and the least expensive is deducted. Appetizers and desserts are not entrées. Valid ${fmtDate(CLUB.validFrom)} to ${fmtDate(CLUB.validTo)}.${r.code&&r.code.restrictions?'<br><b>'+esc(r.name)+':</b> '+esc(r.code.restrictions):' '+esc(r.name)+' may set its own dates, times, restrictions and blackout dates.'}</div></div>
     ${action}
-    ${r.url?`<a class="rd-link" href="${esc(r.url)}" target="_blank" rel="noopener">Visit ${esc(r.name)}’s website</a>`:''}`;
+    `;
   if(r.code&&r.code.type==='barcode'){try{JsBarcode('#bc',r.code.value,{format:'CODE128',width:2.2,height:90,displayValue:true,font:'monospace',fontSize:16,margin:6})}catch(e){}}
   const tick=()=>{const el=$('#clock');if(el)el.textContent=new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',second:'2-digit'})};
   tick(); clearInterval(clockT); clockT=setInterval(tick,1000);
@@ -392,9 +673,9 @@ function openRedeem(id){
   history.pushState({r:id},'');
   if('wakeLock' in navigator) navigator.wakeLock.request('screen').then(w=>wakeLock=w).catch(()=>{});
 }
-function closeRedeem(){ $('#redeem').classList.remove('on'); clearInterval(clockT); if(wakeLock){wakeLock.release().catch(()=>{});wakeLock=null} renderHome(); }
+function closeRedeem(){ $('#redeem').classList.remove('on'); clearInterval(clockT); if(wakeLock){wakeLock.release().catch(()=>{});wakeLock=null} renderHome(); if($('#detail').classList.contains('on')){const id=$('#detail').dataset.id;if(id)openDetail(id,false)} }
 $('#rd-back').addEventListener('click',()=>history.back());
-window.addEventListener('popstate',()=>{ if($('#redeem').classList.contains('on')) closeRedeem(); });
+window.addEventListener('popstate',()=>{ if($('#redeem').classList.contains('on')) closeRedeem(); else if($('#detail').classList.contains('on')) closeDetail(); });
 
 function bindHold(btn,id){
   const bar=btn.querySelector('i'); let t0=0, raf=0;
@@ -413,7 +694,7 @@ function bindHold(btn,id){
 // boot
 if(location.hash==='#join'){openJoin()}
 else if(member){renderHome();show('home');
-  const deep=new URLSearchParams(location.search).get('r'); if(deep)openRedeem(deep);
+  const deep=new URLSearchParams(location.search).get('r'); if(deep)openDetail(deep);
 }else{
   show('signin'); const d=DEMO_MEMBERS[0]; $('#si-email').placeholder=d.email; $('#si-num').placeholder=d.number;
 }
