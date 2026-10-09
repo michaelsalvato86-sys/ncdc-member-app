@@ -95,6 +95,6 @@ const DEMO_MEMBERS = [
 ];
 
 // Heritage Restaurant Group venues on the Dinner Club list. They get member-level detail (names, emails) for
-// marketing, from members who opted in. Confirmed from each venue's own site or ordering links on 2026-10-08;
+// marketing, from members who opted in. Reef, Claw & Hammer, Cluck House, Jo's, La Forge and Quencher added 2026-10-09 from our Toast/DoorDash/ad lists;
 // the full list must be confirmed by Heritage before launch.
-const HRG_VENUES = ['brick-alley', 'caleb-broad', 'wallys', 'red-parrot'];
+const HRG_VENUES = ['brick-alley', 'caleb-broad', 'claw-hammer', 'cluck-house', 'jos', 'la-forge', 'quencher', 'red-parrot', 'reef', 'wallys'];
