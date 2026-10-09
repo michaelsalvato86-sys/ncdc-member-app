@@ -21,9 +21,9 @@ const CLUB = {
   usesPerRestaurant: 1,
   // Dine-in only (Katelyn, 2026-10-09): the discount never applies to takeout or online orders.
   dineInOnly: true,
-  // App logo slot. Katelyn's Dinner Club logo (picture only, no lettering) in light blue + navy becomes the app logo.
-  // logo-app.svg is a PLACEHOLDER until her file arrives - do not treat it as her design.
-  appLogo: 'logo-app.svg', appLogoPending: true,
+  // App logo: the official logo from newportcountydinnerclub.com (Michael, 2026-10-09: "the one from the website
+  // looked great, just use that"). Same file the headers and icons already use.
+  appLogo: 'logo-vert.png', appLogoPending: false,
   email: 'newportcountydinnerclub@gmail.com',
   buyUrl: 'https://square.link/u/MWVwkI9s',
   renewUrl: 'https://square.link/u/XqJux7Uh',
