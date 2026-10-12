@@ -114,6 +114,10 @@ const SOCIAL = {
 "facebook": "https://www.facebook.com/Pickles-A-Deli-734100003610415",
 "instagram": "https://www.instagram.com/pickles_adeli/"
 },
+"pour-judgement": {
+"facebook": "https://www.facebook.com/pour.judgement",
+"instagram": "https://www.instagram.com/pour_judgement/"
+},
 "quencher": {
 "instagram": "https://www.instagram.com/thequenchernewport/"
 },
@@ -145,6 +149,10 @@ const SOCIAL = {
 "tavern-broadway": {
 "facebook": "https://www.facebook.com/tavernonbroadwaynewport",
 "instagram": "http://instagram.com/tavernonbroadway"
+},
+"the-deck": {
+"facebook": "https://www.facebook.com/1424984051051522",
+"instagram": "https://www.instagram.com/thedeck_npt"
 },
 "vieste": {
 "facebook": "https://www.facebook.com/viestesimplyitalian/",
