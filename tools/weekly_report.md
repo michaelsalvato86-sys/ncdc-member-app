@@ -1,4 +1,4 @@
-# Dinner Club weekly refresh - 2026-10-12 18:42
+# Dinner Club weekly refresh - 2026-10-19 16:17
 
 **Result:** OK
 **Menus on the app:** 56 restaurants (was 56)
@@ -8,7 +8,7 @@
 ```
 17 menus published of 61 checked
   1639                   too few items (1, text) - link only (kept last good copy)
-  22-bowens              ok 193 items (structured+rendered)
+  22-bowens              ok 194 items (structured+rendered)
   annies                 too few items (0, text) - link only (kept last good copy)
   aquidneck-pizzeria     kept checked copy (scrape found 117 items by linked-pdf)
   bagel-boys             no menu url
@@ -23,7 +23,7 @@
   caleb-broad            too few items (2, text) - link only
   claw-hammer            kept checked copy (scrape found 6 items by linked-pdf)
   cluck-house            ok 83 items (structured)
-  diegos                 too few items (0, text) - link only (kept last good copy)
+  diegos                 too few items (0, text+rendered) - link only (kept last good copy)
   east-ferry             too few items (5, text) - link only (kept last good copy)
   flos                   kept checked copy (scrape found 15 items by text)
   flos-drive-in          kept checked copy (scrape found 6 items by text)
@@ -32,7 +32,7 @@
   helmway                ok 7 items (structured)
   hooked                 too few items (0, text) - link only
   hungry-monkey          too few items (1, text) - link only (kept last good copy)
-  jos                    kept checked copy (scrape found 18 items by text)
+  jos                    kept checked copy (scrape found 17 items by text)
   jt-commons             ok 147 items (structured+rendered)
   kitchen-table          too few items (0, text) - link only
   la-forge               ok 44 items (structured)
@@ -42,7 +42,7 @@
   marcos                 kept checked copy (scrape found 23 items by linked-pdf)
   martinos               ok 24 items (structured)
   mews                   too few items (0, text) - link only (kept last good copy)
-  mooring                ok 369 items (structured+rendered)
+  mooring                ok 368 items (structured+rendered)
   north-end              no menu url (kept checked copy)
   obriens                no menu url (kept checked copy)
   one-bellevue           no menu url
@@ -53,7 +53,7 @@
   portsmouth-publick     ok 90 items (structured+rendered)
   pour-judgement         no menu url (kept checked copy)
   quencher               too few items (0, text) - link only
-  red-parrot             too few items (0, text) - link only (kept last good copy)
+  red-parrot             too few items (4, text+rendered) - link only (kept last good copy)
   reef                   ok 78 items (structured)
   saltwater              too few items (5, pdf) - link only (kept last good copy)
   skiff-bar              too few items (0, text) - link only

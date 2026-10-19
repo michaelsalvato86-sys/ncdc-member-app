@@ -41,10 +41,6 @@ const SOCIAL = {
 "cluck-house": {
 "instagram": "https://www.instagram.com/cluckhousenewport"
 },
-"diegos": {
-"facebook": "https://www.facebook.com/DiegosBarrioCantina/",
-"instagram": "https://www.instagram.com/diegos_barrio_cantina/"
-},
 "east-ferry": {
 "facebook": "https://www.facebook.com/EastFerryDeli/",
 "x": "https://www.x.com/EastFerryDeli"

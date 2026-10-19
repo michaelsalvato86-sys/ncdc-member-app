@@ -255,7 +255,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "22-bowens": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -756,34 +756,34 @@ const MENUS = {
 "price": "$14.00"
 },
 {
-"desc": "NRG bespoke gin, lemon, prosecco, blackberry pearls",
-"name": "Bespoke",
+"desc": "rye, amaro, ginger, lemon",
+"name": "Bitter End",
 "price": "$18.00"
 },
 {
-"desc": "bourbon, raspberry, vanilla, lemon, soda",
-"name": "Whoopsie Daisy",
+"desc": "dark rum, orange, vanilla, lime",
+"name": "Velvet Orange",
+"price": "$16.00"
+},
+{
+"desc": "peach, raspberry, club soda, prosecco",
+"name": "Peach Please",
 "price": "$18.00"
 },
 {
-"desc": "blanco tequila, triple sec, dragon fruit, lime, black salt rim",
-"name": "Dragon Fruit Margarita",
-"price": "$16.00"
+"desc": "vodka, Galliano, autocrat syrup, club soda",
+"name": "Rhode Island Root Beer",
+"price": "$15.00"
 },
 {
-"desc": "passionfruit liquor, prosecco, soda",
-"name": "Passion Fruit Spritz",
-"price": "$16.00"
+"desc": "reposado tequila, pear shrub, lime",
+"name": "Gilded Pear",
+"price": "$15.00"
 },
 {
-"desc": "plantation pineapple rum, chipotle coconut puree, lime",
-"name": "Portside Punch",
-"price": "$18.00"
-},
-{
-"desc": "vodka, grapefruit shrub, lime, soda",
-"name": "Dove In A Shrub",
-"price": "$16.00"
+"desc": "Soul Cachaca, house-made cherry syrup, lime",
+"name": "Black Cherry Caipirinha",
+"price": "$15.00"
 },
 {
 "desc": "tito's, 22b steakhouse sauce, horseradish, tomato, lemon",
@@ -802,17 +802,17 @@ const MENUS = {
 "items": [
 {
 "desc": "dragon fruit, lime, soda",
-"name": "Dragon Fruit Limeade",
-"price": "$14.00"
+"name": "Cherry Reserve",
+"price": "$15.00"
 },
 {
-"desc": "grapefruit shrub, lime soda",
-"name": "Sweet & Tart Spritz",
+"desc": "pear shrub, lime, club soda",
+"name": "Pear Necessities",
 "price": "$13.00"
 },
 {
-"desc": "coconut, pineapple, lime, hand shaken, dusted with nutmeg",
-"name": "Tropical Daydream",
+"desc": "orange, vanilla bean, club soda",
+"name": "Orange Dreamsicle",
 "price": "$14.00"
 },
 {
@@ -1154,6 +1154,11 @@ const MENUS = {
 "desc": "vanilla vodka, white chocolate, Amaretto, Bailey’s, orange liquor, pistachio rim",
 "name": "Dubai Chocolate Martini",
 "price": "$22.00"
+},
+{
+"desc": "house-made biscotti liquor, espresso, salted caramel chocolate chunk gelato",
+"name": "Ultimate Affogato",
+"price": "$20.00"
 },
 {
 "desc": "",
@@ -3947,7 +3952,7 @@ const MENUS = {
 "source": "https://benjaminsnewportri.com/"
 },
 "blue-plate": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "linked-pdf",
 "sections": [
 {
@@ -4339,7 +4344,7 @@ const MENUS = {
 "source": "https://www.blueplatedinerri.com/lunch-dinner"
 },
 "brick-alley": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "structured",
 "sections": [
 {
@@ -6297,7 +6302,7 @@ const MENUS = {
 "source": "https://www.clawnhammer.com/s/CLAW-AND-HAMMER-MENU-9226.pdf"
 },
 "cluck-house": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "structured",
 "sections": [
 {
@@ -8024,7 +8029,7 @@ const MENUS = {
 "source": "https://flosclamshacks.com/drive-in-menu"
 },
 "food-shack": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "structured",
 "sections": [
 {
@@ -9508,7 +9513,7 @@ const MENUS = {
 "source": "https://www.foodworksfamilyrestaurant.com/menu (Breakfast, Lunch, Drinks and Desserts PDFs)"
 },
 "helmway": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "structured",
 "sections": [
 {
@@ -11017,7 +11022,7 @@ const MENUS = {
 "source": "https://josamericanbistro.com/current-menu/ (+ /dessert-menu/, /childrens-menu/, /cocktail-menu/)"
 },
 "jt-commons": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -11733,12 +11738,12 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "Hot Fudge, Salted Caramel, Strawberry Jam, Peanut Butter Sauce, Lemon Jam, Dulce de Leche",
+"desc": "Hot Fudge, Salted Caramel, Maple-Apple Compote, Peanut Butter Sauce, Pumpkin Sauce",
 "name": "House Made Drizzles | Add  each",
 "price": "$1"
 },
 {
-"desc": "Shortcake Crumble, Strawberry Shortcake Crumble, Caramel Corn, Peanut Brittle, Chocolate Pretzels, Brownie Bites, Chocolate Chip Cookie Dough, Rum Raisin",
+"desc": "Oat Streusel, Caramel Corn, Peanut Brittle, Chocolate Pretzels, Brownie Bites, Chocolate Chip Cookie Crumble, Rum Raisin",
 "name": "Premium Toppings | Add  each",
 "price": "$1"
 },
@@ -11753,13 +11758,13 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "vanilla soft serve, lemon jam, coconut",
-"name": "Del’s-ish",
+"desc": "vanilla soft serve, pumpkin sauce, candied pecans",
+"name": "Pumpkin Praline",
 "price": "$9.00"
 },
 {
-"desc": "vanilla soft serve, strawberry jam, shortcake crumble",
-"name": "Strawberry Shortcake",
+"desc": "vanilla soft serve, oat streusel, maple-apple compote",
+"name": "Apple Pie",
 "price": "$9.00"
 },
 {
@@ -11784,12 +11789,12 @@ const MENUS = {
 "items": [
 {
 "desc": "",
-"name": "Strawberry Rhubarb Lemonade Cake",
+"name": "Chocolate Peanut Butter Cake",
 "price": "$9.00"
 },
 {
 "desc": "",
-"name": "Chocolate Mascarpone Cake",
+"name": "Caramel Apple Cake",
 "price": "$9.00"
 },
 {
@@ -11838,8 +11843,8 @@ const MENUS = {
 "price": "$13.00"
 },
 {
-"desc": "vanilla soft serve, lemon jam, limoncello, vanilla bitters, shortcake crumble",
-"name": "“Lemonades”",
+"desc": "twist or chocolate, Creme de Cacao, brownie bites, caramel",
+"name": "“Adventurefuls”",
 "price": "$13.00"
 },
 {
@@ -12172,7 +12177,7 @@ const MENUS = {
 "source": "https://www.opentable.com/r/the-kitchen-table-middletown"
 },
 "la-forge": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "structured",
 "sections": [
 {
@@ -12712,7 +12717,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "mainsail": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "structured",
 "sections": [
 {
@@ -13968,7 +13973,7 @@ const MENUS = {
 "source": "https://www.marcosri.com/ (+ catering PDF https://www.marcosri.com/_files/ugd/e3afd1_f53a39f598a0494db8ad3762944ee226.pdf)"
 },
 "martinos": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "structured",
 "sections": [
 {
@@ -14623,7 +14628,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "mooring": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -15222,11 +15227,6 @@ const MENUS = {
 "desc": "Providence, RI | New England IPA",
 "name": "long live beerworks ‘invisible ipa’ - 7%",
 "price": "$12.00"
-},
-{
-"desc": "Warwick, RI | New England IPA",
-"name": "PROCLAMATION 'ORDINARY MAN' - 6.5%",
-"price": "$10.00"
 },
 {
 "desc": "Portland, ME | Copper Ale",
@@ -15847,6 +15847,11 @@ const MENUS = {
 "desc": "",
 "name": "2022 archenes, moinoterra crete, greece",
 "price": "$69.00"
+},
+{
+"desc": "",
+"name": "2023 zinfandel, hartford russian river, california",
+"price": "$90.00"
 }
 ],
 "title": "Interesting Reds"
@@ -17383,20 +17388,20 @@ const MENUS = {
 "source": "https://b3177136.assetcdn.net/3177136/wp-content/uploads/2025/06/UPDATED-MENU_compressed-pdf.jpg"
 },
 "perro-salado": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "structured",
 "sections": [
 {
 "items": [
 {
-"desc": "",
-"name": "SMOKE IN THE ORCHARD",
-"price": "$13"
+"desc": "Creamy Butternut Squash Soup Topped with Toasted Pipians, Sour Cream, Cilantro, Chili Oil and Cotija.",
+"name": "BUTTERNUT-SUNDRIED TOMATO SOUP",
+"price": "$12"
 },
 {
-"desc": "",
-"name": "JALAPENO POPPER EGG ROLLS",
-"price": "$12"
+"desc": "Citrus Spice Marinated Lamb with Sautéed Onions & Peppers, Jalapeno-Tzatziki,",
+"name": "LAMB FAJITA",
+"price": "$26"
 },
 {
 "desc": "Served with Tortilla Chips, Warm Tostones and Toasted Pipians",
@@ -18469,7 +18474,7 @@ const MENUS = {
 "source": "https://www.internationalpocketcafe.com/"
 },
 "portsmouth-publick": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -20049,7 +20054,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "reef": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "structured",
 "sections": [
 {
@@ -20851,7 +20856,7 @@ const MENUS = {
 "source": "https://irismiddlewareprodv4weu.blob.core.windows.net/fileresources/public/iris/MRIOTE/MARHOT/PVDLW/SKIFF26.pdf"
 },
 "stoneacre-brasserie": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "structured",
 "sections": [
 {
@@ -22103,7 +22108,7 @@ const MENUS = {
 "source": "https://www.stoneacrebrasserie.com/newport-historic-hill-stoneacre-brasserie-food-menu"
 },
 "stoneacre-garden": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "structured",
 "sections": [
 {
@@ -24547,7 +24552,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "vieste": {
-"checked": "2026-10-12T18:35:51+00:00",
+"checked": "2026-10-19T16:11:59+00:00",
 "how": "structured",
 "sections": [
 {
