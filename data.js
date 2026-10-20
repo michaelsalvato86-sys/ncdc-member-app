@@ -27,6 +27,10 @@ const CLUB = {
   email: 'newportcountydinnerclub@gmail.com',
   buyUrl: 'https://square.link/u/MWVwkI9s',
   renewUrl: 'https://square.link/u/XqJux7Uh',
+  // 2026-2027 season: physical books only (Michael, 2026-10-20: "we have to stick with the physical books").
+  // The app is a dining guide: restaurants, menus, maps, links. No sign-in, digital card or in-app redemption.
+  // Set true to bring the card back; the sign-in, redeem and Supabase code are all still in index.html.
+  digitalCard: false,
   partnerFormUrl: 'https://aqddirfs.paperform.co/',
   // Prices from the club site, 2026-10-08. The $17 online price is an end-of-year special; update when it ends.
   price: { online: 17, regular: 27, retail: 25 },

@@ -195,6 +195,11 @@ body.tabbed #home,body.tabbed #club,body.tabbed #rests{padding-bottom:calc(var(-
 .tabs div{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr)}
 .tab{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;font-weight:600;color:var(--ink-300);padding:6px 0}
 .tab.on{color:var(--water-600)}
+body.guide .applogo,body.guide .dinein,body.guide .demo-ribbon,body.guide #signout,body.guide .card,body.guide #tour,body.guide #opt-portal,body.guide #dt-pass,body.guide .card-only{display:none!important}
+.bookcue{display:flex;gap:12px;align-items:center;margin:-16px 0 14px;padding:15px 16px;border-radius:14px;background:var(--brick-500);color:#fff;box-shadow:0 10px 22px rgba(156,60,37,.28)}
+.bookcue b{display:block;font-size:16px}.bookcue small{display:block;font-size:13px;opacity:.88;margin-top:2px;line-height:1.4}
+.gd-hero{max-width:528px;margin:14px auto 0;width:calc(100% - 32px);background:#fff;border:1.5px solid var(--harbor-400);border-radius:16px;padding:14px 16px}
+.gd-hero>b{display:block;color:var(--water-600);font-size:16px;margin-bottom:4px}.gd-hero p{font-size:14px;color:var(--ink-500);line-height:1.5}
 body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
 
 /* the club (book) */
@@ -441,7 +446,7 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
     </div>
 
     <h2>Good through</h2>
-    <p class="body">Books are valid from <b>December 1st</b> through <b>November 30th</b>. Your card follows the same season.</p>
+    <p class="body">Books are valid from <b>December 1st</b> through <b>November 30th</b>.<span class="card-only"> Your card follows the same season.</span></p>
 
     <h2>In good company</h2>
     <div class="quote">“The Newport County Dinner Club is a wise investment.”<small>Money Magazine</small></div>
@@ -466,7 +471,7 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
     <div class="signup-qr"><div id="cl-qr" aria-label="QR code for the restaurant interest form"></div><span>Share this code with a restaurant owner. It opens the interest form.</span></div>
     <div class="cl-btns">
       <a class="btn ghost" id="cl-signup" target="_blank" rel="noopener" style="text-align:center;text-decoration:none">Request to join (restaurants)</a>
-      <a class="btn ghost" href="partner/" style="text-align:center;text-decoration:none">Approved restaurants: set up your code</a>
+      <a class="btn ghost card-only" href="partner/" style="text-align:center;text-decoration:none">Approved restaurants: set up your code</a>
     </div>
 
     <h2>Need to get in touch?</h2>
@@ -477,7 +482,7 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
 </section>
 
 <nav class="tabs" aria-label="Sections"><div>
-  <button class="tab" data-tab="card" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg>My card</button>
+  <button class="tab" data-tab="card" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg><span class="tab-home">My card</span></button>
   <button class="tab" data-tab="list" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3v8a2 2 0 0 0 2 2v8M5 3v5M9 3v5M17 21V3c-2 0-3 3-3 7h3"/></svg>Restaurants</button>
   <button class="tab" data-tab="club" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5zM4 19a2 2 0 0 1 2-2h13"/></svg>The Club</button>
 </div></nav>
@@ -492,6 +497,7 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
       <div class="mc-meta"><div>Member no.<b id="mc-num"></b></div><div>Valid<b id="mc-valid"></b></div><div>Used<b id="mc-used"></b></div></div>
     </div>
   </div>
+  <div class="gd-hero" id="gd-hero" hidden><b>Your guide to the Dinner Club restaurants</b><p>Find a place to eat, see menus, book a table and get directions. To get your two-for-one, bring your <b>Dinner Club book</b> and present it to your server.</p></div>
   <div class="tour" id="tour" hidden>
     <div class="tour-head"><b>You're in. Here's what's inside.</b><button id="tour-x" type="button" aria-label="Close">Close</button></div>
     <button class="tour-i" data-t="list" type="button"><span>1</span><div><b>See every restaurant</b><small>All 58, with search and filters</small></div></button>
@@ -501,13 +507,16 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
     <a class="tour-i" href="portal/"><span>5</span><div><b>What restaurants see</b><small>Their dashboard, specials and code setup</small></div></a>
   </div>
   <nav class="opts" aria-label="More options">
-    <button class="opt" id="opt-renew" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6.5 15h4"/></svg><b>Join or renew</b><small>Pay with Apple Pay</small></button>
-    <a class="opt" href="portal/"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10h18M5 10v10h14V10M3 10l2-6h14l2 6M10 20v-5h4v5"/></svg><b>Restaurant view</b><small>Dashboard and specials</small></a>
-    <button class="opt" id="opt-help" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6M12 17h.01"/></svg><b>Help</b><small>Tour and how it works</small></button>
+    <button class="opt" id="opt-renew" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6.5 15h4"/></svg><b id="opt-renew-t">Join or renew</b><small id="opt-renew-s">Pay with Apple Pay</small></button>
+    <a class="opt" id="opt-portal" href="portal/"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10h18M5 10v10h14V10M3 10l2-6h14l2 6M10 20v-5h4v5"/></svg><b>Restaurant view</b><small>Dashboard and specials</small></a>
+    <button class="opt" id="opt-help" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6M12 17h.01"/></svg><b>Help</b><small id="opt-help-s">Tour and how it works</small></button>
   </nav>
   <div class="help" id="help" hidden>
+    <div class="card-only">
     <b>How your card works</b>
-    <ol><li>When you're ready to pay, tap the restaurant below.</li><li>Show your server the screen. The live clock proves it's your real card.</li><li>Your server applies the discount, then presses and holds the red button.</li></ol>
+    <ol><li>When you're ready to pay, tap the restaurant below.</li><li>Show your server the screen. The live clock proves it's your real card.</li><li>Your server applies the discount, then presses and holds the red button.</li></ol></div>
+    <div class="guide-only" hidden><b>How the Dinner Club works</b>
+    <ol><li>Pick a restaurant from the list or the map.</li><li>Bring your Dinner Club book and present it to your server when you order.</li><li>Order two entrées and the lower-priced one comes off the bill. Dine-in only.</li></ol></div>
     <p>Questions: <span id="help-mail"></span></p>
   </div>
   <div class="offer"><div><b id="offer-t"></b><span id="offer-d"></span></div></div>
@@ -560,6 +569,10 @@ const LS={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}
 const K_MEMBER='ncdc_member', K_USES='ncdc_uses', K_USES_LIVE='ncdc_uses_live', K_PARTNER='ncdc_partner_codes';
 let member=LS.get(K_MEMBER,null), uses=member&&member.live?LS.get(K_USES_LIVE,{}):LS.get(K_USES,{}), filter='all';
 const isLive=()=>!!(member&&member.live);
+// Guide mode (CLUB.digitalCard false): no sign-in, no card, no redemption. Members use the physical book.
+const GUIDE=CLUB.digitalCard===false;
+if(GUIDE){ member=null; uses={}; document.body.classList.add('guide');
+  document.querySelectorAll('.guide-only').forEach(e=>e.hidden=false); }
 const partner=LS.get(K_PARTNER,{});            // codes saved from /partner/ on this device (demo)
 RESTAURANTS.forEach(r=>{ if(partner[r.id]) r.code=partner[r.id]; });
 
@@ -573,7 +586,7 @@ $('#si-buy').href=CLUB.buyUrl;
 [$('#si-mail'),$('#ft-mail')].forEach(a=>{a.href='mailto:'+CLUB.email;a.textContent=CLUB.email});
 $('#offer-t').textContent=CLUB.offer; $('#offer-d').textContent=CLUB.offerDetail;
 
-function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===id));document.body.classList.toggle('tabbed',!!member&&(id==='home'||id==='club'||id==='rests'));if(id==='home'){setTab('card');setTimeout(homeMap,30)}window.scrollTo(0,0)}
+function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===id));document.body.classList.toggle('tabbed',(GUIDE||!!member)&&(id==='home'||id==='club'||id==='rests'));if(id==='home'){setTab('card');setTimeout(homeMap,30)}window.scrollTo(0,0)}
 
 // ---- sign in ----
 $('#si-demo').addEventListener('click',()=>{const d=DEMO_MEMBERS[0];$('#si-email').value=d.email;$('#si-num').value=d.number;$('#si-zip').value='02840';$('#si-form').requestSubmit()});
@@ -666,6 +679,7 @@ $('#jn-activate').addEventListener('click',()=>{const p=LS.get(K_PENDING,null);i
 
 // ---- options after sign-in ----
 $('#opt-renew').addEventListener('click',()=>{
+  if(GUIDE){window.open(CLUB.buyUrl,'_blank','noopener');return}
   if(member){$('#jn-name').value=member.name;$('#jn-email').value=member.email;document.querySelector('input[name=jt][value=renew]').checked=true}
   $('#jn-paid').hidden=true; renderPrice(); show('join');
 });
@@ -707,6 +721,11 @@ function usesFor(id){return (uses[id]||[]).length}
 function usedOn(id){const a=(uses[id]||[]);const lu=a[a.length-1];const t=lu&&lu.t?lu.t:lu;return t?new Date(t).toLocaleDateString('en-US',{month:'short',day:'numeric'}):''}
 function limitHit(id){return CLUB.usesPerRestaurant>0 && usesFor(id)>=CLUB.usesPerRestaurant}
 function renderHome(){
+  if(GUIDE){
+    const chips=[['all','All'],['seasonal','Seasonal & later']];
+    $('#chips').innerHTML=chips.map(([k,t])=>`<button class="chip${k===filter?' on':''}" data-f="${k}">${t}</button>`).join('');
+    return renderList();
+  }
   $('#mc-season').textContent=CLUB.season+' Member';
   const st=seasonState(), b=$('#mc-badge');
   b.className='mc-badge'+(st==='active'?' ok':'');
@@ -866,7 +885,8 @@ function openDetail(id,push){
     r.reserve?`<div><span>Booking</span><a href="${esc(r.reserve)}" target="_blank" rel="noopener">${esc(r.reservePlatform||'Reserve online')}</a></div>`:'',
     r.order?`<div><span>Takeout</span><a href="${esc(r.order)}" target="_blank" rel="noopener">Order online (Dinner Club discount not valid)</a></div>`:''
   ].join('');
-  $('#dt-body').innerHTML=`
+  const cue=GUIDE?`<div class="bookcue"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="flex:none"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5zM4 19a2 2 0 0 1 2-2h13"/></svg><div><b>Bring your Dinner Club book</b><small>Present it to your server for two-for-one entrées. Dine-in only.</small></div></div>`:'';
+  $('#dt-body').innerHTML=`${cue}
     <button class="use${used?' used':''}" id="dt-use" type="button">${used?'Used '+usedOn(id):'Use my card here'}<small>${used?'One use per restaurant each season':'Two-for-one entrées, dine-in only. Show this to your server.'}</small></button>
     <p class="dinein"><b>Dine-in only.</b> The Dinner Club discount is not valid on takeout, delivery or online orders.</p>
     <div class="acts">${book}${menu}${dir}${call}</div>
@@ -878,7 +898,7 @@ function openDetail(id,push){
     ${rows?`<div class="info">${rows}</div>`:''}
     ${r._confidence==='partial'?'<p class="dt-note"><b>Please call ahead.</b> Some of these details come from public listings, not the restaurant website.</p>':''}
     <p class="dt-note">Each restaurant sets its own dates, times, restrictions and blackout dates. Check with your server before ordering.</p>`;
-  $('#dt-use').addEventListener('click',()=>openRedeem(id));
+  if(!GUIDE)$('#dt-use').addEventListener('click',()=>openRedeem(id)); else $('#dt-use').remove();
   const d=$('#dt-dir'); if(d)d.addEventListener('click',()=>{const x=$('#dt-dirs');x.hidden=!x.hidden;d.classList.toggle('on',!x.hidden)});
   menuNav();
   $('#detail').dataset.id=id; $('#detail').classList.add('on'); $('#detail').scrollTop=0;
@@ -968,7 +988,16 @@ function bindHold(btn,id){
 }
 
 // boot
-if(location.hash==='#join'){openJoin()}
+if(GUIDE){
+  $('#gd-hero').hidden=false; document.querySelector('.tab-home').textContent='Home';
+  $('#opt-renew-t').textContent='Buy a book'; $('#opt-renew-s').textContent='Online, or at local stores';
+  $('#opt-help-s').textContent='How the club works';
+  const cj=$('#club [data-go=join]'); cj.textContent='Buy a book online'; cj.classList.remove('pay');
+  $('#opt-help').onclick=null;
+  renderHome(); show('home');
+  const deep=new URLSearchParams(location.search).get('r'); if(deep)openDetail(deep);
+}
+else if(location.hash==='#join'){openJoin()}
 else if(member){renderHome();show('home');
   if(isLive()) syncLive().then(()=>{ if(member){ renderHome(); if(member.signedOut) toast('Sign in again to use your card'); } }).catch(()=>{});
   const deep=new URLSearchParams(location.search).get('r'); if(deep)openDetail(deep);
