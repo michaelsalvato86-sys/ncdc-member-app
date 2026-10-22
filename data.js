@@ -37,6 +37,8 @@ const CLUB = {
 };
 
 // status: 'live' | 'seasonal' | 'later'   note: shown under the name
+// valid: the restaurant's offer dates / blackout days, shown on its page, e.g. valid: 'Monday to Thursday only'
+//        or 'All months except July and August'. From Katelyn's 2026-27 list (Katelyn, 2026-10-22). Never guess one.
 const RESTAURANTS = [
   { id: 'annies', name: "Annie's" },
   { id: 'aquidneck-pizzeria', name: 'Aquidneck Pizzeria & Bar', url: 'https://aqpizza.com' },

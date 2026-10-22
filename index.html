@@ -197,6 +197,8 @@ body.tabbed #home,body.tabbed #club,body.tabbed #rests{padding-bottom:calc(var(-
 .tab.on{color:var(--water-600)}
 body.guide .applogo,body.guide .dinein,body.guide .demo-ribbon,body.guide #signout,body.guide .card,body.guide #tour,body.guide #opt-portal,body.guide #dt-pass,body.guide .card-only{display:none!important}
 .bookcue{display:flex;gap:12px;align-items:center;margin:-16px 0 14px;padding:15px 16px;border-radius:14px;background:var(--brick-500);color:#fff;box-shadow:0 10px 22px rgba(156,60,37,.28)}
+body.guide .top{padding-bottom:26px}body.guide .top-row{justify-content:center}body.guide .top-row img{height:auto;width:min(300px,78vw)}
+.bookcue .valid{display:block;margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.3);font-size:14px;font-weight:600;opacity:1}
 .bookcue b{display:block;font-size:16px}.bookcue small{display:block;font-size:13px;opacity:.88;margin-top:2px;line-height:1.4}
 .gd-hero{max-width:528px;margin:14px auto 0;width:calc(100% - 32px);background:#fff;border:1.5px solid var(--harbor-400);border-radius:16px;padding:14px 16px}
 .gd-hero>b{display:block;color:var(--water-600);font-size:16px;margin-bottom:4px}.gd-hero p{font-size:14px;color:var(--ink-500);line-height:1.5}
@@ -468,7 +470,7 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
 
     <h2>For restaurant owners</h2>
     <p class="body">Completely free for participating restaurants. <b>Joining is by invitation:</b> send us your details and the Dinner Club team reviews eligibility before your restaurant is added. The restaurant signup deadline is <b>October 31, 2026</b>.</p>
-    <div class="signup-qr"><div id="cl-qr" aria-label="QR code for the restaurant interest form"></div><span>Share this code with a restaurant owner. It opens the interest form.</span></div>
+    <div class="signup-qr"><div id="cl-qr" aria-label="QR code for the restaurant interest form"></div><span>Restaurant owners: scan this code to ask about joining the Dinner Club.</span></div>
     <div class="cl-btns">
       <a class="btn ghost" id="cl-signup" target="_blank" rel="noopener" style="text-align:center;text-decoration:none">Request to join (restaurants)</a>
       <a class="btn ghost card-only" href="partner/" style="text-align:center;text-decoration:none">Approved restaurants: set up your code</a>
@@ -885,7 +887,7 @@ function openDetail(id,push){
     r.reserve?`<div><span>Booking</span><a href="${esc(r.reserve)}" target="_blank" rel="noopener">${esc(r.reservePlatform||'Reserve online')}</a></div>`:'',
     r.order?`<div><span>Takeout</span><a href="${esc(r.order)}" target="_blank" rel="noopener">Order online (Dinner Club discount not valid)</a></div>`:''
   ].join('');
-  const cue=GUIDE?`<div class="bookcue"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="flex:none"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5zM4 19a2 2 0 0 1 2-2h13"/></svg><div><b>Bring your Dinner Club book</b><small>Present it to your server for two-for-one entrées. Dine-in only.</small></div></div>`:'';
+  const cue=GUIDE?`<div class="bookcue"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="flex:none"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5zM4 19a2 2 0 0 1 2-2h13"/></svg><div><b>Bring your Dinner Club book</b><small>Present it to your server for two-for-one entrées. Dine-in only.</small><small class="valid">${r.valid?'Offer valid at '+esc(r.name)+': '+esc(r.valid):'Each restaurant sets its own dates and blackout days. Check your book or ask your server.'}</small></div></div>`:'';
   $('#dt-body').innerHTML=`${cue}
     <button class="use${used?' used':''}" id="dt-use" type="button">${used?'Used '+usedOn(id):'Use my card here'}<small>${used?'One use per restaurant each season':'Two-for-one entrées, dine-in only. Show this to your server.'}</small></button>
     <p class="dinein"><b>Dine-in only.</b> The Dinner Club discount is not valid on takeout, delivery or online orders.</p>
