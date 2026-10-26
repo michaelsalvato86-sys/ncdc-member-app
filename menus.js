@@ -255,7 +255,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "22-bowens": {
-"checked": "2026-10-19T16:11:59+00:00",
+"checked": "2026-10-26T15:50:55+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -279,16 +279,6 @@ const MENUS = {
 "desc": "",
 "name": "Lobster Cocktail",
 "price": "$38.00"
-},
-{
-"desc": "mango chili vinaigrette, avocado, pickled cucumber, wonton chips, furikake",
-"name": "Tuna Tartare*",
-"price": "$26.00"
-},
-{
-"desc": "chipotle sour vinaigrette, passionfruit pearls, micro arugula, crispy tortilla chips",
-"name": "Shrimp Ceviche*",
-"price": "$26.00"
 },
 {
 "desc": "lobster, littlenecks, shrimp & oysters",
@@ -316,9 +306,9 @@ const MENUS = {
 "price": "$25.00"
 },
 {
-"desc": "mussels, top necks, calamari, chourico sofrito",
-"name": "Frutti di Mare",
-"price": "$26.00"
+"desc": "steamed littleneck clams, garlic-white wine broth, grilled focaccia",
+"name": "Clams Zuppa",
+"price": "$27.00"
 },
 {
 "desc": "three-pepper mint relish, lemon",
@@ -336,9 +326,9 @@ const MENUS = {
 "price": "$24.00"
 },
 {
-"desc": "wagyu strip, bone marrow - mustard aioli, cornichon, shallot, caper, chives, tallow toasted brioche",
-"name": "Wagyu Tartare*",
-"price": "$32.00"
+"desc": "grilled sirloin, blue cheese-Boursin spread, red onion jam, crispy shallot",
+"name": "Prime Sirloin Bruschetta",
+"price": "$28.00"
 }
 ],
 "title": "Appetizers"
@@ -452,11 +442,6 @@ const MENUS = {
 },
 {
 "desc": "",
-"name": "Rack of Lamb 16oz.",
-"price": "$52.00"
-},
-{
-"desc": "",
 "name": "Daily Butcher’s Cut",
 "price": "MP"
 },
@@ -469,11 +454,6 @@ const MENUS = {
 "desc": "",
 "name": "Chinook Salmon*",
 "price": "$41.00"
-},
-{
-"desc": "",
-"name": "Daily Catch",
-"price": "MP"
 },
 {
 "desc": "",
@@ -502,11 +482,6 @@ const MENUS = {
 },
 {
 "desc": "",
-"name": "Westholmes Farms Australian Ribeye 16oz.",
-"price": "$125.00"
-},
-{
-"desc": "",
 "name": "New York Strip 14 oz",
 "price": "$56.00"
 },
@@ -526,19 +501,9 @@ const MENUS = {
 "price": "$28.00"
 },
 {
-"desc": "sauteed shrimp served in a garlic butter sauce with fresh tomato",
-"name": "Shrimp Scampi",
-"price": "$16.00"
-},
-{
-"desc": "topped with crab meat and hollandaise, over asparagus",
-"name": "Oscar Style",
-"price": "$21.00"
-},
-{
 "desc": "",
-"name": "Roasted Bone Marrow",
-"price": "$11.00"
+"name": "Karen Elizabeth Scallops*",
+"price": "$25.00"
 },
 {
 "desc": "panko, fresh summer truffle",
@@ -547,13 +512,18 @@ const MENUS = {
 },
 {
 "desc": "",
+"name": "Roasted Bone Marrow*",
+"price": "$11.00"
+},
+{
+"desc": "",
 "name": "Gorgonzola Crust",
 "price": "$8.00"
 },
 {
 "desc": "",
-"name": "Karen Elizabeth Scallops*",
-"price": "$25.00"
+"name": "Boursin Crust",
+"price": "$8.00"
 }
 ],
 "title": "Enhancements"
@@ -571,13 +541,13 @@ const MENUS = {
 "price": "$16.00"
 },
 {
-"desc": "mushrooms, 22B mashed potato, asparagus",
+"desc": "mushrooms, 22B mashed potato, creamed spinach",
 "name": "Side Trio Tasting",
 "price": "$17.00"
 },
 {
 "desc": "",
-"name": "Roasted Asparagus",
+"name": "Creamed Spinach",
 "price": "$15.00"
 },
 {
@@ -646,11 +616,6 @@ const MENUS = {
 "price": "$34.00"
 },
 {
-"desc": "coriander grilled salmon, cucumber yogurt, tomato relish, arugula, marinated cucumber, avocado, lemon-thyme vinaigrette",
-"name": "Salmon Naan*",
-"price": "$35.00"
-},
-{
 "desc": "flat iron, truffled potato wedges, chimichurri",
 "name": "Steak Frites*",
 "price": "$38.00"
@@ -686,9 +651,9 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "roasted garlic & whole-grain mustard aioli, swiss, sourdough, house-pickled cornichon",
-"name": "Wagyu Pastrami",
-"price": "$27.00"
+"desc": "bourbon onions, pickled peppadew peppers, Havarti, Boursin, arugula salad, toasted focaccia",
+"name": "Shaved Steak",
+"price": "$26.00"
 },
 {
 "desc": "warm garlic butter poached lobster, buttered grilled brioche OR cold lobster salad, lemon mayo, chives, buttered grilled brioche",
@@ -701,9 +666,14 @@ const MENUS = {
 "price": "$49.00"
 },
 {
-"desc": "calabrian chili aioli, gem lettuce, pickled onion, ciabatta",
-"name": "Chimichurri Grilled Chicken",
-"price": "$22.00"
+"desc": "peppers and onions, Havarti, avocado, poblano crema, sourdough",
+"name": "House-Roasted Turkey Breast",
+"price": "$23.00"
+},
+{
+"desc": "",
+"name": "Burgers*",
+"price": ""
 },
 {
 "desc": "lettuce, tomato, red onion, bacon, sharp cheddar, secret sauce, brioche bun",
@@ -719,6 +689,11 @@ const MENUS = {
 "desc": "2024 Newport \"Burger Bender\" Winner! Australian wagyu patty, french onion jam, crispy onion straws, havarti & gruyere, roasted garlic aïoli, toasted onion roll",
 "name": "French Onion",
 "price": "$34.00"
+},
+{
+"desc": "house-ground tuna, marinated cucumbers and onions, bibb lettuce, ginger-lemon Kewpie, poppy seed bun",
+"name": "Yellowfin Tuna",
+"price": "$27.00"
 }
 ],
 "title": "Sandwiches"
@@ -731,8 +706,8 @@ const MENUS = {
 "price": "$21.00"
 },
 {
-"desc": "steakhouse aioli",
-"name": "Roasted Asparagus",
+"desc": "",
+"name": "Creamed Spinach",
 "price": "$15.00"
 },
 {
@@ -3952,7 +3927,7 @@ const MENUS = {
 "source": "https://benjaminsnewportri.com/"
 },
 "blue-plate": {
-"checked": "2026-10-19T16:11:59+00:00",
+"checked": "2026-10-26T15:50:55+00:00",
 "how": "linked-pdf",
 "sections": [
 {
@@ -4344,7 +4319,7 @@ const MENUS = {
 "source": "https://www.blueplatedinerri.com/lunch-dinner"
 },
 "brick-alley": {
-"checked": "2026-10-19T16:11:59+00:00",
+"checked": "2026-10-26T15:50:55+00:00",
 "how": "structured",
 "sections": [
 {
@@ -6302,7 +6277,7 @@ const MENUS = {
 "source": "https://www.clawnhammer.com/s/CLAW-AND-HAMMER-MENU-9226.pdf"
 },
 "cluck-house": {
-"checked": "2026-10-19T16:11:59+00:00",
+"checked": "2026-10-26T15:50:55+00:00",
 "how": "structured",
 "sections": [
 {
@@ -8953,7 +8928,8 @@ const MENUS = {
 "title": "Boxed Meals"
 }
 ],
-"source": "https://www.401foodshack.com/menu/"
+"source": "https://www.401foodshack.com/menu/",
+"stale_since": "2026-10-26T15:50:55+00:00"
 },
 "foodworks": {
 "checked": "2026-10-09T00:39:40+00:00",
@@ -9513,7 +9489,7 @@ const MENUS = {
 "source": "https://www.foodworksfamilyrestaurant.com/menu (Breakfast, Lunch, Drinks and Desserts PDFs)"
 },
 "helmway": {
-"checked": "2026-10-19T16:11:59+00:00",
+"checked": "2026-10-26T15:50:55+00:00",
 "how": "structured",
 "sections": [
 {
@@ -11022,7 +10998,7 @@ const MENUS = {
 "source": "https://josamericanbistro.com/current-menu/ (+ /dessert-menu/, /childrens-menu/, /cocktail-menu/)"
 },
 "jt-commons": {
-"checked": "2026-10-19T16:11:59+00:00",
+"checked": "2026-10-26T15:50:55+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -11093,8 +11069,8 @@ const MENUS = {
 "price": "$13.00"
 },
 {
-"desc": "romaine, gorgonzola, hard boiled egg, bacon, grilled corn, avocado, red onion, grape tomatoes, blackened ranch",
-"name": "Summer Cobb",
+"desc": "romaine, gorgonzola, hard boiled egg, bacon, avocado, red onion, grape tomatoes, blackened ranch",
+"name": "Cobb",
 "price": "$15.00"
 },
 {
@@ -11133,8 +11109,8 @@ const MENUS = {
 "price": "$24.00"
 },
 {
-"desc": "mascarpone, mozzarella, gorgonzola, black mission fig, arugula, evoo",
-"name": "Black Fig & Speck",
+"desc": "pulled pork, fig BBQ, mozzarella, Grana Padano, pickled jalapeno, pickled red onion, scallion",
+"name": "Hot Figgy Piggy",
 "price": "$25.00"
 },
 {
@@ -11148,8 +11124,8 @@ const MENUS = {
 "price": "$23.00"
 },
 {
-"desc": "mozzarella, Grana Padano, grilled corn, cilantro-lime crema, cotija, scallions, crispy tahin crunch",
-"name": "The Luchador",
+"desc": "fonduta cheese sauce, mozzarella, Grana Padano, Schartner Farms sweet & golden potato, herbs, cranberry balsamic reduction",
+"name": "The Fall Guy",
 "price": "$22.00"
 },
 {
@@ -11223,9 +11199,9 @@ const MENUS = {
 "price": "$18.00"
 },
 {
-"desc": "tarragon dressing, celery salt, New England hot dog roll",
-"name": "Twin Lobster Rolls",
-"price": "$34.00"
+"desc": "slow roasted pork, prosciutto cotto, Swiss cheese, pickles, spicy mustard, French roll",
+"name": "The Cubano",
+"price": "$20.00"
 }
 ],
 "title": "Sandwiches"
@@ -11233,12 +11209,12 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "slow-roasted 1/2 or whole chicken with house-cut tallow fries, garlic aioli, street corn slaw. Choice of Sauce: red chimichurri or white BBQ sauce",
+"desc": "slow-roasted 1/2 or whole chicken with house-cut tallow fries, garlic aioli, harvest slaw. Choice of Sauce: red chimichurri or white BBQ sauce",
 "name": "Chicken & Fries",
 "price": ""
 },
 {
-"desc": "grilled, red chimichurri, hand-cut tallow fries, street corn slaw, garlic aioli",
+"desc": "grilled, red chimichurri, hand-cut tallow fries, harvest slaw, garlic aioli",
 "name": "Steak Frites *",
 "price": "$32.00"
 },
@@ -11248,7 +11224,7 @@ const MENUS = {
 "price": "$28.00"
 },
 {
-"desc": "oven-roasted salmon, pistachio gremolata, seasonal vegetable succotash, roasted tomato jam",
+"desc": "oven-roasted salmon, honey glazed, celery root puree, roasted fall vegetables, pepita chili crisp",
 "name": "Atlantic Salmon*",
 "price": "$28.00"
 },
@@ -11328,6 +11304,71 @@ const MENUS = {
 {
 "items": [
 {
+"desc": "romaine, garlic breadcrumbs, parmesan, shaved radish, fresh dill",
+"name": "Caesar Salad",
+"price": ""
+},
+{
+"desc": "chili, cilantro crema",
+"name": "Moroccan Lentil Soup",
+"price": ""
+},
+{
+"desc": "served with our house-made tortilla chips",
+"name": "Buffalo Chicken Dip",
+"price": ""
+},
+{
+"desc": "oven-roasted salmon, honey glazed roasted fall vegetables, pepita chili crisp, celery root puree",
+"name": "Atlantic Salmon",
+"price": ""
+},
+{
+"desc": "filet medallions, house cut truffle fries, chimichurri, garlic aioli",
+"name": "Classic Steak Frites",
+"price": ""
+},
+{
+"desc": "spicy vodka sauce, roasted tomatoes, Grana Padano, fresh basil, EVOO",
+"name": "Chef's Vodka Pie (Roman Style)",
+"price": ""
+},
+{
+"desc": "pulled pork, fig BBQ, mozzarella, Grana Padano, pickled jalapenos, pickled red onions, scallions",
+"name": "Hot Figgy Piggy (Roman Style)",
+"price": ""
+},
+{
+"desc": "slow roasted pork, prosciutto cotto, Swiss cheese, pickles, spicy mustard, French roll",
+"name": "The Cubano",
+"price": ""
+}
+],
+"title": "Choose One"
+},
+{
+"items": [
+{
+"desc": "vanilla soft serve, pumpkin sauce, candied pecans",
+"name": "Pumpkin Praline Sundae",
+"price": ""
+},
+{
+"desc": "vanilla soft serve, oat streusal, maple-apple compote",
+"name": "Apple Pie Sundae",
+"price": ""
+},
+{
+"desc": "",
+"name": "Chocolate Peanut Butter Cake",
+"price": ""
+}
+],
+"title": "Additional"
+},
+{
+"items": [
+{
 "desc": "Providence, RI",
 "name": "Long Live Beerworks PVD Pilsner",
 "price": "$8.00"
@@ -11336,11 +11377,6 @@ const MENUS = {
 "desc": "Providence, RI",
 "name": "Narragansett Lager",
 "price": "$7.00"
-},
-{
-"desc": "Cumberland, RI",
-"name": "Phantom Farms Time Off Witbier",
-"price": "$9.00"
 },
 {
 "desc": "Westerly, RI",
@@ -11439,8 +11475,8 @@ const MENUS = {
 },
 {
 "desc": "",
-"name": "Viva Tequila Seltzer Elderberry",
-"price": "$12.00"
+"name": "North Coast Tart Cherry Berliner Weisse",
+"price": "$9.00"
 },
 {
 "desc": "",
@@ -11450,6 +11486,11 @@ const MENUS = {
 {
 "desc": "",
 "name": "Surfside Strawberry Lemonade",
+"price": "$12.00"
+},
+{
+"desc": "",
+"name": "Viva Tequila Seltzer Elderberry",
 "price": "$12.00"
 },
 {
@@ -11618,8 +11659,8 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "lime, peppercorn, basil, sprite",
-"name": "Basilicious",
+"desc": "tomato shrub, lemon, ginger ale",
+"name": "Red October",
 "price": "$11.00"
 },
 {
@@ -12177,7 +12218,7 @@ const MENUS = {
 "source": "https://www.opentable.com/r/the-kitchen-table-middletown"
 },
 "la-forge": {
-"checked": "2026-10-19T16:11:59+00:00",
+"checked": "2026-10-26T15:50:55+00:00",
 "how": "structured",
 "sections": [
 {
@@ -12717,7 +12758,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "mainsail": {
-"checked": "2026-10-19T16:11:59+00:00",
+"checked": "2026-10-26T15:50:55+00:00",
 "how": "structured",
 "sections": [
 {
@@ -13973,7 +14014,7 @@ const MENUS = {
 "source": "https://www.marcosri.com/ (+ catering PDF https://www.marcosri.com/_files/ugd/e3afd1_f53a39f598a0494db8ad3762944ee226.pdf)"
 },
 "martinos": {
-"checked": "2026-10-19T16:11:59+00:00",
+"checked": "2026-10-26T15:50:55+00:00",
 "how": "structured",
 "sections": [
 {
@@ -14628,7 +14669,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "mooring": {
-"checked": "2026-10-19T16:11:59+00:00",
+"checked": "2026-10-26T15:50:55+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -17388,19 +17429,14 @@ const MENUS = {
 "source": "https://b3177136.assetcdn.net/3177136/wp-content/uploads/2025/06/UPDATED-MENU_compressed-pdf.jpg"
 },
 "perro-salado": {
-"checked": "2026-10-19T16:11:59+00:00",
+"checked": "2026-10-26T15:50:55+00:00",
 "how": "structured",
 "sections": [
 {
 "items": [
 {
-"desc": "Creamy Butternut Squash Soup Topped with Toasted Pipians, Sour Cream, Cilantro, Chili Oil and Cotija.",
-"name": "BUTTERNUT-SUNDRIED TOMATO SOUP",
-"price": "$12"
-},
-{
-"desc": "Citrus Spice Marinated Lamb with Sautéed Onions & Peppers, Jalapeno-Tzatziki,",
-"name": "LAMB FAJITA",
+"desc": "Lightly Seasoned Mahi, pan-seared then simmered in Veracruz Sauce of Tomato, Onions, Garlic, Capers, Green Olive,",
+"name": "MAHI VERACRUZ",
 "price": "$26"
 },
 {
@@ -18474,7 +18510,7 @@ const MENUS = {
 "source": "https://www.internationalpocketcafe.com/"
 },
 "portsmouth-publick": {
-"checked": "2026-10-19T16:11:59+00:00",
+"checked": "2026-10-26T15:50:55+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -20054,7 +20090,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "reef": {
-"checked": "2026-10-19T16:11:59+00:00",
+"checked": "2026-10-26T15:50:55+00:00",
 "how": "structured",
 "sections": [
 {
@@ -20856,7 +20892,7 @@ const MENUS = {
 "source": "https://irismiddlewareprodv4weu.blob.core.windows.net/fileresources/public/iris/MRIOTE/MARHOT/PVDLW/SKIFF26.pdf"
 },
 "stoneacre-brasserie": {
-"checked": "2026-10-19T16:11:59+00:00",
+"checked": "2026-10-26T15:50:55+00:00",
 "how": "structured",
 "sections": [
 {
@@ -22108,7 +22144,7 @@ const MENUS = {
 "source": "https://www.stoneacrebrasserie.com/newport-historic-hill-stoneacre-brasserie-food-menu"
 },
 "stoneacre-garden": {
-"checked": "2026-10-19T16:11:59+00:00",
+"checked": "2026-10-26T15:50:55+00:00",
 "how": "structured",
 "sections": [
 {
@@ -24552,7 +24588,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "vieste": {
-"checked": "2026-10-19T16:11:59+00:00",
+"checked": "2026-10-26T15:50:55+00:00",
 "how": "structured",
 "sections": [
 {
