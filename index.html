@@ -18,7 +18,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js"></script>
 <script src="data.js"></script>
 <script>window.SB_CONFIG={url:"https://tjzxgrworbbauqtvcnjh.supabase.co",anon:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRqenhncndvcmJiYXVxdHZjbmpoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE1ODE1MjgsImV4cCI6MjEwNzE1NzUyOH0.JcjA5NlzSWZR8HYSHEQoV_aH6lV7nJUTdN7JVJWs6GY",app:"dinnerclub",storageKey:"sb-dinnerclub",guest:false};</script>
-<script src="sb.js"></script>
+<script>/* Guide-only season: the member back end (sb.js -> Supabase) loads only when CLUB.digitalCard is on. */
+if(typeof CLUB==="undefined"||CLUB.digitalCard!==false)document.write('<script src="sb.js"><\/script>');</script>
 <script src="info.js"></script>
 <script src="menus.js"></script>
 <script src="geo.js"></script>
@@ -199,6 +200,7 @@ body.guide .applogo,body.guide .dinein,body.guide .demo-ribbon,body.guide #signo
 .bookcue{display:flex;gap:12px;align-items:center;margin:-16px 0 14px;padding:15px 16px;border-radius:14px;background:var(--brick-500);color:#fff;box-shadow:0 10px 22px rgba(156,60,37,.28)}
 body.guide .top{padding-bottom:26px}body.guide .top-row{justify-content:center}body.guide .top-row img{height:auto;width:min(300px,78vw)}
 .bookcue .valid{display:block;margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.3);font-size:14px;font-weight:600;opacity:1}
+.osm-credit{position:absolute;right:6px;bottom:4px;z-index:500;font-size:10px;color:#3c4a63;background:rgba(255,255,255,.8);padding:1px 5px;border-radius:4px;pointer-events:none}
 .bookcue b{display:block;font-size:16px}.bookcue small{display:block;font-size:13px;opacity:.88;margin-top:2px;line-height:1.4}
 .gd-hero{max-width:528px;margin:14px auto 0;width:calc(100% - 32px);background:#fff;border:1.5px solid var(--harbor-400);border-radius:16px;padding:14px 16px}
 .gd-hero>b{display:block;color:var(--water-600);font-size:16px;margin-bottom:4px}.gd-hero p{font-size:14px;color:var(--ink-500);line-height:1.5}
@@ -479,7 +481,7 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
     <h2>Need to get in touch?</h2>
     <p class="body">Email us and we'll get back to you: <span class="mail"></span></p>
 
-    <p class="fine">*The Newport County Dinner Club is a two-for-one dining program. An entrée is defined as the main course of a meal as identified on the participating restaurant's standard menu. When two entrées of different prices are ordered, the least expensive qualifying entrée will be deducted. Appetizers and desserts are not considered entrées. Participating restaurants may establish individual valid dates, times, restrictions and blackout dates.<br>© 2026 Newport County Dinner Club.</p>
+    <p class="fine">*The Newport County Dinner Club is a two-for-one dining program. An entrée is defined as the main course of a meal as identified on the participating restaurant's standard menu. When two entrées of different prices are ordered, the least expensive qualifying entrée will be deducted. Appetizers and desserts are not considered entrées. Participating restaurants may establish individual valid dates, times, restrictions and blackout dates.<br>© 2026 Newport County Dinner Club. <a href="privacy.html">Privacy policy</a> · <a href="support.html">Help and contact</a></p>
   </div>
 </section>
 
@@ -805,6 +807,7 @@ let hmap=null;
 function homeMap(){const el=$('#hmap');if(!el||typeof L==='undefined'||!$('#home').classList.contains('on'))return;
   if(!hmap){hmap=L.map(el,{zoomControl:false,dragging:false,scrollWheelZoom:false,doubleClickZoom:false,touchZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18}).addTo(hmap);
+    el.insertAdjacentHTML('beforeend','<span class="osm-credit">&copy; OpenStreetMap contributors</span>');
     const pts=RESTAURANTS.filter(r=>r.geo).map(r=>{L.circleMarker(r.geo,{radius:5,weight:1.5,color:'#fff',fillColor:'#194e8f',fillOpacity:1}).addTo(hmap);return r.geo});
     hmap.fitBounds(L.latLngBounds(pts).pad(0.08));
     el.addEventListener('click',()=>openRests(''));el.addEventListener('keydown',e=>{if(e.key==='Enter')openRests('')});}
