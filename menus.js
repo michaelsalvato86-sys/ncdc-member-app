@@ -255,7 +255,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "22-bowens": {
-"checked": "2026-10-26T15:50:55+00:00",
+"checked": "2026-11-02T19:11:36+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -3927,7 +3927,7 @@ const MENUS = {
 "source": "https://benjaminsnewportri.com/"
 },
 "blue-plate": {
-"checked": "2026-10-26T15:50:55+00:00",
+"checked": "2026-11-02T19:11:36+00:00",
 "how": "linked-pdf",
 "sections": [
 {
@@ -4319,7 +4319,7 @@ const MENUS = {
 "source": "https://www.blueplatedinerri.com/lunch-dinner"
 },
 "brick-alley": {
-"checked": "2026-10-26T15:50:55+00:00",
+"checked": "2026-11-02T19:11:36+00:00",
 "how": "structured",
 "sections": [
 {
@@ -6277,7 +6277,7 @@ const MENUS = {
 "source": "https://www.clawnhammer.com/s/CLAW-AND-HAMMER-MENU-9226.pdf"
 },
 "cluck-house": {
-"checked": "2026-10-26T15:50:55+00:00",
+"checked": "2026-11-02T19:11:36+00:00",
 "how": "structured",
 "sections": [
 {
@@ -9489,7 +9489,7 @@ const MENUS = {
 "source": "https://www.foodworksfamilyrestaurant.com/menu (Breakfast, Lunch, Drinks and Desserts PDFs)"
 },
 "helmway": {
-"checked": "2026-10-26T15:50:55+00:00",
+"checked": "2026-11-02T19:11:36+00:00",
 "how": "structured",
 "sections": [
 {
@@ -10998,7 +10998,7 @@ const MENUS = {
 "source": "https://josamericanbistro.com/current-menu/ (+ /dessert-menu/, /childrens-menu/, /cocktail-menu/)"
 },
 "jt-commons": {
-"checked": "2026-10-26T15:50:55+00:00",
+"checked": "2026-11-02T19:11:36+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -12218,7 +12218,7 @@ const MENUS = {
 "source": "https://www.opentable.com/r/the-kitchen-table-middletown"
 },
 "la-forge": {
-"checked": "2026-10-26T15:50:55+00:00",
+"checked": "2026-11-02T19:11:36+00:00",
 "how": "structured",
 "sections": [
 {
@@ -12758,7 +12758,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "mainsail": {
-"checked": "2026-10-26T15:50:55+00:00",
+"checked": "2026-11-02T19:11:36+00:00",
 "how": "structured",
 "sections": [
 {
@@ -14014,7 +14014,7 @@ const MENUS = {
 "source": "https://www.marcosri.com/ (+ catering PDF https://www.marcosri.com/_files/ugd/e3afd1_f53a39f598a0494db8ad3762944ee226.pdf)"
 },
 "martinos": {
-"checked": "2026-10-26T15:50:55+00:00",
+"checked": "2026-11-02T19:11:36+00:00",
 "how": "structured",
 "sections": [
 {
@@ -14669,7 +14669,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "mooring": {
-"checked": "2026-10-26T15:50:55+00:00",
+"checked": "2026-11-02T19:11:36+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -14678,6 +14678,11 @@ const MENUS = {
 "desc": "daily selection of up to four; mignonette, cocktail sauce",
 "name": "Oysters*",
 "price": "$3.50"
+},
+{
+"desc": "calamansi crema, dill oil, kaluga caviar",
+"name": "Dressed Oysters",
+"price": "$24.00"
 },
 {
 "desc": "",
@@ -14701,11 +14706,6 @@ const MENUS = {
 },
 {
 "desc": "",
-"name": "Whole Chilled Lobster",
-"price": "$38.00"
-},
-{
-"desc": "",
 "name": "Shrimp Cocktail",
 "price": "$4.50"
 },
@@ -14725,12 +14725,7 @@ const MENUS = {
 "price": "$9.00"
 },
 {
-"desc": "calamansi crema, dill oil, kaluga caviar",
-"name": "Dressed Oysters",
-"price": "$24.00"
-},
-{
-"desc": "pickled white strawberry, fresh strawberry, jalapeno, hibiscus-rhubarb broth",
+"desc": "king salmon, pickled beets, citrus, shaved fennel, hazelnut crunch, evoo",
 "name": "Market Crudo*",
 "price": "$19.00"
 },
@@ -14743,11 +14738,6 @@ const MENUS = {
 "desc": "9 shrimp, 9 littlenecks, 9 oysters, 6 jonah crab claws, market crudo, whole chilled lobster",
 "name": "The Highbrow*",
 "price": "$164.00"
-},
-{
-"desc": "sweet corn churros, sauce gribice, fine herbs",
-"name": "Giavara Osetra Caviar, 30g",
-"price": "$105.00"
 }
 ],
 "title": "The Raw Bar"
@@ -14923,25 +14913,15 @@ const MENUS = {
 "desc": "crispy polenta, swiss chard, sauce vierge",
 "name": "Tuna*",
 "price": "$36.00"
-}
-],
-"title": "From the Water"
 },
 {
-"items": [
-{
-"desc": "roasted garlic mashed potato, asparagus, sea urchin butter",
-"name": "Filet Mignon*",
-"price": "$55.00"
+"desc": "bavette, truffle fries, roasted garlic aioli, red chimichurri",
+"name": "MOO Frites*",
+"price": "$37.00"
 },
 {
-"desc": "dry aged pork chop, manilla clams, fennel-lemongrass pan sauce, sourdough",
-"name": "Pork & Clams*",
-"price": "$32.00"
-},
-{
-"desc": "baby carrots, ancient grains, dukkha, whipped tahini, salsa verde",
-"name": "roasted summer plate",
+"desc": "roasted squashes, cauliflower, ancient grains, whipped tahini, dukkha",
+"name": "Rhode Island Farm Vegetables",
 "price": "$24.00"
 },
 {
@@ -14950,12 +14930,22 @@ const MENUS = {
 "price": "$25.00"
 },
 {
-"desc": "",
-"name": "Additional Surf & Turf Options",
-"price": ""
+"desc": "roasted garlic mashed potato, grilled broccolini choice of: sea urchin butter or red chimichurri",
+"name": "Filet Mignon*",
+"price": "$62.00"
+},
+{
+"desc": "garlic mashed potato, roasted brussels sprouts, carrot & pearl onion, pumpkin-sage stuffing, whole berry cranberry sauce, brown butter-bourbon gravy",
+"name": "Roasted Helger's Farm Turkey",
+"price": "$36.00"
+},
+{
+"desc": "herbed baby shrimp & crab stuffing, spinach, cauliflower puree, champagne-citrus beurre blanc",
+"name": "Stuffed Sole",
+"price": "$46.00"
 }
 ],
-"title": "From the Land"
+"title": "Mains"
 },
 {
 "items": [
@@ -14970,7 +14960,7 @@ const MENUS = {
 "price": "$95.00"
 },
 {
-"desc": "16 oz bone-in prime ribeye, steamed lobster, local sweet corn, herb roasted potato, lobster butter",
+"desc": "7 oz filet, steamed lobster, herb roasted potato, RI mushroom fricassee, fine herb butter",
 "name": "Surf & Turf*",
 "price": ""
 }
@@ -14983,6 +14973,16 @@ const MENUS = {
 "desc": "",
 "name": "Broccolini",
 "price": "$8.00"
+},
+{
+"desc": "parmesan, parsley",
+"name": "Truffle Fries",
+"price": "$14.00"
+},
+{
+"desc": "sherry butter, chives",
+"name": "RI Mushroom Fricassee",
+"price": "$17.00"
 },
 {
 "desc": "",
@@ -14998,11 +14998,6 @@ const MENUS = {
 "desc": "",
 "name": "Herb Roasted Fingerling Potatoes",
 "price": "$8.00"
-},
-{
-"desc": "",
-"name": "Roasted Asparagus",
-"price": "$9.00"
 }
 ],
 "title": "Sides"
@@ -15541,18 +15536,13 @@ const MENUS = {
 "items": [
 {
 "desc": "",
-"name": "n/v pierre peters, cote des blancs (magnum) champagne, france",
-"price": "$350.00"
-},
-{
-"desc": "",
 "name": "2016 vazart coquart & fils, blanc de blancs, brut reserve chouilly, france",
 "price": "$152.00"
 },
 {
 "desc": "",
-"name": "n/v veuve clicquot, brut reims, france",
-"price": "$158.00"
+"name": "n/v möet & chandon, imperial brut, épernay, champagne, france",
+"price": "$150.00"
 },
 {
 "desc": "",
@@ -15566,7 +15556,7 @@ const MENUS = {
 },
 {
 "desc": "",
-"name": "2013 dom perignon, brut, epernay champagne, france",
+"name": "2015 dom perignon, brut, epernay champagne, france",
 "price": "$595.00"
 },
 {
@@ -15591,13 +15581,8 @@ const MENUS = {
 },
 {
 "desc": "",
-"name": "2019 steininger, sauvignon blanc, sekt kamptal, austria",
-"price": "$58.00"
-},
-{
-"desc": "",
-"name": "2018 chateau moncontour, 'cuvee predilection' brut vouvray, france",
-"price": "$55.00"
+"name": "2020 steininger, sauvignon blanc, sekt kamptal, austria",
+"price": "$78.00"
 }
 ],
 "title": "Champagne & Sparkling"
@@ -15756,8 +15741,8 @@ const MENUS = {
 },
 {
 "desc": "",
-"name": "2024 greywacke marlborough, new zealand",
-"price": "$59.00"
+"name": "2024 escarpment, martinborough, new zealand",
+"price": "$65.00"
 },
 {
 "desc": "",
@@ -15893,6 +15878,16 @@ const MENUS = {
 "desc": "",
 "name": "2023 zinfandel, hartford russian river, california",
 "price": "$90.00"
+},
+{
+"desc": "",
+"name": "2022 zinfandel, ridge lytton springs dry creek valley, california",
+"price": "$100.00"
+},
+{
+"desc": "",
+"name": "2019 tempranillo, marques de riscal, rioja riserva rioja, spain",
+"price": "$58.00"
 }
 ],
 "title": "Interesting Reds"
@@ -17429,15 +17424,15 @@ const MENUS = {
 "source": "https://b3177136.assetcdn.net/3177136/wp-content/uploads/2025/06/UPDATED-MENU_compressed-pdf.jpg"
 },
 "perro-salado": {
-"checked": "2026-10-26T15:50:55+00:00",
+"checked": "2026-11-02T19:11:36+00:00",
 "how": "structured",
 "sections": [
 {
 "items": [
 {
-"desc": "Lightly Seasoned Mahi, pan-seared then simmered in Veracruz Sauce of Tomato, Onions, Garlic, Capers, Green Olive,",
-"name": "MAHI VERACRUZ",
-"price": "$26"
+"desc": "",
+"name": "CLASSIC NACHOS",
+"price": "$16"
 },
 {
 "desc": "Served with Tortilla Chips, Warm Tostones and Toasted Pipians",
@@ -18510,7 +18505,7 @@ const MENUS = {
 "source": "https://www.internationalpocketcafe.com/"
 },
 "portsmouth-publick": {
-"checked": "2026-10-26T15:50:55+00:00",
+"checked": "2026-11-02T19:11:36+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -20090,7 +20085,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "reef": {
-"checked": "2026-10-26T15:50:55+00:00",
+"checked": "2026-11-02T19:11:36+00:00",
 "how": "structured",
 "sections": [
 {
@@ -20892,7 +20887,7 @@ const MENUS = {
 "source": "https://irismiddlewareprodv4weu.blob.core.windows.net/fileresources/public/iris/MRIOTE/MARHOT/PVDLW/SKIFF26.pdf"
 },
 "stoneacre-brasserie": {
-"checked": "2026-10-26T15:50:55+00:00",
+"checked": "2026-11-02T19:11:36+00:00",
 "how": "structured",
 "sections": [
 {
@@ -22144,7 +22139,7 @@ const MENUS = {
 "source": "https://www.stoneacrebrasserie.com/newport-historic-hill-stoneacre-brasserie-food-menu"
 },
 "stoneacre-garden": {
-"checked": "2026-10-26T15:50:55+00:00",
+"checked": "2026-11-02T19:11:36+00:00",
 "how": "structured",
 "sections": [
 {
@@ -24588,7 +24583,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "vieste": {
-"checked": "2026-10-26T15:50:55+00:00",
+"checked": "2026-11-02T19:11:36+00:00",
 "how": "structured",
 "sections": [
 {

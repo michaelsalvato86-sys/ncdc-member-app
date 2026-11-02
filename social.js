@@ -53,7 +53,7 @@ const SOCIAL = {
 },
 "food-shack": {
 "facebook": "https://www.facebook.com/119490138087021",
-"instagram": "https://www.instagram.com/401foodshack"
+"instagram": "https://www.instagram.com/401foodshack/"
 },
 "foodworks": {
 "facebook": "https://www.facebook.com/Food-Works-Restaurant-115846798437105/",

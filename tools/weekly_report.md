@@ -1,4 +1,4 @@
-# Dinner Club weekly refresh - 2026-10-26 15:56
+# Dinner Club weekly refresh - 2026-11-02 19:18
 
 **Result:** OK
 **Menus on the app:** 56 restaurants (was 56)
@@ -42,7 +42,7 @@
   marcos                 kept checked copy (scrape found 23 items by linked-pdf)
   martinos               ok 24 items (structured)
   mews                   too few items (0, text) - link only (kept last good copy)
-  mooring                ok 368 items (structured+rendered)
+  mooring                ok 364 items (structured+rendered)
   north-end              no menu url (kept checked copy)
   obriens                no menu url (kept checked copy)
   one-bellevue           no menu url
