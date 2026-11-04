@@ -322,6 +322,16 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
 .pass{position:absolute;right:0;top:4px;display:flex;align-items:center;gap:6px;background:#fff;color:var(--water-600);border-radius:12px;padding:9px 12px;font-weight:700;font-size:14px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
 .hrs{list-style:none;font-size:14px;color:var(--ink-500);line-height:1.8}
 .hrs li.today{color:var(--ink-800);font-weight:700}
+.el-today{display:inline-block;font-size:14px;font-weight:700;padding:5px 11px;border-radius:99px;margin:2px 0 10px}
+.el-today.ok{background:#e6f4ea;color:#1e6b34}.el-today.no{background:#f3f4f7;color:var(--ink-500)}
+.el-grid{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
+.el-grid th,.el-grid td{text-align:center;padding:7px 0;border-bottom:1px solid #eef0f5}
+.el-grid th{font-weight:600;color:var(--ink-500);font-size:12px}
+.el-grid th:first-child,.el-grid td:first-child{text-align:left;width:31%;color:var(--ink-800);font-weight:600}
+.el-grid .y{color:#1e6b34;font-weight:700;font-size:15px}.el-grid .n{color:#c3c8d4}
+.el-grid .td{background:#eef4fb}.el-grid th.td{color:var(--water-600)}
+.el-x{font-size:14px;line-height:1.5;margin-top:10px;padding:9px 12px;border-radius:10px}
+.el-x.bo{background:#fff6f3;border:1px solid #f1d3c9;color:var(--brick-600)}.el-x.ru{background:#f6f7fb;color:var(--ink-800)}
 .soc{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .soc a{padding:8px 12px;border-radius:99px;background:#fff;border:1px solid #e3e7f1;color:var(--water-600);font-weight:600;font-size:13px;text-decoration:none}
 .mi{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
@@ -404,7 +414,7 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
   <div class="jn">
     <button class="jn-back" id="jn-back" type="button"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m15 18-6-6 6-6"/></svg>Back</button>
     <h1>Join the Dinner Club</h1>
-    <p class="lead">Two-for-one entrées at 50+ Newport County restaurants, all season. Pay in under a minute, then activate your card on this phone.</p>
+    <p class="lead">Two-for-one entrées at 40+ Newport County restaurants, all season. Pay in under a minute, then activate your card on this phone.</p>
     <form id="jn-form" novalidate>
       <div class="seg" role="radiogroup" aria-label="Membership type">
         <label><input type="radio" name="jt" value="new" checked>New member</label>
@@ -436,7 +446,7 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
   <div class="cl">
     <div class="stats">
       <div class="stat"><b>38</b><small>years of dinners in Newport County</small></div>
-      <div class="stat"><b>50+</b><small>restaurants in the book</small></div>
+      <div class="stat"><b>43</b><small>restaurants in the book</small></div>
       <div class="stat"><b>5–15</b><small>minutes from downtown Newport</small></div>
     </div>
 
@@ -726,7 +736,7 @@ function usedOn(id){const a=(uses[id]||[]);const lu=a[a.length-1];const t=lu&&lu
 function limitHit(id){return CLUB.usesPerRestaurant>0 && usesFor(id)>=CLUB.usesPerRestaurant}
 function renderHome(){
   if(GUIDE){
-    const chips=[['all','All'],['seasonal','Seasonal & later']];
+    const chips=[['all','All'],['today','Valid today'],['seasonal','Seasonal']];
     $('#chips').innerHTML=chips.map(([k,t])=>`<button class="chip${k===filter?' on':''}" data-f="${k}">${t}</button>`).join('');
     return renderList();
   }
@@ -752,6 +762,7 @@ function renderList(){
     if(filter==='used')return usesFor(r.id)>0;
     if(filter==='ready')return usesFor(r.id)===0&&!r.status;
     if(filter==='seasonal')return !!r.status;
+    if(filter==='today'){const t=(new Date().getDay()+6)%7,o=r.offer||{};return ['breakfast','lunch','dinner'].some(k=>(o[k]||[]).includes(t));}
     return true;
   });
   if(here)rows.sort((a,b)=>(a.geo?miles(here,a.geo):999)-(b.geo?miles(here,b.geo):999));
@@ -831,6 +842,18 @@ function hoursBlock(r){
   const today=(new Date().getDay()+6)%7;
   return `<div class="sec"><h3>Hours</h3><ul class="hrs">${pl.hours.map((h,i)=>`<li${i===today?' class="today"':''}>${esc(h)}</li>`).join('')}</ul><p class="mnote">From Google, checked weekly. Holiday hours may differ.</p></div>`;
 }
+// When the book works here: the days each meal is valid, from the restaurant's 2026-27 sign-up form.
+function eligBlock(r){
+  const o=r.offer; if(!o)return '';
+  const D=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'], M=[['breakfast','Breakfast'],['lunch','Lunch'],['dinner','Dinner']].filter(([k])=>o[k]&&o[k].length);
+  const t=(new Date().getDay()+6)%7, now=M.filter(([k])=>o[k].includes(t)).map(([,n])=>n.toLowerCase());
+  const today=now.length?`<span class="el-today ok">Today (${D[t]}): ${now.join(' and ')}${r.blackout?', unless a blackout date':''}</span>`:`<span class="el-today no">Not valid today (${D[t]})</span>`;
+  const grid=M.length?`<table class="el-grid"><tr><th></th>${D.map((d,i)=>`<th${i===t?' class="td"':''}>${d[0]}${d==='Thu'?'h':d==='Sun'?'u':''}</th>`).join('')}</tr>${M.map(([k,n])=>`<tr><td>${n}</td>${D.map((d,i)=>`<td class="${o[k].includes(i)?'y':'n'}${i===t?' td':''}" aria-label="${d} ${n} ${o[k].includes(i)?'valid':'not valid'}">${o[k].includes(i)?'&#10003;':'&ndash;'}</td>`).join('')}</tr>`).join('')}</table>`:'';
+  return `<div class="sec"><h3>When your book works here</h3>${today}${grid}`+
+    (r.blackout?`<p class="el-x bo"><b>Blackout dates:</b> ${esc(r.blackout)}</p>`:'')+
+    (r.rules?`<p class="el-x ru"><b>Restrictions:</b> ${esc(r.rules)}</p>`:'')+
+    `<p class="mnote">From ${esc(r.name)}'s 2026-27 Dinner Club sign-up. Most holidays and specials are excluded. Check your book or ask your server.</p></div>`;
+}
 function socialBlock(r){
   const s=r.social||{}; const items=[['instagram','Instagram'],['facebook','Facebook'],['tiktok','TikTok'],['x','X']].filter(([k])=>s[k]);
   if(!items.length)return '';
@@ -890,12 +913,13 @@ function openDetail(id,push){
     r.reserve?`<div><span>Booking</span><a href="${esc(r.reserve)}" target="_blank" rel="noopener">${esc(r.reservePlatform||'Reserve online')}</a></div>`:'',
     r.order?`<div><span>Takeout</span><a href="${esc(r.order)}" target="_blank" rel="noopener">Order online (Dinner Club discount not valid)</a></div>`:''
   ].join('');
-  const cue=GUIDE?`<div class="bookcue"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="flex:none"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5zM4 19a2 2 0 0 1 2-2h13"/></svg><div><b>Bring your Dinner Club book</b><small>Present it to your server for two-for-one entrées. Dine-in only.</small><small class="valid">${r.valid?'Offer valid at '+esc(r.name)+': '+esc(r.valid):'Each restaurant sets its own dates and blackout days. Check your book or ask your server.'}</small></div></div>`:'';
+  const cue=GUIDE?`<div class="bookcue"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="flex:none"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5zM4 19a2 2 0 0 1 2-2h13"/></svg><div><b>Bring your Dinner Club book</b><small>Present it to your server for two-for-one entrées. Dine-in only.</small><small class="valid">${r.offer?'The days your book works here are listed below.':r.valid?'Offer valid at '+esc(r.name)+': '+esc(r.valid):'Each restaurant sets its own dates and blackout days. Check your book or ask your server.'}</small></div></div>`:'';
   $('#dt-body').innerHTML=`${cue}
     <button class="use${used?' used':''}" id="dt-use" type="button">${used?'Used '+usedOn(id):'Use my card here'}<small>${used?'One use per restaurant each season':'Two-for-one entrées, dine-in only. Show this to your server.'}</small></button>
     <p class="dinein"><b>Dine-in only.</b> The Dinner Club discount is not valid on takeout, delivery or online orders.</p>
     <div class="acts">${book}${menu}${dir}${call}</div>
     <div class="dirs" id="dt-dirs" hidden>${maps}</div>
+    ${eligBlock(r)}
     ${hoursBlock(r)}
     ${socialBlock(r)}
     ${specialsBlock(r)}

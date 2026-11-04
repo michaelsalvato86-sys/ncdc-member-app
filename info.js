@@ -513,14 +513,13 @@ const RESTAURANT_INFO = {
   "_confidence": "verified"
  },
  "wharf-southern": {
-  "address": "37 Bowen's Wharf, Newport, RI 02840",
+  "address": "37 Bowen's Wharf, Newport, RI, 02840",
   "town": "Newport",
   "phone": "(401) 619-5672",
   "url": "https://wharfcoastalseafood.com/",
-  "reserve": "https://toast.app/r/the-wharf-37-bowens-wharf",
-  "reservePlatform": "Toast Tables",
-  "_confidence": "verified",
-  "note": "Its website now shows the name Wharf Fishhouse Coastal Seafood & Tavern"
+  "_confidence": "form",
+  "note": "Its website now shows the name Wharf Fishhouse Coastal Seafood & Tavern",
+  "_source": "NCDC sign-up form 2026-11-04"
  },
  "yagi": {
   "address": "20 Long Wharf Mall, Newport, RI 02840",
@@ -562,6 +561,46 @@ const RESTAURANT_INFO = {
   "reserve": "https://resy.com/cities/south-kingstown-ri/venues/mews-tavern",
   "reservePlatform": "Resy",
   "_confidence": "verified"
+ },
+ "anthonys": {
+  "address": "963 Aquidneck Ave, Middletown, RI, 02842",
+  "town": "Middletown",
+  "phone": "(401) 846-9620",
+  "url": "https://anthonysseafood.net/",
+  "_confidence": "form",
+  "_source": "NCDC sign-up form 2026-11-04"
+ },
+ "pasta-vino": {
+  "address": "694 Aquidneck Ave, Middletown, Rhode Island, 02842",
+  "town": "Middletown",
+  "phone": "(401) 324-5219",
+  "url": "https://Pastavinori.com",
+  "_confidence": "form",
+  "_source": "NCDC sign-up form 2026-11-04"
+ },
+ "diegos-newport": {
+  "address": "11 Bowen's Wharf, Newport, RI, 02840",
+  "town": "Newport",
+  "phone": "(401) 619-2640",
+  "url": "https://diegosnewport.com/",
+  "_confidence": "form",
+  "_source": "NCDC sign-up form 2026-11-04"
+ },
+ "marcos-cafe": {
+  "address": "382 Spring Street, Newport, RI, 02840",
+  "town": "Newport",
+  "phone": "(401) 324-5237",
+  "url": "https://www.marcoscafenewport.com/",
+  "_confidence": "form",
+  "_source": "NCDC sign-up form 2026-11-04"
+ },
+ "prudence": {
+  "address": "1 State Street, Bristol, Rhode Island, 02809",
+  "town": "Bristol",
+  "phone": "(401) 253-7400",
+  "url": "https://prudencebristol.com",
+  "_confidence": "form",
+  "_source": "NCDC sign-up form 2026-11-04"
  }
 };
 RESTAURANTS.forEach(r => { const i = RESTAURANT_INFO[r.id]; if (i) Object.assign(r, i); });
