@@ -8,6 +8,9 @@ const SOCIAL = {
 "facebook": "https://www.facebook.com/22bowensnewport",
 "instagram": "https://www.instagram.com/22bowens/"
 },
+"anthonys": {
+"facebook": "https://www.facebook.com/AnthonysSeafoodMiddletownRI"
+},
 "aquidneck-pizzeria": {
 "facebook": "http://www.facebook.com/aqpizza",
 "x": "http://www.twitter.com/aqpizza"
@@ -90,6 +93,10 @@ const SOCIAL = {
 "facebook": "https://www.facebook.com/MarcosSubsRI",
 "instagram": "https://www.instagram.com/marcos__ri/"
 },
+"marcos-cafe": {
+"facebook": "https://www.facebook.com/MarcosSubsRI",
+"instagram": "https://www.instagram.com/marcos__ri/"
+},
 "martinos": {
 "facebook": "https://www.facebook.com/Martinos-Pizzeria-424950744306336"
 },
@@ -106,6 +113,9 @@ const SOCIAL = {
 "instagram": "https://www.instagram.com/onepelhameast/",
 "x": "https://twitter.com/onepelhameast"
 },
+"pasta-vino": {
+"instagram": "https://www.instagram.com/pastavinori/"
+},
 "pickles": {
 "facebook": "https://www.facebook.com/Pickles-A-Deli-734100003610415",
 "instagram": "https://www.instagram.com/pickles_adeli/"
@@ -116,6 +126,10 @@ const SOCIAL = {
 },
 "quencher": {
 "instagram": "https://www.instagram.com/thequenchernewport/"
+},
+"red-parrot": {
+"facebook": "https://www.facebook.com/RedParrotRestaurant/",
+"instagram": "https://www.instagram.com/redparrotrestaurant/"
 },
 "reef": {
 "facebook": "https://www.facebook.com/thereefnewport",
@@ -135,7 +149,8 @@ const SOCIAL = {
 "instagram": "https://www.instagram.com/smokehousenewport"
 },
 "stoneacre-brasserie": {
-"instagram": "https://www.instagram.com/stoneacrebrasserie"
+"instagram": "https://www.instagram.com/stoneacrebrasserie",
+"tiktok": "https://www.tiktok.com/@stonacrehospitality"
 },
 "stoneacre-garden": {
 "facebook": "https://www.facebook.com/112027363998105",

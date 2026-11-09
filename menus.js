@@ -255,7 +255,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "22-bowens": {
-"checked": "2026-11-02T19:11:36+00:00",
+"checked": "2026-11-09T19:29:35+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -524,6 +524,16 @@ const MENUS = {
 "desc": "",
 "name": "Boursin Crust",
 "price": "$8.00"
+},
+{
+"desc": "",
+"name": "Karen Elizabeth Scallops",
+"price": "$25.00"
+},
+{
+"desc": "",
+"name": "Roasted Bone Marrow",
+"price": "$11.00"
 }
 ],
 "title": "Enhancements"
@@ -722,6 +732,46 @@ const MENUS = {
 }
 ],
 "title": "Sides"
+},
+{
+"items": [
+{
+"desc": "braised short rib, French onion jam, parmesan-black pepper risotto, garlic-thyme aioli",
+"name": "Arancini Brasato",
+"price": ""
+},
+{
+"desc": "roasted local baby beets, beet purée, arugula, goat cheese spread, caramelized fennel, toasted pistachio, baby kale",
+"name": "Beet Salad",
+"price": ""
+},
+{
+"desc": "leek velouté, confit baby artichokes, roasted asparagus-fennel salad",
+"name": "Pan-Seared Halibut",
+"price": ""
+},
+{
+"desc": "sweet potato pommes Anna, bourbon-glazed Brussels sprouts, prosciutto, aged balsamic butter",
+"name": "Elite Prime NY Strip*",
+"price": ""
+},
+{
+"desc": "local mushrooms, roasted asparagus, pecorino romano, herb gremolata",
+"name": "Wild Mushroom Risotto",
+"price": ""
+}
+],
+"title": "Select One"
+},
+{
+"items": [
+{
+"desc": "milk chocolate and vanilla mousse, chocolate ganache, white chocolate drizzle",
+"name": "Tuxedo Bombe",
+"price": ""
+}
+],
+"title": "Dessert"
 },
 {
 "items": [
@@ -1091,7 +1141,7 @@ const MENUS = {
 "price": "$13.00"
 },
 {
-"desc": "vanilla custard, seasonal berries",
+"desc": "vanilla custard, berries",
 "name": "Crème Brûlée",
 "price": "$13.00"
 },
@@ -1101,8 +1151,8 @@ const MENUS = {
 "price": "$15.00"
 },
 {
-"desc": "macerated strawberries, whipped ricotta, strawberry gelato, shortcake crumb",
-"name": "Olive Oil Cake",
+"desc": "fig chutney, vanilla gelato",
+"name": "Sweet Potato Cake",
 "price": "$14.00"
 },
 {
@@ -3927,7 +3977,7 @@ const MENUS = {
 "source": "https://benjaminsnewportri.com/"
 },
 "blue-plate": {
-"checked": "2026-11-02T19:11:36+00:00",
+"checked": "2026-11-09T19:29:35+00:00",
 "how": "linked-pdf",
 "sections": [
 {
@@ -4319,7 +4369,7 @@ const MENUS = {
 "source": "https://www.blueplatedinerri.com/lunch-dinner"
 },
 "brick-alley": {
-"checked": "2026-11-02T19:11:36+00:00",
+"checked": "2026-11-09T19:29:35+00:00",
 "how": "structured",
 "sections": [
 {
@@ -6277,7 +6327,7 @@ const MENUS = {
 "source": "https://www.clawnhammer.com/s/CLAW-AND-HAMMER-MENU-9226.pdf"
 },
 "cluck-house": {
-"checked": "2026-11-02T19:11:36+00:00",
+"checked": "2026-11-09T19:29:35+00:00",
 "how": "structured",
 "sections": [
 {
@@ -9489,7 +9539,7 @@ const MENUS = {
 "source": "https://www.foodworksfamilyrestaurant.com/menu (Breakfast, Lunch, Drinks and Desserts PDFs)"
 },
 "helmway": {
-"checked": "2026-11-02T19:11:36+00:00",
+"checked": "2026-11-09T19:29:35+00:00",
 "how": "structured",
 "sections": [
 {
@@ -10998,7 +11048,7 @@ const MENUS = {
 "source": "https://josamericanbistro.com/current-menu/ (+ /dessert-menu/, /childrens-menu/, /cocktail-menu/)"
 },
 "jt-commons": {
-"checked": "2026-11-02T19:11:36+00:00",
+"checked": "2026-11-09T19:29:35+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -12218,50 +12268,60 @@ const MENUS = {
 "source": "https://www.opentable.com/r/the-kitchen-table-middletown"
 },
 "la-forge": {
-"checked": "2026-11-02T19:11:36+00:00",
+"checked": "2026-11-09T19:29:35+00:00",
 "how": "structured",
 "sections": [
 {
 "items": [
 {
-"desc": "(6) boneless or (8) bone in wings • Plain, Buffalo, Sesame Garlic, or BBQ | With your choice of dipping sauce: ranch or bleu cheese",
-"name": "Chicken Wings",
+"desc": "Plain, Buffalo, sesame garlic, or BBQ with your choice of dipping sauce: Ranch or Bleu Cheese.",
+"name": "Chicken Tenders",
 "price": "$16.00"
 },
 {
-"desc": "Sautéed brussels with crispy bacon and balsamic glaze",
+"desc": "Sautéed Brussels with crispy bacon and balsamic glaze.",
 "name": "Crispy Brussels",
-"price": "$12.00"
+"price": "$13.00"
 },
 {
-"desc": "Italian breaded mozzarella sticks with marinara sauce",
+"desc": "Italian breaded mozzarella sticks with marinara sauce.",
 "name": "Mozzarella Sticks",
-"price": "$12.00"
+"price": "$13.00"
 },
 {
-"desc": "Fresh house-fried tortilla chips, melted pepper jack cheese, topped with sour cream, house guacamole, pico de gallo, and jalapeño slices | Add: Chicken +$6.00",
+"desc": "",
+"name": "Edwins Housemade Chili with Chips",
+"price": "$13.00"
+},
+{
+"desc": "Fresh house-fried tortilla chips, melted pepper jack cheese, topped with sour cream, house guacamole, pico de gallo, and jalapeño slices • Add Chicken +$6.00 | Chili +$6.00",
 "name": "Nachos",
 "price": "$13.00"
 },
 {
-"desc": "Half dozen native littlenecks baked with seasoned bread crumbs, garlic butter, and bacon",
+"desc": "Half a dozen native littlenecks baked with seasoned bread crumbs, garlic butter, and bacon.",
 "name": "Clams Casino",
 "price": "$18.00"
 },
 {
-"desc": "Stuffed with chopped clams, chorizo, bacon, peppers, onions, breadcrumbs, and seasoning",
+"desc": "Stuffed with chopped clams, chorizo, bacon, peppers, onions, breadcrumbs, and seasoning.",
 "name": "RI Stuffed Quahog",
-"price": "$8.00"
+"price": "$10.00"
 },
 {
-"desc": "(6) Jumbo shrimp served with cocktail sauce",
-"name": "Jumbo Shrimp Cocktail",
-"price": "$20.00"
+"desc": "Jumbo shrimp served with cocktail sauce.",
+"name": "Jumbo Shrimp Cocktail (6)",
+"price": "$24.00"
 },
 {
-"desc": "Fried calamari served with lemon, banana peppers, and marinara sauce",
+"desc": "Fried calamari served with lemon, banana peppers, and marinara sauce.",
 "name": "Crispy Calamari",
-"price": "$18.00"
+"price": "$19.00"
+},
+{
+"desc": "Two jumbo lump crab cakes pan seared and served with Creole remoulade and tomato basil salsa.",
+"name": "Crab Cakes (2)",
+"price": "$20.00"
 }
 ],
 "title": "Starters"
@@ -12269,114 +12329,39 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "Broccoli, kohlrabi, brussels sprouts, kale, carrot, Radicchio, white bean, walnuts, green goddess dressing",
-"name": "Chopped Veggie Power Blend",
-"price": "$16.00"
-},
-{
-"desc": "Spring mix, goat cheese, walnuts, and mixed berries served with a raspberry vinaigrette",
-"name": "Goat Cheese & Berry Salad",
-"price": "$16.00"
-},
-{
-"desc": "Chopped romaine, shaved parmesan, and house made croutons served with Caesar dressing",
-"name": "Classic Caesar Salad",
-"price": "$15.00"
-},
-{
-"desc": "Fresh roasted turkey breast, bacon, avocado, sliced egg, tomato, greens and your choice of dressing",
-"name": "Cobb Salad",
-"price": "$18.00"
-},
-{
-"desc": "Mixed greens in a tortilla shell with bell peppers, black olives, salsa, sour cream, guacamole, cheddar, and Monterey Jack cheeses. Served with grilled chicken or blackened chicken",
-"name": "Taco Salad",
-"price": "$18.00"
-}
-],
-"title": "Salads"
-},
-{
-"items": [
-{
-"desc": "Traditional creamy New England clam chowder with clams, potato, and dill",
-"name": "N.E. Clam Chowder",
-"price": "$8.00/$10.00"
-},
-{
-"desc": "Traditional and creamy lobster bisque with herbs and a hint of sherry",
-"name": "Lobster Bisque",
-"price": "$10.00/$12.00"
-},
-{
-"desc": "Onion soup with beef broth, crostini, and melted Swiss cheese",
-"name": "Baked Onion Soup",
-"price": "$12.00"
-},
-{
-"desc": "Soup: Onion Soup, Chowder or Lobster Bisque • Sandwich: Any sandwich (excluding lobster roll and burgers)",
-"name": "Half Sandwich & Cup Soup",
-"price": "$16.00"
-},
-{
-"desc": "Bowl of New England clam chowder, lobster slider, served cold or warm",
-"name": "The New England Duo",
-"price": "$20.00"
-}
-],
-"title": "Soups"
-},
-{
-"items": [
-{
-"desc": "Cold lobster with light mayo, celery, lemon and parsley, or warm butter lobster roll",
+"desc": "Cold lobster with light mayo, celery, lemon, and parsley, or warm butter lobster roll.",
 "name": "La Forge Lobster Roll",
-"price": "$33.00"
+"price": "$34.00"
 },
 {
-"desc": "Hand carved turkey on toasted white bread with bacon, lettuce, tomato, and mayonnaise served on white bread",
+"desc": "Hand-carved turkey on toasted white bread with bacon, lettuce, tomato, and mayonnaise served on white bread.",
 "name": "Roasted Turkey Club",
-"price": "$17.00"
+"price": "$18.00"
 },
 {
-"desc": "All white meat, mayonnaise, arugula, celery, and sweet pickles served on a croissant",
+"desc": "All-white meat, mayonnaise, arugula, celery, and sweet pickles served on a croissant.",
 "name": "Chicken Salad Croissant",
-"price": "$17.00"
+"price": "$18.00"
 },
 {
-"desc": "Corned beef, sauerkraut, Swiss cheese, and Thousand Island dressing, served on rye toast",
+"desc": "Corned beef, sauerkraut, Swiss cheese, and Thousand Island dressing served on rye toast.",
 "name": "Reuben",
-"price": "$17.00"
+"price": "$18.00"
 },
 {
-"desc": "Grilled chicken breast, fig jam, mozzarella, arugula, pressed ciabatta",
-"name": "Balsamic Fig Chicken Press",
-"price": ""
+"desc": "Grilled chicken with Swiss cheese and caramelized onions on grilled sourdough.",
+"name": "French Onion Chicken Grilled Cheese",
+"price": "$18.00"
 },
 {
-"desc": "8 oz. beef patty topped with lettuce, tomato, onion & your choice of: American, Swiss, Pepper Jack, or Cheddar",
+"desc": "8 oz. special blend, lettuce, tomato, onion, and your choice of: American, Swiss, Pepper Jack, or Cheddar.",
 "name": "Classic Cheeseburger",
 "price": "$17.00"
 },
 {
-"desc": "Grilled veggie burger, pepper jack cheese, lettuce, tomato, and red onion on a pretzel bun",
-"name": "Spicy Black Bean Burger",
-"price": "$16.00"
-},
-{
-"desc": "A grilled cheese, tomato and all-white-meat tuna salad sandwich",
-"name": "Tuna Melt",
-"price": "$17.00"
-},
-{
-"desc": "A grilled chicken breast topped with melted cheddar cheese, sliced onion, bacon, lettuce, tomato, and mayo stacked on three pieces of toast",
-"name": "Kinsale Club Sandwich",
-"price": "$17.00"
-},
-{
-"desc": "An 8 oz. burger with sautéed mushrooms and onions, Swiss cheese, and Thousand Island dressing on grilled sourdough bread",
-"name": "La Forge Burger",
-"price": "$18.00"
+"desc": "8 oz. special blend, sharp Cheddar cheese, short rib, arugula, bacon jam, and brioche bun.",
+"name": "Winter Burger",
+"price": "$20.00"
 }
 ],
 "title": "Sandwiches"
@@ -12384,97 +12369,137 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "(5) Jumbo shrimp, crab ritz stuffing, mashed potatoes, asparagus, lemon beurre blanc",
-"name": "Baked Stuffed Shrimp",
-"price": "$30.00"
+"desc": "Kale, roasted butternut squash, Brussels, craisins, pepitas, and goat cheese with an apple cider vinaigrette.",
+"name": "Kale Salad",
+"price": "$16.00"
 },
 {
-"desc": "Fresh cod battered & fried served with French fries, coleslaw, and tartar sauce",
-"name": "Fish ‘n Chips",
-"price": "$24.00"
+"desc": "Iceberg lettuce, chopped tomatoes, bacon, crumbled blue cheese, and blue cheese dressing.",
+"name": "Wedge Salad",
+"price": "$16.00"
 },
 {
-"desc": "Grilled salmon served plain or with teriyaki with jasmine rice and mixed vegetables",
-"name": "Grilled Salmon",
+"desc": "Chopped romaine, shaved Parmesan, and house-made croutons served with Caesar dressing.",
+"name": "Classic Caesar Salad",
+"price": "$16.00"
+}
+],
+"title": "Salads"
+},
+{
+"items": [
+{
+"desc": "Soup: onion soup, chowder, lobster bisque, or soup of the day. Any sandwich (excluding burgers and lobster rolls).",
+"name": "Half Sandwich & Cup Soup",
+"price": "$17.00"
+},
+{
+"desc": "Bowl of New England clam chowder and lobster slider served cold or warm.",
+"name": "The New England Duo",
+"price": "$22.00"
+},
+{
+"desc": "$10.00 | $12.00 • Traditional creamy New England clam chowder with clams, potato, and dill.",
+"name": "N.E. Clam Chowder",
+"price": ""
+},
+{
+"desc": "$11.00 | $13.00 • Traditional and creamy lobster bisque with herbs and a hint of sherry.",
+"name": "Lobster Bisque",
+"price": ""
+},
+{
+"desc": "Onion soup with beef broth, crostini, and melted Swiss cheese.",
+"name": "Baked Onion Soup",
+"price": "$12.00"
+},
+{
+"desc": "$10.00 | $12.00",
+"name": "Soup of the Day",
+"price": ""
+}
+],
+"title": "Soups"
+},
+{
+"items": [
+{
+"desc": "Jumbo shrimp, crab ritz stuffing, mashed potatoes, asparagus, and lemon beurre blanc.",
+"name": "Baked Stuffed Shrimp (5)",
+"price": "$33.00"
+},
+{
+"desc": "Fresh cod, battered and fried served with French fries, coleslaw, and tartar sauce.",
+"name": "Fish 'n Chips",
+"price": "$26.00"
+},
+{
+"desc": "Broiled salmon with a lemon dill sauce or hollandaise sauce, served with mashed potatoes and asparagus.",
+"name": "Broiled Salmon",
 "price": "$28.00"
 },
 {
-"desc": "Baked cod topped with garlic butter and panko crumbs, rice pilaf and mixed vegetables",
-"name": "Baked Cod",
-"price": "$30.00"
+"desc": "Potato gnocchi with ground beef, onions, and bell peppers simmered in a tomato basil sauce.",
+"name": "Gnocchi Bolognese",
+"price": "$25.00"
 },
 {
-"desc": "Jumbo shrimp sautéed in white wine & butter with garlic, tomatoes, onions, linguine",
+"desc": "Jumbo shrimp sautéed in white wine and butter with garlic, tomatoes, and onions, over linguine.",
 "name": "Shrimp Scampi",
 "price": "$28.00"
 },
 {
-"desc": "Local lobster meat, spinach, Leaks, shallots, cherry tomato, lobster Newburg sauce, puff pastry (a play on lobster pot pie)",
-"name": "The Gilded Lobster Pie",
-"price": "$42.00"
-},
-{
-"desc": "Classic breaded chicken parmesan baked with mozzarella, marinara, over linguini",
+"desc": "Classic breaded chicken Parmesan baked with mozzarella and marinara, over linguine.",
 "name": "Chicken Parmesan",
-"price": "$26.00"
+"price": "$27.00"
 },
 {
-"desc": "Two seared chicken cutlets in a classic piccata sauce over mashed potatoes with mixed vegetables",
-"name": "Chicken Piccata",
-"price": "$26.00"
+"desc": "Tender short rib served over mashed potatoes, with carrots, onions, celery, and a red wine demi-glace.",
+"name": "Short Rib",
+"price": "$38.00"
 },
 {
-"desc": "Ground beef with fresh herbs, vegetables, house-made gravy with dollops of mashed potatoes",
-"name": "Shepherd’s Pie",
-"price": "$24.00"
-},
-{
-"desc": "House-made meatloaf and gravy served with mashed potatoes and mixed vegetables",
-"name": "Meatloaf & Mashed",
-"price": "$24.00"
-},
-{
-"desc": "16 hour braised pork shank, garlic mashed potato, green beans, au jus",
-"name": "Pork Oss Bucco",
+"desc": "Baked cod topped with garlic butter and panko crumbs, rice pilaf, and mixed vegetables.",
+"name": "Baked Cod",
 "price": "$30.00"
 },
 {
-"desc": "Classic filet mignon grilled to your liking and served with a rich mushroom demi-glace sauce",
-"name": "Filet Mignon",
-"price": "$44.00"
+"desc": "Ground beef with fresh herbs, vegetables, and house-made gravy with dollops of mashed potatoes.",
+"name": "Shepherd's Pie",
+"price": "$25.00"
+},
+{
+"desc": "House-made meatloaf and gravy served with mashed potatoes and mixed vegetables.",
+"name": "Meatloaf & Mashed",
+"price": "$25.00"
+},
+{
+"desc": "Statler chicken with pan sauce, mashed, and green beans.",
+"name": "Chicken Bellevue",
+"price": "$28.00"
+},
+{
+"desc": "Grilled to your liking, mashed potatoes, mixed vegetables, and red wine demi-glace.",
+"name": "Steak Tips",
+"price": "$32.00"
+},
+{
+"desc": "Choice of the following: Chili & Chips La Forge house chili, melted aged Cheddar & Monterey Jack, sour cream, scallions, and nacho chips. NE Clam Chowder A cup of our creamy clam chowder with clams, potatoes, bacon, and ",
+"name": "FIRST COURSE",
+"price": ""
+},
+{
+"desc": "Choose from the following: Classic Grilled Chicken Caesar Salad Chopped romaine, shaved Parmesan, and house-made croutons served with Caesar dressing. The Bellevue Burger 8 oz special blend patty topped with lettuce, tom",
+"name": "SECOND COURSE",
+"price": ""
+},
+{
+"desc": "Cheesecake Pumpkin Bread Pudding",
+"name": "DESSERT",
+"price": ""
 }
 ],
 "title": "Mains"
-},
-{
-"items": [
-{
-"desc": "Littlenecks sautéed in a white wine sauce with chourico, onions, and peppers, served with grilled sourdough",
-"name": "Steamed Littlenecks",
-"price": "$19.00"
-},
-{
-"desc": "Mussels sautéed in a white wine sauce with onions, herbs, and garlic, served with grilled sourdough",
-"name": "Steamed Mussels",
-"price": "$19.00"
-}
-],
-"title": "Appetizers"
-},
-{
-"items": [
-{
-"desc": "Breaded chicken stuffed with ham and Swiss cheese served with mashed potatoes and asparagus with a side of honey mustard | *Can also be served as a sandwich on toasted ciabatta $17.00",
-"name": "Chicken Cordon Bleu",
-"price": "$26.00"
-},
-{
-"desc": "Shrimp, mussels, and salmon sautéed in a creamy white wine sauce, served over linguini",
-"name": "Seafood Fantasy",
-"price": "$30.00"
-}
-],
-"title": "Entrees"
 }
 ],
 "source": "https://laforgenewport.com/newport-la-forge-casino-restaurant-food-menu"
@@ -12758,7 +12783,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "mainsail": {
-"checked": "2026-11-02T19:11:36+00:00",
+"checked": "2026-11-09T19:29:35+00:00",
 "how": "structured",
 "sections": [
 {
@@ -14014,7 +14039,7 @@ const MENUS = {
 "source": "https://www.marcosri.com/ (+ catering PDF https://www.marcosri.com/_files/ugd/e3afd1_f53a39f598a0494db8ad3762944ee226.pdf)"
 },
 "martinos": {
-"checked": "2026-11-02T19:11:36+00:00",
+"checked": "2026-11-09T19:29:35+00:00",
 "how": "structured",
 "sections": [
 {
@@ -14669,7 +14694,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "mooring": {
-"checked": "2026-11-02T19:11:36+00:00",
+"checked": "2026-11-09T19:29:35+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -14738,6 +14763,16 @@ const MENUS = {
 "desc": "9 shrimp, 9 littlenecks, 9 oysters, 6 jonah crab claws, market crudo, whole chilled lobster",
 "name": "The Highbrow*",
 "price": "$164.00"
+},
+{
+"desc": "",
+"name": "Jonah Crab Claw",
+"price": "$6.00"
+},
+{
+"desc": "4 each; calamansi crema, dill oil, kaluga caviar",
+"name": "Dressed Oysters*",
+"price": "$24.00"
 }
 ],
 "title": "The Raw Bar"
@@ -14760,12 +14795,12 @@ const MENUS = {
 "price": "$17.00"
 },
 {
-"desc": "baby carrot, roasted asparagus, English pea, mascarpone, lemon thyme vinaigrette",
+"desc": "baby carrot, roasted delicata squash, turnip, koginut mousse, spiced pepitas, cider-thyme vinaigrette",
 "name": "Little Gem Salad",
 "price": "$17.00"
 },
 {
-"desc": "Castelfranco, frisee, hazelnut-miso vinaigrette, local stone fruit, ricotta salata",
+"desc": "Castelfranco & red radicchio, frisee, roasted pear, pomegranate seeds, ricotta salata, hazelnut miso vinaigrette",
 "name": "Chicory Salad",
 "price": "$17.00"
 },
@@ -14823,6 +14858,11 @@ const MENUS = {
 "desc": "aquidneck honey",
 "name": "Warm Homemade Buttermilk Biscuit",
 "price": "$14.00"
+},
+{
+"desc": "king salmon, pickled beets, citrus, shaved fennel, hazelnut crunch, evoo",
+"name": "Market Crudo*",
+"price": "$19.00"
 }
 ],
 "title": "Appetizers"
@@ -14875,7 +14915,7 @@ const MENUS = {
 "price": "$45.00"
 },
 {
-"desc": "grilled; tomato brown butter, charred poblano corn relish, roasted cousa squash, spiced pepitas",
+"desc": "pan seared; koginut squash puree, sweet potato-red beet hash, roasted pear, Brussels sprouts, citrus chili butter",
 "name": "Salmon*",
 "price": "$36.00"
 },
@@ -14926,13 +14966,28 @@ const MENUS = {
 },
 {
 "desc": "statler breast, citrus brine, chimichuri, garlic mashed potatoes, broccolini",
-"name": "Chicken*",
-"price": "$25.00"
+"name": "Chicken",
+"price": "$26.00"
 },
 {
 "desc": "roasted garlic mashed potato, grilled broccolini choice of: sea urchin butter or red chimichurri",
 "name": "Filet Mignon*",
 "price": "$62.00"
+},
+{
+"desc": "7 oz filet, steamed lobster, herb roasted potato, RI mushroom fricassee, fine herb butter",
+"name": "Surf & Turf*",
+"price": ""
+},
+{
+"desc": "pan seared; saffron risotto, pickled nardello peppers",
+"name": "Scallops",
+"price": "$45.00"
+},
+{
+"desc": "1 1/4 pound lobster, local white fish, mussels, shrimp, potatoes, fennel, white-wine shellfish broth, saffron aioli",
+"name": "Bouillabaisse (For Two)",
+"price": "$99.00"
 },
 {
 "desc": "garlic mashed potato, roasted brussels sprouts, carrot & pearl onion, pumpkin-sage stuffing, whole berry cranberry sauce, brown butter-bourbon gravy",
@@ -14958,11 +15013,6 @@ const MENUS = {
 "desc": "two lobsters, ginger, lemongrass, scallions, chiles, jasmine rice, sesame bok choy",
 "name": "Pan Seared Lobster",
 "price": "$95.00"
-},
-{
-"desc": "7 oz filet, steamed lobster, herb roasted potato, RI mushroom fricassee, fine herb butter",
-"name": "Surf & Turf*",
-"price": ""
 }
 ],
 "title": "For Two"
@@ -14970,9 +15020,14 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "",
+"desc": "jimmy nardello peppers, chives",
+"name": "Saffron Risotto",
+"price": "$12.00"
+},
+{
+"desc": "whipped tahini, dukkha",
 "name": "Broccolini",
-"price": "$8.00"
+"price": "$12.00"
 },
 {
 "desc": "parmesan, parsley",
@@ -14985,19 +15040,14 @@ const MENUS = {
 "price": "$17.00"
 },
 {
-"desc": "",
-"name": "Roasted Garlic Mashed Potatoes",
-"price": "$8.00"
+"desc": "bacon lardon, cider reduction",
+"name": "Brussels Sprouts",
+"price": "$14.00"
 },
 {
-"desc": "",
-"name": "Jasmine Rice",
-"price": "$8.00"
-},
-{
-"desc": "",
-"name": "Herb Roasted Fingerling Potatoes",
-"price": "$8.00"
+"desc": "sherry butter, chives",
+"name": "RI Mushroom Fricasse",
+"price": "$17.00"
 }
 ],
 "title": "Sides"
@@ -15013,9 +15063,69 @@ const MENUS = {
 "desc": "*Raw meat & shellfish, or products not cooked to recommended internal temperatures, can increase your risk of illness. Consumers who are sensitive to food-related reactions or illness should eat only thoroughly cooked me",
 "name": "Attention",
 "price": ""
+},
+{
+"desc": "The Mooring is committed to purchasing sustainable seafood whenever possible through a variety of sources, including Narragansett Bay Lobster, Foley Fish, and Newport Lobster. Please inquire with your server about today’",
+"name": "The Mooring is committed to purchasing sustainable seafood",
+"price": ""
+},
+{
+"desc": "The culinary staff at The Mooring feels it necessary to inform our guests on the issue of mercury in seafood. Some types of seafood can contain elevated levels of mercury, which can be detrimental to the health of certai",
+"name": "The culinary staff at The Mooring...",
+"price": ""
 }
 ],
 "title": "Menu Notes"
+},
+{
+"items": [
+{
+"desc": "shaved romaine, tomato, cucumber, red onion, chopped egg, bacon lardon, fingerling potato, sunflower, buttermilk ranch",
+"name": "Chopped",
+"price": "$17.00"
+},
+{
+"desc": "baby carrot, roasted delicata squash, turnip, koginut mousse, spiced pepitas, cider-thyme vinaigrette",
+"name": "Little Gem Salad",
+"price": "$17.00"
+},
+{
+"desc": "Castelfranco & red radicchio, frisee, roasted pear, pomegranate seeds, ricotta salata, hazelnut miso vinaigrette",
+"name": "Chicory",
+"price": "$17.00"
+},
+{
+"desc": "salt roasted badger flame beets, pistachio, Narragansett burrata, Greenview Farms baby greens, raspberry vinaigrette",
+"name": "Beet + Burrata",
+"price": "$19.00"
+},
+{
+"desc": "",
+"name": "Salad Buddies - Great companions to any salad",
+"price": ""
+}
+],
+"title": "Salad"
+},
+{
+"items": [
+{
+"desc": "lemon-chive aioli, celery, lettuce",
+"name": "Lobster Roll",
+"price": "$39.00"
+},
+{
+"desc": "lettuce",
+"name": "Warm Buttered Lobster Roll",
+"price": "$39.00"
+},
+{
+"desc": "sharp cheddar, lettuce, roasted garlic aioli",
+"name": "Brandt Farm’s Beef Burger*",
+"price": "$23.00"
+}
+],
+"title": "all sandwiches served on gluten-free bread"
 },
 {
 "items": [
@@ -15808,89 +15918,9 @@ const MENUS = {
 "desc": "",
 "name": "2018 furmint/yellow muscat, royal tokaji ‘late harvest’ tokaj-hegyalja, hungary",
 "price": "$74.00"
-},
-{
-"desc": "",
-"name": "2024 stolpman vineyards ‘combe’, vin gris ballard canyon, california",
-"price": "$55.00"
-},
-{
-"desc": "",
-"name": "2025 la spinetta il rose de casanova tuscany, italy",
-"price": "$44.00"
-},
-{
-"desc": "",
-"name": "2024 peyrassol ‘les templiers’ cotes de provence, france",
-"price": "$59.00"
-},
-{
-"desc": "",
-"name": "2025 mirabeau ‘one day’ provence, france",
-"price": "$60.00"
-},
-{
-"desc": "",
-"name": "2023 chateau mesclances ‘romane’ provence, france",
-"price": "$82.00"
-},
-{
-"desc": "",
-"name": "2024 steininger osterreich, austria",
-"price": "$65.00"
 }
 ],
 "title": "Interesting Whites"
-},
-{
-"items": [
-{
-"desc": "",
-"name": "2020 sangiovese, castello dei rampolla, chianti classico tuscany, italy",
-"price": "$99.00"
-},
-{
-"desc": "",
-"name": "2018 sangiovese, la fiorita, brunello d’montalcino tuscany, italy",
-"price": "$140.00"
-},
-{
-"desc": "",
-"name": "2022 cabernet franc, arnaud lambert ‘clos mazurique’ saumur, france",
-"price": "$52.00"
-},
-{
-"desc": "",
-"name": "2020 pinot d’aunis, domaine colin, coteaux du vendmois ‘vv’ loire, france",
-"price": "$55.00"
-},
-{
-"desc": "",
-"name": "2023 cabernet franc, couly-dutheil chinon loire, france",
-"price": "$60.00"
-},
-{
-"desc": "",
-"name": "2022 archenes, moinoterra crete, greece",
-"price": "$69.00"
-},
-{
-"desc": "",
-"name": "2023 zinfandel, hartford russian river, california",
-"price": "$90.00"
-},
-{
-"desc": "",
-"name": "2022 zinfandel, ridge lytton springs dry creek valley, california",
-"price": "$100.00"
-},
-{
-"desc": "",
-"name": "2019 tempranillo, marques de riscal, rioja riserva rioja, spain",
-"price": "$58.00"
-}
-],
-"title": "Interesting Reds"
 }
 ],
 "source": "https://www.mooringrestaurant.com/menu/"
@@ -17424,15 +17454,70 @@ const MENUS = {
 "source": "https://b3177136.assetcdn.net/3177136/wp-content/uploads/2025/06/UPDATED-MENU_compressed-pdf.jpg"
 },
 "perro-salado": {
-"checked": "2026-11-02T19:11:36+00:00",
+"checked": "2026-11-09T19:29:35+00:00",
 "how": "structured",
 "sections": [
 {
 "items": [
 {
-"desc": "",
-"name": "CLASSIC NACHOS",
-"price": "$16"
+"desc": "2 Courses",
+"name": "per Person 2 Courses  per Person",
+"price": "$ 30"
+},
+{
+"desc": "2 Courses",
+"name": "ENTRADAS",
+"price": "$ 30"
+},
+{
+"desc": "2 Courses",
+"name": "Choose One",
+"price": "$ 30"
+},
+{
+"desc": "Crispy Corn Tortilla Chips, Melted Cheese, Black Beans,",
+"name": "GROUND BEEF NACHITOS",
+"price": ""
+},
+{
+"desc": "Sweet and Delicious. Garnished with Pickled Red Onions, Sesame Seeds and Chili Oil.",
+"name": "STICKY PORK RIBS",
+"price": ""
+},
+{
+"desc": "2 Courses",
+"name": "AVOCADO FRIES Panko Breaded. Fried to Perfection. Chipotle Mayo.",
+"price": "$ 30"
+},
+{
+"desc": "Panko Breaded. Fried to Perfection. Chipotle Mayo.",
+"name": "AVOCADO FRIES",
+"price": ""
+},
+{
+"desc": "2 Courses",
+"name": "PRINCIPALES",
+"price": "$ 30"
+},
+{
+"desc": "2 Courses",
+"name": "WINTER SALAD with LEMON-HERB CHICKEN",
+"price": "$ 30"
+},
+{
+"desc": "Crispy Green Leaf Lettuce and Arugula, Roasted Rainbow Carrots, Golden Beets, Delicata Squash,",
+"name": "Pan-Seared Marinated Chicken Breast on",
+"price": ""
+},
+{
+"desc": "Two Beer Battered or Blackened Mahi Tacos on Corn Tortillas with Slaw, Pico de Gallo and Chipotle Mayo.",
+"name": "FISH TACOS",
+"price": ""
+},
+{
+"desc": "Crispy Fingerling Potatoes, Cotija Cheese,",
+"name": "CARNE ASADA",
+"price": ""
 },
 {
 "desc": "Served with Tortilla Chips, Warm Tostones and Toasted Pipians",
@@ -17453,16 +17538,6 @@ const MENUS = {
 "desc": "Served with Tortilla Chips, Warm Tostones and Toasted Pipians",
 "name": "AVOCADO FRIES Panko Breaded, Fried to Perfection. Served with Chipotle Mayo",
 "price": "$ 18"
-},
-{
-"desc": "Panko Breaded, Fried to Perfection. Served with Chipotle Mayo",
-"name": "AVOCADO FRIES",
-"price": "$ 16"
-},
-{
-"desc": "Sweet and Delicious. Garnished with Pickled Red Onions, Sesame Seeds, and Chili-Oil",
-"name": "STICKY PORK RIBS",
-"price": "$ 19"
 },
 {
 "desc": "Oven Roasted Tri-Color Carrots, over Romesco Verde topped with Chili-Oil, Crumbled Goat Cheese and Pipians.",
@@ -17502,11 +17577,6 @@ const MENUS = {
 {
 "desc": "Served with Tortilla Chips, Warm Tostones and Toasted Pipians",
 "name": "CHIPS WITH SALSA & SIDE GUACAMOLE",
-"price": "$ 18"
-},
-{
-"desc": "Two Beer Battered OR Blackened Mahi Mahi Tacos, on Corn Tortillas, Slaw, Pico de Gallo & Chipotle Mayo.",
-"name": "FISH TACOS",
 "price": "$ 18"
 },
 {
@@ -18505,7 +18575,7 @@ const MENUS = {
 "source": "https://www.internationalpocketcafe.com/"
 },
 "portsmouth-publick": {
-"checked": "2026-11-02T19:11:36+00:00",
+"checked": "2026-11-09T19:29:35+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -20085,34 +20155,34 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "reef": {
-"checked": "2026-11-02T19:11:36+00:00",
+"checked": "2026-11-09T19:29:35+00:00",
 "how": "structured",
 "sections": [
 {
 "items": [
 {
-"desc": "Cilantro, pickled red onion, pickled carrot, sweet soy, seaweed salad",
+"desc": "Cilantro, pickled red onion, avocado, pickled carrot, sweet soy, seaweed salad",
 "name": "Spicy Tuna Crispy Rice*",
-"price": "$23.00"
+"price": "$25.00"
 },
 {
-"desc": "Fresh mussels, olive oil, garlic, chili pepper, whi te wine, oregano, black pepper, lemon, cream, toast points",
-"name": "Old Captain Mussels*",
+"desc": "olive oil, garlic, chili pepper, white wine, oregano, lemon, black pepper, cream, toast points",
+"name": "Old Captain Mussels",
 "price": "$23.00"
 },
 {
 "desc": "Spicy mayo, chives",
-"name": "Crab Croquettes",
-"price": "$25.00"
+"name": "Lobster Croquettes",
+"price": "$28.00"
 },
 {
 "desc": "Cacio & pepe sauce",
-"name": "Cod Croquettes*",
+"name": "Cod Croquettes",
 "price": "$23.00"
 },
 {
-"desc": "Heirloom tomato carpaccio, crostini powder, grilled sourdough, truffled honey, extra virgin olive oil",
-"name": "Truffled Burrata*",
+"desc": "Heirloom tomato carpaccio, crostini powder, grilled sourdough, EVOO, truffled honey, crostini powder",
+"name": "Truffled Burrata",
 "price": "$27.00"
 },
 {
@@ -20121,24 +20191,34 @@ const MENUS = {
 "price": "$25.00"
 },
 {
-"desc": "Arugula, paresian cheese, sesame truffle sauce, fresh soy with lemon, orange, lime, shabu shabu oil",
-"name": "New Style Sashimi*",
-"price": "$25.00"
+"desc": "Mixed microgreens, artichoke, parmesan, sweet soy & sesame dressing",
+"name": "Tuna Carpaccio*",
+"price": "$27.00"
 },
 {
-"desc": "Lime, salt, and pepper, sweet and sour sauce, or marinara",
+"desc": "Lime, salt, and pepper, marinara or sweet and sour sauce",
 "name": "Crunchy Fresh Calamari",
 "price": "$23.00"
 },
 {
 "desc": "Tomato sauce, parmesan cheese, basil",
-"name": "Homemade Meatballs*",
+"name": "Homemade Meatballs",
 "price": "$27.00"
 },
 {
-"desc": "• Short Ribs - Iceburg lettuce, BBQ short rib, pico de gallo, Pecorino fondu, cilantro • Shrimp - Gochujang Korean BBQ sauce, guacamole, Pecorino crema, pickled onions, cilantro • Cod - Sancho pepper, guacamole, spicy li",
-"name": "Tacos",
-"price": "$25.00"
+"desc": "Heirloom tomato carpaccio, crostini powder, grilled sourdough, truffled honey, extra virgin olive oil",
+"name": "Truffled Burrata*",
+"price": "$27.00"
+},
+{
+"desc": "Tomato sauce, Parmesan cheese, basil",
+"name": "Housemade Meatballs*",
+"price": "$27.00"
+},
+{
+"desc": "Fresh mussels, olive oil, garlic, chili pepper, white wine, oregano, black pepper, lemon, cream, toast points",
+"name": "Old Captain Mussels*",
+"price": "$23.00"
 }
 ],
 "title": "To Share"
@@ -20146,13 +20226,13 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "Dashi, dill & tarragon • Add Bacon +$2",
-"name": "New England Clam Chowder",
+"desc": "",
+"name": "Soup of the Day",
 "price": "$15.00"
 },
 {
-"desc": "Tomato, red and green peppers , watermelon, cucumber , jalapeño, olive oil • Add: Lobster +$11 | Crab +$9",
-"name": "Summer Gazpacho",
+"desc": "Dashi, dill & tarragon",
+"name": "New England Clam Chowder",
 "price": "$15.00"
 },
 {
@@ -20166,24 +20246,24 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "Croutons, bacon, house-made Caesar dressing, shaved Parmigiano-Reggiano",
+"desc": "House-made Caesar dressing. croutons, shaved Parmigiano-Reggiano",
 "name": "Traditional Caesar",
 "price": "$15.00"
 },
 {
-"desc": "Spicy sesame dressing, tobiko, wekame seaweed, avocado",
-"name": "Crab Salad",
-"price": "$25.00"
-},
-{
-"desc": "Baby arugula, red onion, cucumber , macona almond, feta, aged balsamic",
-"name": "Watermelon Salad",
-"price": "$17.00"
+"desc": "Spinach, tomato, pickled onion, egg, radish, crunchy chickpeas, truffle lemon dressing",
+"name": "Winter Salad",
+"price": "$16.00"
 },
 {
 "desc": "Cucumber, red onion, cherry tomatoes, goat cheese, toasted pine nuts, green goddess dressing",
 "name": "Mixed Greens Salad",
 "price": "$15.00"
+},
+{
+"desc": "Lobster +$22.00 | Chicken +$12.00 | Salmon +$12.00 | Sliced Tuna* +$14.00 | Sliced NY Sirloin* +$17.00",
+"name": "Salad Additions",
+"price": ""
 }
 ],
 "title": "Salad"
@@ -20191,19 +20271,164 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "Butter poached lobster, apple coleslaw, french fries",
+"desc": "Pico de gallo, pecorino fondue, cilantro, iceberg, BBQ sauce",
+"name": "Short Rib",
+"price": "$25.00"
+},
+{
+"desc": "Gochujang, pecorino crema, guacamole, pickled onions, cilantro",
+"name": "Shrimp",
+"price": "$25.00"
+},
+{
+"desc": "Guacamole, pico de gallo, Oaxaca cheese, Old Bay-chipotle aioli",
+"name": "Lobster",
+"price": "$35.00"
+}
+],
+"title": "Tacos"
+},
+{
+"items": [
+{
+"desc": "Pappardelle. lobster meat, lobster sauce",
+"name": "Lobster Pasta",
+"price": "$41.00"
+},
+{
+"desc": "Gnocchi, bolognese, ragu, finished in the oven",
+"name": "Reef Wagyu Bolognese",
+"price": "$29.00"
+},
+{
+"desc": "Tagliolini with lemon & basil sauce • Add Lobster +$22.00 | Shrimp +$12.00 | Chicken +$12.00",
+"name": "Tagliolini Capri",
+"price": "$18.00"
+},
+{
+"desc": "Spaghetti, mussels, little necks, shrimp, lobster, crab, spicy red cherry tomato sauce, basil",
+"name": "The Happy Fisherman",
+"price": "$37.00"
+},
+{
+"desc": "Rigatoni, homemade meatballs, tomato sauce, Parmesan",
+"name": "Meatball Rigatoni",
+"price": "$29.00"
+},
+{
+"desc": "Carnaroli risotto, parmesan • Add Lobster +$22.00 | Chicken $12.00 | Shrimp +$12.00 | Mushrooms +$8.00",
+"name": "Parmesan Risotto",
+"price": "$22.00"
+}
+],
+"title": "Fresh Pasta & Risotto"
+},
+{
+"items": [
+{
+"desc": "Yuzu lemon & miso marinated black cod, eggplant hummus, asparagus, togarashi",
+"name": "Black Cod",
+"price": "$39.00"
+},
+{
+"desc": "Teriyaki balsamic glaze, sautéed spinach, mashed potatoes",
+"name": "Balsamic Teriyaki Salmon*",
+"price": "$35.00"
+},
+{
+"desc": "Beer battered cod, dry parsley seasoned French fries",
+"name": "London Style Fish & Chips",
+"price": "$25.00"
+},
+{
+"desc": "Caponata eggplant, tomato and couscous",
+"name": "Sicilian Tuna Tataki*",
+"price": "$37.00"
+},
+{
+"desc": "Sushi rice, tamari, edamame, sesame, chili oil, scallion, red cabbage, jalapeño, cucumber, crunchy onion, spicy mayo. Choice of salmon, shrimp or tuna",
+"name": "Poke Bowl*",
+"price": "$31.00"
+},
+{
+"desc": "Choose Two: mashed potatoes, asparagus, coleslaw, French fries, salad, truffle mashed potatoes",
+"name": "Native Steamed Lobster",
+"price": "$59.00"
+},
+{
+"desc": "10 oz, mashed potato, grilled zucchini • ADD: Homemade BBQ Sauce +$5.00 | Bernaise Sauce +$5.00 | Truffle Demi-Glace +$7.00",
+"name": "Filet Mignon*",
+"price": "$57.00"
+},
+{
+"desc": "14-ounce ribeye, café de Paris secret sauce, asparagus, mashed potato",
+"name": "Bone-in Ribeye*",
+"price": "$67.00"
+},
+{
+"desc": "Trruffle mashed potatoes, asparagus, gremolada",
+"name": "Short Rib",
+"price": "$39.00"
+},
+{
+"desc": "Crispy fried cauliflower, miso chili glaze, rice",
+"name": "Korean Fried Cauliflower",
+"price": "$21.00"
+},
+{
+"desc": "Buttermilk fried chicken, honey mustard, cheddar cheese, lettuce, tomato",
+"name": "Chicken Katsu Sando",
+"price": "$21.00"
+},
+{
+"desc": "Butter-poached green apple coleslaw, French fries",
 "name": "Warm Lobster Roll",
-"price": "$35.00"
+"price": "$36.00"
 },
 {
-"desc": "Lobster meat with yuzu aioli, pink peppercorn, celery, french fries",
-"name": "Lobster Salad Roll",
-"price": "$35.00"
+"desc": "Fried Calico scallops, served on a bun with tartar sauce; choice of French fries or a cup of chowder",
+"name": "New England Fried Scallop Roll",
+"price": "$27.00"
 },
 {
-"desc": "Spicy old bay aioli, corn, celery, tobiko, french fries",
-"name": "Crab Salad Roll",
-"price": "$33.00"
+"desc": "Beer-battered cod, dry Parsley-seasoned French fries",
+"name": "Fish & Chips London Style",
+"price": "$25.00"
+},
+{
+"desc": "Fresh tagliolini pasta, lemon and basil sauce • ADD: Lobster +$22.00 | Shrimp +$12.00 | Chicken +12.00",
+"name": "Tagliolini Capri",
+"price": "$18.00"
+},
+{
+"desc": "Fresh pappardelle, lobster meat, lobster sauce",
+"name": "Lobster Pasta",
+"price": "$41.00"
+},
+{
+"desc": "Fresh gnocchi, bolognese, ragu, baked in oven",
+"name": "Beef Wagyu Bolognese",
+"price": "$29.00"
+},
+{
+"desc": "Truffle mashed potato, asparagus, gremolada",
+"name": "Short Rib*",
+"price": "$39.00"
+}
+],
+"title": "Mains"
+},
+{
+"items": [
+{
+"desc": "Butter poached lobster, apple coleslaw, French fries",
+"name": "Warm Lobster Roll",
+"price": "$36.00"
+},
+{
+"desc": "Fried Calico Bay scallops served on a bun with tartar sauce; choice of French fries or a cup of New England clam chowder",
+"name": "New England Fried Scallop Roll",
+"price": "$27.00"
 },
 {
 "desc": "Buttermilk fried chicken, honey mustard, cheddar cheese, lettuce, tomato",
@@ -20221,9 +20446,9 @@ const MENUS = {
 "price": "$23.00"
 },
 {
-"desc": "Beef patty, lobster meat, cheese sauce, lettuce, tomato, Old Bay chipotle aioli",
-"name": "Reef Surf & Turf Burger",
-"price": "$32.00"
+"desc": "Beef patty, lobster meat, double cheddar, lettuce, tomato, Old Bay chipotle aioli",
+"name": "The Reef Surf & Turf Burger",
+"price": "$34.00"
 }
 ],
 "title": "Sandwiches"
@@ -20231,178 +20456,43 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "Baked black cod marinated with yuzu lemon miso, sushi rice, and togarashi",
-"name": "Black Cod*",
-"price": "$37.00"
+"desc": "Croutons, house-made Caesar dressing shaved Parmigiano-Reggiano",
+"name": "Traditional Caesar",
+"price": "$15.00"
 },
 {
-"desc": "Grilled salmon, teriyaki balsamic sauce, sautéed spinach, mashed potatoes",
-"name": "Balsamic Teriyaki Salmon*",
-"price": "$30.00"
+"desc": "Spinach, tomato, pickled onion, egg, radish, crunchy chickpeas, truffle lemon dressing",
+"name": "Winter Salad",
+"price": "$17.00"
 },
 {
-"desc": "10 ounce filet , mashed potato, bok choy • Add: Homemade BBQ Sauce +$5 | Bernaise Sauce +$5 | Truffle Demi-Glace +$7",
-"name": "Filet Mignon*",
-"price": "$57.00"
+"desc": "Cucumber, red onion, cherry tomatoes, goat cheese, toasted pine nuts, white balsamic vinaigrette",
+"name": "Mixed Greens",
+"price": "$15.00"
 },
 {
-"desc": "Choose Two: mashed potatoes, asparagus, coleslaw, french fries, salad, truffle mashed potatoes",
-"name": "Native Steamed Lobster",
-"price": "$59.00"
-},
-{
-"desc": "Choose Two: mashed potatoes, asparagus, coleslaw, french fries, salad, truffle mashed potatoes",
-"name": "Baked Stuffed Lobster",
-"price": "$77.00"
-},
-{
-"desc": "Beer battered cod, dry parsley seasoned french fries",
-"name": "Fish & Chips London Style*",
-"price": "$25.00"
-},
-{
-"desc": "Caponata eggplant, tomato and couscous",
-"name": "Sicilian Tuna Tataki*",
-"price": "$37.00"
-},
-{
-"desc": "14-ounce ribeye, café de Paris secret sauce, asparagus, mashed potato",
-"name": "Bone-in Ribeye*",
-"price": "$59.00"
-},
-{
-"desc": "Trruffle mashed potatoes, asparagus, gremolada",
-"name": "Short Rib*",
-"price": "$37.00"
-},
-{
-"desc": "Choice of salmon, shrimp or tuna. sushi rice, tamari, edamame, sesame seed, chili oil, scallion, red cabbage, jalapeño, cucumber, crunchy onion, spicy mayo",
-"name": "Poke Bowl*",
-"price": "$29.00"
-},
-{
-"desc": "Yuzu lemon miso, rice, togarashi",
-"name": "Miso Roasted Cauliflower",
-"price": "$21.00"
-},
-{
-"desc": "Carnaroli risotto, parmesan, sautéed mushrooms, porcini powder",
-"name": "Mushroom Parmesan Risotto",
-"price": "$21.00"
-},
-{
-"desc": "Fresh gnocchi, bolognese, ragu, baked in oven",
-"name": "Beef Wagyu Bolognese",
-"price": "$27.00"
-},
-{
-"desc": "Fresh pappardelle, lobster meat, lobster sauce",
-"name": "Lobster Pasta",
-"price": "$37.00"
-},
-{
-"desc": "Green mashed peas, beer-battered cod, dry Parsley-seasoned French fries",
-"name": "Fish & Chips London Style",
-"price": "$25.00"
-},
-{
-"desc": "Truffle mashed potato, asparagus, gremolada",
-"name": "Short Rib",
-"price": "$35.00"
-},
-{
-"desc": "Butter-poached green apple coleslaw, French fries",
-"name": "Warm Lobster Roll",
-"price": "$35.00"
+"desc": "Lobster +$22.00 | Chicken +$12.00 | Salmon +$12.00 | Sliced Tuna + $14.00 | Sliced NY Sirloin +$17.00",
+"name": "Salad Additions",
+"price": ""
 }
 ],
-"title": "Mains"
+"title": "Salads"
 },
 {
 "items": [
 {
-"desc": "Fresh pappardelle. lobster meat, lobster sauce",
-"name": "Lobster Pasta",
-"price": "$37.00"
-},
-{
-"desc": "Wok soba noodles, daikon radish, snow peas, red peppers, BBQ pork belly • Add Lobster +$22 | Shrimp +$12 | Crab +$18",
-"name": "Korean BBQ Noodles",
-"price": "$21.00"
-},
-{
-"desc": "Fresh gnocchi, bolognese, ragu, baked in oven",
-"name": "Reef Wagyu Bolognese",
-"price": "$27.00"
-},
-{
-"desc": "Fresh tagliolini pasta, with lemon and basil sauce • Add Lobster +$22 | Shrimp +$12 | Crab +$18",
-"name": "Tagliolini Capri",
-"price": "$18.00"
-},
-{
-"desc": "Fresh spaghetti, mussels, little necks, shrimp, lobster, crab, spicy red cherry tomato sauce, basil",
-"name": "The Happy Fisherman",
-"price": "$35.00"
-},
-{
-"desc": "Fresh rigatoni, homemade meatballs, tomato sauce, parmesan cheese",
-"name": "Meatball Rigatoni",
-"price": "$25.00"
-},
-{
-"desc": "Carnaroli risotto, parmesan, sautéed mushrooms, porcini powder • Add Lobster +$22 | Shrimp +$12 | Crab +$18 | Chicken $12",
-"name": "Mushroom Parmesan Risotto",
-"price": "$21.00"
-}
-],
-"title": "Pasta, Risotto & Noodles"
-},
-{
-"items": [
-{
-"desc": "Topped with red fruit sauce, crumble, gold dust",
-"name": "Chocolate Mousse",
-"price": "$18.00"
-},
-{
-"desc": "Homemade tiramisu, fresh strawberry, crumble, strawberry sauce",
-"name": "Strawberry Tiramisu",
-"price": "$15.00"
-},
-{
-"desc": "Topped with crème fraiche gelato",
-"name": "Marinated Red Berries",
-"price": "$15.00"
-},
-{
-"desc": "Maldon salt , extra virgin olive oil",
-"name": "Pistacchio Gelato",
-"price": "$15.00"
-},
-{
-"desc": "Topped with salted caramel gelato",
-"name": "Chocolate Molten Cake (GF)",
-"price": "$15.00"
-}
-],
-"title": "Dessert"
-},
-{
-"items": [
-{
-"desc": "Dashi, dill & tarragon",
+"desc": "Dashi, dill & tarragon • ADD: Bacon +$2.00",
 "name": "New England Clam Chowder",
-"price": "$15.00"
-},
-{
-"desc": "Vegetarian",
-"name": "Weekly Special Soups",
 "price": "$15.00"
 },
 {
 "desc": "Pumpkin seed oil, micro greens",
 "name": "Lobster Bisque",
+"price": "$15.00"
+},
+{
+"desc": "",
+"name": "Soup of the Day",
 "price": "$15.00"
 }
 ],
@@ -20411,64 +20501,49 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "Croutons, bacon, house-made Caesar dressing shaved Parmigiano-Reggiano",
-"name": "Traditional Caesar",
-"price": "$15.00"
-},
-{
-"desc": "Grilled eggplant, zucchini, cherry tomatoes, bell peppers, burrata sauce, mixed seeds",
-"name": "Mixed Greens",
-"price": "$15.00"
-},
-{
-"desc": "Grilled half lobster, sesame seeds, pink yogurt sauce",
-"name": "Lobster Salad",
-"price": "$33.00"
-}
-],
-"title": "Salads"
-},
-{
-"items": [
-{
 "desc": "Dairy cow beef, fried egg, bacon, avocado, brown maple, aioli, cheddar cheese, bolo, home fries",
 "name": "Breakfast Burger*",
-"price": "$21.00"
+"price": "$22.00"
 },
 {
 "desc": "Lobster meat, spinach, mushrooms, croissant, lobster-infused hollandaise, mixed baby greens",
 "name": "Butter Poached Lobster Benedict*",
-"price": "$29.00"
+"price": "$33.00"
 },
 {
 "desc": "Spinach, mushrooms, tomatoes, caramelized onions, roasted peppers, goat cheese, home fries",
 "name": "Farmers Omelet*",
-"price": "$15.00"
+"price": "$18.00"
 },
 {
 "desc": "New York Sirloin, bearnaise, eggs benedict, hollandaise, mixed baby greens",
 "name": "Steak & Eggs*",
-"price": "$28.00"
+"price": "$33.00"
 },
 {
 "desc": "Baby spinach, brie, lobster",
 "name": "Lobster Omelet*",
-"price": "$29.00"
+"price": "$33.00"
 },
 {
 "desc": "Poached egg, Canadian bacon, hollandaise, English muffin, mixed baby greens",
 "name": "Classic Benedict*",
-"price": "$14.00"
+"price": "$17.00"
 },
 {
 "desc": "Portuguese sweet bread, baileys, bacon",
 "name": "Bailey's French Toast",
-"price": "$15.00"
+"price": "$16.00"
 },
 {
 "desc": "Soft-boiled egg, avocado, pickled shallots, goat cheese, cilantro, everything bagel spice, radish, mixed baby greens",
 "name": "Avocado Toast*",
-"price": "$14.00"
+"price": "$16.00"
+},
+{
+"desc": "With bourbon-aged maple syrup, French fries • ADD: honey truffle +$5.00",
+"name": "Chicken & Waffles",
+"price": "$23.00"
 }
 ],
 "title": "Brunch"
@@ -20476,27 +20551,27 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "",
-"name": "Side Biscuit",
-"price": "$8.00"
+"desc": "Ladyfingers, mascarpone cheese, cocoa powder",
+"name": "House-Made Tiramisu",
+"price": "$15.00"
 },
 {
-"desc": "",
-"name": "Side Fries",
-"price": "$7.00"
+"desc": "Crème fraiche, vanilla gelato",
+"name": "Carrot Cake",
+"price": "$15.00"
 },
 {
-"desc": "",
-"name": "Truffle Fries",
-"price": "$10.00"
+"desc": "With Maldon salt, extra virgin olive oil",
+"name": "Pistachio Gelato",
+"price": "$15.00"
 },
 {
-"desc": "",
-"name": "Sweet Potato Fries",
-"price": "$10.00"
+"desc": "Malden salt, extra virgin olive oil",
+"name": "GF Chocolate Molten Cake",
+"price": "$15.00"
 }
 ],
-"title": "Sides"
+"title": "Dessert"
 },
 {
 "items": [
@@ -20531,14 +20606,14 @@ const MENUS = {
 "price": "$75.00"
 },
 {
-"desc": "24 little necks, 24 oysters, 20 jumbo shrimp cocktails, 4 poached and chilled lobster tails",
-"name": "The Bellevue Avenue*",
-"price": "$300.00"
-},
-{
 "desc": "12 little necks, 12 oysters, 12 jumbo shrimp cocktails, 2 poached & chilled, lobster tails",
 "name": "The Ocean Drive*",
 "price": "$150.00"
+},
+{
+"desc": "24 little necks, 24 oysters, 20 jumbo shrimp cocktails, 4 poached and chilled lobster tails",
+"name": "The Bellevue Avenue*",
+"price": "$280.00"
 }
 ],
 "title": "Platters"
@@ -20887,7 +20962,7 @@ const MENUS = {
 "source": "https://irismiddlewareprodv4weu.blob.core.windows.net/fileresources/public/iris/MRIOTE/MARHOT/PVDLW/SKIFF26.pdf"
 },
 "stoneacre-brasserie": {
-"checked": "2026-11-02T19:11:36+00:00",
+"checked": "2026-11-09T19:29:35+00:00",
 "how": "structured",
 "sections": [
 {
@@ -20943,9 +21018,9 @@ const MENUS = {
 "price": "$24"
 },
 {
-"desc": "Assorted Nuts | Sugar | Spice | Everything Nice - TNS | GF",
-"name": "Candied Mixed Nuts",
-"price": "$8"
+"desc": "stuffed littleneck clams | bacon | breadcrumbs | lemon",
+"name": "Clams Casino",
+"price": "$18"
 },
 {
 "desc": "Buffalo | Ranch | Celery | Carrots - TNS",
@@ -20963,19 +21038,19 @@ const MENUS = {
 "price": "$8"
 },
 {
-"desc": "pepitas & pumpkin seed oil",
-"name": "Heirloom Squash Soup",
-"price": "$14"
+"desc": "crispy brussels & chives",
+"name": "Potato-Leek Soup",
+"price": "$16"
 },
 {
-"desc": "frisee, bacon lardons, croutons, vinaigrette & poached egg",
-"name": "Frisee aux Lardons Salad",
-"price": "$18"
+"desc": "truffled celery root puree, snap dragon apples",
+"name": "Boudin Blanc",
+"price": "$16"
 },
 {
-"desc": "stuffed littleneck clams, bacon, fresh herbs, breadcrumbs, lemon",
-"name": "Clams Casino",
-"price": "$18"
+"desc": "flashed with beurre noisette, ponzu & crispy shallots *",
+"name": "Yellowfin Tuna",
+"price": "$24"
 },
 {
 "desc": "1/2 oz $44 or 1 oz $68",
@@ -20983,8 +21058,8 @@ const MENUS = {
 "price": ""
 },
 {
-"desc": "black rice, arugula, & almond romesco",
-"name": "Grilled Octopus",
+"desc": "cucumbers, garlic & yogurt*",
+"name": "Grilled Lamb Skewers",
 "price": "$24"
 }
 ],
@@ -21003,9 +21078,9 @@ const MENUS = {
 "price": ""
 },
 {
-"desc": "Blue Cheese | Croutons | Sherry Vinaigrette",
-"name": "Market Greens Salad",
-"price": "$14"
+"desc": "frisee | bacon lardons | croutons | vinaigrette & poached egg",
+"name": "Frisee Aux Lardons Salad",
+"price": "$18"
 },
 {
 "desc": "Goat Cheese | Apricot | Pistachio - GF & TNS",
@@ -21026,6 +21101,11 @@ const MENUS = {
 "desc": "Leeks | Potatoes | Bacon | Cream | Dill | Parsley - GF",
 "name": "New England Clam Chowder",
 "price": "$12"
+},
+{
+"desc": "Blue Cheese | Croutons | Sherry Vinaigrette",
+"name": "Market Greens Salad",
+"price": "$14"
 },
 {
 "desc": "Kale | Miso Dressing | Maitakes | Lemon | Parmesan - GF & TNS",
@@ -21504,7 +21584,7 @@ const MENUS = {
 },
 {
 "desc": "Tea Sandwich",
-"name": "Smoked Salmon | Chive Cream Cheese on Multi-Grain",
+"name": "Pimento Cheese on Whole Wheat",
 "price": ""
 },
 {
@@ -21529,11 +21609,6 @@ const MENUS = {
 },
 {
 "desc": "",
-"name": "Sliced Fresh Fruit",
-"price": ""
-},
-{
-"desc": "",
 "name": "Berries | Creme Fraiche & Brown Sugar",
 "price": ""
 },
@@ -21548,11 +21623,6 @@ const MENUS = {
 "price": ""
 },
 {
-"desc": "Blue Cheese Crumbles, Croutons, Vinaigrette",
-"name": "Market Greens",
-"price": ""
-},
-{
 "desc": "Bacon, Cherry Tomatoes, Red Onion, Vegan Ranch | gf",
 "name": "Wedge Salad",
 "price": ""
@@ -21563,27 +21633,22 @@ const MENUS = {
 "price": ""
 },
 {
-"desc": "Ham, Gruyere, Parmesan",
-"name": "Croque Monsieur",
+"desc": "Whipped Burrata, Roasted Tomato, Basil",
+"name": "Burrata Toast",
 "price": ""
 },
 {
-"desc": "Cauliflower, Gruyere, Parmesan",
-"name": "Croque Chou - Fleur",
+"desc": "Creamy Polenta, Broccolini, Pearl Onions +8",
+"name": "Braised Beef Short Rib",
 "price": ""
 },
 {
-"desc": "Grilled Cheese, Aged Cheddar",
-"name": "Tomato Bisque",
-"price": ""
-},
-{
-"desc": "Turmeric Rice, Seasonal Vegetables",
+"desc": "Turmeric Rice, Cauliflower Puree, Rainbow Carrots",
 "name": "Roasted Salmon",
 "price": ""
 },
 {
-"desc": "Turmeric Rice, Seasonal Vegetables",
+"desc": "Turmeric Rice, Cauliflower Puree, Rainbow Carrots",
 "name": "Roasted Chicken",
 "price": ""
 },
@@ -22134,12 +22199,27 @@ const MENUS = {
 }
 ],
 "title": "Brunch Buffet"
+},
+{
+"items": [
+{
+"desc": "Enjoy our sans alcohol shots for the body and mind - Some Like It Hot orange, ginger, lemon, cayenne, sage-honey - Ginger Elixir pineapple, turmeric, ginger, lemon",
+"name": "Wellness Shots",
+"price": ""
+},
+{
+"desc": "bourbon, Aperol, amaro, lemon",
+"name": "Paper Plane",
+"price": "$18"
+}
+],
+"title": "Cocktails"
 }
 ],
 "source": "https://www.stoneacrebrasserie.com/newport-historic-hill-stoneacre-brasserie-food-menu"
 },
 "stoneacre-garden": {
-"checked": "2026-11-02T19:11:36+00:00",
+"checked": "2026-11-09T19:29:35+00:00",
 "how": "structured",
 "sections": [
 {
@@ -22598,11 +22678,6 @@ const MENUS = {
 "desc": "greens | tomato | cucumber | pickled red onions | feta peppers | chickpeas | pomegranate | herbed vinaigrette | GF",
 "name": "Chopped Salad",
 "price": "$18"
-},
-{
-"desc": "butter lettuce | asparagus | gribiche | avocado | almonds | GF",
-"name": "Breakfast Salad",
-"price": "$18"
 }
 ],
 "title": "Soups | Salads"
@@ -22690,18 +22765,18 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "Salted Caramel | Cocoa Streusel | Whipped Creme Fraiche",
-"name": "Hazelnut Chocolate Mousse",
-"price": "$12"
-},
-{
-"desc": "Fresh Fruit",
-"name": "Lavender Panna Cotta",
-"price": "$12"
+"desc": "Graham cracker crust, berries, elderflower and lemon",
+"name": "Cheesecake",
+"price": "$14"
 },
 {
 "desc": "Chef's Selection",
 "name": "Sorbet With Berries",
+"price": "$12"
+},
+{
+"desc": "brownie, sprinkles, vanilla gelato, whipped cream, hazelnuts,",
+"name": "Brownie Sundae",
 "price": "$12"
 }
 ],
@@ -23327,6 +23402,11 @@ const MENUS = {
 {
 "desc": "",
 "name": "Autumn Squash Risotto | Mushrooms | Pepitas",
+"price": ""
+},
+{
+"desc": "",
+"name": "Roasted Cauliflower Steak | Kale | Capers | Lemon | Za'atar",
 "price": ""
 }
 ],
@@ -24583,7 +24663,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "vieste": {
-"checked": "2026-11-02T19:11:36+00:00",
+"checked": "2026-11-09T19:29:35+00:00",
 "how": "structured",
 "sections": [
 {
