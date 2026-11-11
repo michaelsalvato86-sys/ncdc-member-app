@@ -514,7 +514,7 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
   <div class="gd-hero" id="gd-hero" hidden><b>Your guide to the Dinner Club restaurants</b><p>Find a place to eat, see menus, book a table and get directions. To get your two-for-one, bring your <b>Dinner Club book</b> and present it to your server.</p></div>
   <div class="tour" id="tour" hidden>
     <div class="tour-head"><b>You're in. Here's what's inside.</b><button id="tour-x" type="button" aria-label="Close">Close</button></div>
-    <button class="tour-i" data-t="list" type="button"><span>1</span><div><b>See every restaurant</b><small>All 58, with search and filters</small></div></button>
+    <button class="tour-i" data-t="list" type="button"><span>1</span><div><b>See every restaurant</b><small>All <span class="rcount">43</span>, with search and filters</small></div></button>
     <button class="tour-i" data-t="scan" type="button"><span>2</span><div><b>Show a code to the server</b><small>Try Brick Alley Pub (sample QR)</small></div></button>
     <button class="tour-i" data-t="pay" type="button"><span>3</span><div><b>Join or renew with Apple Pay</b><small>The payment screen</small></div></button>
     <button class="tour-i" data-t="club" type="button"><span>4</span><div><b>The Club</b><small>About, rules, where to buy, contact</small></div></button>
@@ -537,7 +537,7 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
   <div class="list-head"><h2>Where are you dining?</h2><p>Search, or find the restaurants closest to you.</p></div>
   <div class="find"><div class="find-in">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-    <input id="hq" type="search" placeholder="Search 58 restaurants or a town" aria-label="Search restaurants"></div>
+    <input id="hq" type="search" placeholder="Search 43 restaurants or a town" aria-label="Search restaurants"></div>
     <button class="btn near" id="h-near" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>Near me</button>
     <div class="hmap" id="hmap" role="button" tabindex="0" aria-label="Open the restaurant map"></div>
     <button class="btn ghost" id="h-all" type="button">See all on the map</button></div>
@@ -710,6 +710,7 @@ document.querySelectorAll('.pr-online').forEach(e=>e.textContent=CLUB.price.onli
 document.querySelectorAll('.pr-reg').forEach(e=>e.textContent=CLUB.price.regular);
 document.querySelectorAll('.pr-retail').forEach(e=>e.textContent=CLUB.price.retail);
 document.querySelectorAll('#club .mail').forEach(e=>e.textContent=CLUB.email);
+document.querySelectorAll('.rcount').forEach(e=>e.textContent=RESTAURANTS.length);$('#hq').placeholder='Search '+RESTAURANTS.length+' restaurants or a town';
 $('#cl-signup').href=CLUB.partnerFormUrl;
 try{const q=qrcode(0,'M');q.addData(CLUB.partnerFormUrl);q.make();$('#cl-qr').innerHTML=q.createSvgTag({cellSize:4,margin:2,scalable:true})}catch(e){}
 (function(){const h=document.querySelector('#cl-signup');if(!h||!CLUB.appLogo)return;const box=document.createElement('div');box.className='applogo';box.innerHTML=`<img src="${CLUB.appLogo}" alt="App logo"><span>${CLUB.appLogoPending?'App logo: placeholder until the Dinner Club logo file arrives':'App logo'}</span>`;const fine=document.querySelector('.fine');if(fine)fine.parentNode.insertBefore(box,fine)})();
