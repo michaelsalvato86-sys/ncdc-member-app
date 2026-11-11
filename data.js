@@ -1,6 +1,6 @@
 // Newport County Dinner Club - app data.
 // Restaurant names, links and notes are copied from newportcountydinnerclub.com (2026-10-08).
-// Every redemption "code" below is SAMPLE until the restaurant submits its own through /partner/.
+// Redemption codes come only from restaurants via /partner/ (none in this file; the 2026-27 season uses the printed book).
 //
 // code.type:
 //   'image'   - the restaurant uploaded its own graphic (QR, barcode or coupon); shown as-is
@@ -24,7 +24,7 @@ const CLUB = {
   // App logo: the official logo from newportcountydinnerclub.com (Michael, 2026-10-09: "the one from the website
   // looked great, just use that"). Same file the headers and icons already use.
   appLogo: 'logo-vert.png', appLogoPending: false,
-  email: 'newportcountydinnerclub@gmail.com',
+  email: 'dinnerclub@newportlifemagazine.com',
   buyUrl: 'https://square.link/u/MWVwkI9s',
   renewUrl: 'https://square.link/u/XqJux7Uh',
   // 2026-2027 season: physical books only (Michael, 2026-10-20: "we have to stick with the physical books").
@@ -49,9 +49,9 @@ const RESTAURANTS = [
   { id: 'bar-12', name: 'Bar 12', url: 'https://www.bar12newport.com', offer: {breakfast: [], lunch: [], dinner: [2, 3, 4, 5, 6]} },
   { id: 'ben-jerrys', name: "Ben and Jerry's", url: 'https://www.benjerry.com/thamesstreet', offer: {breakfast: [0, 1, 2, 3, 4, 5, 6], lunch: [0, 1, 2, 3, 4, 5, 6], dinner: [0, 1, 2, 3, 4, 5, 6]} },
   { id: 'benjamins', name: "Benjamin's Raw Bar", url: 'https://www.benjaminsrawbar.com/', status: 'seasonal', offer: {breakfast: [], lunch: [], dinner: [0, 1, 2, 3, 4]}, blackout: "During winter closed on Wednesdays. Not valid June, July, August", rules: "Valid for dine-in only. A 20% gratuity will be added to the total bill prior to the deduction." },
-  { id: 'brick-alley', name: 'Brick Alley Pub', url: 'https://www.brickalley.com', code: { type: 'qr', value: 'NCDC-2FOR1-BRICKALLEY', pos: 'Toast', sample: true }, offer: {breakfast: [], lunch: [0, 1, 2, 3, 4, 5, 6], dinner: [0, 1, 2, 3, 4, 5, 6]} },
+  { id: 'brick-alley', name: 'Brick Alley Pub', url: 'https://www.brickalley.com', offer: {breakfast: [], lunch: [0, 1, 2, 3, 4, 5, 6], dinner: [0, 1, 2, 3, 4, 5, 6]} },
   { id: 'caleb-broad', name: 'Caleb & Broad', url: 'http://www.calebandbroad.com/', offer: {breakfast: [5, 6], lunch: [5, 6], dinner: [0, 1, 2, 3, 4, 5, 6]} },
-  { id: 'claw-hammer', name: 'Claw & Hammer', url: 'https://www.clawnhammer.com/', code: { type: 'barcode', value: 'NCDC2027CLAW', pos: 'Square', sample: true }, offer: {breakfast: [], lunch: [2, 3, 4, 5, 6], dinner: [0, 1, 2, 3, 4, 5, 6]} },
+  { id: 'claw-hammer', name: 'Claw & Hammer', url: 'https://www.clawnhammer.com/', offer: {breakfast: [], lunch: [2, 3, 4, 5, 6], dinner: [0, 1, 2, 3, 4, 5, 6]} },
   { id: 'cluck-house', name: 'Cluck House', url: 'https://cluckhousenewport.com', offer: {breakfast: [], lunch: [0, 1, 2, 3, 4, 5, 6], dinner: [0, 1, 2, 3, 4, 5, 6]} },
   { id: 'the-deck', name: '@ The Deck', url: 'http://www.waiteswharf.com/', status: 'seasonal', offer: {breakfast: [], lunch: [0, 1, 2, 3, 4], dinner: [0, 1, 2, 3, 4, 5, 6]}, blackout: "Valid: Inside Sun thru Sat 4:30pm-8:30pm Outside Mon thru Fri 12:00pm-4:00pm (April thru Oct.) NOTE: OCT THRU DEC. Inside Closed Mon thru Wed CLOSED JAN THRU MARCH Visit website to verify hours NOT VALID ON TAKE-OUT", rules: "A 20% gratuity will be added to the total bill prior to the deduction" },
   { id: 'diegos-newport', name: "Diego's Newport", url: "https://diegosnewport.com/", status: 'seasonal', offer: {breakfast: [], lunch: [0, 1, 2, 3, 4], dinner: []}, blackout: "All of July and August" },
@@ -59,7 +59,7 @@ const RESTAURANTS = [
   { id: 'flos', name: "Flo's Clam Shack", url: 'https://flosclamshacks.com/', note: 'Heritage Restaurant Group', offer: {breakfast: [], lunch: [0, 1, 2, 3, 4, 5, 6], dinner: [0, 1, 2, 3, 4, 5, 6]} },
   { id: 'food-shack', name: 'The Food Shack', url: 'https://www.401foodshack.com/', offer: {breakfast: [], lunch: [0, 1, 2, 3, 4, 5], dinner: [0, 1, 2, 3, 4, 5]} },
   { id: 'foodworks', name: 'Foodworks', url: 'https://www.foodworksfamilyrestaurant.com/', offer: {breakfast: [0, 1, 2, 3, 4], lunch: [0, 1, 2, 3, 4], dinner: []}, rules: "A 20% gratuity will be added to the total bill prior to the deduction." },
-  { id: 'hooked', name: 'Hooked', url: 'https://hooked-newport.com', code: { type: 'code', value: 'DINNERCLUB27', pos: 'Clover', sample: true }, status: 'seasonal', offer: {breakfast: [], lunch: [], dinner: [0, 1, 2, 6]}, blackout: "Blackout Months of June July August September", rules: "A 20% gratuity will be added to the total bill prior to the deduction" },
+  { id: 'hooked', name: 'Hooked', url: 'https://hooked-newport.com', status: 'seasonal', offer: {breakfast: [], lunch: [], dinner: [0, 1, 2, 6]}, blackout: "Blackout Months of June July August September", rules: "A 20% gratuity will be added to the total bill prior to the deduction" },
   { id: 'jos', name: "Jo's American Bistro", url: 'https://josamericanbistro.com', offer: {breakfast: [], lunch: [5, 6], dinner: [0, 1, 2, 3, 4, 5, 6]} },
   { id: 'jt-commons', name: 'JT Commons', url: 'https://www.jtcommonsrestaurant.com', status: 'seasonal', offer: {breakfast: [], lunch: [0, 1, 2, 3, 6], dinner: [0, 1, 2, 3, 6]}, blackout: "Not valid June 15th - September 15th", rules: "Dine-in only. Not valid on take-out orders. Not valid all holidays. Not valid with any other promotion or discount. Gratuity not included. Please tip your server on total value of check prior to deduction." },
   { id: 'la-forge', name: 'La Forge Casino Restaurant', url: 'https://laforgenewport.com/', offer: {breakfast: [], lunch: [0, 1, 2, 3, 4, 5, 6], dinner: [0, 1, 2, 3, 4, 5, 6]} },
@@ -87,10 +87,8 @@ const RESTAURANTS = [
   { id: 'wharf-southern', name: "Wharf Coastal Seafood & Tavern", url: "https://wharfcoastalseafood.com/", status: 'seasonal', offer: {breakfast: [], lunch: [0, 1, 2, 3, 6], dinner: [0, 1, 2, 3, 6]}, blackout: "Not available July and August.", rules: "Only the Tavern side is participating, seafood side is closed" },
 ];
 
-// DEMO members. The real build checks the Square customer list (purchases and renewals already run through Square).
-const DEMO_MEMBERS = [
-  { number: '27-00001', email: 'demo@newportcountydinnerclub.com', name: 'Demo Member' },
-];
+// No sample members. A digital card would check the Square customer list.
+const DEMO_MEMBERS = [];
 
 // Heritage Restaurant Group venues on the Dinner Club list. They get member-level detail (names, emails) for
 // marketing, from members who opted in. Reef, Claw & Hammer, Cluck House, Jo's, La Forge and Quencher added 2026-10-09 from our Toast/DoorDash/ad lists;
