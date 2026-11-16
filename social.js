@@ -77,7 +77,7 @@ const SOCIAL = {
 "instagram": "https://www.instagram.com/j.t.commons/"
 },
 "la-forge": {
-"facebook": "https://www.facebook.com/laforgenewport/",
+"facebook": "https://www.facebook.com/127153057299879",
 "instagram": "https://www.instagram.com/laforgenewport",
 "x": "https://www.twitter.com/LaForgeCasino"
 },
@@ -123,6 +123,10 @@ const SOCIAL = {
 "pour-judgement": {
 "facebook": "https://www.facebook.com/pour.judgement",
 "instagram": "https://www.instagram.com/pour_judgement/"
+},
+"prudence": {
+"facebook": "https://www.facebook.com/PrudenceBristoleRhodeIsland/",
+"instagram": "https://www.instagram.com/prudencebristol/"
 },
 "quencher": {
 "instagram": "https://www.instagram.com/thequenchernewport/"
