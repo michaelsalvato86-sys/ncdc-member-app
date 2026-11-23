@@ -77,9 +77,8 @@ const SOCIAL = {
 "instagram": "https://www.instagram.com/j.t.commons/"
 },
 "la-forge": {
-"facebook": "https://www.facebook.com/127153057299879",
-"instagram": "https://www.instagram.com/laforgenewport",
-"x": "https://www.twitter.com/LaForgeCasino"
+"facebook": "https://www.facebook.com/laforgenewport/",
+"instagram": "https://www.instagram.com/laforgenewport"
 },
 "lucia": {
 "facebook": "https://www.facebook.com/Lucia-Italian-Restaurant-126383664081483/",
@@ -154,7 +153,7 @@ const SOCIAL = {
 },
 "stoneacre-brasserie": {
 "instagram": "https://www.instagram.com/stoneacrebrasserie",
-"tiktok": "https://www.tiktok.com/@stonacrehospitality"
+"tiktok": "https://www.tiktok.com/@stoneacrehospitality"
 },
 "stoneacre-garden": {
 "facebook": "https://www.facebook.com/112027363998105",

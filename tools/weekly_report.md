@@ -1,4 +1,4 @@
-# Dinner Club weekly refresh - 2026-11-16 19:22
+# Dinner Club weekly refresh - 2026-11-23 20:57
 
 **Result:** OK
 **Menus on the app:** 56 restaurants (was 56)
@@ -6,8 +6,7 @@
 
 ## Menus and social links (exit 0)
 ```
- copy)
-  22-bowens              ok 192 items (structured+rendered)
+ 22-bowens              ok 192 items (structured+rendered)
   annies                 too few items (0, text) - link only (kept last good copy)
   anthonys               no menu url
   aquidneck-pizzeria     kept checked copy (scrape found 117 items by linked-pdf)
@@ -34,9 +33,9 @@
   hooked                 too few items (0, text) - link only
   hungry-monkey          too few items (1, text) - link only (kept last good copy)
   jos                    kept checked copy (scrape found 17 items by text)
-  jt-commons             ok 147 items (structured+rendered)
+  jt-commons             ok 146 items (structured+rendered)
   kitchen-table          too few items (0, text) - link only
-  la-forge               ok 41 items (structured)
+  la-forge               ok 6 items (structured)
   lucia                  too few items (3, text) - link only (kept last good copy)
   mainsail               ok 67 items (structured)
   mamma-luisas           kept checked copy (scrape found 19 items by text)
@@ -44,7 +43,7 @@
   marcos-cafe            no menu url
   martinos               ok 24 items (structured)
   mews                   too few items (0, text) - link only (kept last good copy)
-  mooring                ok 381 items (structured+rendered)
+  mooring                ok 388 items (structured+rendered)
   north-end              no menu url (kept checked copy)
   obriens                no menu url (kept checked copy)
   one-bellevue           no menu url
@@ -57,7 +56,7 @@
   pour-judgement         no menu url (kept checked copy)
   prudence               no menu url
   quencher               kept checked copy (scrape found 8 items by linked-pdf)
-  red-parrot             too few items (0, text+rendered) - link only (kept last good copy)
+  red-parrot             too few items (4, text+rendered) - link only (kept last good copy)
   reef                   ok 79 items (structured)
   saltwater              too few items (5, pdf) - link only (kept last good copy)
   skiff-bar              too few items (0, text) - link only
@@ -68,10 +67,10 @@
   the-deck               no menu url (kept checked copy)
   titos                  too few items (0, text) - link only (kept last good copy)
   vieste                 ok 31 items (structured)
-  wallys                 too few items (1, text) - link only
+  wallys                 too few items (1, text+rendered) - link only
   wharf-fishhouse        too few items (0, text) - link only
   wharf-southern         no menu url (kept checked copy)
-  yagi                   too few items (1, text) - link only
+  yagi                   too few items (0, text) - link only
 ```
 
 ## Google ratings and hours (exit 0)

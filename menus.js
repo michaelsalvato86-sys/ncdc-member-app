@@ -255,7 +255,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "22-bowens": {
-"checked": "2026-11-16T19:16:01+00:00",
+"checked": "2026-11-23T20:52:08+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -3957,7 +3957,7 @@ const MENUS = {
 "source": "https://benjaminsnewportri.com/"
 },
 "blue-plate": {
-"checked": "2026-11-16T19:16:01+00:00",
+"checked": "2026-11-23T20:52:08+00:00",
 "how": "linked-pdf",
 "sections": [
 {
@@ -4349,7 +4349,7 @@ const MENUS = {
 "source": "https://www.blueplatedinerri.com/lunch-dinner"
 },
 "brick-alley": {
-"checked": "2026-11-16T19:16:01+00:00",
+"checked": "2026-11-23T20:52:08+00:00",
 "how": "structured",
 "sections": [
 {
@@ -6307,7 +6307,7 @@ const MENUS = {
 "source": "https://www.clawnhammer.com/s/CLAW-AND-HAMMER-MENU-9226.pdf"
 },
 "cluck-house": {
-"checked": "2026-11-16T19:16:01+00:00",
+"checked": "2026-11-23T20:52:08+00:00",
 "how": "structured",
 "sections": [
 {
@@ -9519,7 +9519,7 @@ const MENUS = {
 "source": "https://www.foodworksfamilyrestaurant.com/menu (Breakfast, Lunch, Drinks and Desserts PDFs)"
 },
 "helmway": {
-"checked": "2026-11-16T19:16:01+00:00",
+"checked": "2026-11-23T20:52:08+00:00",
 "how": "structured",
 "sections": [
 {
@@ -11028,7 +11028,7 @@ const MENUS = {
 "source": "https://josamericanbistro.com/current-menu/ (+ /dessert-menu/, /childrens-menu/, /cocktail-menu/)"
 },
 "jt-commons": {
-"checked": "2026-11-16T19:16:01+00:00",
+"checked": "2026-11-23T20:52:08+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -11192,19 +11192,19 @@ const MENUS = {
 "desc": "signature red sauce, grated parmesan",
 "name": "RI Red",
 "price": "$22.00"
+}
+],
+"title": "Our signature style."
 },
 {
-"desc": "Includes Soup, Salad & Focaccia Slice: Salad | Caesar or Simple Greens Salad Soup | Tuscan Chicken or NE Clam Chowder Slice | Just Cheese, Red Slice, Pepperoni, or Sausage, Peppers & Onions",
-"name": "Slice Box",
-"price": "$15.00"
-},
+"items": [
 {
 "desc": "Includes Soup, Salad & Focaccia Slice",
 "name": "The Slice Box",
 "price": "$15.00"
 }
 ],
-"title": "Our signature style."
+"title": "Slice Box"
 },
 {
 "items": [
@@ -11220,7 +11220,7 @@ const MENUS = {
 },
 {
 "desc": "caramelized onions, mushrooms, Cooper’s sharp American cheese, vienna roll",
-"name": "Steak & Cheese*",
+"name": "Steak & Cheese",
 "price": "$18.00"
 },
 {
@@ -12183,60 +12183,30 @@ const MENUS = {
 "source": "https://www.opentable.com/r/the-kitchen-table-middletown"
 },
 "la-forge": {
-"checked": "2026-11-16T19:16:01+00:00",
+"checked": "2026-11-23T20:52:08+00:00",
 "how": "structured",
 "sections": [
 {
 "items": [
 {
-"desc": "Plain, Buffalo, sesame garlic, or BBQ with your choice of dipping sauce: Ranch or Bleu Cheese.",
-"name": "Chicken Tenders",
-"price": "$16.00"
+"desc": "Plain, Buffalo, Sesame Garlic, or BBQ | With your choice of dipping sauce: ranch or bleu cheese",
+"name": "Crispy Brussels  Sautéed brussels with crispy bacon and balsamic glaze",
+"price": "$16"
 },
 {
-"desc": "Sautéed Brussels with crispy bacon and balsamic glaze.",
-"name": "Crispy Brussels",
-"price": "$13.00"
+"desc": "Plain, Buffalo, Sesame Garlic, or BBQ | With your choice of dipping sauce: ranch or bleu cheese",
+"name": "Mozzarella Sticks  Italian breaded mozzarella sticks with marinara sauce",
+"price": "$16"
 },
 {
-"desc": "Italian breaded mozzarella sticks with marinara sauce.",
-"name": "Mozzarella Sticks",
-"price": "$13.00"
+"desc": "Plain, Buffalo, Sesame Garlic, or BBQ | With your choice of dipping sauce: ranch or bleu cheese",
+"name": "Edwin’s Housemade Chili with Chips",
+"price": "$16"
 },
 {
-"desc": "",
-"name": "Edwins Housemade Chili with Chips",
-"price": "$13.00"
-},
-{
-"desc": "Fresh house-fried tortilla chips, melted pepper jack cheese, topped with sour cream, house guacamole, pico de gallo, and jalapeño slices • Add Chicken +$6.00 | Chili +$6.00",
-"name": "Nachos",
-"price": "$13.00"
-},
-{
-"desc": "Half a dozen native littlenecks baked with seasoned bread crumbs, garlic butter, and bacon.",
-"name": "Clams Casino",
-"price": "$18.00"
-},
-{
-"desc": "Stuffed with chopped clams, chorizo, bacon, peppers, onions, breadcrumbs, and seasoning.",
-"name": "RI Stuffed Quahog",
-"price": "$8.00"
-},
-{
-"desc": "Jumbo shrimp served with cocktail sauce.",
-"name": "Jumbo Shrimp Cocktail (6)",
-"price": "$24.00"
-},
-{
-"desc": "Fried calamari served with lemon, banana peppers, and marinara sauce.",
-"name": "Crispy Calamari",
-"price": "$19.00"
-},
-{
-"desc": "Two jumbo lump crab cakes pan seared and served with Creole remoulade and tomato basil salsa.",
-"name": "Crab Cakes (2)",
-"price": "$20.00"
+"desc": "Plain, Buffalo, Sesame Garlic, or BBQ | With your choice of dipping sauce: ranch or bleu cheese",
+"name": "Jumbo Shrimp Cocktail  (6) Jumbo shrimp served with cocktail sauce",
+"price": "$16"
 }
 ],
 "title": "Starters"
@@ -12244,177 +12214,17 @@ const MENUS = {
 {
 "items": [
 {
-"desc": "Cold lobster with light mayo, celery, lemon, and parsley, or warm butter lobster roll.",
-"name": "La Forge Lobster Roll",
-"price": "$34.00"
+"desc": "Traditional creamy New England clam chowder with clams, potato, and dill",
+"name": "Baked Onion Soup  Onion soup with beef broth, crostini, and melted Swiss cheese",
+"price": "$10 / $12"
 },
 {
-"desc": "Hand-carved turkey on toasted white bread with bacon, lettuce, tomato, and mayonnaise served on white bread.",
-"name": "Roasted Turkey Club",
-"price": "$18.00"
-},
-{
-"desc": "All-white meat, mayonnaise, arugula, celery, and sweet pickles served on a croissant.",
-"name": "Chicken Salad Croissant",
-"price": "$18.00"
-},
-{
-"desc": "Corned beef, sauerkraut, Swiss cheese, and Thousand Island dressing served on rye toast.",
-"name": "Reuben",
-"price": "$18.00"
-},
-{
-"desc": "Grilled chicken with Swiss cheese and caramelized onions on grilled sourdough.",
-"name": "French Onion Chicken Grilled Cheese",
-"price": "$18.00"
-},
-{
-"desc": "8 oz. special blend, lettuce, tomato, onion, and your choice of: American, Swiss, Pepper Jack, or Cheddar.",
-"name": "Classic Cheeseburger",
-"price": "$17.00"
-},
-{
-"desc": "8 oz. special blend, sharp Cheddar cheese, short rib, arugula, bacon jam, and brioche bun.",
-"name": "Winter Burger",
-"price": "$20.00"
-}
-],
-"title": "Sandwiches"
-},
-{
-"items": [
-{
-"desc": "Kale, roasted butternut squash, Brussels, craisins, pepitas, and goat cheese with an apple cider vinaigrette.",
-"name": "Kale Salad",
-"price": "$16.00"
-},
-{
-"desc": "Iceberg lettuce, chopped tomatoes, bacon, crumbled blue cheese, and blue cheese dressing.",
-"name": "Wedge Salad",
-"price": "$16.00"
-},
-{
-"desc": "Chopped romaine, shaved Parmesan, and house-made croutons served with Caesar dressing.",
-"name": "Classic Caesar Salad",
-"price": "$16.00"
-}
-],
-"title": "Salads"
-},
-{
-"items": [
-{
-"desc": "Soup: onion soup, chowder, lobster bisque, or soup of the day. Any sandwich (excluding burgers and lobster rolls).",
-"name": "Half Sandwich & Cup Soup",
-"price": "$17.00"
-},
-{
-"desc": "Bowl of New England clam chowder and lobster slider served cold or warm.",
-"name": "The New England Duo",
-"price": "$22.00"
-},
-{
-"desc": "$10.00 | $12.00 • Traditional creamy New England clam chowder with clams, potato, and dill.",
-"name": "N.E. Clam Chowder",
-"price": ""
-},
-{
-"desc": "$11.00 | $13.00 • Traditional and creamy lobster bisque with herbs and a hint of sherry.",
-"name": "Lobster Bisque",
-"price": ""
-},
-{
-"desc": "Onion soup with beef broth, crostini, and melted Swiss cheese.",
-"name": "Baked Onion Soup",
-"price": "$12.00"
-},
-{
-"desc": "$10.00 | $12.00",
+"desc": "Traditional creamy New England clam chowder with clams, potato, and dill",
 "name": "Soup of the Day",
-"price": ""
+"price": "$10 / $12"
 }
 ],
 "title": "Soups"
-},
-{
-"items": [
-{
-"desc": "Jumbo shrimp, crab ritz stuffing, mashed potatoes, asparagus, and lemon beurre blanc.",
-"name": "Baked Stuffed Shrimp (5)",
-"price": "$33.00"
-},
-{
-"desc": "Fresh cod, battered and fried served with French fries, coleslaw, and tartar sauce.",
-"name": "Fish 'n Chips",
-"price": "$26.00"
-},
-{
-"desc": "Broiled salmon with a lemon dill sauce or hollandaise sauce, served with mashed potatoes and asparagus.",
-"name": "Broiled Salmon",
-"price": "$28.00"
-},
-{
-"desc": "Potato gnocchi with ground beef, onions, and bell peppers simmered in a tomato basil sauce.",
-"name": "Gnocchi Bolognese",
-"price": "$25.00"
-},
-{
-"desc": "Jumbo shrimp sautéed in white wine and butter with garlic, tomatoes, and onions, over linguine.",
-"name": "Shrimp Scampi",
-"price": "$28.00"
-},
-{
-"desc": "Classic breaded chicken Parmesan baked with mozzarella and marinara, over linguine.",
-"name": "Chicken Parmesan",
-"price": "$27.00"
-},
-{
-"desc": "Tender short rib served over mashed potatoes, with carrots, onions, celery, and a red wine demi-glace.",
-"name": "Short Rib",
-"price": "$38.00"
-},
-{
-"desc": "Baked cod topped with garlic butter and panko crumbs, rice pilaf, and mixed vegetables.",
-"name": "Baked Cod",
-"price": "$30.00"
-},
-{
-"desc": "Ground beef with fresh herbs, vegetables, and house-made gravy with dollops of mashed potatoes.",
-"name": "Shepherd's Pie",
-"price": "$25.00"
-},
-{
-"desc": "House-made meatloaf and gravy served with mashed potatoes and mixed vegetables.",
-"name": "Meatloaf & Mashed",
-"price": "$25.00"
-},
-{
-"desc": "Statler chicken with pan sauce, mashed, and green beans.",
-"name": "Chicken Bellevue",
-"price": "$28.00"
-},
-{
-"desc": "Grilled to your liking, mashed potatoes, mixed vegetables, and red wine demi-glace.",
-"name": "Steak Tips",
-"price": "$32.00"
-},
-{
-"desc": "Choice of the following: Chili & Chips La Forge house chili, melted aged Cheddar & Monterey Jack, sour cream, scallions, and nacho chips. NE Clam Chowder A cup of our creamy clam chowder with clams, potatoes, bacon, and ",
-"name": "FIRST COURSE",
-"price": ""
-},
-{
-"desc": "Choose from the following: Classic Grilled Chicken Caesar Salad Chopped romaine, shaved Parmesan, and house-made croutons served with Caesar dressing. The Bellevue Burger 8 oz special blend patty topped with lettuce, tom",
-"name": "SECOND COURSE",
-"price": ""
-},
-{
-"desc": "Cheesecake Pumpkin Bread Pudding",
-"name": "DESSERT",
-"price": ""
-}
-],
-"title": "Mains"
 }
 ],
 "source": "https://laforgenewport.com/newport-la-forge-casino-restaurant-food-menu"
@@ -12698,7 +12508,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "mainsail": {
-"checked": "2026-11-16T19:16:01+00:00",
+"checked": "2026-11-23T20:52:08+00:00",
 "how": "structured",
 "sections": [
 {
@@ -13944,7 +13754,7 @@ const MENUS = {
 "source": "https://www.marcosri.com/ (+ catering PDF https://www.marcosri.com/_files/ugd/e3afd1_f53a39f598a0494db8ad3762944ee226.pdf)"
 },
 "martinos": {
-"checked": "2026-11-16T19:16:01+00:00",
+"checked": "2026-11-23T20:52:08+00:00",
 "how": "structured",
 "sections": [
 {
@@ -14599,7 +14409,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "mooring": {
-"checked": "2026-11-16T19:16:01+00:00",
+"checked": "2026-11-23T20:52:08+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -15040,7 +14850,7 @@ const MENUS = {
 "price": "$15.00"
 },
 {
-"desc": "pusser’s rum, tropical juices, coconut & nutmeg",
+"desc": "Pusser’s rum, tropical juices, coconut & nutmeg",
 "name": "THE MOORING PAINKILLER",
 "price": "$16.00"
 },
@@ -15050,39 +14860,39 @@ const MENUS = {
 "price": "$15.00"
 },
 {
-"desc": "barr hill gin, yuzu, citrus, prosecco",
-"name": "yuzu",
-"price": "$18.00"
-},
-{
-"desc": "old forester bourbon, black walnut bitters",
-"name": "seafarer’s old fashion",
-"price": "$18.00"
-},
-{
-"desc": "tequila, aperol, blood orange, lemon, lemon-lime soda",
-"name": "sundown on sayer’s",
+"desc": "Tito's vodka, white cranberry, lime, ginger beer",
+"name": "arctic mule",
 "price": "$16.00"
 },
 {
-"desc": "mezcal, pineapple, agave, lime, habanero bitters, black sea salt",
-"name": "smoked horizon",
+"desc": "vanilla vodka, cinnamon, berry, prosecco, soda",
+"name": "cinnamon berry spritz",
+"price": "$16.00"
+},
+{
+"desc": "blanco tequila, Triple Sec, pineapple, jalapeno",
+"name": "spicy pineapple",
+"price": "$16.00"
+},
+{
+"desc": "Casamigos tequila, Cointreau, pomegranate, cardamom, lime",
+"name": "pomegranate cardamom margarita",
+"price": "$19.00"
+},
+{
+"desc": "mezcal, elderflower, blood orange, lime, ginger",
+"name": "Ember & orange",
+"price": "$18.00"
+},
+{
+"desc": "Barr Hill gin, spiced pear liqueur, lemon, honey, sage",
+"name": "spiced pear sour",
 "price": "$17.00"
 },
 {
-"desc": "hendrick's gin, st. elder grapefruit, cucumber, citrus",
-"name": "gilded garden",
+"desc": "Old Forester bourbon, black walnut bitters",
+"name": "seafarer’s old fashion",
 "price": "$18.00"
-},
-{
-"desc": "maker's mark bourbon, peach, lemon, mint",
-"name": "velvet peach smash",
-"price": "$18.00"
-},
-{
-"desc": "bacardi, kahlua, lime, coca cola",
-"name": "java pop",
-"price": "$15.00"
 }
 ],
 "title": "Seasonal Cocktails"
@@ -15130,42 +14940,72 @@ const MENUS = {
 "price": "$9.00"
 },
 {
-"desc": "grapefruit juice, jalapeno, lime, soda",
-"name": "rough waters",
+"desc": "pomegranate, berry hibiscus, soda",
+"name": "ruby bloom",
 "price": "$9.00"
 },
 {
-"desc": "cucumber water, lime, ginger ale",
-"name": "sunny by the sea",
-"price": "$9.00"
-},
-{
-"desc": "watermelon juice, sparkling soda, lime",
-"name": "melon ball",
+"desc": "blood orange, jalapeno, soda",
+"name": "spicy blood orange",
 "price": "$10.00"
+},
+{
+"desc": "pear, cardamom, lemon, ginger ale",
+"name": "golden pear",
+"price": "$9.00"
 },
 {
 "desc": "non - alcoholic, sparkling rose",
 "name": "tÖst",
 "price": "$8.00"
-},
-{
-"desc": "rosaluna, chocolate, kahlua, baileys, espresso, agave",
-"name": "lavive",
-"price": "$18.00"
-},
-{
-"desc": "vanilla vodka, kahlua, baileys, espresso",
-"name": "espresso martini",
-"price": "$17.00"
-},
-{
-"desc": "vanilla vodka, key lime, coconut",
-"name": "coco for key lime",
-"price": "$15.00"
 }
 ],
 "title": "Refreshments & Mocktails"
+},
+{
+"items": [
+{
+"desc": "",
+"name": "tears of llorona",
+"price": ""
+},
+{
+"desc": "",
+"name": "clase azul reposado",
+"price": ""
+},
+{
+"desc": "",
+"name": "don julio 1942",
+"price": ""
+},
+{
+"desc": "",
+"name": "hibiki 21 year",
+"price": ""
+},
+{
+"desc": "",
+"name": "johnnie walker blue",
+"price": ""
+},
+{
+"desc": "",
+"name": "balvenie 21 portwood",
+"price": ""
+},
+{
+"desc": "",
+"name": "blantons (when available)",
+"price": ""
+},
+{
+"desc": "",
+"name": "maker’s mark employee owner’s stock",
+"price": ""
+}
+],
+"title": "Featured Spirits"
 },
 {
 "items": [
@@ -15793,31 +15633,6 @@ const MENUS = {
 "desc": "",
 "name": "2024 vermentino, cantina mesa ‘giunco’ sardinia, italy",
 "price": "$50.00"
-},
-{
-"desc": "",
-"name": "2022 pinot blanc, kelley fox ‘freedom hill’ willamette valley, oregon",
-"price": "$75.00"
-},
-{
-"desc": "",
-"name": "2022 gruner vetliner, steininger 'grand cru', kamptal, austria",
-"price": "$68.00"
-},
-{
-"desc": "",
-"name": "2023 godello, emilio moro ‘el zarzal’ bierzo, spain",
-"price": "$69.00"
-},
-{
-"desc": "",
-"name": "2022 macabeo/riesling, estrada palacio ‘sentif xxii’ bespen, spain",
-"price": "$65.00"
-},
-{
-"desc": "",
-"name": "2018 furmint/yellow muscat, royal tokaji ‘late harvest’ tokaj-hegyalja, hungary",
-"price": "$74.00"
 }
 ],
 "title": "Interesting Whites"
@@ -17354,23 +17169,23 @@ const MENUS = {
 "source": "https://b3177136.assetcdn.net/3177136/wp-content/uploads/2025/06/UPDATED-MENU_compressed-pdf.jpg"
 },
 "perro-salado": {
-"checked": "2026-11-16T19:16:01+00:00",
+"checked": "2026-11-23T20:52:08+00:00",
 "how": "structured",
 "sections": [
 {
 "items": [
 {
-"desc": "Crispy White Corn Tortillas Topped with Pork Al Pastor simmered in Pork Glaze, Refried Pinto Beans,",
-"name": "THE LUCY LU NACHOS",
-"price": "$19"
+"desc": "Crispy White Corn Tortilla Chips topped with Shrimp Sauteed in Sweet-Chili Glaze, Cheese Blend,",
+"name": "SWEET CHILI SHRIMP NACHOS",
+"price": "$20"
 },
 {
-"desc": "Crispy White Corn Chips, Brisket, Barbeque Sauce, Refried Pinto Beans, Melted Cheese Blend, Pineapple-Cucumber Salsa, Cotija.",
-"name": "BBQ BEEF BRISKET NACHOS",
-"price": ""
+"desc": "Refried Pinto Beans, House and Oaxaca Cheeses, Crispy White Corn Tortilla Chips,",
+"name": "CHORIZO & POTATO NACHOS",
+"price": "$18"
 },
 {
-"desc": "Crispy White Corn Tortillas Topped with Pork Al Pastor simmered in Pork Glaze, Refried Pinto Beans,",
+"desc": "Crispy White Corn Tortilla Chips topped with Shrimp Sauteed in Sweet-Chili Glaze, Cheese Blend,",
 "name": "CLASSIC NACHOS",
 "price": "$16"
 },
@@ -18445,7 +18260,7 @@ const MENUS = {
 "source": "https://www.internationalpocketcafe.com/"
 },
 "portsmouth-publick": {
-"checked": "2026-11-16T19:16:01+00:00",
+"checked": "2026-11-23T20:52:08+00:00",
 "how": "structured+rendered",
 "sections": [
 {
@@ -20025,7 +19840,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "reef": {
-"checked": "2026-11-16T19:16:01+00:00",
+"checked": "2026-11-23T20:52:08+00:00",
 "how": "structured",
 "sections": [
 {
@@ -20832,7 +20647,7 @@ const MENUS = {
 "source": "https://irismiddlewareprodv4weu.blob.core.windows.net/fileresources/public/iris/MRIOTE/MARHOT/PVDLW/SKIFF26.pdf"
 },
 "stoneacre-brasserie": {
-"checked": "2026-11-16T19:16:01+00:00",
+"checked": "2026-11-23T20:52:08+00:00",
 "how": "structured",
 "sections": [
 {
@@ -20928,9 +20743,9 @@ const MENUS = {
 "price": ""
 },
 {
-"desc": "cucumbers, garlic & yogurt*",
-"name": "Grilled Lamb Skewers",
-"price": "$24"
+"desc": "Chili Crisp, Manchego & Pomegranate",
+"name": "Roasted Brussels Sprouts",
+"price": "$18"
 }
 ],
 "title": "Appetizers"
@@ -22078,8 +21893,8 @@ const MENUS = {
 "price": ""
 },
 {
-"desc": "bourbon, Aperol, amaro, lemon",
-"name": "Paper Plane",
+"desc": "Absolut Mandarin, rose, lime, white cranberry",
+"name": "French Twist",
 "price": "$18"
 }
 ],
@@ -22089,7 +21904,7 @@ const MENUS = {
 "source": "https://www.stoneacrebrasserie.com/newport-historic-hill-stoneacre-brasserie-food-menu"
 },
 "stoneacre-garden": {
-"checked": "2026-11-16T19:16:01+00:00",
+"checked": "2026-11-23T20:52:08+00:00",
 "how": "structured",
 "sections": [
 {
@@ -24533,7 +24348,7 @@ const MENUS = {
 "stale_since": "2026-10-12T18:35:51+00:00"
 },
 "vieste": {
-"checked": "2026-11-16T19:16:01+00:00",
+"checked": "2026-11-23T20:52:08+00:00",
 "how": "structured",
 "sections": [
 {
