@@ -21,6 +21,7 @@
 <script>/* Guide-only season: the member back end (sb.js -> Supabase) loads only when CLUB.digitalCard is on. */
 if(typeof CLUB==="undefined"||CLUB.digitalCard!==false)document.write('<script src="sb.js"><\/script>');</script>
 <script src="info.js"></script>
+<script src="signup.js"></script>
 <script src="menus.js"></script>
 <script src="geo.js"></script>
 <script src="places.js"></script>
@@ -442,7 +443,7 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
   <div class="cl">
     <div class="stats">
       <div class="stat"><b>38</b><small>years of dinners in Newport County</small></div>
-      <div class="stat"><b>43</b><small>restaurants in the book</small></div>
+      <div class="stat"><b class="rcount">43</b><small>restaurants in the book</small></div>
       <div class="stat"><b>5–15</b><small>minutes from downtown Newport</small></div>
     </div>
 
@@ -527,13 +528,16 @@ body.tabbed .demo-ribbon{bottom:calc(var(--safe-b) + 74px)}
     <p>Questions: <span id="help-mail"></span></p>
   </div>
   <div class="offer"><div><b id="offer-t"></b><span id="offer-d"></span></div></div>
-  <div class="list-head"><h2>Where are you dining?</h2><p>Search, or find the restaurants closest to you.</p></div>
+  <div class="list-head"><h2>Where are you dining?</h2><p>Explore the 2026–2027 Newport County Dinner Club participating restaurants! Discover incredible dining experiences and exclusive two-for-one offers throughout Newport County. Tap any restaurant to see its location, contact information, Dinner Club offer, valid days and times, and any restrictions. Search, or find the restaurants closest to you.</p></div>
   <div class="find"><div class="find-in">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-    <input id="hq" type="search" placeholder="Search 43 restaurants or a town" aria-label="Search restaurants"></div>
+    <input id="hq" type="search" placeholder="Search restaurants or a town" aria-label="Search restaurants"></div>
     <button class="btn near" id="h-near" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>Near me</button>
     <div class="hmap" id="hmap" role="button" tabindex="0" aria-label="Open the restaurant map"></div>
     <button class="btn ghost" id="h-all" type="button">See all on the map</button></div>
+  <div class="sec holidays"><h3>Important dining information &amp; restrictions</h3>
+    <p class="mnote" style="margin-top:0">Newport County Dinner Club offers are <b>not valid on the following holidays</b>, unless otherwise specified by the participating restaurant. Individual restaurants may have additional blackout dates, offer limitations and restrictions. Please review each restaurant's page for complete offer details before dining.</p>
+    <ul class="mnote" style="padding-left:18px;margin-top:6px"><li>Christmas Day (Dec. 25)</li><li>New Year's Eve (Dec. 31)</li><li>New Year's Day (Jan. 1)</li><li>Valentine's Day (Feb. 14)</li><li>Easter (Mar. 28, 2027)</li><li>Mother's Day (May 9, 2027)</li><li>Memorial Day Weekend (May 28 – 31, 2027)</li><li>Father's Day (Jun. 20, 2027)</li><li>July 4th (Jul. 4)</li><li>Labor Day Weekend (Sep. 3 – 6, 2027)</li><li>Columbus Day Weekend (Oct. 8 – 11, 2027)</li><li>Thanksgiving Day (Nov. 25, 2027)</li></ul></div>
   <div class="foot">Each restaurant sets its own dates, times and blackout days. Check with your server before ordering.<br><a id="ft-mail"></a></div>
 </section>
 
@@ -840,12 +844,15 @@ function eligBlock(r){
   const o=r.offer; if(!o)return '';
   const D=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'], M=[['breakfast','Breakfast'],['lunch','Lunch'],['dinner','Dinner']].filter(([k])=>o[k]&&o[k].length);
   const t=(new Date().getDay()+6)%7, now=M.filter(([k])=>o[k].includes(t)).map(([,n])=>n.toLowerCase());
-  const today=now.length?`<span class="el-today ok">Today (${D[t]}): ${now.join(' and ')}${r.blackout?', unless a blackout date':''}</span>`:`<span class="el-today no">Not valid today (${D[t]})</span>`;
+  const today=now.length?`<span class="el-today ok">Today (${D[t]}): ${now.join(' and ')}${r.blackout?', unless an additional blackout date':''}</span>`:`<span class="el-today no">Not valid today (${D[t]})</span>`;
   const grid=M.length?`<table class="el-grid"><tr><th></th>${D.map((d,i)=>`<th${i===t?' class="td"':''}>${d[0]}${d==='Thu'?'h':d==='Sun'?'u':''}</th>`).join('')}</tr>${M.map(([k,n])=>`<tr><td>${n}</td>${D.map((d,i)=>`<td class="${o[k].includes(i)?'y':'n'}${i===t?' td':''}" aria-label="${d} ${n} ${o[k].includes(i)?'valid':'not valid'}">${o[k].includes(i)?'&#10003;':'&ndash;'}</td>`).join('')}</tr>`).join('')}</table>`:'';
   return `<div class="sec"><h3>When your book works here</h3>${today}${grid}`+
-    (r.blackout?`<p class="el-x bo"><b>Blackout dates:</b> ${esc(r.blackout)}</p>`:'')+
+    (r.blackout?`<p class="el-x bo"><b>Additional blackout dates:</b> ${esc(r.blackout)}</p>`:'')+
     (r.rules?`<p class="el-x ru"><b>Restrictions:</b> ${esc(r.rules)}</p>`:'')+
-    `<p class="mnote">From ${esc(r.name)}'s 2026-27 Dinner Club sign-up. Most holidays and specials are excluded. Check your book or ask your server.</p></div>`;
+    `<p class="mnote">From ${esc(r.name)}'s 2026-27 Dinner Club sign-up. Club-wide holiday blackout dates also apply. Check your book or ask your server.</p></div>`;
+}
+function bioBlock(r){
+  return r.bio?`<div class="sec"><h3>About ${esc(r.name)}</h3><p style="line-height:1.55;color:var(--ink-700,#333)">${esc(r.bio)}</p></div>`:'';
 }
 function socialBlock(r){
   const s=r.social||{}; const items=[['instagram','Instagram'],['facebook','Facebook'],['tiktok','TikTok'],['x','X']].filter(([k])=>s[k]);
@@ -912,7 +919,9 @@ function openDetail(id,push){
     <p class="dinein"><b>Dine-in only.</b> The Dinner Club discount is not valid on takeout, delivery or online orders.</p>
     <div class="acts">${book}${menu}${dir}${call}</div>
     <div class="dirs" id="dt-dirs" hidden>${maps}</div>
+    ${bioBlock(r)}
     ${eligBlock(r)}
+    <p class="mnote">Most club-wide holidays are excluded. See the holiday list on the Restaurants page.</p>
     ${hoursBlock(r)}
     ${socialBlock(r)}
     ${specialsBlock(r)}

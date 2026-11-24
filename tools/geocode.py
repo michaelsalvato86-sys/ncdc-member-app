@@ -7,7 +7,7 @@ import json, pathlib, time, urllib.parse
 import requests
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-UA = 'NewportCountyDinnerClubApp/1.0 (msalvato@mwmwealth.com)'
+UA = 'NewportCountyDinnerClubApp/1.0'
 
 
 def census(addr):
