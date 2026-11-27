@@ -21,5 +21,5 @@ for rid, e in sign.items():
         geo[rid] = [r[0], r[1]]
         changed.append(rid)
 head = gj[:gj.index('{')]
-(ROOT / 'geo.js').write_text(head + json.dumps(geo) + ';\n', encoding='utf8')
+(ROOT / 'geo.js').write_text(head + json.dumps(geo) + gj[end:], encoding='utf8')
 print('added', changed)

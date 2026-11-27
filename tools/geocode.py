@@ -36,6 +36,14 @@ MANUAL = {'portsmouth-publick': [41.590964, -71.267453]}
 def main():
     js = (ROOT / 'info.js').read_text(encoding='utf8')
     info = json.loads(js[js.index('{'): js.rindex('};') + 1])
+    # signup.js (approved 2026-27 list) wins over info.js and adds the restaurants info.js never had.
+    sp = ROOT / 'signup.js'
+    if sp.exists():
+        sj = sp.read_text(encoding='utf8')
+        sign = json.loads(sj[sj.index('{'): sj.index('};' + chr(10) + 'const SIGNUP_IDS') + 1])
+        for rid, e in sign.items():
+            if e.get('address'):
+                info.setdefault(rid, {})['address'] = e['address']
     out, report = {}, {}
     for rid, i in info.items():
         a = i.get('address')
